@@ -1,0 +1,28 @@
+{
+  "schema": "g5-restore-v1",
+  "backup_id": "20261028T025604Z-a1efb294",
+  "run_id": "drill2",
+  "restored_at": "2026-10-28T02:57:00.986027+00:00",
+  "duration_seconds": 6.6560000000172295,
+  "databases": {
+    "core": {
+      "database": "hotel_project_g5_restore_drill2_core",
+      "content_matches": true,
+      "tables": 81
+    },
+    "sim-a": {
+      "database": "hotel_project_g5_restore_drill2_sim_a",
+      "content_matches": true,
+      "tables": 8
+    },
+    "sim-b": {
+      "database": "hotel_project_g5_restore_drill2_sim_b",
+      "content_matches": true,
+      "tables": 5
+    }
+  },
+  "artifact_root": "D:\\hotel\\.runtime\\g5-restored-artifacts\\drill2",
+  "dispatch": "BLOCKED_BY_DEFAULT",
+  "remote_state": "UNMODIFIED; reconciliation required before any release",
+  "rto_note": "restore and hash-check only; full RTO includes reconciliation and explicit safe release"
+}

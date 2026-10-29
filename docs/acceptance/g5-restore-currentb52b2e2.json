@@ -1,0 +1,28 @@
+{
+  "schema": "g5-restore-v1",
+  "backup_id": "20261028T141709Z-4539a75e",
+  "run_id": "currentb52b2e2",
+  "restored_at": "2026-10-28T14:18:38.751094+00:00",
+  "duration_seconds": 14.952999999979511,
+  "databases": {
+    "core": {
+      "database": "hotel_project_g5_restore_currentb52b2e2_core",
+      "content_matches": true,
+      "tables": 82
+    },
+    "sim-a": {
+      "database": "hotel_project_g5_restore_currentb52b2e2_sim_a",
+      "content_matches": true,
+      "tables": 8
+    },
+    "sim-b": {
+      "database": "hotel_project_g5_restore_currentb52b2e2_sim_b",
+      "content_matches": true,
+      "tables": 5
+    }
+  },
+  "artifact_root": "D:\\hotel\\.runtime\\g5-restored-artifacts\\currentb52b2e2",
+  "dispatch": "BLOCKED_BY_DEFAULT",
+  "remote_state": "UNMODIFIED; reconciliation required before any release",
+  "rto_note": "restore and hash-check only; full RTO includes reconciliation and explicit safe release"
+}

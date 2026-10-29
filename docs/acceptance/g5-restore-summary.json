@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-28T14:18:54.276765+00:00",
+  "status": "PASSED",
+  "schema": "022",
+  "backup": "D:\\hotel\\.runtime\\g5-backups\\20261028T141709Z-4539a75e",
+  "backup_completed_at": "2026-10-28T14:17:30.935676+00:00",
+  "runs": [
+    {
+      "run_id": "currenta52b2e2",
+      "scenario": "remote_ahead",
+      "rto_seconds": 33.95299999997951,
+      "restore_report": "g5-restore-currenta52b2e2.json",
+      "business_report": "g5-restore-business-currenta52b2e2.json",
+      "inventory_hashes_identical": true
+    },
+    {
+      "run_id": "currentb52b2e2",
+      "scenario": "remote_already_closed",
+      "rto_seconds": 30.45299999997951,
+      "restore_report": "g5-restore-currentb52b2e2.json",
+      "business_report": "g5-restore-business-currentb52b2e2.json",
+      "inventory_hashes_identical": true
+    }
+  ],
+  "rpo_note": "Both drills use this consistent snapshot; the known post-backup sequence3 is outside the core backup and is detected via actual remote reads. Backup age is measured by timestamps, not a claim of zero data loss.",
+  "same_disk_limitation": true
+}

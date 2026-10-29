@@ -1,0 +1,25 @@
+{
+  "status": "DESKTOP_FUNCTIONAL_PASS_NARROW_PENDING",
+  "url": "http://127.0.0.1:8000/admin/",
+  "code": "G4-HTTP-2696697e",
+  "policy_id": "3473e777-be57-40f3-80df-044c59582bfd",
+  "desktop_viewport_pixels": {
+    "width": 1265,
+    "height": 712
+  },
+  "actions": [
+    "a.reviewer independently approved submitted policy in browser",
+    "a.tenant_admin enabled reviewed policy and created subscription in browser",
+    "real HTTP upload then independent G4/G3 workers completed automatic dual VERIFIED",
+    "browser opened completed workflow and showed two SYSTEM_POLICY ALLOW records"
+  ],
+  "screenshots": [
+    "g4-browser-policy.png",
+    "g4-browser-workflow.png"
+  ],
+  "uncompleted": [
+    "narrow/mobile viewport verification",
+    "browser final stop clicks; completed through local HTTP instead"
+  ],
+  "computer_use_stop_reason": "Windows native app selection could not reliably determine the current browser URL; tool stopped computer use for this turn"
+}

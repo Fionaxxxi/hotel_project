@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-28T14:16:26.879020+00:00",
+  "status": "PASSED",
+  "injection": "Actual normal-core table lock held while real backup command reaches its 5-second lock timeout; no row mutation",
+  "command_exit_code": 1,
+  "normal_api_ready_after_failure": 200,
+  "incomplete_backup_directories": [
+    "20261028T141635Z-cdbcec95"
+  ],
+  "incorrect_complete_packages": [],
+  "private_log": ".runtime/g5-controlled-backup-failure.log"
+}

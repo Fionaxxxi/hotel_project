@@ -1,0 +1,9 @@
+{
+  "stage": "pre-G3",
+  "test_profile": "g2",
+  "passed": 93,
+  "failed": 0,
+  "seconds": 48.55,
+  "schema_at_run": "007",
+  "note": "Actual rerun before new migrations; historical G2 evidence retained"
+}

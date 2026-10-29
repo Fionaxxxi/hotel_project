@@ -1,0 +1,528 @@
+{
+  "at": "2026-10-29T01:50:29.839133+00:00",
+  "status": "PASSED_LOCAL_SCOPE_DEFERRED_ITEMS",
+  "scenarios": [
+    {
+      "id": "01",
+      "priority": "P0",
+      "scenario": "重新执行G0～G4当前完整套件，统计实际收集数与全部结果",
+      "status": "PASS",
+      "evidence": [
+        "g5-baseline.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "02",
+      "priority": "P0",
+      "scenario": "新增迁移不改写旧checksum；升级后旧业务数据与RLS保留",
+      "status": "PASS",
+      "evidence": [
+        "g5-setup-idempotence.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "03",
+      "priority": "P0",
+      "scenario": "全端点角色矩阵；只读审计所有写动作拒绝",
+      "status": "PASS",
+      "evidence": [
+        "g5-security-matrix.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "04",
+      "priority": "P0",
+      "scenario": "两租户互换对象/任务/原件/建议/策略ID，无越权读取写入",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "05",
+      "priority": "P0",
+      "scenario": "连接池复用、后台任务、缓存、分页/筛选均无租户串漏",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "06",
+      "priority": "P0",
+      "scenario": "旧/畸形JWT、成员撤销、开发登录关闭与失败限速有效",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "07",
+      "priority": "P0",
+      "scenario": "独立审批不可自批；客户端不能伪造机器actor或恢复许可",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "08",
+      "priority": "P0",
+      "scenario": "路径穿越、伪装格式、畸形/超限XLSX和长字段受控拒绝",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "09",
+      "priority": "P0",
+      "scenario": "来源XSS/提示指令仅字面显示，无映射/发布副作用",
+      "status": "PASS",
+      "evidence": [
+        "g5-browser.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "10",
+      "priority": "P0",
+      "scenario": "CSV公式前缀含空白变体安全导出；原件hash不变",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "11",
+      "priority": "P0",
+      "scenario": "出站URL及重定向绕过被拒绝，不触达未授权地址",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "12",
+      "priority": "P0",
+      "scenario": "日志、错误、导出、交付包扫描无真实秘密",
+      "status": "PASS",
+      "evidence": [
+        "g5-secret-scan.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "13",
+      "priority": "P0",
+      "scenario": "HTTP→外盒→Worker→模拟器→回执关联可查询",
+      "status": "PASS",
+      "evidence": [
+        "g5-trace.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "14",
+      "priority": "P0",
+      "scenario": "队列数量/最老年龄与数据库事实对照；人工等待单列",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml",
+        "g5-final-integration-supplement.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "15",
+      "priority": "P0",
+      "scenario": "外盒滞后/租约过期/死信告警发现与恢复；不伪成功",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "16",
+      "priority": "P0",
+      "scenario": "UNKNOWN/429/来源过期/停卖待确认告警正确，确认不等于解除",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "17",
+      "priority": "P0",
+      "scenario": "指标租户隔离、标签有界、采集失败标记陈旧/UNKNOWN",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "18",
+      "priority": "P0",
+      "scenario": "采集故障不阻断业务和紧急关闭",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml",
+        "g5-final-integration-supplement.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "19",
+      "priority": "P0",
+      "scenario": "20条分层链全部回到版本、审批和实际观察",
+      "status": "PASS",
+      "evidence": [
+        "g5-audit-sampling.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "20",
+      "priority": "P0",
+      "scenario": "CSV多行字段、XLSX sheet/row、JSON record/path定位准确",
+      "status": "PASS",
+      "evidence": [
+        "g5-original-locators.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "21",
+      "priority": "P0",
+      "scenario": "G4投影记录和原件记录明确区分，引用缺失可见",
+      "status": "PASS",
+      "evidence": [
+        "g5-browser.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "22",
+      "priority": "P0",
+      "scenario": "SYSTEM_POLICY、模型revision、人工反馈和epoch均可追溯",
+      "status": "PASS",
+      "evidence": [
+        "g5-audit-sampling.json",
+        "g5-http-smoke.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "23",
+      "priority": "P0",
+      "scenario": "回放不重算/发任务；稳定分页和对象上限有效",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml",
+        "g5-final-integration-supplement.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "24",
+      "priority": "P0",
+      "scenario": "导出跨租户/越权拒绝；脱敏包离线验证及篡改失败",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "25",
+      "priority": "P0",
+      "scenario": "备份维护屏障阻止新写/派发，未决在途有记录",
+      "status": "PASS",
+      "evidence": [
+        "g5-backup-failure-drill.json",
+        "g5-backup-schedule.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "26",
+      "priority": "P0",
+      "scenario": "联合备份完整；失败/磁盘不足包不可标完成，服务可恢复",
+      "status": "PASS",
+      "evidence": [
+        "g5-backup-failure-drill.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "27",
+      "priority": "P0",
+      "scenario": "恢复到新库新目录，拒绝开发库/错误路径/不完整包",
+      "status": "PASS",
+      "evidence": [
+        "g5-restore-summary.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "28",
+      "priority": "P0",
+      "scenario": "核心+两模拟库联合恢复，hash/迁移/RLS一致",
+      "status": "PASS",
+      "evidence": [
+        "g5-restore-summary.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "29",
+      "priority": "P0",
+      "scenario": "核心回退而远端已成功：查询原key，远端无重复效果",
+      "status": "PASS",
+      "evidence": [
+        "g5-restore-summary.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "30",
+      "priority": "P0",
+      "scenario": "远端备份后已停卖：恢复旧目标不复活，旧epoch阻断",
+      "status": "PASS",
+      "evidence": [
+        "g5-restore-summary.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "31",
+      "priority": "P0",
+      "scenario": "无法确定远端状态时保持UNKNOWN/冻结，未自动放行",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "32",
+      "priority": "P0",
+      "scenario": "两次恢复计时，RPO/RTO如实计算；每日调度/超期告警可验证",
+      "status": "PASS",
+      "evidence": [
+        "g5-backup-schedule.json",
+        "g5-restore-summary.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "33",
+      "priority": "P0",
+      "scenario": "风险待办可跳正确处理入口，空/错/部分结果可理解",
+      "status": "PASS",
+      "evidence": [
+        "g5-browser.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "34",
+      "priority": "P0",
+      "scenario": "已批准策略换版重绑；旧决定失效，CAS冲突不误绑",
+      "status": "PASS",
+      "evidence": [
+        "g5-browser.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "35",
+      "priority": "P0",
+      "scenario": "桌面与390窄屏完成回放/导出/重绑/关闭，无整页横溢",
+      "status": "PASS",
+      "evidence": [
+        "g5-browser.json",
+        "g5-browser-desktop.png",
+        "g5-browser-narrow.png"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "36",
+      "priority": "P0",
+      "scenario": "关键流程键盘完成；焦点、标签、风险文字和401/409恢复有效",
+      "status": "PASS",
+      "evidence": [
+        "g5-browser.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "37",
+      "priority": "P0",
+      "scenario": "三格式1万/10万解析基准，解析与后续物化分开",
+      "status": "PASS",
+      "evidence": [
+        "g5-parse-benchmark.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "38",
+      "priority": "P0",
+      "scenario": "API/回放至少100样本、协议三档复测，保留失败与max",
+      "status": "PASS",
+      "evidence": [
+        "g5-query-benchmark.json",
+        "g5-protocol-benchmark.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "39",
+      "priority": "P0",
+      "scenario": "十来源双渠道完整自动链五轮及1/2/4并发，统计全分母",
+      "status": "PASS",
+      "evidence": [
+        "g5-load.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "40",
+      "priority": "P0",
+      "scenario": "实际模型任务竞争下10次关闭，确认远端状态并报告所有耗时",
+      "status": "PASS",
+      "evidence": [
+        "g5-load.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "41",
+      "priority": "P0",
+      "scenario": "60分钟资源/队列稳定性，无不可解释增长或遗失任务",
+      "status": "PASS",
+      "evidence": [
+        "g5-soak.json",
+        "g5-soak-closure.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "42",
+      "priority": "P0",
+      "scenario": "100次固定seed随机重复/乱序投递，远端无重复效果",
+      "status": "PASS",
+      "evidence": [
+        "g5-duplicate-delivery.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "43",
+      "priority": "P0",
+      "scenario": "最终完整回归、安全/契约/恢复均通过，正常故障入口关闭",
+      "status": "PASS",
+      "evidence": [
+        "g5-tests.xml",
+        "g5-environment.json",
+        "g5-final-health.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "44",
+      "priority": "P0",
+      "scenario": "setup重复运行保留.env/数据；停止仅影响已核验项目进程",
+      "status": "PASS",
+      "evidence": [
+        "g5-setup-idempotence.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "45",
+      "priority": "P0",
+      "scenario": "白名单隔离实例两次重建；范围错误拒绝，不清开发租户",
+      "status": "PASS",
+      "evidence": [
+        "g5-local-reproduction.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "46",
+      "priority": "P0",
+      "scenario": "准备后断网，人工/禁模型完整闭环；缓存模型真实推理可用",
+      "status": "PASS",
+      "evidence": [
+        "g5-local-reproduction.json",
+        "g5-tests.xml"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "47",
+      "priority": "P0",
+      "scenario": "另一干净Windows实例按文档完成安装、测试、演示与恢复",
+      "status": "DEFERRED_BY_USER",
+      "evidence": [],
+      "note": "用户确认暂无独立 Windows 环境，先完成本机范围。"
+    },
+    {
+      "id": "48",
+      "priority": "P0",
+      "scenario": "最终包无秘密，源码/依赖/模型/证据manifest可校验",
+      "status": "PASS",
+      "evidence": [
+        "g5-release.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    },
+    {
+      "id": "49",
+      "priority": "P1",
+      "scenario": "12～15分钟与约2分钟真实录屏，标注版本和模拟边界",
+      "status": "DEFERRED_BY_USER",
+      "evidence": [
+        "g5-video.json"
+      ],
+      "note": "用户明确选择不录屏，录像列为待补交付项；截图不代替录像。"
+    },
+    {
+      "id": "50",
+      "priority": "P0",
+      "scenario": "README/runbook/限制齐全；所有P0有证据，目标与实测分列",
+      "status": "PASS",
+      "evidence": [
+        "g5-report.md",
+        "g5-acceptance-summary.json"
+      ],
+      "note": "按本机范围验证；证据、历史失败和边界见验收报告。"
+    }
+  ]
+}

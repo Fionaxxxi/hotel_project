@@ -1,0 +1,67 @@
+{
+  "captured_at": "2026-10-27T03:31:47.442Z",
+  "url": "http://127.0.0.1:8000/admin/",
+  "listing_key": "S-A-G3-HTTP-373ce7ab",
+  "plan_prefix": "9f3ff601",
+  "activation_id": "537f4998-73aa-42e1-8f56-3c404bd6034a",
+  "snapshot_ids": [
+    "8ee48bfc-3b86-42b4-adce-bd9e64c31fa9",
+    "49abff58-b345-4bed-b264-f17918345fc3"
+  ],
+  "actions": [
+    "reviewer independently approved SIM-A and SIM-B snapshots with explicit repair grant",
+    "operator selected both snapshots and submitted one plan",
+    "both plan branches visibly VERIFIED",
+    "tenant_admin submitted full close for both channels",
+    "SIM-A first attempt did not apply; refreshed current listing and reconfirmed",
+    "both listings visibly STOPPED desired=observed=2",
+    "reloaded final frontend build and confirmed both closed states"
+  ],
+  "status": "PASSED",
+  "screenshot": "g3-browser.png",
+  "viewport_pixels": {
+    "width": 1265,
+    "height": 712
+  },
+  "limits": [
+    "one actual desktop viewport; no full mobile or accessibility audit"
+  ],
+  "server_confirmations": [
+    {
+      "id": "250c43f7-83e8-474d-b481-37f345db8677",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "account_id": "3c3b4e78-3598-596b-a2b4-934468db3031",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G3-HTTP-373ce7ab",
+      "listing_key": "S-A-G3-HTTP-373ce7ab",
+      "desired_revision": 2,
+      "delivery_revision": 2,
+      "stop_epoch": 1,
+      "version": 11,
+      "state": "STOPPED",
+      "intent_id": "6f88479e-d4bc-45f4-9d92-7e1ec877fd92",
+      "applied_revision": 2,
+      "observed_revision": 2,
+      "next_due_at": "2026-10-27T11:34:05.739759+08:00",
+      "paused": false,
+      "code": "SIM-A"
+    },
+    {
+      "id": "aaceea32-1676-41a1-871f-78936edbd075",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "account_id": "41e0b0f5-2699-50f2-9855-dd4dbd0eea01",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G3-HTTP-373ce7ab",
+      "listing_key": "S-A-G3-HTTP-373ce7ab",
+      "desired_revision": 2,
+      "delivery_revision": 2,
+      "stop_epoch": 1,
+      "version": 9,
+      "state": "STOPPED",
+      "intent_id": "f562d573-b254-4570-87eb-97fcbf30ca27",
+      "applied_revision": 2,
+      "observed_revision": 2,
+      "next_due_at": "2026-10-27T11:33:20.233569+08:00",
+      "paused": false,
+      "code": "SIM-B"
+    }
+  ]
+}

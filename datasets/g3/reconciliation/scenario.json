@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "faults": [
+    "drift",
+    "missing",
+    "read_failure",
+    "incomplete",
+    "remote_ahead"
+  ],
+  "expected": "Precise diff; read errors UNKNOWN; no blind overwrite of remote ahead"
+}

@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "start": {
+    "SIM-A": 3,
+    "SIM-B": 0
+  },
+  "proposed": {
+    "SIM-A": 0,
+    "SIM-B": 3
+  },
+  "expected": "Block increase until remote A decrease verified; retain UNKNOWN exposure"
+}

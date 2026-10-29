@@ -1,0 +1,159 @@
+{
+  "dataset_sha256": "fbab20197f987c729192c4c5ab0e29d6f1b4e42a704ceb10562a26639e865e09",
+  "synthetic": true,
+  "independent_human_adjudication": false,
+  "group_count": 50,
+  "query_count": 200,
+  "model_manifest": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "license": "Apache-2.0",
+    "files": {
+      "onnx/model_quint8_avx2.onnx": {
+        "sha256": "98a01d88b7de996cdea58c32ca71208c09968d143798814b2ea09d3439dc334f",
+        "bytes": 118453870
+      },
+      "tokenizer.json": {
+        "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+        "bytes": 9081518
+      },
+      "config.json": {
+        "sha256": "6300193cb75e01cf80c96decef7187dfb33094d97cc1490b7ead6ff134476e4e",
+        "bytes": 645
+      },
+      "README.md": {
+        "sha256": "1e98ea05b0de579fcaad3d625b62ea55647142ed674d5f5ebf1440e4bbbb6f23",
+        "bytes": 3888
+      }
+    }
+  },
+  "thresholds_dev_only": {
+    "model": 0.48173048753890496,
+    "rule": 0.07142957142857143
+  },
+  "metrics": {
+    "dev": {
+      "rule": {
+        "total": 100,
+        "match_count": 72,
+        "none_count": 28,
+        "candidate_recall_at_10": 1.0,
+        "candidate_recall_limit": "preconstructed candidate package; not a measured database recall pipeline",
+        "top1_correct": 72,
+        "top1_accuracy": 1.0,
+        "top1_wilson95": [
+          0.9493,
+          1.0
+        ],
+        "mrr": 1.0,
+        "none_false_suggestions": 0,
+        "none_false_suggestion_rate": 0.0,
+        "suggestion_threshold": 0.07142957142857143,
+        "high_bucket_count": 72,
+        "high_bucket_correct": 72,
+        "high_bucket_precision": 1.0,
+        "high_bucket_coverage": 0.72,
+        "high_bucket_wilson95": [
+          0.9493,
+          1.0
+        ]
+      },
+      "model": {
+        "total": 100,
+        "match_count": 72,
+        "none_count": 28,
+        "candidate_recall_at_10": 1.0,
+        "candidate_recall_limit": "preconstructed candidate package; not a measured database recall pipeline",
+        "top1_correct": 72,
+        "top1_accuracy": 1.0,
+        "top1_wilson95": [
+          0.9493,
+          1.0
+        ],
+        "mrr": 1.0,
+        "none_false_suggestions": 0,
+        "none_false_suggestion_rate": 0.0,
+        "suggestion_threshold": 0.48173048753890496,
+        "high_bucket_count": 72,
+        "high_bucket_correct": 72,
+        "high_bucket_precision": 1.0,
+        "high_bucket_coverage": 0.72,
+        "high_bucket_wilson95": [
+          0.9493,
+          1.0
+        ]
+      }
+    },
+    "test": {
+      "rule": {
+        "total": 100,
+        "match_count": 68,
+        "none_count": 32,
+        "candidate_recall_at_10": 1.0,
+        "candidate_recall_limit": "preconstructed candidate package; not a measured database recall pipeline",
+        "top1_correct": 56,
+        "top1_accuracy": 0.8235294117647058,
+        "top1_wilson95": [
+          0.7164,
+          0.8961
+        ],
+        "mrr": 0.8970588235294118,
+        "none_false_suggestions": 4,
+        "none_false_suggestion_rate": 0.125,
+        "suggestion_threshold": 0.07142957142857143,
+        "high_bucket_count": 72,
+        "high_bucket_correct": 56,
+        "high_bucket_precision": 0.7777777777777778,
+        "high_bucket_coverage": 0.72,
+        "high_bucket_wilson95": [
+          0.6691,
+          0.8583
+        ]
+      },
+      "model": {
+        "total": 100,
+        "match_count": 68,
+        "none_count": 32,
+        "candidate_recall_at_10": 1.0,
+        "candidate_recall_limit": "preconstructed candidate package; not a measured database recall pipeline",
+        "top1_correct": 65,
+        "top1_accuracy": 0.9558823529411765,
+        "top1_wilson95": [
+          0.8781,
+          0.9849
+        ],
+        "mrr": 0.9779411764705882,
+        "none_false_suggestions": 9,
+        "none_false_suggestion_rate": 0.28125,
+        "suggestion_threshold": 0.48173048753890496,
+        "high_bucket_count": 77,
+        "high_bucket_correct": 65,
+        "high_bucket_precision": 0.8441558441558441,
+        "high_bucket_coverage": 0.77,
+        "high_bucket_wilson95": [
+          0.7471,
+          0.9085
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "cold_first_seconds": 1.7189999999973224,
+    "warm_sample_count": 199,
+    "warm_p50_seconds": 0.01600000000325963,
+    "warm_p95_seconds": 0.03200000000651926,
+    "warm_max_seconds": 0.062000000005355105,
+    "peak_model_rss_mib": 432.640625,
+    "total_seconds": 6.23399999999674,
+    "threads": 2,
+    "cache": "disabled for every query",
+    "scope": "model subprocess only; excludes PostgreSQL and API"
+  },
+  "default_ranking": "explicit opt-in advisory; no automatic mapping approval",
+  "limitations": [
+    "synthetic preconstructed candidates, no real-world generalization claim",
+    "group-separated variants, limited invented names and templates",
+    "candidate recall is package membership, not an actual search recall benchmark",
+    "no independent two-person gold adjudication"
+  ]
+}

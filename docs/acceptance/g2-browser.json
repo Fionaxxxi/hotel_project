@@ -1,0 +1,19 @@
+{
+  "run_id": "11737145-04ca-4428-a4ad-7aa5f1a6ab01",
+  "workflow_id": "71863b41-a847-4f5b-bd23-c139cc4426d5",
+  "snapshot_id": "1ef98bca-76e1-40a0-ad49-02a18517f790",
+  "task": {
+    "id": "60c20a51-5034-40f9-a6b3-ede23f372afe",
+    "status": "VERIFIED",
+    "attempt": 1
+  },
+  "workflow_state": "COMPLETED",
+  "steps": [
+    "ACTIVATE",
+    "COMPILE",
+    "PARSE",
+    "PUBLISH"
+  ],
+  "interaction": "HTTP prepared/uploaded package; browser confirmed activation, approved five mappings as reviewer, approved operator-submitted snapshot; no manual compile/task creation",
+  "viewport": "actual narrow in-app browser; no claim of desktop breakpoint or full accessibility audit"
+}

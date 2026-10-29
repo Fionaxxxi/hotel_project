@@ -1,0 +1,28 @@
+couldn't stop thread 'pool-1-scheduler' within 5.0 seconds
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "D:\hotel\services\core\g3\worker.py", line 28, in <module>
+    main()
+  File "D:\hotel\services\core\g3\worker.py", line 21, in main
+    tick(db, owner)
+  File "D:\hotel\services\core\g3\engine.py", line 616, in tick
+    safety_scan(db, tenant, listing_ids, scheduled=True)
+  File "D:\hotel\services\core\g3\engine.py", line 529, in safety_scan
+    with db.transaction(tenant) as c:
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\hotel_project\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\hotel\services\core\db.py", line 25, in transaction
+    with self.pool.connection() as conn:
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\hotel_project\Lib\contextlib.py", line 137, in __enter__
+    return next(self.gen)
+           ^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\hotel_project\Lib\site-packages\psycopg_pool\pool.py", line 184, in connection
+    conn = self.getconn(timeout=timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\miniconda3\envs\hotel_project\Lib\site-packages\psycopg_pool\pool.py", line 218, in getconn
+    raise PoolTimeout(
+psycopg_pool.PoolTimeout: couldn't get a connection after 3.00 sec

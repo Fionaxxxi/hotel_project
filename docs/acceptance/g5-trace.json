@@ -1,0 +1,478 @@
+{
+  "at": "2026-10-28T14:28:23.440352+00:00",
+  "status": "PASSED",
+  "chain": {
+    "trace_id": "01507b20-8ce9-44f9-8da5-02dc71fbfbf2",
+    "job_kinds": [
+      "G3_DELIVER",
+      "PARSE",
+      "WORKFLOW"
+    ],
+    "cause_event_ids": [
+      "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+      "a3c6f67e-8ffc-4a4d-b037-d3ec9f9d4d0f",
+      "d2a1cb01-c19f-4644-a9a0-c2580deb6705",
+      "edb1567f-f9e2-410d-b6f0-242bfb340a3a",
+      "f3f3ee6e-fb37-40cc-8a83-79268b6c9350"
+    ],
+    "recorded_events": [
+      {
+        "service": "api",
+        "event": "request",
+        "method": "POST",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:02.504626+00:00"
+      },
+      {
+        "service": "g2-parse",
+        "event": "job.attempt",
+        "job_id": "13e8f7c3-1d60-41e4-903b-822015882147",
+        "cause_event_id": null,
+        "timestamp": "2026-10-28T04:20:02.602729+00:00"
+      },
+      {
+        "service": "g2-control",
+        "event": "job.attempt",
+        "job_id": "ef346e26-7bf1-4bde-96fe-ec1c83be2d0b",
+        "cause_event_id": "f3f3ee6e-fb37-40cc-8a83-79268b6c9350",
+        "timestamp": "2026-10-28T04:20:02.669378+00:00"
+      },
+      {
+        "service": "g2-control",
+        "event": "job.attempt",
+        "job_id": "ae211e9c-aad0-4fd8-9949-400a837e0111",
+        "cause_event_id": "a3c6f67e-8ffc-4a4d-b037-d3ec9f9d4d0f",
+        "timestamp": "2026-10-28T04:20:02.876529+00:00"
+      },
+      {
+        "service": "g2-control",
+        "event": "job.attempt",
+        "job_id": "5e735912-ac23-465c-80c8-2398be374682",
+        "cause_event_id": "d2a1cb01-c19f-4644-a9a0-c2580deb6705",
+        "timestamp": "2026-10-28T04:20:03.082557+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "799da85a-908e-4ddb-b803-3f9526872393",
+        "cause_event_id": "edb1567f-f9e2-410d-b6f0-242bfb340a3a",
+        "timestamp": "2026-10-28T04:20:05.207054+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "1c1368fc-d2af-4064-9da8-bc231f009f2d",
+        "cause_event_id": "edb1567f-f9e2-410d-b6f0-242bfb340a3a",
+        "timestamp": "2026-10-28T04:20:05.269120+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "a197f702-7aa3-4ec7-958d-9c0e9dcbe496",
+        "cause_event_id": "edb1567f-f9e2-410d-b6f0-242bfb340a3a",
+        "timestamp": "2026-10-28T04:20:05.393588+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "7a9f9a16-4599-45ac-a6ae-5e6159f80861",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:05.474232+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "2a0bfc47-f5d4-49a7-baaa-8a73595769a0",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:05.548199+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:05.602667+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "c007a543-1ff9-4591-8ef5-35bff9cce252",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:05.678537+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "27476e75-93ec-4ce2-9d28-e9ab73c430aa",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:05.807693+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "ca451c69-aa13-4c39-9839-431c7a8d3e2a",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:05.948669+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:06.043185+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "799da85a-908e-4ddb-b803-3f9526872393",
+        "cause_event_id": "edb1567f-f9e2-410d-b6f0-242bfb340a3a",
+        "timestamp": "2026-10-28T04:20:08.052263+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "1c1368fc-d2af-4064-9da8-bc231f009f2d",
+        "cause_event_id": "edb1567f-f9e2-410d-b6f0-242bfb340a3a",
+        "timestamp": "2026-10-28T04:20:08.265245+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "7a9f9a16-4599-45ac-a6ae-5e6159f80861",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:08.387960+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "2a0bfc47-f5d4-49a7-baaa-8a73595769a0",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:08.472384+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:08.556025+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "c007a543-1ff9-4591-8ef5-35bff9cce252",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:08.637880+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:08.852521+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "ca451c69-aa13-4c39-9839-431c7a8d3e2a",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:08.972694+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "7a9f9a16-4599-45ac-a6ae-5e6159f80861",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:11.187308+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "c007a543-1ff9-4591-8ef5-35bff9cce252",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:11.345994+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "2a0bfc47-f5d4-49a7-baaa-8a73595769a0",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:11.437415+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:11.531938+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:11.626948+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "ca451c69-aa13-4c39-9839-431c7a8d3e2a",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:12.004062+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "7a9f9a16-4599-45ac-a6ae-5e6159f80861",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:13.454231+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "c007a543-1ff9-4591-8ef5-35bff9cce252",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:13.551269+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "2a0bfc47-f5d4-49a7-baaa-8a73595769a0",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:13.690930+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:13.778399+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:13.896741+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "ca451c69-aa13-4c39-9839-431c7a8d3e2a",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:14.061755+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "c007a543-1ff9-4591-8ef5-35bff9cce252",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:15.378571+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "2a0bfc47-f5d4-49a7-baaa-8a73595769a0",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:15.661625+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:15.803518+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:15.885625+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "ca451c69-aa13-4c39-9839-431c7a8d3e2a",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:15.977110+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "c007a543-1ff9-4591-8ef5-35bff9cce252",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:17.236711+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "ca451c69-aa13-4c39-9839-431c7a8d3e2a",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:18.730525+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:18.834425+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:18.948041+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:22.864071+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "e3c27d4e-fc83-4097-81d3-bca81f6f8cff",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:22.983116+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:25.893564+00:00"
+      },
+      {
+        "service": "g3-distribution",
+        "event": "job.attempt",
+        "job_id": "90af205d-bc8b-41f8-b39e-7f70791071dd",
+        "cause_event_id": "98f0dfad-4c9d-4765-a1af-6f444ae76462",
+        "timestamp": "2026-10-28T04:20:28.761539+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:05.807693+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:08.380445+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:08.963993+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:11.343988+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "GET",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:13.447112+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:13.683027+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "GET",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:15.657312+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:15.788604+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "GET",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:17.226660+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "GET",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:18.721486+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 202,
+        "timestamp": "2026-10-28T04:20:18.948041+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "GET",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:22.983116+00:00"
+      },
+      {
+        "service": "sim-sim-b",
+        "event": "channel.http",
+        "method": "GET",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:28.752980+00:00"
+      },
+      {
+        "service": "sim-sim-a",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:05.387437+00:00"
+      },
+      {
+        "service": "sim-sim-a",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:08.052263+00:00"
+      },
+      {
+        "service": "sim-sim-a",
+        "event": "channel.http",
+        "method": "PUT",
+        "status": 200,
+        "timestamp": "2026-10-28T04:20:08.256633+00:00"
+      }
+    ],
+    "services": [
+      "api",
+      "g2-control",
+      "g2-parse",
+      "g3-distribution",
+      "sim-sim-a",
+      "sim-sim-b"
+    ]
+  },
+  "scope": "Historical immutable job/event references plus actual retained JSON service logs; no synthetic logging injected"
+}

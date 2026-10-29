@@ -1,0 +1,4 @@
+{
+  "valid": false,
+  "required_error": "DUPLICATE_NATURAL_KEY"
+}

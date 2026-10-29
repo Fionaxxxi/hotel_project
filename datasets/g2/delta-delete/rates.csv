@@ -1,0 +1,2 @@
+property_code,room_code,plan_code,pool_code,stay_date,adults,currency,net_amount,operation
+DEMO-G2,R1,FLEX,POOL-1,2027-01-12,2,USD,100.00,delete

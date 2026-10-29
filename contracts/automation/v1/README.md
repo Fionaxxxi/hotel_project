@@ -1,0 +1,11 @@
+# G4 bounded automation contract v1
+
+Policies freeze exactly two human-approved G3 baseline snapshots from one source/allocation and both accounts. Server derives source, contract, stream, mode, full scope, buffer, amounts and NONREF selection. Numeric limits use decimal strings. Allowed configurable fields are typed and extra fields rejected.
+
+Administrator proposes/submits; a different reviewer approves/rejects; administrator enables. States and epoch changes are explicit, content immutable. One ENABLED policy per tenant/source. Activation and publishing are separate grants; default false. Enabled policy expiry is checked. Pause/revoke invalidate old machine decisions; enable generates a new epoch. Policy replacement requires a newly independently approved version, old policy disabled, new policy enabled, same source, CAS and audited subscription rebinding.
+
+Each new snapshot receives its own append-only ALLOW/REVIEW record binding payload/input hash, fixed human baseline IDs, prior actual desired payload, policy hash/epoch, reasons and earliest expiry. Price differences are checked against both fixed baseline and previous target, with inclusive relative and absolute limits, for net and sell amounts. Source inventory changes are also checked: static published quota must not conceal an inventory jump. Terms/content, scope, capability, channel codes, allocation configuration and pricing rule changes require review. Hard compiler conflicts remain blocking.
+
+Authorized snapshots store `reviewer=system.policy` with a corresponding decision record; no synthetic human identity or public `approved_by_policy` flag exists. G3 validates the authorization at plan submission and each new sale dispatch. Source locks serialize policy commands and per-listing send permits. Requests already permitted/sent can remain in flight: they must be queried, not declared cancelled. Pause is not remote closure. Safety scan does not turn policy pause into an implicit stop; actual source invalidity and explicit stop retain G3 safety behavior.
+
+An old policy decision cannot reopen a stop fence. Human approvals for exceptions bind new snapshots and retain the existing role/version checks. Repairs remain under their separate G3 exact-target authorization.

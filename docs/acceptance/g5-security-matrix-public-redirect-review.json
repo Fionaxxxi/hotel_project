@@ -1,0 +1,435 @@
+{
+  "at": "2026-10-28T14:10:27.641586+00:00",
+  "status": "REVIEW_REQUIRED",
+  "probes": [
+    {
+      "path": "/v1/me",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/suppliers",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/properties/{property_id}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/config",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/imports",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/imports",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/imports/{bid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/imports/{bid}/issues",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/imports/{bid}/confirm",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/imports/{bid}/activate",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/artifacts/{aid}/download",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/match-proposals",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/mappings/{kind}/{source_id}/decisions",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/offers/compile",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/snapshots",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/snapshots/{sid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/snapshots/{sid}/submit",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/snapshots/{sid}/decisions",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/publish-plans",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/publish-tasks",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/publish-tasks/{tid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v1/publish-tasks/{tid}/query",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v1/snapshots/{sid}/provenance",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/",
+      "method": "get",
+      "unauthenticated_status": 307
+    },
+    {
+      "path": "/v2/imports",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v2/imports",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/imports/{bid}/preview",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/imports/{bid}/runs",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v2/processing-runs",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/processing-runs/{rid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/processing-runs/{rid}/issues",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/processing-runs/{rid}/issues.csv",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/processing-runs/{rid}/activate",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 404
+    },
+    {
+      "path": "/v2/workflows/{wid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/workflows/{wid}/commands",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v2/operations",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v2/jobs/{jid}/retry",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v2/events/{eid}/retry",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/sources",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v3/sources/{aid}/adopt",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/sources/{aid}/close-legacy",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/overview",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v3/allocations",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/snapshots",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/snapshots/{sid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v3/snapshots/{sid}/provenance",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v3/snapshots/{sid}/decisions",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/plans",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/plans/{pid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v3/plans/{pid}/cancel",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/listings/{lid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v3/listings/{lid}/reconcile",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/listings/{lid}/stop",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/diffs/{did}/repair",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/listings/{lid}/commands",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/accounts/{aid}/resume",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v3/dead-letters/{did}/retry",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/suggestions/{tid}/retry",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/subscriptions/{sid}/policy",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/overview",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v4/suggestions",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/suggestions/{tid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v4/policies",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/policies/{pid}/commands",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 404
+    },
+    {
+      "path": "/v4/subscriptions",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/subscriptions/{sid}/commands",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v4/runs/{rid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v5/recovery/scopes",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v5/recovery/listings/{lid}/stop",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v5/recovery/release",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v5/operations/metrics",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v5/operations/alerts",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v5/operations/collect",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v5/operations/alerts/{aid}/acknowledge",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 403
+    },
+    {
+      "path": "/v5/audit/{kind}/{rid}",
+      "method": "get",
+      "unauthenticated_status": 401
+    },
+    {
+      "path": "/v5/audit/{kind}/{rid}/export",
+      "method": "post",
+      "unauthenticated_status": 401,
+      "auditor_status": 404
+    }
+  ],
+  "scope": "All documented core operations, dummy valid-shaped resource IDs; HTTP authorization probes plus existing real-resource cross-tenant/self-approval tests. Dummy resource 404 alone is not proof of a live-resource write guard.",
+  "unauthenticated_all_denied": false,
+  "unresolved": [
+    {
+      "path": "/",
+      "method": "get",
+      "unauthenticated_status": 307
+    }
+  ]
+}

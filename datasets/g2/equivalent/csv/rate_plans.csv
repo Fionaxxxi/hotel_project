@@ -1,0 +1,3 @@
+property_code,room_code,plan_code,meal,cancellation,payment,tax_basis
+DEMO-G2,R1,FLEX,BREAKFAST_2,"{""kind"": ""FLEX"", ""deadline_hours"": 72, ""penalty_basis"": ""stay_total""}",AT_PROPERTY,NET_EXCLUSIVE
+DEMO-G2,R1,NONREF,BREAKFAST_2,"{""kind"": ""NONREF"", ""deadline_hours"": 0, ""penalty_basis"": ""stay_total""}",AT_PROPERTY,NET_EXCLUSIVE

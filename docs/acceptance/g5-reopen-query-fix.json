@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-29T01:42:59.212857+00:00",
+  "status": "PASSED",
+  "scope": "Same original test and 25-second drain budgets; SQL trace profiling only, parameters not retained. One targeted measured run is not an SLA.",
+  "queries": [
+    {
+      "template_prefix": "UPDATE outbox_event e SET delivered_at",
+      "before": {
+        "sql": "UPDATE outbox_event e SET delivered_at=clock_timestamp() WHERE e.event_type LIKE 'g3.%%' AND e.delivered_at IS NULL AND EXISTS(SELECT 1 FROM consumer_inbox i WHERE i.event_id=e.id AND i.consumer='g3-delivery-v1')",
+        "calls": 54,
+        "seconds": 20.631424900027923,
+        "max_seconds": 1.7127076000033412
+      },
+      "after": {
+        "sql": "UPDATE outbox_event e SET delivered_at=clock_timestamp() WHERE e.tenant_id=%s AND e.event_type='g3.intent.created' AND e.delivered_at IS NULL AND EXISTS(SELECT 1 FROM consumer_inbox i WHERE i.tenant_id=e.tenant_id AND i.event_id=e.id AND i.consumer='g3-delivery-v1')",
+        "calls": 80,
+        "seconds": 0.18841110009816475,
+        "max_seconds": 0.019724099984159693
+      }
+    },
+    {
+      "template_prefix": "SELECT t.id FROM g3_task t JOIN g3_intent i ON",
+      "before": {
+        "sql": "SELECT t.id FROM g3_task t JOIN g3_intent i ON i.id=t.intent_id WHERE i.listing_id=ANY(%s)",
+        "calls": 48,
+        "seconds": 9.863220500032185,
+        "max_seconds": 1.8889031000144314
+      },
+      "after": {
+        "sql": "SELECT t.id FROM g3_task t JOIN g3_intent i ON (i.tenant_id,i.id)=(t.tenant_id,t.intent_id) WHERE t.tenant_id=%s AND i.listing_id=ANY(%s)",
+        "calls": 74,
+        "seconds": 0.08127090014750138,
+        "max_seconds": 0.0035943000111728907
+      }
+    }
+  ],
+  "target_junit": "g5-reopen-query-fix-tests.xml",
+  "prior_failed_full": "g5-final-305-pass-1-reopen-fail.xml",
+  "full_regression": "g5-tests.xml"
+}

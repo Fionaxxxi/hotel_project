@@ -1,0 +1,11 @@
+name: hotel_project
+variables:
+  PYTHONNOUSERSITE: '1'
+channels:
+  - defaults
+dependencies:
+  - python=3.12.15
+  - pip
+  - postgresql=18.4
+  - pip:
+      - -r requirements.lock.txt

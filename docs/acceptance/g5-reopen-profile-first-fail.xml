@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="55.421" timestamp="2026-10-29T09:37:24.567258+08:00" hostname="Fionaxi"><testcase classname="tests.test_g3_operations" name="test_g3_new_approval_can_reopen_after_confirmed_stop" time="53.290"><failure message="AssertionError: G3 durable state did not converge">tests\test_g3_operations.py:103: in test_g3_new_approval_can_reopen_after_confirmed_stop
+    drain(
+tests\g3_helpers.py:92: in drain
+    raise AssertionError("G3 durable state did not converge")
+E   AssertionError: G3 durable state did not converge</failure></testcase></testsuite></testsuites>

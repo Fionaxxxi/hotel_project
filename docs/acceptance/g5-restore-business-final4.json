@@ -1,0 +1,3069 @@
+{
+  "schema": "g5-restore-business-drill-v1",
+  "run_id": "final4",
+  "started_at": "2026-10-28T03:56:43.353103+00:00",
+  "old_source": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-7ea95a65",
+  "listing_ids": [
+    "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+    "91a4b481-738e-4b3a-99cb-a7022da93908"
+  ],
+  "api_port": 8005,
+  "held_scope_confirmed": true,
+  "old_listings_before": [
+    {
+      "id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "account_id": "3c3b4e78-3598-596b-a2b4-934468db3031",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-7ea95a65",
+      "listing_key": "S-A-G5-7ea95a65",
+      "desired_revision": 1,
+      "delivery_revision": 1,
+      "stop_epoch": 1,
+      "version": 5,
+      "state": "VERIFIED",
+      "intent_id": "5f915a90-124d-4e15-aed8-72156fab416e",
+      "applied_revision": 1,
+      "observed_revision": 1,
+      "next_due_at": "2026-10-28T11:57:45.086201+08:00",
+      "paused": true,
+      "safety_due_at": "2026-10-28T11:56:48.045823+08:00",
+      "intent": {
+        "id": "5f915a90-124d-4e15-aed8-72156fab416e",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+        "snapshot_id": "851282d0-0cf2-4dbd-88fa-6ff0a6c06c4a",
+        "plan_id": "6274e678-fbea-4639-9dff-f7e93a55c343",
+        "action": "PUBLISH",
+        "desired_revision": 1,
+        "delivery_revision": 1,
+        "stop_epoch": 0,
+        "payload": {
+          "cells": [
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-10",
+              "kind": "pool",
+              "quantity": 2,
+              "sellable": true
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-11",
+              "kind": "pool",
+              "quantity": 2,
+              "sellable": true
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-12",
+              "kind": "pool",
+              "quantity": 2,
+              "sellable": true
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-10",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-11",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-12",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            }
+          ],
+          "content": {
+            "plans": [
+              {
+                "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "meal": "BREAKFAST_2",
+                "adults": 2,
+                "payment": "AT_PROPERTY",
+                "currency": "USD",
+                "pool_key": "G5-7ea95a65/R1/POOL-1",
+                "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                "tax_basis": "NET_EXCLUSIVE",
+                "cancellation": {
+                  "kind": "NONREF",
+                  "penalty_basis": "stay_total",
+                  "deadline_hours": 0
+                }
+              }
+            ],
+            "pools": [
+              "G5-7ea95a65/R1/POOL-1"
+            ],
+            "scope": {
+              "entities": [
+                "properties",
+                "rooms",
+                "rate_plans",
+                "inventory",
+                "rates"
+              ],
+              "property_codes": [
+                "G5-7ea95a65"
+              ],
+              "stay_date_from": "2027-01-10",
+              "stay_date_to_exclusive": "2027-01-13"
+            },
+            "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+          }
+        },
+        "payload_hash": "2b44b6cf1828ccc406ce5b3eafcdd6d31e87f197f486eaab57b3369e65ce7ce5",
+        "manifest": {
+          "chunks": {
+            "1": "e2d0b925f612f53de3a8ab3f1c9f570a0d35489f4d9fe903ea5dad57c3aa754d"
+          },
+          "content_hash": "c66400260437ecb8db35636297ad7070983cae85c0b749b9b834f9c8f1d5082e",
+          "payload_hash": "2b44b6cf1828ccc406ce5b3eafcdd6d31e87f197f486eaab57b3369e65ce7ce5"
+        },
+        "manifest_hash": "72713acba635376f8e119d28e841b598f653361028c419666eabf67c04e01031",
+        "state": "VERIFIED",
+        "created_by": "a.tenant_admin",
+        "reason": "Approved publish",
+        "created_at": "2026-10-28T11:48:54.170845+08:00"
+      },
+      "observations": [
+        {
+          "id": "9fb033c0-df46-4133-a8f4-5238e09430c2",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 1,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:06.386312+08:00"
+        },
+        {
+          "id": "32ef09c4-a360-4f88-bf09-5e837a43fa65",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 1,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:04.049560+08:00"
+        },
+        {
+          "id": "745aabe7-4a06-4580-93c1-faa40a676c20",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 1,
+          "classification": "PENDING",
+          "complete": true,
+          "data": {
+            "cells": {},
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:48:58.549829+08:00"
+        }
+      ]
+    },
+    {
+      "id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "account_id": "41e0b0f5-2699-50f2-9855-dd4dbd0eea01",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-7ea95a65",
+      "listing_key": "S-A-G5-7ea95a65",
+      "desired_revision": 1,
+      "delivery_revision": 1,
+      "stop_epoch": 1,
+      "version": 4,
+      "state": "VERIFIED",
+      "intent_id": "b8de1cbb-e5c8-4d79-92e3-d3de50003546",
+      "applied_revision": 1,
+      "observed_revision": 1,
+      "next_due_at": "2026-10-28T11:57:45.393014+08:00",
+      "paused": true,
+      "safety_due_at": "2026-10-28T11:56:48.046321+08:00",
+      "intent": {
+        "id": "b8de1cbb-e5c8-4d79-92e3-d3de50003546",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+        "snapshot_id": "aa468677-b991-4f40-b30c-526e86486e96",
+        "plan_id": "6274e678-fbea-4639-9dff-f7e93a55c343",
+        "action": "PUBLISH",
+        "desired_revision": 1,
+        "delivery_revision": 1,
+        "stop_epoch": 0,
+        "payload": {
+          "cells": [
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-10",
+              "kind": "pool",
+              "quantity": 1,
+              "sellable": true
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-11",
+              "kind": "pool",
+              "quantity": 1,
+              "sellable": true
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-12",
+              "kind": "pool",
+              "quantity": 1,
+              "sellable": true
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-10",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-11",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-12",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            }
+          ],
+          "content": {
+            "plans": [
+              {
+                "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "meal": "BREAKFAST_2",
+                "adults": 2,
+                "payment": "AT_PROPERTY",
+                "currency": "USD",
+                "pool_key": "G5-7ea95a65/R1/POOL-1",
+                "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                "tax_basis": "NET_EXCLUSIVE",
+                "cancellation": {
+                  "kind": "NONREF",
+                  "penalty_basis": "stay_total",
+                  "deadline_hours": 0
+                }
+              }
+            ],
+            "pools": [
+              "G5-7ea95a65/R1/POOL-1"
+            ],
+            "scope": {
+              "entities": [
+                "properties",
+                "rooms",
+                "rate_plans",
+                "inventory",
+                "rates"
+              ],
+              "property_codes": [
+                "G5-7ea95a65"
+              ],
+              "stay_date_from": "2027-01-10",
+              "stay_date_to_exclusive": "2027-01-13"
+            },
+            "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+          }
+        },
+        "payload_hash": "23545aedf8d80cad255995d583259d95db60102565cf27a6c07c10c4ea971097",
+        "manifest": {
+          "chunks": {
+            "1": "51cf53d8d6ed4ba48192d53a70beee1af8bb42d9119377262b751da7c6ec77df"
+          },
+          "content_hash": "9f43b5b7611b438ce7f167a9d2d346793f2a31c78b5e91951fe659537a67c31e",
+          "payload_hash": "23545aedf8d80cad255995d583259d95db60102565cf27a6c07c10c4ea971097"
+        },
+        "manifest_hash": "8cad6f9ecdd4f0192b9a637469deb0caef68d6e4c65c74675bdd60350d97c81b",
+        "state": "VERIFIED",
+        "created_by": "a.tenant_admin",
+        "reason": "Approved publish",
+        "created_at": "2026-10-28T11:48:54.170845+08:00"
+      },
+      "observations": [
+        {
+          "id": "f5b70352-bd21-4484-a6d5-8250331dd218",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 1,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:12.537408+08:00"
+        },
+        {
+          "id": "ec925a01-5ae6-4f98-ab37-926eaf356244",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 1,
+          "classification": "PENDING",
+          "complete": true,
+          "data": {
+            "cells": {},
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:04.141877+08:00"
+        },
+        {
+          "id": "9c673afe-78aa-45f3-b828-8408e05b36b3",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 1,
+          "classification": "PENDING",
+          "complete": true,
+          "data": {
+            "cells": {},
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:48:58.546067+08:00"
+        }
+      ]
+    }
+  ],
+  "fresh_stops": [
+    {
+      "id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "account_id": "3c3b4e78-3598-596b-a2b4-934468db3031",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-7ea95a65",
+      "listing_key": "S-A-G5-7ea95a65",
+      "desired_revision": 4,
+      "delivery_revision": 4,
+      "stop_epoch": 2,
+      "version": 8,
+      "state": "STOPPED",
+      "intent_id": "304fe4a3-12b0-479f-8c4d-4aee0126ff73",
+      "applied_revision": 4,
+      "observed_revision": 4,
+      "next_due_at": "2026-10-28T11:57:50.067604+08:00",
+      "paused": true,
+      "safety_due_at": "2026-10-28T11:56:51.087674+08:00",
+      "intent": {
+        "id": "304fe4a3-12b0-479f-8c4d-4aee0126ff73",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+        "snapshot_id": "851282d0-0cf2-4dbd-88fa-6ff0a6c06c4a",
+        "plan_id": null,
+        "action": "STOP",
+        "desired_revision": 4,
+        "delivery_revision": 4,
+        "stop_epoch": 2,
+        "payload": {
+          "cells": [
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-10",
+              "kind": "pool",
+              "quantity": 0,
+              "sellable": false
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-11",
+              "kind": "pool",
+              "quantity": 0,
+              "sellable": false
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-12",
+              "kind": "pool",
+              "quantity": 0,
+              "sellable": false
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-10",
+              "kind": "rate",
+              "sellable": false,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-11",
+              "kind": "rate",
+              "sellable": false,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-12",
+              "kind": "rate",
+              "sellable": false,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            }
+          ],
+          "content": {
+            "plans": [
+              {
+                "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "meal": "BREAKFAST_2",
+                "adults": 2,
+                "payment": "AT_PROPERTY",
+                "currency": "USD",
+                "pool_key": "G5-7ea95a65/R1/POOL-1",
+                "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                "tax_basis": "NET_EXCLUSIVE",
+                "cancellation": {
+                  "kind": "NONREF",
+                  "penalty_basis": "stay_total",
+                  "deadline_hours": 0
+                }
+              }
+            ],
+            "pools": [
+              "G5-7ea95a65/R1/POOL-1"
+            ],
+            "scope": {
+              "entities": [
+                "properties",
+                "rooms",
+                "rate_plans",
+                "inventory",
+                "rates"
+              ],
+              "property_codes": [
+                "G5-7ea95a65"
+              ],
+              "stay_date_from": "2027-01-10",
+              "stay_date_to_exclusive": "2027-01-13"
+            },
+            "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+          }
+        },
+        "payload_hash": "81f063fa97cdb8281bbce52ad1e0bd5b72a81f6c89a55a9ca7b1ed30ef6c8871",
+        "manifest": {
+          "chunks": {
+            "1": "e24fb77d8b0f6aab25696bbcd4438029876845e8cc541899b9bbaa82dc4785b2"
+          },
+          "content_hash": "c66400260437ecb8db35636297ad7070983cae85c0b749b9b834f9c8f1d5082e",
+          "payload_hash": "81f063fa97cdb8281bbce52ad1e0bd5b72a81f6c89a55a9ca7b1ed30ef6c8871"
+        },
+        "manifest_hash": "af6a2551c248f791753dc50933e5f4c56de07c4379ad9ea6a14a2df2bfb17422",
+        "state": "VERIFIED",
+        "created_by": "a.tenant_admin",
+        "reason": "G5 real restore: retain newer remote revision, explicitly close",
+        "created_at": "2026-10-28T11:56:46.649149+08:00"
+      },
+      "observations": [
+        {
+          "id": "0c849876-a5d0-480a-b52e-05ef3f5e9a72",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 4,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 0,
+                  "sellable": false
+                },
+                "revision": 4
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 0,
+                  "sellable": false
+                },
+                "revision": 4
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 0,
+                  "sellable": false
+                },
+                "revision": 4
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": false,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 4
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": false,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 4
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": false,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 4
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 4,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:56:50.061272+08:00"
+        },
+        {
+          "id": "9fb033c0-df46-4133-a8f4-5238e09430c2",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 1,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:06.386312+08:00"
+        },
+        {
+          "id": "32ef09c4-a360-4f88-bf09-5e837a43fa65",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 1,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:04.049560+08:00"
+        },
+        {
+          "id": "745aabe7-4a06-4580-93c1-faa40a676c20",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "8cb798aa-bbe1-4104-84cd-9eb0cae99436",
+          "desired_revision": 1,
+          "classification": "PENDING",
+          "complete": true,
+          "data": {
+            "cells": {},
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:48:58.549829+08:00"
+        }
+      ]
+    },
+    {
+      "id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "account_id": "41e0b0f5-2699-50f2-9855-dd4dbd0eea01",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-7ea95a65",
+      "listing_key": "S-A-G5-7ea95a65",
+      "desired_revision": 4,
+      "delivery_revision": 4,
+      "stop_epoch": 2,
+      "version": 7,
+      "state": "STOPPED",
+      "intent_id": "22d4a678-cc0f-43d1-9377-e9c0bafda58c",
+      "applied_revision": 4,
+      "observed_revision": 4,
+      "next_due_at": "2026-10-28T11:57:54.700388+08:00",
+      "paused": true,
+      "safety_due_at": "2026-10-28T11:56:57.159629+08:00",
+      "intent": {
+        "id": "22d4a678-cc0f-43d1-9377-e9c0bafda58c",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+        "snapshot_id": "aa468677-b991-4f40-b30c-526e86486e96",
+        "plan_id": null,
+        "action": "STOP",
+        "desired_revision": 4,
+        "delivery_revision": 4,
+        "stop_epoch": 2,
+        "payload": {
+          "cells": [
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-10",
+              "kind": "pool",
+              "quantity": 0,
+              "sellable": false
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-11",
+              "kind": "pool",
+              "quantity": 0,
+              "sellable": false
+            },
+            {
+              "key": "G5-7ea95a65/R1/POOL-1",
+              "date": "2027-01-12",
+              "kind": "pool",
+              "quantity": 0,
+              "sellable": false
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-10",
+              "kind": "rate",
+              "sellable": false,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-11",
+              "kind": "rate",
+              "sellable": false,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-12",
+              "kind": "rate",
+              "sellable": false,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            }
+          ],
+          "content": {
+            "plans": [
+              {
+                "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "meal": "BREAKFAST_2",
+                "adults": 2,
+                "payment": "AT_PROPERTY",
+                "currency": "USD",
+                "pool_key": "G5-7ea95a65/R1/POOL-1",
+                "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                "tax_basis": "NET_EXCLUSIVE",
+                "cancellation": {
+                  "kind": "NONREF",
+                  "penalty_basis": "stay_total",
+                  "deadline_hours": 0
+                }
+              }
+            ],
+            "pools": [
+              "G5-7ea95a65/R1/POOL-1"
+            ],
+            "scope": {
+              "entities": [
+                "properties",
+                "rooms",
+                "rate_plans",
+                "inventory",
+                "rates"
+              ],
+              "property_codes": [
+                "G5-7ea95a65"
+              ],
+              "stay_date_from": "2027-01-10",
+              "stay_date_to_exclusive": "2027-01-13"
+            },
+            "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+          }
+        },
+        "payload_hash": "5113fc2d1531636a501a52f6e0e655ea15a7a95b9f28572060f84f01021cddd3",
+        "manifest": {
+          "chunks": {
+            "1": "29cb16d7663afb1a1933cc991a5abe1ef76fec47770be208a85b32308b29a673"
+          },
+          "content_hash": "9f43b5b7611b438ce7f167a9d2d346793f2a31c78b5e91951fe659537a67c31e",
+          "payload_hash": "5113fc2d1531636a501a52f6e0e655ea15a7a95b9f28572060f84f01021cddd3"
+        },
+        "manifest_hash": "e1e1db0008c06226e49d35ee4491bfbbec70f71fb5b41056ae4b66f7288bd5d6",
+        "state": "VERIFIED",
+        "created_by": "a.tenant_admin",
+        "reason": "G5 real restore: retain newer remote revision, explicitly close",
+        "created_at": "2026-10-28T11:56:46.705577+08:00"
+      },
+      "observations": [
+        {
+          "id": "e2d6a3bb-b956-4f4b-bc70-2c7f98c2add4",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 4,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 0,
+                  "sellable": false
+                },
+                "revision": 4
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 0,
+                  "sellable": false
+                },
+                "revision": 4
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 0,
+                  "sellable": false
+                },
+                "revision": 4
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": false,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 4
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": false,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 4
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": false,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 4
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 4,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:56:54.693935+08:00"
+        },
+        {
+          "id": "f5b70352-bd21-4484-a6d5-8250331dd218",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 1,
+          "classification": "CONSISTENT",
+          "complete": true,
+          "data": {
+            "cells": {
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-10": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-11": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "pool/G5-7ea95a65/R1/POOL-1/2027-01-12": {
+                "value": {
+                  "key": "G5-7ea95a65/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                "revision": 1
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              },
+              "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+                "value": {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                "revision": 1
+              }
+            },
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:12.537408+08:00"
+        },
+        {
+          "id": "ec925a01-5ae6-4f98-ab37-926eaf356244",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 1,
+          "classification": "PENDING",
+          "complete": true,
+          "data": {
+            "cells": {},
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:49:04.141877+08:00"
+        },
+        {
+          "id": "9c673afe-78aa-45f3-b828-8408e05b36b3",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "91a4b481-738e-4b3a-99cb-a7022da93908",
+          "desired_revision": 1,
+          "classification": "PENDING",
+          "complete": true,
+          "data": {
+            "cells": {},
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            },
+            "complete": true,
+            "revision": 1,
+            "simulation": true,
+            "http_status": 200,
+            "wire_content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-7ea95a65/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "refundable": false
+                  }
+                }
+              ],
+              "pools": [
+                "G5-7ea95a65/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-7ea95a65"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "created_at": "2026-10-28T11:48:58.546067+08:00"
+        }
+      ]
+    }
+  ],
+  "release": {
+    "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-7ea95a65",
+    "state": "RELEASED",
+    "stop_fence": "RETAINED_NEW_APPROVAL_REQUIRED"
+  },
+  "new_business": {
+    "code": "G5-965ce841",
+    "sequence": 2,
+    "received_run": "fe12b185-302e-4515-9910-2e9b3a320d82",
+    "workflow": {
+      "id": "9ad4035d-9713-4471-806a-52114df0492e",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "subscription_id": "4e1f6a9c-55e5-4e06-90aa-7e7bcadbaeb6",
+      "processing_id": "fe12b185-302e-4515-9910-2e9b3a320d82",
+      "definition": "g4-flow-v1",
+      "state": "COMPLETED",
+      "activation_id": "5255e17e-4f99-456f-b043-abe5988c120a",
+      "allocation_id": "d327c523-c3b5-479d-ba49-ffd2faa571af",
+      "snapshot_ids": [
+        "61a6cec1-047a-4e0a-a9cb-0e6e78fbbbc6",
+        "3c21cfc5-aea4-4f56-b512-f596d2b033e9"
+      ],
+      "plan_id": "c3c9d4c6-a2a4-4d5c-b124-e36b1633fb17",
+      "reason": "VERIFIED",
+      "version": 5,
+      "created_at": "2026-10-28T11:56:55.710688+08:00"
+    },
+    "plan": {
+      "id": "c3c9d4c6-a2a4-4d5c-b124-e36b1633fb17",
+      "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+      "command_key": "g4:9ad4035d-9713-4471-806a-52114df0492e",
+      "request_hash": "370f490e6f6d30e3ec6da8985d2d3c0419ed9aa4fc6ccc0268bb1af593912632",
+      "state": "VERIFIED",
+      "created_by": "a.tenant_admin",
+      "created_at": "2026-10-28T11:56:55.757390+08:00",
+      "definition": "g3-flow-v1",
+      "branches": [
+        {
+          "id": "5f9f5a3a-ec31-47da-a215-7015c38c4351",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "580d51a5-a45c-4c23-b9f4-677ab57ac007",
+          "snapshot_id": "61a6cec1-047a-4e0a-a9cb-0e6e78fbbbc6",
+          "plan_id": "c3c9d4c6-a2a4-4d5c-b124-e36b1633fb17",
+          "action": "PUBLISH",
+          "desired_revision": 1,
+          "delivery_revision": 1,
+          "stop_epoch": 0,
+          "payload": {
+            "cells": [
+              {
+                "key": "G5-965ce841/R1/POOL-1",
+                "date": "2027-01-10",
+                "kind": "pool",
+                "quantity": 2,
+                "sellable": true
+              },
+              {
+                "key": "G5-965ce841/R1/POOL-1",
+                "date": "2027-01-11",
+                "kind": "pool",
+                "quantity": 2,
+                "sellable": true
+              },
+              {
+                "key": "G5-965ce841/R1/POOL-1",
+                "date": "2027-01-12",
+                "kind": "pool",
+                "quantity": 2,
+                "sellable": true
+              },
+              {
+                "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "date": "2027-01-10",
+                "kind": "rate",
+                "sellable": true,
+                "net_amount": "105.0000",
+                "sell_amount": "115.50"
+              },
+              {
+                "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "date": "2027-01-11",
+                "kind": "rate",
+                "sellable": true,
+                "net_amount": "105.0000",
+                "sell_amount": "115.50"
+              },
+              {
+                "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "date": "2027-01-12",
+                "kind": "rate",
+                "sellable": true,
+                "net_amount": "105.0000",
+                "sell_amount": "115.50"
+              }
+            ],
+            "content": {
+              "plans": [
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-965ce841/R1/POOL-1",
+                  "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-965ce841/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-965ce841"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "payload_hash": "c791b9f0c714c20b1eb7e862468c6cf149a546bf92099b9b1af46cbe05ced681",
+          "manifest": {
+            "chunks": {
+              "1": "1e6015c7111ff7042a949969f5cd55cc767e26adee96380910df36fe4a17c8f5"
+            },
+            "content_hash": "1a940a9b987032b824a4acddb728abc243d2a7adcc12b5f89972e11885c20cfb",
+            "payload_hash": "c791b9f0c714c20b1eb7e862468c6cf149a546bf92099b9b1af46cbe05ced681"
+          },
+          "manifest_hash": "b616ebbe546f49d052a34a555bbaa4559a7f1ea4c2dde2af52c5e65edbec6e20",
+          "state": "VERIFIED",
+          "created_by": "a.tenant_admin",
+          "reason": "Approved publish",
+          "created_at": "2026-10-28T11:56:55.757390+08:00",
+          "code": "SIM-A",
+          "listing_state": "VERIFIED",
+          "tasks": [
+            {
+              "id": "300e1f8e-e9d8-4058-836c-7d742bc9f53a",
+              "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+              "intent_id": "5f9f5a3a-ec31-47da-a215-7015c38c4351",
+              "chunk_index": 0,
+              "action": "CONTENT",
+              "request_key": "881c5d53515e277b67b10e54885b62494e9c2e055321b45c59aa741d0a3b19fd",
+              "body": {
+                "cells": [],
+                "action": "CONTENT",
+                "content": {
+                  "plans": [
+                    {
+                      "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                      "meal": "BREAKFAST_2",
+                      "adults": 2,
+                      "payment": "AT_PROPERTY",
+                      "currency": "USD",
+                      "pool_key": "G5-965ce841/R1/POOL-1",
+                      "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                      "tax_basis": "NET_EXCLUSIVE",
+                      "cancellation": {
+                        "kind": "NONREF",
+                        "penalty_basis": "stay_total",
+                        "deadline_hours": 0
+                      }
+                    }
+                  ],
+                  "pools": [
+                    "G5-965ce841/R1/POOL-1"
+                  ],
+                  "scope": {
+                    "entities": [
+                      "properties",
+                      "rooms",
+                      "rate_plans",
+                      "inventory",
+                      "rates"
+                    ],
+                    "property_codes": [
+                      "G5-965ce841"
+                    ],
+                    "stay_date_from": "2027-01-10",
+                    "stay_date_to_exclusive": "2027-01-13"
+                  },
+                  "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+                },
+                "manifest": {
+                  "chunks": {
+                    "1": "1e6015c7111ff7042a949969f5cd55cc767e26adee96380910df36fe4a17c8f5"
+                  },
+                  "content_hash": "1a940a9b987032b824a4acddb728abc243d2a7adcc12b5f89972e11885c20cfb",
+                  "payload_hash": "c791b9f0c714c20b1eb7e862468c6cf149a546bf92099b9b1af46cbe05ced681"
+                },
+                "revision": 1,
+                "chunk_index": 0,
+                "manifest_hash": "b616ebbe546f49d052a34a555bbaa4559a7f1ea4c2dde2af52c5e65edbec6e20"
+              },
+              "request_hash": "edfabcb465f802239cf7bd5ac755276f3a51564a7b7eedc555d00189edc38115",
+              "state": "APPLIED",
+              "send_count": 1,
+              "query_count": 0,
+              "budget_cycle": 1,
+              "error": null,
+              "remote_operation": "4edc2e10-e1a2-45c3-a037-5235d38bfae7",
+              "deadline": "2026-10-28T12:11:55.757390+08:00",
+              "version": 3,
+              "cell_results": [],
+              "receipts": [
+                {
+                  "phase": "SEND",
+                  "status": 200,
+                  "data": {
+                    "state": "DONE",
+                    "result": {
+                      "cells": [],
+                      "status": "APPLIED",
+                      "revision": 1,
+                      "manifest_hash": "b616ebbe546f49d052a34a555bbaa4559a7f1ea4c2dde2af52c5e65edbec6e20"
+                    },
+                    "operation_id": "4edc2e10-e1a2-45c3-a037-5235d38bfae7"
+                  },
+                  "created_at": "2026-10-28T11:57:02.011102+08:00"
+                }
+              ]
+            },
+            {
+              "id": "e20bb0f8-21f6-488b-8f3c-15257f397992",
+              "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+              "intent_id": "5f9f5a3a-ec31-47da-a215-7015c38c4351",
+              "chunk_index": 1,
+              "action": "PUBLISH",
+              "request_key": "0c09c278647f58d10a87978546a5f179923aaf5403409a3a02d7fe4736d630a8",
+              "body": {
+                "cells": [
+                  {
+                    "key": "G5-965ce841/R1/POOL-1",
+                    "date": "2027-01-10",
+                    "kind": "pool",
+                    "quantity": 2,
+                    "sellable": true
+                  },
+                  {
+                    "key": "G5-965ce841/R1/POOL-1",
+                    "date": "2027-01-11",
+                    "kind": "pool",
+                    "quantity": 2,
+                    "sellable": true
+                  },
+                  {
+                    "key": "G5-965ce841/R1/POOL-1",
+                    "date": "2027-01-12",
+                    "kind": "pool",
+                    "quantity": 2,
+                    "sellable": true
+                  },
+                  {
+                    "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "date": "2027-01-10",
+                    "kind": "rate",
+                    "sellable": true,
+                    "net_amount": "105.0000",
+                    "sell_amount": "115.50"
+                  },
+                  {
+                    "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "date": "2027-01-11",
+                    "kind": "rate",
+                    "sellable": true,
+                    "net_amount": "105.0000",
+                    "sell_amount": "115.50"
+                  },
+                  {
+                    "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "date": "2027-01-12",
+                    "kind": "rate",
+                    "sellable": true,
+                    "net_amount": "105.0000",
+                    "sell_amount": "115.50"
+                  }
+                ],
+                "action": "PUBLISH",
+                "content": null,
+                "manifest": null,
+                "revision": 1,
+                "chunk_index": 1,
+                "manifest_hash": "b616ebbe546f49d052a34a555bbaa4559a7f1ea4c2dde2af52c5e65edbec6e20"
+              },
+              "request_hash": "9c052f3bc93df63ca21a9946a441e515b7b96d103b24520bf561c967293d4b3a",
+              "state": "APPLIED",
+              "send_count": 1,
+              "query_count": 0,
+              "budget_cycle": 1,
+              "error": null,
+              "remote_operation": "02bbd35a-3e39-406c-baed-d4175723fd44",
+              "deadline": "2026-10-28T12:11:55.757390+08:00",
+              "version": 3,
+              "cell_results": [
+                {
+                  "cell_key": "pool/G5-965ce841/R1/POOL-1/2027-01-10",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "pool/G5-965ce841/R1/POOL-1/2027-01-11",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "pool/G5-965ce841/R1/POOL-1/2027-01-12",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                  "state": "APPLIED",
+                  "code": null
+                }
+              ],
+              "receipts": [
+                {
+                  "phase": "SEND",
+                  "status": 200,
+                  "data": {
+                    "state": "DONE",
+                    "result": {
+                      "cells": [
+                        {
+                          "key": "pool/G5-965ce841/R1/POOL-1/2027-01-10",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "pool/G5-965ce841/R1/POOL-1/2027-01-11",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "pool/G5-965ce841/R1/POOL-1/2027-01-12",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                          "code": null,
+                          "state": "APPLIED"
+                        }
+                      ],
+                      "status": "APPLIED",
+                      "revision": 1,
+                      "manifest_hash": "b616ebbe546f49d052a34a555bbaa4559a7f1ea4c2dde2af52c5e65edbec6e20"
+                    },
+                    "operation_id": "02bbd35a-3e39-406c-baed-d4175723fd44"
+                  },
+                  "created_at": "2026-10-28T11:57:05.378547+08:00"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "fc569489-a320-4852-8873-66cec7f989c4",
+          "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+          "listing_id": "e5cb48a1-44a5-4cce-9b60-79f923b0a8fc",
+          "snapshot_id": "3c21cfc5-aea4-4f56-b512-f596d2b033e9",
+          "plan_id": "c3c9d4c6-a2a4-4d5c-b124-e36b1633fb17",
+          "action": "PUBLISH",
+          "desired_revision": 1,
+          "delivery_revision": 1,
+          "stop_epoch": 0,
+          "payload": {
+            "cells": [
+              {
+                "key": "G5-965ce841/R1/POOL-1",
+                "date": "2027-01-10",
+                "kind": "pool",
+                "quantity": 1,
+                "sellable": true
+              },
+              {
+                "key": "G5-965ce841/R1/POOL-1",
+                "date": "2027-01-11",
+                "kind": "pool",
+                "quantity": 1,
+                "sellable": true
+              },
+              {
+                "key": "G5-965ce841/R1/POOL-1",
+                "date": "2027-01-12",
+                "kind": "pool",
+                "quantity": 1,
+                "sellable": true
+              },
+              {
+                "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "date": "2027-01-10",
+                "kind": "rate",
+                "sellable": true,
+                "net_amount": "105.0000",
+                "sell_amount": "115.50"
+              },
+              {
+                "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "date": "2027-01-11",
+                "kind": "rate",
+                "sellable": true,
+                "net_amount": "105.0000",
+                "sell_amount": "115.50"
+              },
+              {
+                "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "date": "2027-01-12",
+                "kind": "rate",
+                "sellable": true,
+                "net_amount": "105.0000",
+                "sell_amount": "115.50"
+              }
+            ],
+            "content": {
+              "plans": [
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "meal": "BREAKFAST_2",
+                  "adults": 2,
+                  "payment": "AT_PROPERTY",
+                  "currency": "USD",
+                  "pool_key": "G5-965ce841/R1/POOL-1",
+                  "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                  "tax_basis": "NET_EXCLUSIVE",
+                  "cancellation": {
+                    "kind": "NONREF",
+                    "penalty_basis": "stay_total",
+                    "deadline_hours": 0
+                  }
+                }
+              ],
+              "pools": [
+                "G5-965ce841/R1/POOL-1"
+              ],
+              "scope": {
+                "entities": [
+                  "properties",
+                  "rooms",
+                  "rate_plans",
+                  "inventory",
+                  "rates"
+                ],
+                "property_codes": [
+                  "G5-965ce841"
+                ],
+                "stay_date_from": "2027-01-10",
+                "stay_date_to_exclusive": "2027-01-13"
+              },
+              "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+            }
+          },
+          "payload_hash": "2c9948faa8679eaa25390f9f7508f95b58bf72b5a4ddcbfa1d59efc265aa370f",
+          "manifest": {
+            "chunks": {
+              "1": "44261e07d9b9ec64947302773921ae2954e9edba0a64c9b2979edd60c9d661ea"
+            },
+            "content_hash": "7c645a2e6116f5e7efddc8da04626ee509e0c811355d49f6bc06864148306a20",
+            "payload_hash": "2c9948faa8679eaa25390f9f7508f95b58bf72b5a4ddcbfa1d59efc265aa370f"
+          },
+          "manifest_hash": "6d56a96b6ac0addbcd4f137f76212b128df2110e5fc90902ed752c869ff685f5",
+          "state": "VERIFIED",
+          "created_by": "a.tenant_admin",
+          "reason": "Approved publish",
+          "created_at": "2026-10-28T11:56:55.757390+08:00",
+          "code": "SIM-B",
+          "listing_state": "VERIFIED",
+          "tasks": [
+            {
+              "id": "02711c53-cd4d-4bbe-9907-8f870d051190",
+              "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+              "intent_id": "fc569489-a320-4852-8873-66cec7f989c4",
+              "chunk_index": 0,
+              "action": "CONTENT",
+              "request_key": "ecc1f682963d87b5c593e0f9c15b3422c2e767e70ebee185236523442e6e8d49",
+              "body": {
+                "cells": [],
+                "action": "CONTENT",
+                "content": {
+                  "plans": [
+                    {
+                      "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                      "meal": "BREAKFAST_2",
+                      "adults": 2,
+                      "payment": "AT_PROPERTY",
+                      "currency": "USD",
+                      "pool_key": "G5-965ce841/R1/POOL-1",
+                      "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                      "tax_basis": "NET_EXCLUSIVE",
+                      "cancellation": {
+                        "refundable": false
+                      }
+                    }
+                  ],
+                  "pools": [
+                    "G5-965ce841/R1/POOL-1"
+                  ],
+                  "scope": {
+                    "entities": [
+                      "properties",
+                      "rooms",
+                      "rate_plans",
+                      "inventory",
+                      "rates"
+                    ],
+                    "property_codes": [
+                      "G5-965ce841"
+                    ],
+                    "stay_date_from": "2027-01-10",
+                    "stay_date_to_exclusive": "2027-01-13"
+                  },
+                  "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+                },
+                "manifest": {
+                  "chunks": {
+                    "1": "44261e07d9b9ec64947302773921ae2954e9edba0a64c9b2979edd60c9d661ea"
+                  },
+                  "content_hash": "7c645a2e6116f5e7efddc8da04626ee509e0c811355d49f6bc06864148306a20",
+                  "payload_hash": "2c9948faa8679eaa25390f9f7508f95b58bf72b5a4ddcbfa1d59efc265aa370f"
+                },
+                "revision": 1,
+                "chunk_index": 0,
+                "manifest_hash": "6d56a96b6ac0addbcd4f137f76212b128df2110e5fc90902ed752c869ff685f5"
+              },
+              "request_hash": "ffbfdaf74d4f7b73affcabcf6a4d93b8d1722fd744f38f2e9bb5d9d0aaaf803f",
+              "state": "APPLIED",
+              "send_count": 1,
+              "query_count": 0,
+              "budget_cycle": 1,
+              "error": null,
+              "remote_operation": "24c21ce3-6bf8-485f-8c9c-f484bcc97054",
+              "deadline": "2026-10-28T12:11:55.757390+08:00",
+              "version": 3,
+              "cell_results": [],
+              "receipts": [
+                {
+                  "phase": "SEND",
+                  "status": 200,
+                  "data": {
+                    "state": "DONE",
+                    "result": {
+                      "cells": [],
+                      "status": "APPLIED",
+                      "revision": 1,
+                      "manifest_hash": "6d56a96b6ac0addbcd4f137f76212b128df2110e5fc90902ed752c869ff685f5"
+                    },
+                    "operation_id": "24c21ce3-6bf8-485f-8c9c-f484bcc97054"
+                  },
+                  "created_at": "2026-10-28T11:57:02.295118+08:00"
+                }
+              ]
+            },
+            {
+              "id": "28b47f59-8e2a-4086-96af-10969e9aab23",
+              "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+              "intent_id": "fc569489-a320-4852-8873-66cec7f989c4",
+              "chunk_index": 1,
+              "action": "PUBLISH",
+              "request_key": "ff3cd89aa5e8f9c22db471a5120c0561c51757c575561d971211bdc8bb496e3d",
+              "body": {
+                "cells": [
+                  {
+                    "key": "G5-965ce841/R1/POOL-1",
+                    "date": "2027-01-10",
+                    "kind": "pool",
+                    "quantity": 1,
+                    "sellable": true
+                  },
+                  {
+                    "key": "G5-965ce841/R1/POOL-1",
+                    "date": "2027-01-11",
+                    "kind": "pool",
+                    "quantity": 1,
+                    "sellable": true
+                  },
+                  {
+                    "key": "G5-965ce841/R1/POOL-1",
+                    "date": "2027-01-12",
+                    "kind": "pool",
+                    "quantity": 1,
+                    "sellable": true
+                  },
+                  {
+                    "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "date": "2027-01-10",
+                    "kind": "rate",
+                    "sellable": true,
+                    "net_amount": "105.0000",
+                    "sell_amount": "115.50"
+                  },
+                  {
+                    "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "date": "2027-01-11",
+                    "kind": "rate",
+                    "sellable": true,
+                    "net_amount": "105.0000",
+                    "sell_amount": "115.50"
+                  },
+                  {
+                    "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "date": "2027-01-12",
+                    "kind": "rate",
+                    "sellable": true,
+                    "net_amount": "105.0000",
+                    "sell_amount": "115.50"
+                  }
+                ],
+                "action": "PUBLISH",
+                "content": null,
+                "manifest": null,
+                "revision": 1,
+                "chunk_index": 1,
+                "manifest_hash": "6d56a96b6ac0addbcd4f137f76212b128df2110e5fc90902ed752c869ff685f5"
+              },
+              "request_hash": "73ffc21c61fb8103d133918651665dd77557b631adc310c256bbc3ff743007b6",
+              "state": "APPLIED",
+              "send_count": 1,
+              "query_count": 1,
+              "budget_cycle": 1,
+              "error": null,
+              "remote_operation": "15d2905c-a49e-43ac-81df-db44506ebbbc",
+              "deadline": "2026-10-28T12:11:55.757390+08:00",
+              "version": 4,
+              "cell_results": [
+                {
+                  "cell_key": "pool/G5-965ce841/R1/POOL-1/2027-01-10",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "pool/G5-965ce841/R1/POOL-1/2027-01-11",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "pool/G5-965ce841/R1/POOL-1/2027-01-12",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                  "state": "APPLIED",
+                  "code": null
+                },
+                {
+                  "cell_key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                  "state": "APPLIED",
+                  "code": null
+                }
+              ],
+              "receipts": [
+                {
+                  "phase": "QUERY",
+                  "status": 200,
+                  "data": {
+                    "state": "DONE",
+                    "result": {
+                      "cells": [
+                        {
+                          "key": "pool/G5-965ce841/R1/POOL-1/2027-01-10",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "pool/G5-965ce841/R1/POOL-1/2027-01-11",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "pool/G5-965ce841/R1/POOL-1/2027-01-12",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                          "code": null,
+                          "state": "APPLIED"
+                        },
+                        {
+                          "key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                          "code": null,
+                          "state": "APPLIED"
+                        }
+                      ],
+                      "status": "APPLIED",
+                      "revision": 1,
+                      "manifest_hash": "6d56a96b6ac0addbcd4f137f76212b128df2110e5fc90902ed752c869ff685f5"
+                    },
+                    "operation_id": "15d2905c-a49e-43ac-81df-db44506ebbbc"
+                  },
+                  "created_at": "2026-10-28T11:57:07.501396+08:00"
+                },
+                {
+                  "phase": "SEND",
+                  "status": 202,
+                  "data": {
+                    "state": "PROCESSING",
+                    "result": {},
+                    "operation_id": "15d2905c-a49e-43ac-81df-db44506ebbbc"
+                  },
+                  "created_at": "2026-10-28T11:57:06.186138+08:00"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "seconds": 12.562999999994645,
+    "status": "VERIFIED"
+  },
+  "new_business_stop": {
+    "seconds": 2.7030000000086147,
+    "results": [
+      {
+        "id": "580d51a5-a45c-4c23-b9f4-677ab57ac007",
+        "state": "STOPPED",
+        "desired": 2,
+        "observed": 2
+      },
+      {
+        "id": "e5cb48a1-44a5-4cce-9b60-79f923b0a8fc",
+        "state": "STOPPED",
+        "desired": 2,
+        "observed": 2
+      }
+    ]
+  },
+  "status": "PASSED_CONSERVATIVE_RESTORE",
+  "duration_from_quarantine_seconds": 28.687999999994645,
+  "restore_plus_reconciliation_seconds": 38.54800000000978,
+  "completed_at": "2026-10-28T03:57:11.001627+00:00"
+}

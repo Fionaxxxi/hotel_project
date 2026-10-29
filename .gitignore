@@ -1,0 +1,15 @@
+.env
+.env.*
+!.env.example
+.codex/
+.agents/
+.aws/
+.impeccable/
+.runtime/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.pyc
+*.log
+node_modules/
+apps/admin/dist/

@@ -1,0 +1,1257 @@
+{
+  "version": "g4-hard-conflicts-v1",
+  "synthetic": true,
+  "independent_human_adjudication": false,
+  "cases": [
+    {
+      "id": "HC-01",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Same City"
+        }
+      },
+      "target": {
+        "country_code": "JP",
+        "city": "Same City"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-02",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Same City"
+        }
+      },
+      "target": {
+        "country_code": "US",
+        "city": "Same City"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-03",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Same City"
+        }
+      },
+      "target": {
+        "country_code": "SG",
+        "city": "Same City"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-04",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Same City"
+        }
+      },
+      "target": {
+        "country_code": "GB",
+        "city": "Same City"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-05",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Same City"
+        }
+      },
+      "target": {
+        "country_code": "AU",
+        "city": "Same City"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-06",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Xiamen"
+        }
+      },
+      "target": {
+        "country_code": "CN",
+        "city": "Shanghai"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-07",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Shanghai"
+        }
+      },
+      "target": {
+        "country_code": "CN",
+        "city": "Beijing"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-08",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Hangzhou"
+        }
+      },
+      "target": {
+        "country_code": "CN",
+        "city": "Suzhou"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-09",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Nanjing"
+        }
+      },
+      "target": {
+        "country_code": "CN",
+        "city": "Wuhan"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-10",
+      "source": {
+        "kind": "property",
+        "data": {
+          "country_code": "CN",
+          "city": "Xiamen"
+        }
+      },
+      "target": {
+        "country_code": "CN",
+        "city": "Quanzhou"
+      },
+      "expected": "LOCATION_CONFLICT",
+      "parent": null
+    },
+    {
+      "id": "HC-11",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "TWIN",
+        "max_adults": 2
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-12",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "TWIN",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-13",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "UNKNOWN",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-14",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "UNKNOWN",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "TWIN",
+        "max_adults": 2
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-15",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "UNKNOWN",
+        "max_adults": 2
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-16",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "TWIN",
+        "max_adults": 3
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-17",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "TWIN",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 3
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-18",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "UNKNOWN",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 3
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-19",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "UNKNOWN",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "TWIN",
+        "max_adults": 3
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-20",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "UNKNOWN",
+        "max_adults": 3
+      },
+      "expected": "BED_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-21",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "1"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "OCCUPANCY_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-22",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 1
+      },
+      "expected": "OCCUPANCY_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-23",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 3
+      },
+      "expected": "OCCUPANCY_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-24",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "OCCUPANCY_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-25",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "3"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 4
+      },
+      "expected": "OCCUPANCY_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-26",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "4"
+        }
+      },
+      "target": {
+        "property_id": "hotel-1",
+        "bed_type": "KING",
+        "max_adults": 3
+      },
+      "expected": "OCCUPANCY_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-27",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-2",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "PARENT_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-28",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-3",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "PARENT_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-29",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-4",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "PARENT_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-30",
+      "source": {
+        "kind": "room",
+        "data": {
+          "bed_type": "KING",
+          "max_adults": "2"
+        }
+      },
+      "target": {
+        "property_id": "hotel-5",
+        "bed_type": "KING",
+        "max_adults": 2
+      },
+      "expected": "PARENT_CONFLICT",
+      "parent": "hotel-1"
+    },
+    {
+      "id": "HC-31",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "FLEX",
+          "deadline_hours": 24,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-32",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 24, \"kind\": \"FLEX\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-33",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "FLEX",
+          "deadline_hours": 48,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-34",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 48, \"kind\": \"FLEX\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-35",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "FLEX",
+          "deadline_hours": 72,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-36",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 72, \"kind\": \"FLEX\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-37",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "FLEX",
+          "deadline_hours": 96,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-38",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 96, \"kind\": \"FLEX\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-39",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "FLEX",
+          "deadline_hours": 120,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-40",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 120, \"kind\": \"FLEX\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-41",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "NONE",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_1",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "MEAL_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-42",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "NONE",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "MEAL_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-43",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_1",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "NONE",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "MEAL_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-44",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "NONE",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "MEAL_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-45",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_1",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "MEAL_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-46",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "UNKNOWN",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "NONE",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "MEAL_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-47",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "PREPAY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "PAYMENT_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-48",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "PREPAY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "PAYMENT_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-49",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "UNKNOWN",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "PAYMENT_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-50",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "UNKNOWN",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "PREPAY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "PAYMENT_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-51",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "UNKNOWN",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "PAYMENT_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-52",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "PREPAY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "UNKNOWN",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "PAYMENT_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-53",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "GROSS_INCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "TAX_BASIS_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-54",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "GROSS_INCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "TAX_BASIS_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-55",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "UNKNOWN",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "TAX_BASIS_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-56",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "UNKNOWN",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "GROSS_INCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "TAX_BASIS_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-57",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "UNKNOWN",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "TAX_BASIS_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-58",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "GROSS_INCLUSIVE",
+          "cancellation": "{\"deadline_hours\": 0, \"kind\": \"NONREF\", \"penalty_basis\": \"stay_total\"}"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "UNKNOWN",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "TAX_BASIS_CONFLICT",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-59",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "{"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_UNKNOWN",
+      "parent": "room-1"
+    },
+    {
+      "id": "HC-60",
+      "source": {
+        "kind": "rate",
+        "data": {
+          "meal": "BREAKFAST_2",
+          "payment": "AT_PROPERTY",
+          "tax_basis": "NET_EXCLUSIVE",
+          "cancellation": "unknown"
+        }
+      },
+      "target": {
+        "meal": "BREAKFAST_2",
+        "payment": "AT_PROPERTY",
+        "tax_basis": "NET_EXCLUSIVE",
+        "cancellation": {
+          "kind": "NONREF",
+          "deadline_hours": 0,
+          "penalty_basis": "stay_total"
+        },
+        "plan_id": null
+      },
+      "expected": "CANCELLATION_UNKNOWN",
+      "parent": "room-1"
+    }
+  ]
+}

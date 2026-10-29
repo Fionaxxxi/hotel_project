@@ -1,0 +1,299 @@
+{
+  "captured_at": "2026-10-27T03:33:07.348330+00:00",
+  "python": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+  "python_version": "3.12.15",
+  "databases": {
+    "core": {
+      "database": "hotel_project",
+      "version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+      "migrations": [
+        [
+          "001_foundation",
+          "61f87f08663c2c7da4a51199c4d75b3c1ad68f5a951e9aeb6191257010760bf4"
+        ],
+        [
+          "002_g1",
+          "ab168ad136d5793441270a3d83cb42c2d90e003fd5a622e229959161e6ec3c94"
+        ],
+        [
+          "003_command_idempotency",
+          "0919e1cacf20e12f7eccd2c88745b0f1851a7ae4e01e07b5f82cde988bc94130"
+        ],
+        [
+          "004_channel_codes",
+          "33e0c1d555a248203e9ca29270b9da86e51dd4b40735d4c1b530de7fd5fae5c8"
+        ],
+        [
+          "005_g2_foundation",
+          "e6c3010862b08208c875732e3d8d7ea1c675b8a41c325a75d1f44f6c0cd24bbe"
+        ],
+        [
+          "006_generation_links",
+          "aedb9e8ae5a3799db31a0675fe99f6c95da85aaa2ce9a121bc5107ea2fd8c91e"
+        ],
+        [
+          "007_event_guards",
+          "d78325f53bfbfe58a48ea7bd94098fb939122c92497ac6550de61b3604985c7d"
+        ],
+        [
+          "008_g3_distribution",
+          "e55b826b675e8f7612cab0033f11b67313499adfa3c9ec0bd6e03703d455633b"
+        ],
+        [
+          "009_g3_readiness",
+          "5b5989992a81e7cb3a95665e9e8fe1edf513c9a258fb88cfa70fe97888d5a271"
+        ],
+        [
+          "010_g3_definition",
+          "b4fb03f6cd8818927f26223739aca5990e4db8a6f542e7b89ac9c1c4f4e7a4a0"
+        ]
+      ],
+      "role_flags": [
+        [
+          "hotel_app",
+          false,
+          false
+        ],
+        [
+          "hotel_migrator",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_migrator",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_migrator",
+          false,
+          false
+        ]
+      ]
+    },
+    "sim_a": {
+      "database": "hotel_project_sim",
+      "version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+      "migrations": [
+        [
+          "001",
+          "3a2228455e355e498c559da8d1987602d271af496adfb086f90aa918f5fe761f"
+        ],
+        [
+          "002_g3_protocol",
+          "b69334b1c2a943fcc062f112a99a97c4e89c43446edab9a60035b00d14359795"
+        ],
+        [
+          "003_g3_quota",
+          "c497309bdf5ed902803ac2b839df815072bfda7ae0cc8be623ad5b652db8cbb4"
+        ]
+      ],
+      "role_flags": [
+        [
+          "hotel_app",
+          false,
+          false
+        ],
+        [
+          "hotel_migrator",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_migrator",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_migrator",
+          false,
+          false
+        ]
+      ]
+    },
+    "sim_b": {
+      "database": "hotel_project_sim_b",
+      "version": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+      "migrations": [
+        [
+          "001_protocol",
+          "c3f8ac64ea7c42252e8f4bb5330257b11039f80416da7017a9a9d4ac803ff09e"
+        ],
+        [
+          "002_quota",
+          "ea18e8ae9941c1fcb6bd9345472a7dc82bd8b221ca42f169ddad590cd3687ff0"
+        ]
+      ],
+      "role_flags": [
+        [
+          "hotel_app",
+          false,
+          false
+        ],
+        [
+          "hotel_migrator",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_migrator",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_migrator",
+          false,
+          false
+        ]
+      ]
+    }
+  },
+  "processes": {
+    "api": {
+      "pid": 21864,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "uvicorn",
+        "services.core.main:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000"
+      ]
+    },
+    "g3-worker-0": {
+      "pid": 23192,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g3.worker"
+      ]
+    },
+    "g3-worker-1": {
+      "pid": 29336,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g3.worker"
+      ]
+    },
+    "g2-worker-0": {
+      "pid": 37780,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g2.worker",
+        "--lane",
+        "parse"
+      ]
+    },
+    "g2-worker-1": {
+      "pid": 32164,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g2.worker",
+        "--lane",
+        "control"
+      ]
+    },
+    "sim": {
+      "pid": 19844,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "uvicorn",
+        "services.channel_simulator.main:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8001"
+      ]
+    },
+    "sim-b": {
+      "pid": 33120,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "uvicorn",
+        "services.channel_simulator_b.main:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8002"
+      ]
+    }
+  },
+  "sim_health": {
+    "8001": {
+      "channel": "SIM-A",
+      "capability": "sim-a-g3-v1",
+      "simulation": true
+    },
+    "8002": {
+      "channel": "SIM-B",
+      "capability": "sim-b-v1",
+      "simulation": true
+    }
+  },
+  "core_ready": {
+    "status": "ready",
+    "migration": "010"
+  },
+  "normal_faults_enabled": "false"
+}

@@ -1,0 +1,492 @@
+{
+  "status": "PASSED",
+  "scenario_count": 50,
+  "scope": "local synthetic S-A, one source/property, USD two adults, NONREF, independent SIM-A/B",
+  "scenarios": [
+    {
+      "id": "G4-01",
+      "scenario": "G3兼容基线复跑",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-baseline.xml",
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-02",
+      "scenario": "实际本地模型推理",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-model-runs.jsonl",
+        "g4-final-browser-server.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-03",
+      "scenario": "结构化字段与模型职责",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "../../contracts/ai/v1/README.md",
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-04",
+      "scenario": "冻结候选白名单",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "../../services/core/g4/ai.py"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-05",
+      "scenario": "引用及原文核验",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-browser.json",
+        "g4-final-browser-server.json"
+      ],
+      "scope_note": "建议引用为冻结事实及投影位置；原件定位继续沿既有provenance，不把投影行号冒充原始行号。"
+    },
+    {
+      "id": "G4-06",
+      "scenario": "非法Schema/数值/超大输出",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-07",
+      "scenario": "同名异店与NONE",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-ai-eval.json",
+        "g4-browser.json"
+      ],
+      "scope_note": "NONE误建议如实单列；人工可不采用任何建议，不启用自动匹配。"
+    },
+    {
+      "id": "G4-08",
+      "scenario": "房型/政策硬冲突",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-hard-conflicts.xml",
+        "../../datasets/g4/hard-conflicts-v1.json"
+      ],
+      "scope_note": "60组语义输入互不重复；合成、无独立双人标注，不外推真实分布。"
+    },
+    {
+      "id": "G4-09",
+      "scenario": "输入提示注入/HTML",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-browser.json",
+        "g4-final-narrow-security.png"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-10",
+      "scenario": "缓存隔离和版本失效",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-11",
+      "scenario": "缺模型/断网/停用",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-http-smoke-disabled.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-12",
+      "scenario": "真正超时与预算",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-13",
+      "scenario": "AI Worker崩溃与旧结果",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-14",
+      "scenario": "模型无写权限",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "../../services/core/g4/local_model.py",
+        "../../services/core/g4/model_process.py",
+        "g4-final-browser-server.json"
+      ],
+      "scope_note": "推理进程不传DB/渠道凭证，不加载任意远程代码；不是操作系统恶意代码隔离证明。"
+    },
+    {
+      "id": "G4-15",
+      "scenario": "策略默认关闭与跨租户",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-16",
+      "scenario": "策略四眼审批",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-browser.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-17",
+      "scenario": "策略范围与重叠",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "../../infra/migrations/011_g4_automation.sql",
+        "../../services/core/g4/policy.py"
+      ],
+      "scope_note": "同source仅一条ENABLED策略由数据库唯一索引和状态命令共同约束；范围逐字段比较。"
+    },
+    {
+      "id": "G4-18",
+      "scenario": "两类授权分离",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-final-browser-server.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-19",
+      "scenario": "常规小幅价格更新",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-final-browser-server.json",
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-20",
+      "scenario": "阈值端点及Decimal",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-21",
+      "scenario": "连续小涨累计越界",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-22",
+      "scenario": "条款/币种/规则变化",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-hard-conflicts.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-23",
+      "scenario": "安全库存更新",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-final-browser-server.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-24",
+      "scenario": "容量不足或库存骤降",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-25",
+      "scenario": "范围/删除与文件mode",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-26",
+      "scenario": "无来源序号/模板未知",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "../../services/core/g4/workflow.py"
+      ],
+      "scope_note": "当前合同要求source_sequence，旧序号/未知合同不获得自动激活资格。"
+    },
+    {
+      "id": "G4-27",
+      "scenario": "每快照独立机器决定",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-final-browser-server.json",
+        "g4-browser.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-28",
+      "scenario": "旧人审接口不能伪机器批准",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-29",
+      "scenario": "决策到提交之间撤权",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-30",
+      "scenario": "派发许可前后暂停竞争",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-race-tests.xml"
+      ],
+      "scope_note": "测试延迟发生在派发许可提交后、实际HTTP前；暂停后放行真实请求仍可落地，不称为撤回。"
+    },
+    {
+      "id": "G4-31",
+      "scenario": "停用不等于停售",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-http-smoke.json",
+        "g4-browser.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-32",
+      "scenario": "停售防复活",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-33",
+      "scenario": "工作流所有权",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-34",
+      "scenario": "合格更新无逐步点击",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-final-browser-server.json",
+        "g4-final-desktop-workflow.png"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-35",
+      "scenario": "映射安全复用",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-final-browser-server.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-36",
+      "scenario": "新实体等待与恢复",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-browser.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-37",
+      "scenario": "策略外异常人工批准",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-final-browser-server.json",
+        "g4-final-narrow-wait.png"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-38",
+      "scenario": "质量/范围人工处理",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-39",
+      "scenario": "额度修正恢复",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-40",
+      "scenario": "新来源并发/迟到事件",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-41",
+      "scenario": "重复消费与并发Worker",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-42",
+      "scenario": "真进程崩溃窗口",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-43",
+      "scenario": "G3故障兼容",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-44",
+      "scenario": "AI高负载下关闭",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-http-smoke.json"
+      ],
+      "scope_note": "135次实际推理与关闭并行；仅本次CPU负载，不冒称100个生产队列积压或SLA。"
+    },
+    {
+      "id": "G4-45",
+      "scenario": "RLS/FK与资源鉴权",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-tests.xml",
+        "g4-environment.json"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    },
+    {
+      "id": "G4-46",
+      "scenario": "真实浏览器闭环",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-browser.json",
+        "g4-final-narrow-stop.png",
+        "g4-final-desktop-stop.png"
+      ],
+      "scope_note": "浏览器viewport 390×844与1280×800；排除滚动条后页面宽375/1265，无页面横向溢出，四列表局部滚动。"
+    },
+    {
+      "id": "G4-47",
+      "scenario": "规则与实际模型对照",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-ai-eval.json",
+        "g4-model-runs.jsonl"
+      ],
+      "scope_note": "候选为预构建包，召回只报告包内覆盖；并非数据库召回/生产准确率验收。"
+    },
+    {
+      "id": "G4-48",
+      "scenario": "实际性能与预算",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-ai-eval.json",
+        "g4-http-smoke.json"
+      ],
+      "scope_note": "冷热分开199热样本，RSS为模型子进程；不含API/数据库。"
+    },
+    {
+      "id": "G4-49",
+      "scenario": "全链追溯与安全展示",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-final-browser-server.json",
+        "g4-environment.json"
+      ],
+      "scope_note": "原件→G2/G3 provenance和新增引用可追溯；完整一键审计回放体验属于G5。"
+    },
+    {
+      "id": "G4-50",
+      "scenario": "独立进程最终演示与交接",
+      "result": "PASS_LOCAL_SCOPED",
+      "evidence": [
+        "g4-http-smoke.json",
+        "g4-http-smoke-disabled.json",
+        "g4-final-browser-server.json",
+        "../runbooks/g4-local.md"
+      ],
+      "scope_note": "当前本机合成来源及独立模拟渠道范围；详见正式报告与原始测试。"
+    }
+  ]
+}

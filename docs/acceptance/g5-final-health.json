@@ -1,0 +1,36 @@
+{
+  "at": "2026-10-29T01:50:23.548599+00:00",
+  "status": "PASSED",
+  "process_health_exit": 0,
+  "process_health": [
+    "SIM-A ready on loopback",
+    "SIM-B ready on loopback",
+    "core ready on loopback",
+    "api verified: PID 45896",
+    "g3-worker-0 verified: PID 16532",
+    "g3-worker-1 verified: PID 35432",
+    "g2-worker-0 verified: PID 33120",
+    "g2-worker-1 verified: PID 25876",
+    "g4-flow verified: PID 24220",
+    "g4-ai verified: PID 40816",
+    "G4 processes and schema ready",
+    "G5 operations process verified: PID 3088"
+  ],
+  "profile": {
+    "offline_only": true,
+    "simulator_profile": "normal",
+    "ai_enabled": true
+  },
+  "readonly_fault_probes": [
+    {
+      "channel": "SIM-A",
+      "status": 404,
+      "disabled": true
+    },
+    {
+      "channel": "SIM-B",
+      "status": 404,
+      "disabled": true
+    }
+  ]
+}

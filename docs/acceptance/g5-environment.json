@@ -1,0 +1,30 @@
+{
+  "at": "2026-10-29T01:50:31.006782+00:00",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "prefix": "D:\\miniconda3\\envs\\hotel_project",
+  "schema_expected": "022",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "versions": {
+    "fastapi": "0.162.0",
+    "psycopg": "3.3.6",
+    "onnxruntime": "1.31.1",
+    "tokenizers": "0.23.3",
+    "pytest": "9.1.1",
+    "ruff": "0.17.2",
+    "psutil": "7.2.2",
+    "imageio-ffmpeg": "0.6.0"
+  },
+  "scope": "local synthetic, independent simulators, project Conda only",
+  "python_executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+  "dedicated_conda_environment": true,
+  "cpu_logical": 18,
+  "ram_bytes": 33945935872,
+  "node": "v24.16.0",
+  "postgresql": "18.4",
+  "locked_inputs": {
+    "requirements.lock.txt": "df1ae7097e9717283d210b7fdf4747d8976aa9330e496262e7d7b346512b6432",
+    "conda-explicit-win-64.txt": "8229d9cbe4e4542e9ffbef781c482336ac6bf01bc090e9638ea9295a1660cf9e",
+    "apps/admin/package-lock.json": "659caf55ed4223f6b41068862b07477670c1096a4f428fe5536ca57435fc6db4",
+    ".runtime/models/multilingual-minilm/manifest.json": "1756c0812a947f60c54d2d33b15ae26743eea81c54de3b55ad974b9b84ad16cf"
+  }
+}

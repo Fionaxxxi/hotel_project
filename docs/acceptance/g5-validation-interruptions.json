@@ -1,0 +1,24 @@
+{
+  "status": "RETAINED_NON_PASS_ATTEMPTS",
+  "date": "2026-10-29",
+  "timezone": "Asia/Shanghai",
+  "attempts": [
+    {
+      "stage": "final regression after transient pool recovery patch",
+      "result": "INTERRUPTED",
+      "process_exit_code": 1073807364,
+      "note": "Tool session interruption terminated the running process before JUnit completion. Existing 305-case result retained separately; interruption is not a pass."
+    },
+    {
+      "stage": "immediate retry preparation",
+      "result": "DATABASE_NOT_READY",
+      "note": "PostgreSQL reported database system is starting up. prepare_tests could not connect; simulators were not ready. No database reset or recovery bypass."
+    }
+  ],
+  "database_recovery": {
+    "ready_at": "2026-10-29T09:15:10.455+08:00",
+    "evidence": "Project postgres.log: end-of-recovery checkpoint complete, database system is ready to accept connections. Private log excluded from release.",
+    "action": "Waited for pg_isready success, then restarted complete regression against isolated G5 test databases."
+  },
+  "final_result": "See g5-tests.xml and g5-final-health.json; this record alone never proves success."
+}

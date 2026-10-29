@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AI 酒店库存匹配与多渠道分销平台：本地文件 MVP、业务流程、领域模型、架构、接口、测试、演示与分阶段实施。">
+<title>AI 酒店库存匹配与多渠道分销平台 · 产品与技术设计说明书</title>
+<style>
+:root{--paper:#faf9f5;--ink:#172c40;--muted:#4d6372;--line:#ccd5d8;--accent:#00665f;--soft:#eaf2ef;--warn:#874518;--warm:#fff0df;--code:#edf0f3}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:28px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.85 "Microsoft YaHei","PingFang SC",sans-serif}a{color:var(--accent);text-underline-offset:4px}a:hover{color:#003d39}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #b95719;outline-offset:4px}::selection{background:#b9ded3;color:#102e2b}nav{position:fixed;inset:0 auto 0 0;width:256px;overflow:auto;padding:30px 22px;background:#f0f2ef;border-right:1px solid var(--line)}nav strong{display:block;font-size:20px;margin-bottom:6px}nav small{color:var(--muted)}nav ol{list-style:none;padding:18px 0;margin:0}nav li{margin:2px 0}nav a{display:block;padding:5px 8px;text-decoration:none;font-size:13px;border-radius:3px}nav a:hover,nav a[aria-current=true]{background:#dce9e3;color:#003e38}main{max-width:1450px;margin-left:256px;padding:56px 5vw 100px}header{padding:10px 0 38px;border-bottom:2px solid var(--ink)}h1{font-size:clamp(32px,4vw,54px);line-height:1.3;font-weight:750;max-width:1000px;margin:15px 0 24px;letter-spacing:-.025em}h1 span{display:block;font-size:.54em;line-height:1.6;margin-top:14px;font-weight:500}h2{font-size:28px;line-height:1.45;margin:0 0 24px;padding-bottom:16px;border-bottom:1px solid var(--line)}h3{font-size:20px;line-height:1.5;margin:32px 0 12px}h4{font-size:17px;margin:24px 0 9px}p{margin:10px 0 18px;max-width:88ch}section{padding-top:60px}section:target h2{color:var(--accent)}.lead{font-size:19px;max-width:70ch}.meta{display:flex;flex-wrap:wrap;gap:9px 24px;color:var(--muted);font-size:13px}.notice{background:var(--soft);padding:20px 24px;margin:24px 0;border:1px solid #c3d7cf}.warning{background:var(--warm);border-color:#e3c9aa;color:#673612}.notice p:last-child{margin-bottom:0}.tag{display:inline-block;border:1px solid #88aaa0;color:#00584f;padding:1px 8px;font-size:12px;margin:0 6px 5px 0;border-radius:2px}.table-wrap{overflow:auto;margin:18px 0 26px;border:1px solid var(--line)}table{border-collapse:collapse;width:100%;font-size:14px;line-height:1.75}th,td{padding:13px 15px;vertical-align:top;text-align:left;border-bottom:1px solid var(--line);min-width:100px}th{background:#e7edeb;font-weight:650}tr:last-child td{border-bottom:0}td:first-child{font-weight:600}td ul{margin:0;padding-left:18px}code,pre{font-family:Consolas,"Microsoft YaHei",monospace;font-size:13px}code{background:var(--code);padding:2px 5px;overflow-wrap:anywhere}pre{background:#142b3c;color:#e9f1f4;padding:22px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.75;tab-size:2}pre code{background:none;padding:0}ul,ol{padding-left:24px}li{margin:6px 0}.two{display:grid;grid-template-columns:1fr 1fr;gap:26px}.diagram{margin:24px 0;padding:20px;background:#fff;border:1px solid var(--line);overflow:auto}.diagram svg{display:block;width:100%;min-width:660px;height:auto}.diagram figcaption{font-size:13px;color:var(--muted);margin-top:12px}.diagram text{font-family:"Microsoft YaHei",sans-serif;fill:#172c40;font-size:15px}.diagram .box{fill:#edf4f0;stroke:#85aaa0;stroke-width:1.3}.diagram .neutral{fill:#edf0f5;stroke:#98aab8;stroke-width:1.3}.diagram .risk{fill:#fff0df;stroke:#bd946b;stroke-width:1.3}.diagram .edge{fill:none;stroke:#55717c;stroke-width:1.5;marker-end:url(#arrow)}.diagram .small{font-size:12px}.diagram .title{font-weight:700}.steps{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0}.steps span{background:#e6eeea;padding:8px 13px;border:1px solid #becfc7}.steps b{color:var(--accent);margin-right:8px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}button{background:var(--ink);color:white;border:0;border-radius:3px;font:inherit;font-size:13px;padding:9px 16px;cursor:pointer}button:hover{background:#284c62}details{margin:20px 0;border:1px solid var(--line);padding:14px 18px}summary{cursor:pointer;font-weight:600}footer{margin-top:60px;padding-top:24px;border-top:2px solid var(--ink);color:var(--muted);font-size:13px}.caption{font-size:13px;color:var(--muted)}.matrix td{min-width:120px}.nowrap{white-space:nowrap}#top-link{position:fixed;bottom:18px;right:20px;background:var(--paper);border:1px solid var(--line);padding:6px 12px;font-size:13px;text-decoration:none}.mobile-nav{display:none}body{scrollbar-color:#819b94 #edf1ed} @media(max-width:1000px){nav{width:220px;padding:22px 14px}main{margin-left:220px;padding:35px 30px 70px}.two{grid-template-columns:1fr}}@media(max-width:760px){nav{position:static;width:auto;max-height:290px;border-right:0;border-bottom:1px solid var(--line);padding:18px 22px}nav ol{columns:2;padding:8px 0}nav a{font-size:12px;break-inside:avoid}main{margin:0;padding:28px 20px 65px}h1{font-size:34px}h2{font-size:25px}section{padding-top:42px}table{font-size:13px}th,td{padding:10px}header{padding-bottom:26px}.notice{padding:16px}.diagram{padding:12px}.lead{font-size:17px}#top-link{bottom:8px;right:8px}.meta{gap:5px 14px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}@media print{@page{size:A4 landscape;margin:15mm}body{font-size:10pt;background:#fff;color:#000}nav,.toolbar,#top-link{display:none}main{margin:0;padding:0;max-width:none}header{break-after:page}h1{font-size:30pt}h2{font-size:19pt;break-after:avoid}h3,h4{break-after:avoid}section{padding-top:20px}table{font-size:9pt}tr,figure,.notice,pre{break-inside:avoid}.table-wrap{overflow:visible}th,td{min-width:0;padding:7px}.diagram svg{min-width:0}a{color:inherit;text-decoration:none}.two{display:block}pre{background:#edf0f3;color:#000}details{display:block}details>*{display:block}footer{margin-top:20px}}
+</style>
+</head>
+<body id="top">
+<nav aria-label="文档目录"><strong>酒店分销设计档案</strong><small>产品 × 数据 × AI × 工程交付</small><ol id="toc">
+<li><a href="#summary">阅读指南与执行摘要</a></li><li><a href="#position">定位、边界与商业假设</a></li><li><a href="#stakeholders">角色与业务责任</a></li><li><a href="#domain">领域对象与库存语义</a></li><li><a href="#needs">痛点与需求追踪矩阵</a></li><li><a href="#scenarios">端到端场景与异常路径</a></li><li><a href="#ingestion">本地文件接入与质量</a></li><li><a href="#matching">AI 匹配与人工审核</a></li><li><a href="#offers">价格、库存与商品生成</a></li><li><a href="#publishing">模拟发布与可靠性</a></li><li><a href="#states">状态机与不变量</a></li><li><a href="#architecture">技术架构与模块设计</a></li><li><a href="#database">数据库与关系设计</a></li><li><a href="#api">API 与事件契约</a></li><li><a href="#security">多租户、权限与安全</a></li><li><a href="#ux">管理后台与交互</a></li><li><a href="#observability">观测、审计与运营</a></li><li><a href="#testing">测试与评估体系</a></li><li><a href="#dataset">样例数据与演示脚本</a></li><li><a href="#roadmap">分期计划与验收门槛</a></li><li><a href="#integration">未来真实平台接入</a></li><li><a href="#risks">风险、取舍与决策记录</a></li><li><a href="#handoff">作品集交付与实施清单</a></li>
+</ol><small>单文件 · 无外部依赖 · 离线可读</small></nav>
+<main>
+<header><div class="meta"><span>设计版本 v1.1 · 后端工程主线</span><span>修订日期 2026-10-25</span><span>中文产品与技术说明书</span></div>
+<h1>AI 酒店库存匹配<br>与多渠道分销平台<span>从供应商文件到可审计的渠道商品，构建可信的自动化闭环。</span></h1>
+<p class="lead">面向旅游科技公司的多供应商库存整合场景，以<strong>可靠的后端自动化流程</strong>为主线，贯通本地文件接入、数据标准化、AI 辅助匹配、商品生成、多渠道异步分发与对账。展示重点是领域建模、批处理、事务一致性、任务编排、并发控制和失败恢复；AI 是流程中的数据理解能力。</p>
+<div><span class="tag">CSV / XLSX / JSON</span><span class="tag">Local-first MVP</span><span class="tag">Human-in-the-loop</span><span class="tag">Simulated Channel</span><span class="tag">可追溯与可恢复</span></div>
+<div class="notice warning"><strong>阅读前提</strong><p>本文件是拟议产品与技术设计，尚不代表系统已经开发、上线或通过性能测试。所有容量、准确率、耗时、里程碑和收益数字均为<strong>建议目标、实验规模或演示设定</strong>，不是实测结果。MVP 不连接任何真实 OTA/B2B，不代表已获得平台 API、商业合作或分销授权。平台接入必须作为后续独立准入关卡。</p></div>
+<div class="toolbar"><button type="button" onclick="window.print()">打印 / 另存为 PDF</button><button type="button" id="expand">展开全部补充内容</button><button type="button" id="collapse">收起补充内容</button></div>
+</header>
+
+<section id="summary"><h2>阅读指南与执行摘要</h2>
+<div class="notice"><strong>v1.1 定位调整：后端工程主导，AI 辅助自动化</strong><p>本项目采用确定性工作流：由服务端状态机决定阶段推进，由 AI 处理难以规则化的名称、房型和条款理解。采用“常规自动流转，异常人工处理后恢复”的方式，不要求每次更新逐步点击，也不把 Agent 自主规划作为项目目标。本次交付仍是设计说明书；下述能力均需通过实现与测试证明。</p></div>
+<p>这不是“给酒店名称做一次相似度计算”的项目。真正需要解决的是：多个供应商用不同语言、编码、房型和价格条款描述同一资产，运营如何确认它们可以归并，如何把来源不确定、有效期有限的库存变成渠道可接受的商品，又如何证明某次发布用的是哪一版数据。</p>
+<div class="table-wrap"><table><thead><tr><th>阅读目的</th><th>建议路径</th><th>应该获得的答案</th></tr></thead><tbody><tr><td>招聘经理 / 产品负责人</td><td>摘要 → 业务场景 → 痛点矩阵 → 路线图 → 演示</td><td>需求是否真实、范围是否可信、作品集是否有明确价值</td></tr><tr><td>后端 / 架构评审</td><td>领域对象 → 发布可靠性 → 状态机 → 数据库 → API → 测试</td><td>数据是否一致、失败能否恢复、租户是否隔离</td></tr><tr><td>AI / 数据工程评审</td><td>文件接入 → 匹配 → 评估 → 数据集</td><td>模型是否有边界、如何防误合并、如何防评估泄漏</td></tr><tr><td>实际实施</td><td>架构 → 模块 → API → 里程碑 → 实施清单</td><td>第一周做什么、每期如何验收、哪些决策仍需确认</td></tr></tbody></table></div>
+<h3>核心方案</h3><ol><li><strong>先建立事实，再调用 AI。</strong>文件原件不可变，按批次解析、校验、标准化；保留原始值、转换规则与行级来源。</li><li><strong>以内部主数据承接外部差异。</strong>供应商酒店/房型/计划映射到租户内标准酒店、标准房型与价格计划；渠道编码独立管理。</li><li><strong>匹配是受约束的决策。</strong>规则检索与候选排序先行，模型提供证据和结构化建议；冲突进入审核，未知不补成确定事实。</li><li><strong>发布的是快照。</strong>审核的是确定版本、确定日期、确定条款的商品；事务外盒与幂等任务保障重试，对账保障最终状态可解释。</li><li><strong>演示失败比只演示成功更有说服力。</strong>主动展示房型误匹配拦截、文件重复导入、超时后结果未知、重试去重、旧版本覆盖拦截和租户越权失败。</li></ol>
+<h3>产品价值与验证方式</h3><p>预期减少重复录入、发现重复酒店、降低条款错配风险，并缩短从文件到可发布商品的准备时间。作品集阶段不承诺商业 ROI；采用同一合成数据集上的“纯人工流程基线”和“系统辅助流程”计时、纠错与审核记录比较，报告样本数、硬件、模型版本和误差范围。</p>
+<div class="notice"><strong>最小完整闭环</strong><p>导入两家虚构供应商文件 → 隔离坏行 → 标准化 → 提出酒店与房型候选 → 人工批准映射 → 生成商品及差异预览 → 审核发布 → 模拟渠道写入 → 故障重试 → 对账 → 审计回放。</p></div>
+</section>
+
+<section id="position"><h2>定位、边界与商业假设</h2>
+<h3>产品定位</h3><p>平台是旅游科技公司内部的<strong>库存整合与分销自动化后端及运营控制台</strong>，同时也是展示领域建模、数据处理、异步编排、事务一致性和可靠性设计的作品；AI承担流程内的数据理解任务。它连接供应侧描述与渠道侧商品规范，提供运营决策和发布编排，不以模型替代合同、库存承诺或平台准入。</p>
+<div class="table-wrap"><table><thead><tr><th>范围层级</th><th>包含</th><th>明确边界</th></tr></thead><tbody><tr><td>MVP 必须完成</td><td>本地 CSV/XLSX/JSON；本地主数据种子；多供应商映射；数据质量；审核；商品快照；模拟渠道；重试/对账/审计；两个租户隔离</td><td>完整演示链路，以小规模可复现优先</td></tr><tr><td>MVP 可选增强</td><td>本地多语言向量模型；可选外部 LLM；批量建议；版本差异；导出错误报告；日历视图</td><td>不阻塞无模型/离线模式，不增加真实依赖</td></tr><tr><td>后续扩展</td><td>供应商 API、现有 PMS/CRS 连接器、真实渠道适配、增量同步、渠道回执、可订检查、订单联动</td><td>需样例、授权、协议与测试环境；独立立项</td></tr><tr><td>当前不做</td><td>支付、结算、税务申报、完整订单履约、取消退款、动态收益管理、全球酒店内容库、真实超售赔付</td><td>商品分发闭环不能被宣传为交易履约平台</td></tr></tbody></table></div>
+<h3>需要确认的商业假设</h3><ul><li>租户代表一家旅行科技企业；供应商、渠道账号与内部用户均属于该租户。默认主数据也租户隔离，避免通过“共享酒店库”意外暴露合作关系。</li><li>供应商提供的是<strong>分配库存、可售状态或询价型产品</strong>之一，必须在导入合同配置中标记。MVP 默认演示分配库存快照；不声称等同实时可订。</li><li>演示采用每日每房净价、单一售卖币种 USD、按入住日历管理；真实税费、占用人数定价、儿童年龄政策、汇率与舍入规则需要合同定义。</li><li>同一酒店不同供应商可能售卖相同物理房源；库存不因来源不同而天然可相加。未知共享关系时采取单供应来源选择或人工标记。</li><li>本地文件的库存新鲜度有限。TTL 是运营风险规则，不是供应商库存真实性保证。</li></ul>
+<h3>作品集差异点</h3><p>展示的重点是完整业务链上的后端正确性：批次版本如何激活、并发更新如何协调、任务中断如何恢复、请求重复如何去重、超时如何确认结果、远端漂移如何修复。AI 为该链路提供结构化理解与匹配建议。模块化单体足以体现架构判断；在没有规模证据前不引入微服务、复杂流处理和多集群部署。</p>
+<h3>后端能力与可验证证据</h3><div class="table-wrap"><table><thead><tr><th>能力</th><th>业务落点</th><th>实现与验收证据</th></tr></thead><tbody><tr><td>领域建模</td><td>酒店、房型、计划、库存池、报价、渠道商品</td><td>数据库约束与领域不变量；共享库存不重复累计</td></tr><tr><td>批量数据处理</td><td>混合文件、坏行、重复导入</td><td>流式解析、分批写入、质量报告、断点与来源定位</td></tr><tr><td>事务与版本</td><td>文件乱序、并发激活、审批后来源变化</td><td>原子激活、CAS、快照 hash、事务外盒与并发测试</td></tr><tr><td>异步编排</td><td>耗时流程、人工等待、进程崩溃</td><td>持久化运行实例、阶段检查点、租约、恢复与重复事件去重</td></tr><tr><td>外部调用可靠性</td><td>多渠道限流、超时、部分失败</td><td>稳定幂等键、UNKNOWN 查询、退避预算、版本顺序</td></tr><tr><td>最终一致性</td><td>本地状态与模拟渠道不一致</td><td>desired/applied/observed 对账、差异修复与停卖确认</td></tr><tr><td>权限与可运维性</td><td>多租户、审批责任、故障定位</td><td>资源鉴权、RLS、审计回放、追踪与恢复手册</td></tr></tbody></table></div>
+</section>
+
+<section id="stakeholders"><h2>角色与业务责任</h2>
+<div class="table-wrap"><table><thead><tr><th>角色</th><th>工作目标</th><th>关键决策 / 责任</th><th>关注证据</th></tr></thead><tbody><tr><td>供应商运营</td><td>把报价和房态变成可用数据</td><td>确认模板、编码、覆盖范围、全量/增量语义、新鲜度</td><td>导入报告、坏行、批次版本与来源</td></tr><tr><td>内容 / 映射审核员</td><td>识别同一酒店和等价房型</td><td>批准/拒绝/新建主数据；处理冲突；撤销错误映射</td><td>地址、坐标、房型属性、模型理由与历史判断</td></tr><tr><td>分销经理</td><td>将合格商品送往合适渠道</td><td>选择渠道、加价策略、售卖范围、发布审批</td><td>价格差异、库存时效、能力校验、预览快照</td></tr><tr><td>技术运营</td><td>处理积压、失败与状态不一致</td><td>重试、暂停、死信处置、对账和应急止损</td><td>任务、回执、追踪链、队列与错误码</td></tr><tr><td>租户管理员</td><td>配置企业边界和权限</td><td>供应商/渠道配置、成员角色、双人审批开关</td><td>权限变更审计、配置版本</td></tr><tr><td>安全审计 / 面试评审</td><td>理解每个决策和风险边界</td><td>只读检查；验证证据链完整性</td><td>从源文件行到远端模拟快照的回放</td></tr><tr><td>未来商务 / 合规负责人</td><td>确认真实接入可行性</td><td>授权、合作主体、合同、数据许可及地区要求</td><td>准入证据包；没有证据则不得启用真实连接</td></tr></tbody></table></div>
+<p>建议职责分离：导入者可提交匹配建议，审核者确认归并；商品提交者不能审批自己的高风险发布。MVP 演示模式可由一人切换账号展示流程，但审计必须保留不同账号，不能据此宣称真实职责分离。</p>
+</section>
+
+<section id="domain"><h2>领域对象与库存语义</h2>
+<p><strong>酒店 ≠ 房型 ≠ 价格计划 ≠ 库存 ≠ 可售报价。</strong>这是整个设计的基础。酒店相同不等于房型等价，房型等价也不等于早餐、取消政策和支付条款相同。</p>
+<div class="table-wrap"><table><thead><tr><th>对象</th><th>定义与例子（全部虚构）</th><th>关键字段 / 粒度</th><th>不应混淆</th></tr></thead><tbody><tr><td>Property 标准酒店</td><td>“海岚滨海酒店 / Hailan Bay Hotel”这一物理物业</td><td>内部 ID、国家、城市、地址、坐标、时区、内容版本</td><td>品牌同名分店不能合并；供应商编码不是酒店主键</td></tr><tr><td>Supplier property 供应商酒店</td><td>S-A 的 A100 与 S-B 的 B700 可能指向同一物业</td><td>supplier_id + external_property_id；原始名称/地址</td><td>一个来源记录只能映射一个当前有效标准酒店</td></tr><tr><td>Room type 标准房型</td><td>豪华大床房，1 张特大床，最多 2 人，禁烟</td><td>property_id、床型结构、入住上限、面积区间、景观、吸烟政策</td><td>“Deluxe”只是一段名称；Twin 与 King 不可因名称相似合并</td></tr><tr><td>Rate plan 价格计划</td><td>含双早、入住前 72 小时免费取消、到店付</td><td>room_type_id、餐食、取消阶梯、付款、税费口径、售卖限制</td><td>Non-refundable 与 Flexible 不等价；条款可有生效版本</td></tr><tr><td>Inventory pool 库存池</td><td>A100-R1 的分配库存池，每晚 4 间</td><td>供应商、库存池编码、房型、stay_date；数量/stop_sell/更新时间</td><td>两种价格计划可能共用这 4 间，不能显示为总计 8 间</td></tr><tr><td>Rate calendar 日价格</td><td>2027-01-10，2 成人，净价 USD 100.00</td><td>supplier_rate_plan、日期、occupancy、币种、金额、税费、条款版本</td><td>单日房价不是整个入住订单总价；不自动转换成含税售价</td></tr><tr><td>Offer 可售报价</td><td>面向 SIM-A 的 1/10 豪华大床含早商品</td><td>标准酒店/房型/计划 + 来源选择 + 日期 + 人数 + 渠道 + 政策版本</td><td>报价是“条件组合”，不代表已预订或库存锁定</td></tr><tr><td>Listing 渠道商品</td><td>渠道模拟器中的酒店、房型、计划编码组合</td><td>channel_account_id、external codes、desired/applied revision</td><td>内部酒店 ID 与渠道编码有独立映射</td></tr><tr><td>Offer snapshot 发布快照</td><td>已审批、不可修改的一次商品内容与日历载荷</td><td>revision、payload_hash、来源版本、规则版本、审批信息</td><td>后续源文件更新不得悄悄改写已审批内容</td></tr></tbody></table></div>
+<figure class="diagram"><svg viewBox="0 0 1000 340" role="img" aria-labelledby="domain-title"><title id="domain-title">来源实体映射到内部主数据并生成渠道商品</title><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#55717c"/></marker></defs><rect class="neutral" x="15" y="35" width="210" height="62" rx="4"/><text x="35" y="62">供应商 A / B 酒店记录</text><text class="small" x="35" y="83">原始标识、名称、地址、版本</text><rect class="box" x="310" y="35" width="180" height="62" rx="4"/><text x="337" y="71">标准酒店 Property</text><rect class="box" x="310" y="140" width="180" height="62" rx="4"/><text x="337" y="176">标准房型 Room</text><rect class="box" x="310" y="245" width="180" height="62" rx="4"/><text x="337" y="281">价格计划 Rate plan</text><rect class="neutral" x="15" y="140" width="210" height="62" rx="4"/><text x="35" y="176">供应商房型 / 计划</text><rect class="neutral" x="15" y="245" width="210" height="62" rx="4"/><text x="35" y="271">库存池 + 日价格</text><text class="small" x="35" y="292">日期、人数组合、有效期</text><rect class="box" x="580" y="140" width="165" height="62" rx="4"/><text x="603" y="176">Offer + 快照</text><rect class="risk" x="815" y="140" width="165" height="62" rx="4"/><text x="839" y="168">模拟渠道 Listing</text><text class="small" x="839" y="190">每渠道独立编码与回执</text><path class="edge" d="M225 66H310"/><path class="edge" d="M225 171H310"/><path class="edge" d="M400 97V140"/><path class="edge" d="M400 202V245"/><path class="edge" d="M490 66H535V153H580"/><path class="edge" d="M490 276H535V190H580"/><path class="edge" d="M225 276H265V325H663V202"/><path class="edge" d="M745 171H815"/></svg><figcaption>主数据的从属关系与映射关系分开保存；库存和价格通过供应商房型/计划及日期关联，避免把多个来源的库存直接叠加。</figcaption></figure>
+<h3>时间、金额与政策约定</h3><ul><li><strong>日期：</strong>入住/房态日使用酒店本地日期 <code>DATE</code>；入住区间为 [check_in, check_out)，退房日不占夜数。事件时间使用 UTC <code>timestamptz</code>；酒店时区使用 IANA 名称。</li><li><strong>取消：</strong>保留供应商原文及结构化阶梯；截止时间按酒店时区解释后转换 UTC。未知时区、无法解释的“当地时间”、缺失金额基数均阻断售卖，不让 LLM 猜。</li><li><strong>金额：</strong>使用 <code>NUMERIC(18,4)</code> 存计算值，最终按币种精度量化；MVP 固定 USD 两位，禁止浮点计算。注明净价/售价、含税/未含税和每晚/每次入住口径。</li><li><strong>占用人数：</strong>区分成人数、儿童年龄组和房间数；MVP 仅 1 间房、2 成人、无儿童，超出范围显式拒绝。</li><li><strong>条款版本：</strong>早餐人数、税费、担保、取消阶梯任一变化即产生新 rate policy version，不能覆盖历史。</li></ul>
+</section>
+
+<section id="needs"><h2>痛点、根因与需求追踪</h2>
+<p>以下为基于场景的需求假设，尚未经真实运营访谈验证。开发前建议用 3–5 位供应商运营/分销人员的脱敏样本访谈核实：每次处理哪些文件、最耗时决策是什么、错误如何被发现、谁承担发布责任。</p>
+<div class="table-wrap"><table><thead><tr><th>痛点 / 根因</th><th>真实需求</th><th>设计响应</th><th>验收证据 / 优先级</th></tr></thead><tbody>
+<tr><td>P01 同一家酒店被建多次；语言、分店、地址噪声</td><td>R01 减少重复且避免误合并</td><td>分层检索、国家/城市硬约束、候选证据、映射版本与人工审核</td><td>T01 同名不同城市不合并；Top-K 召回评估 / P0</td></tr>
+<tr><td>P02 房型名相似但床型/入住人数不同</td><td>R02 区分可替代性与名称相似</td><td>结构化属性、兼容矩阵、缺失标记、房型级复审</td><td>T02 Twin→King 被阻断 / P0</td></tr>
+<tr><td>P03 早餐/退改/税费藏在自由文本</td><td>R03 对交易条款保持保守</td><td>原文引用、受约束提取、政策版本、未知不自动通过</td><td>T03 不可退与可退永不自动归并 / P0</td></tr>
+<tr><td>P04 文件模板反复变化、坏行影响整批</td><td>R04 一次建立模板，逐行纠错</td><td>模板版本、原件保留、预览确认、错误隔离、重传生成新版本</td><td>T04 带坏行批次可定位并部分导入 / P0</td></tr>
+<tr><td>P05 旧报价覆盖新库存、文件缺行含义不明</td><td>R05 明确覆盖与增量规则</td><td>snapshot/delta 声明、覆盖范围、单调来源序号、CAS 激活</td><td>T05 乱序批次不能静默覆盖 / P0</td></tr>
+<tr><td>P06 同源库存多计划重复累计</td><td>R06 正确表达库存共享</td><td>库存池、来源选择、未知池不求和</td><td>T06 两个计划共享四间而非八间 / P0</td></tr>
+<tr><td>P07 发布超时后人工重复点，远端状态不明</td><td>R07 安全恢复与确认结果</td><td>外盒、幂等键、状态 UNKNOWN、查询回执、对账</td><td>T07 远端已成功但超时后只保留一份效果 / P0</td></tr>
+<tr><td>P08 规则改后不知道商品为何变价</td><td>R08 解释每次变更</td><td>不可变快照、规则版本、审批绑定 hash、差异预览</td><td>T08 从渠道回执追到文件行 / P0</td></tr>
+<tr><td>P09 多企业共享系统产生越权风险</td><td>R09 默认隔离且最小权限</td><td>tenant_id、复合 FK、RLS、资源级检查、导出鉴权</td><td>T09 跨租户 ID/下载/任务访问失败 / P0</td></tr>
+<tr><td>P10 AI 判断不稳定、无法说服审核员</td><td>R10 可解释、可降级、可复现</td><td>候选证据包、模型/提示词版本、冻结评估集、离线规则回退</td><td>T10 模型不可用仍可完成审核发布 / P0</td></tr>
+<tr><td>P11 渠道能力不同，缺字段反复返工</td><td>R11 发布前发现不可表达条款</td><td>capability contract、channel validation、显式阻断</td><td>T11 模拟渠道不支持阶梯取消时阻断 / P1</td></tr>
+<tr><td>P12 失败很多但无法定位责任</td><td>R12 统一错误与操作队列</td><td>错误码、关联 ID、重试预算、告警与死信处置</td><td>T12 失败定位到模块及可恢复动作 / P1</td></tr>
+</tbody></table></div>
+<h3>功能优先级原则</h3><p>P0 是闭环正确性与数据安全，缺一不能宣称 MVP 完成；P1 提升运营效率与展示深度；P2 是真实接入或规模演进。宁可减少 UI 花样，也不省略状态未知、映射复核、来源版本和库存池语义。</p>
+</section>
+
+<section id="scenarios"><h2>端到端业务场景与异常路径</h2>
+<h3>自动化运行模式与人工边界</h3><p>本地文件仍由用户主动上传；确认接收后系统自动推进，不意味着自动扫描磁盘或接入供应商 API。首次模板、首次实体映射与发布策略由人建立；重复更新复用已批准且事实未变的映射。人工操作形成恢复事件，流程从等待点继续，不要求重新上传或重做已成功阶段。</p>
+<div class="table-wrap"><table><thead><tr><th>情况</th><th>自动执行</th><th>何时等待人工</th></tr></thead><tbody><tr><td>首次供应商 / 模板</td><td>上传后安全检查、预览、质量检查与候选生成</td><td>字段映射、覆盖语义、首次映射、初始发布审批</td></tr><tr><td>已有映射的常规更新</td><td>契约检查→暂存→按策略激活→检查映射有效性→编译新快照→策略判定→发布→对账</td><td>没有启用授权策略时停在审批；策略范围外变更进入审核</td></tr><tr><td>新增实体 / 关键属性变化</td><td>定位受影响实体、提出候选、冻结受影响商品</td><td>批准新映射或确认关键事实；其他无依赖商品可继续</td></tr><tr><td>质量异常 / 价格异常</td><td>隔离、报告、影响分析</td><td>修正后新批次或审批风险，不把异常视为正常更新</td></tr><tr><td>网络故障 / 渠道未知</td><td>分类、限流、查询回执、在预算内重试与对账</td><td>无安全恢复依据、预算耗尽、认证失败时升级</td></tr></tbody></table></div>
+<p><strong>自动审批不等于绕过审批：</strong>默认人工模式；租户管理员与独立审批者可预先批准一版自动化策略，限定供应商、渠道、日期、来源时效、允许变更类型与价格波动区间。示例只允许已批准映射上的价格/库存更新，禁止条款、币种、税费、房型变化；超范围即等待人工。每个新快照依然生成独立策略决策，绑定 payload_hash、policy_version 与 system actor，不能复用旧审批或伪造人类审批。初期仅在演示租户 opt-in，并支持立即暂停。</p>
+<figure class="diagram"><svg viewBox="0 0 1000 410" role="img" aria-labelledby="flow-title"><title id="flow-title">文件到发布对账的业务闭环</title><rect class="neutral" x="15" y="25" width="170" height="66" rx="4"/><text x="35" y="52">供应商运营</text><text class="small" x="35" y="75">上传 → 预览 → 确认范围</text><rect class="box" x="225" y="25" width="170" height="66" rx="4"/><text x="247" y="52">接入与质量检查</text><text class="small" x="247" y="75">原件、坏行、标准化版本</text><rect class="box" x="435" y="25" width="170" height="66" rx="4"/><text x="457" y="52">匹配与审核</text><text class="small" x="457" y="75">证据 → 决策 → 有效映射</text><rect class="box" x="645" y="25" width="170" height="66" rx="4"/><text x="667" y="52">商品编译与审批</text><text class="small" x="667" y="75">规则、差异、快照 hash</text><rect class="risk" x="225" y="155" width="170" height="66" rx="4"/><text x="247" y="182">隔离 / 修正重传</text><text class="small" x="247" y="205">新批次，不修改原文件</text><rect class="risk" x="435" y="155" width="170" height="66" rx="4"/><text x="457" y="182">冲突 / 暂存待补</text><text class="small" x="457" y="205">不确定条款禁止发布</text><rect class="neutral" x="645" y="285" width="170" height="66" rx="4"/><text x="667" y="312">事务外盒与任务</text><text class="small" x="667" y="335">幂等、租约、版本顺序</text><rect class="box" x="435" y="285" width="170" height="66" rx="4"/><text x="457" y="312">模拟渠道写入</text><text class="small" x="457" y="335">故障注入与回执查询</text><rect class="box" x="225" y="285" width="170" height="66" rx="4"/><text x="247" y="312">对账与审计</text><text class="small" x="247" y="335">desired / applied / observed</text><path class="edge" d="M185 58H225"/><path class="edge" d="M395 58H435"/><path class="edge" d="M605 58H645"/><path class="edge" d="M310 91V155"/><path class="edge" d="M520 91V155"/><path class="edge" d="M730 91V285"/><path class="edge" d="M645 318H605"/><path class="edge" d="M435 318H395"/><path class="edge" d="M225 318H80V115H310V91"/><text class="small" x="27" y="383">所有步骤携带 tenant_id / batch_id / trace_id；错误不会绕开审核和版本检查直接发布。</text></svg><figcaption>反馈回路既包括数据修正，也包括发布对账。每个阶段都有可解释的停止点。</figcaption></figure>
+<h3>S01 新供应商首次导入</h3><ol><li>管理员创建供应商、定义文件契约、数据权属和默认时区/币种；运营选择文件类型与模板版本。</li><li>系统计算原始文件 SHA-256，扫描大小、格式和压缩展开限制；重复文件显示已有批次并复用，不重复激活。</li><li>预览前 50 行、工作表选择、编码/分隔符和字段映射。运营确认导入模式、日期范围、source_sequence 与生效时间。</li><li>后台流式解析并校验；酒店/房型主键冲突为阻断错误，单条无效日价格可隔离；显示总行/有效/警告/隔离数量。</li><li>解析产物进入 staging，生成匹配候选。未匹配实体只可进入审核，不能生成可发布商品。</li><li>运营确认批次激活；原子切换该供应商该覆盖范围的当前版本。审核映射后编译商品，完成审批与模拟发布。</li></ol>
+<p><strong>异常：</strong>空文件→拒绝；模板漂移→暂停并要求新模板；某房型缺酒店→引用错误；批次含被隔离行的全量范围→默认禁止激活该覆盖分区，避免把坏行误当删除；显式允许部分激活时必须缩小覆盖范围并重新确认。</p>
+<h3>S02 同一酒店由两家供应商供货</h3><p>供应商 A 提供英文简称，供应商 B 提供中文名称。候选按城市、地址、坐标和已有编码定位；审核员确认同一物业。房型分别映射；B 的“双床含早不可退”不能归到 A 的“大床含早可退”。供应选择策略只比较条款兼容、日期连续、时效合格的报价。跨供应来源可能共享库存时不合计。</p>
+<p><strong>异常：</strong>同名异店、酒店搬迁、整修更名、坐标落点不准、同一物业内公寓与酒店分开经营→进入疑似重复队列；不得依赖名字“一键全合并”。主数据合并需给出影响预览和审批，旧 ID 保留重定向与历史引用。</p>
+<h3>S03 每日库存与价格更新</h3><p>运营导入 A 的 delta 文件：1/10 库存从 4 到 2，1/11 stop_sell=true。系统校验来源序号高于当前分区版本，更新 staging；激活后产生 offer 失效/重编译事件，仅生成变化日期的模拟渠道补丁。若渠道不支持增量，则按能力契约生成完整替换快照。</p>
+<p><strong>异常：</strong>delta 缺失日期表示“不变”；snapshot 缺失日期只有在明确覆盖范围且校验完整时才表示删除/关闭。不能把缺行自动解释为售罄。过期报价触发 stop-sell 意图与告警；远端停卖未确认前显示“关闭待确认”。</p>
+<h3>S04 批量发布与部分失败</h3><p>分销经理选择 SIM-A、SIM-B，预览各渠道能力和 payload 差异。审批绑定快照与规则版本。提交创建发布计划与外盒；按酒店/渠道聚合键顺序执行。SIM-A 成功、SIM-B 超时，整体显示部分完成。查询 SIM-B 回执发现已落地，则标记成功；若确定未执行再重试，不重发已成功任务。</p>
+<p><strong>异常：</strong>字段不支持→不可重试；限流→等待 Retry-After；凭证错误→暂停账号并通知；查询仍无法确定→UNKNOWN + 人工处置；不得把超时直接当失败再创建另一份商品。</p>
+<h3>S05 发现错误匹配后的止损</h3><ol><li>审核员标记错误映射并冻结其后续商品编译；系统列出受影响报价、渠道、日期、快照与当前发布任务。</li><li>创建高优先级停卖快照，终止未发送旧任务；执行中任务完成后仍需通过新 revision 停卖并对账。</li><li>修订映射需再次审批；重新编译并发布新版本。历史映射和原始快照保持不可变。</li><li>若远端尚未停卖成功，持续显著展示风险；数据库回滚不能撤销外部已发生效果。真实订单后续需要独立履约补偿流程。</li></ol>
+<h3>S06 多日入住与库存有效性</h3><p>请求 1/10 入住、1/13 退房，需要 10、11、12 三晚均有价格、有效库存及合格政策；可售间数受三晚最小可用量约束。任一天 stop_sell 或缺价则不可售；入住日 CTA、退房日 CTD、最短/最长连住在正确日期检查。MVP 编译日历，可用本地查询验证多晚一致性；不承诺真实预订锁房。</p>
+<h3>S07 操作中断、恢复与并发</h3><p>浏览器关闭不终止已确认的后台批次。Worker 崩溃后租约过期才允许接管；断点记录和唯一键避免重复 staging。两个审核员同时批准同一候选，后者收到 409 并刷新版本。两个文件同时激活相同覆盖分区时，通过来源序号与行锁决定，不能“最后请求获胜”。</p>
+</section>
+
+<section id="ingestion"><h2>本地文件接入、数据质量与版本管理</h2>
+<h3>文件契约</h3><p>MVP 接受用户主动上传的本地文件，不扫描任意磁盘路径。标准导入包可由多个文件组成：properties、rooms、rate_plans、inventory、rates、manifest；XLSX 使用同名工作表，JSON 使用同名数组。CSV 默认 UTF-8，可在预览中显式选择编码；编码猜测不能绕过预览确认。</p>
+<div class="table-wrap"><table><thead><tr><th>数据文件</th><th>必需列</th><th>关键校验</th></tr></thead><tbody><tr><td>manifest.json</td><td>schema_version, supplier_code, source_sequence, generated_at, mode, scope, file hashes</td><td>mode=snapshot/delta；scope 明确物业、实体种类、日期范围；上传者不能自定 tenant_id</td></tr><tr><td>properties.csv</td><td>property_code, name, country_code, city, address, timezone</td><td>代码按字符串保留前导零；名称非空；国家代码与城市词表；坐标需成对有效</td></tr><tr><td>rooms.csv</td><td>property_code, room_code, name, max_adults, bed_type</td><td>父酒店存在；床型未知用 UNKNOWN；面积注明单位，不强行补全</td></tr><tr><td>rate_plans.json</td><td>room_code, plan_code, meal, cancellation, payment, tax_basis</td><td>房型引用需带 property_code；条款保留原文；取消阶梯有时间与金额基数</td></tr><tr><td>inventory.csv</td><td>property_code, room_code, pool_code, stay_date, quantity, stop_sell, observed_at</td><td>quantity 为非负整数；0 与未知不同；共享池关联多个计划；同池同日唯一</td></tr><tr><td>rates.csv</td><td>property_code, room_code, plan_code, stay_date, adults, currency, net_amount</td><td>同粒度唯一；金额正数；支持人数与币种；条款版本可引用；不可接受 NaN/Infinity</td></tr></tbody></table></div>
+<pre><code>{
+  "schema_version": "1.0", "supplier_code": "S-A",
+  "source_sequence": 12, "generated_at": "2027-01-01T02:00:00Z",
+  "mode": "snapshot",
+  "scope": {"property_codes":["A100"], "entities":["inventory","rates"],
+            "stay_date_from":"2027-01-10", "stay_date_to_exclusive":"2027-01-13"},
+  "files": [{"name":"inventory.csv", "sha256":"&lt;实际内容摘要&gt;"}],
+  "contract_version": "supplier-a-demo-v1"
+}</code></pre>
+<h3>接入流水线与行级质量</h3><div class="steps"><span><b>1</b>接收原件</span><span><b>2</b>安全检查</span><span><b>3</b>模板预览</span><span><b>4</b>解析暂存</span><span><b>5</b>标准化/引用校验</span><span><b>6</b>质量报告</span><span><b>7</b>确认激活</span></div>
+<div class="table-wrap"><table><thead><tr><th>质量维度</th><th>规则与严重程度</th><th>处理</th></tr></thead><tbody><tr><td>完整性</td><td>缺酒店编码、日期、房价：ERROR；缺酒店星级：WARN</td><td>ERROR 行隔离；WARN 不补造，字段标记 unknown</td></tr><tr><td>一致性</td><td>房型所属酒店与计划酒店不一致；同一自然键重复且值冲突</td><td>冲突分区阻断；同键同值可折叠但计入报告</td></tr><tr><td>有效性</td><td>负库存、非法日期、价格非数字、过大单元格、无效坐标</td><td>隔离并给出字段、行号、错误码与修复建议</td></tr><tr><td>时效性</td><td>文件 generated_at 过旧、observed_at 过期、未来时间明显偏移</td><td>警告或阻断由合同策略定义；MVP 示例 TTL=24h，仅为演示参数</td></tr><tr><td>异常变动</td><td>价格变动超过 30%、库存骤降、覆盖日期收缩</td><td>风险审核；30% 为拟议初始阈值，需真实数据校准，不等于错误</td></tr><tr><td>语义兼容</td><td>人数不支持、儿童政策缺失、无法表达的税费或退改</td><td>实体可保存，但 offer 不可发布；不能丢字段后发布</td></tr></tbody></table></div>
+<h3>版本策略与原子激活</h3><ul><li>三层保留：raw artifact（原件字节与 hash）→ normalized snapshot（解析规则与模板版本）→ active source version（当前可用视图）。修正只产生新批次，不改旧原件。</li><li>去重作用域为 tenant + supplier + contract + raw_hash + scope + mode；同文件改模板重解析应新建 processing_run，复用原件，不误判为已完成。</li><li>来源 <code>source_sequence</code> 只在约定分区内单调；无来源序号的文件按“需确认替换”处理，不把上传时间当业务新鲜度。</li><li>激活事务：锁覆盖分区 → 检查 expected_active_version → 校验来源版本 → 处理 tombstone → 切换 active pointer → 写审计与 outbox → 提交。不同分区可独立激活。</li><li>取消解析可停止未提交批次；已激活数据的“撤销”是恢复某历史版本的新激活事件，并触发新商品修订与审批。</li><li>每条标准化记录保存 artifact_id、sheet、row_number、raw_record_hash、template_version、normalizer_version、source_version；敏感字段不重复写进普通日志。</li></ul>
+<h3>解析安全与资源限制（建议默认）</h3><p>单次原件上限 20 MB、总行数 100,000、最多 10 工作表、单字段 16 KB、解压后总量 200 MB；这些是保护性配置建议，需要实际性能测试后调整。拒绝宏文件、嵌入对象和远程链接；不执行单元格公式。关键字段含公式时拒绝而非依赖不可信缓存。解析在隔离 Worker 中按流/批次处理，支持取消与超时；错误报告 CSV 导出需防 <code>= + - @</code> 等公式注入并保留可读错误信息。</p>
+</section>
+
+<section id="matching"><h2>AI 辅助匹配与人工审核</h2>
+<h3>职责划分：规则控制资格，模型辅助判断</h3><p>AI 的价值在于跨语言别名理解、房型描述提取、候选排序与证据归纳。数据库归并、政策等价和发布资格由可测试规则控制。MVP 默认所有新映射都需人工确认；现有且关键事实未变的有效映射可自动复用。高置信新映射自动批准仅为后续经评估后可启用的能力，区别于基于已授权策略的常规更新发布。</p>
+<h3>AI 是可替换的流程能力</h3><p>统一定义 <code>extract_attributes</code>、<code>retrieve_candidates</code>、<code>rank_candidates</code> 与 <code>summarize_evidence</code> 接口，接收冻结的来源版本，返回结构化提案，不直接改变业务状态。每次调用设置超时、重试预算、缓存键与输出校验。字段已结构化时直接解析；AI 不可用时使用规则候选或等待人工。流程引擎通过相同结果契约继续执行，不能因模型失败丢失批次或重复发布。</p>
+<div class="table-wrap"><table><thead><tr><th>阶段</th><th>输入 / 方法</th><th>输出与防护</th></tr></thead><tbody><tr><td>标准化</td><td>Unicode NFKC、大小写/空白、地址词元；国家城市词典；已批准别名</td><td>保留原文，不能删掉分店号、“Airport/Annex”等区分词</td></tr><tr><td>候选召回</td><td>同国家/城市 blocking；地址 trigram；名称 BM25/向量；坐标邻域；已有编码</td><td>合并 Top-K 候选与来源理由；MVP K=10 为实验参数；城市不确定走独立复核</td></tr><tr><td>确定性筛选</td><td>国家冲突、明确远距离、酒店类型冲突；房型所属酒店、床型、人数、餐食/取消政策</td><td>hard_conflicts 列表；模型不能覆盖；缺值为 unknown 而非相等</td></tr><tr><td>模型提取与排序</td><td>仅接收必要来源字段和候选；本地多语言向量或可选 LLM 结构化输出</td><td>candidate_id 必须在候选集；证据指向原文路径；输出 Schema 验证</td></tr><tr><td>人工审核</td><td>并排字段、地图坐标数值、冲突、历史决策、同店其他房型</td><td>批准/拒绝/待补充/新建；理由必填；版本并发检查</td></tr><tr><td>反馈与再评估</td><td>审核决策形成弱标签；双人裁定形成金标准</td><td>训练/阈值调整与冻结测试集隔离；模型更新先 shadow 对比</td></tr></tbody></table></div>
+<h3>酒店、房型与计划分别匹配</h3><ul><li><strong>酒店级：</strong>名称只是软信号。国家明确冲突必拒绝；城市冲突需地址与行政区人工确认；坐标距离只有在地理精度足够时才启用，例如“双方均为建筑级定位且大于 2km”阻断自动建议，阈值为拟议配置。不能把城市中心默认坐标当建筑位置。</li><li><strong>房型级：</strong>只在已批准的同酒店内比较。床型、床数、入住上限、卧室数、吸烟、景观和面积分别记录“相等/兼容/冲突/未知”；“床型到店安排”不等于固定大床。上限 3 人的房不自动等同 2 人房，需要供应商销售语义。</li><li><strong>价格计划级：</strong>按餐食人数、取消阶梯、担保/付款、税费、售卖窗口、入住限制、人数组合做结构化比较。Flexible 标签不能证明阶梯相同。任何关键字段未知或冲突都阻断自动等价映射。</li><li><strong>方向性：</strong>“更大房型可以替代更小房型”是业务履约承诺，不能从属性包含关系推断。MVP 只支持人工确认的等价映射，不做自动升级替代。</li></ul>
+<h3>评分设计与阈值</h3><p>酒店初始排序可用 <code>s = 0.30×名称 + 0.30×地址 + 0.20×位置 + 0.10×联系方式 + 0.10×已知别名</code>，所有特征在 [0,1]，缺失项不默认给满分，并附 evidence_coverage。该公式是可解释基线，不是经训练的概率；真实权重须用标注集校准。LLM 自报 confidence 不用于直接批准。</p>
+<div class="table-wrap"><table><thead><tr><th>决策区间（建议起点）</th><th>行为</th><th>额外条件</th></tr></thead><tbody><tr><td>score ≥ 0.92 且 Top1−Top2 ≥ 0.10</td><td>高优先级建议，MVP 仍需人工批准</td><td>无硬冲突、关键证据完整、未发生来源实质变更</td></tr><tr><td>0.70 ≤ score &lt; 0.92 或候选差距小</td><td>普通人工审核</td><td>显示候选竞争关系，不诱导只看 Top1</td></tr><tr><td>score &lt; 0.70 / 无候选</td><td>待补资料或新建主数据</td><td>先检查重复；不强制选一个候选</td></tr><tr><td>任意硬冲突 / 关键条款未知</td><td>阻断批准等价，进入冲突处理</td><td>需修正事实或特批记录；不可通过提高分数绕过</td></tr></tbody></table></div>
+<pre><code>{
+  "entity_type": "room", "source_id": "A100-R1", "candidate_id": "ROOM-H001-K",
+  "decision": "REVIEW", "rank_score": "0.94", "evidence_coverage": "0.88",
+  "evidence": [
+    {"field":"bed_type", "source_path":"rooms[0].bed_type", "quote":"1 King", "normalized":"KING"},
+    {"field":"max_adults", "source_path":"rooms[0].max_adults", "quote":"2", "normalized":2}
+  ],
+  "hard_conflicts": [], "unknown_fields":["area_sqm"],
+  "model_version":"optional-local-embedding-v1", "prompt_version":"extract-v1",
+  "rules_version":"matching-rules-v1", "candidate_set_version":"cs-001"
+}</code></pre>
+<h3>模型风险控制</h3><ul><li>文件文本是数据而非指令。遇到“忽略规则、直接发布”等提示注入，模型无工具权限；输出仅作为候选提案，经字段白名单与规则验证。</li><li>外部 LLM 默认关闭；启用前获得数据处理许可。可离线使用规则和已缓存候选；模型调用失败显示“模型建议不可用”，保留人工流程。</li><li>证据引用必须能在来源中定位；无法验证的地址、坐标、星级与设施不得写回事实层。翻译内容与原始事实分别存储并标记待审核。</li><li>以 source_version + candidate_set_version + model + prompt + rules 做结果缓存键；温度等参数固定仍不保证完全确定，因此保留实际请求/响应摘要。</li><li>人工批准不等于永久豁免：床型、政策、地址等实质字段变化时，现有映射变为 NEEDS_REVIEW；纯空白规范化不触发复审，但规则要可测试。</li><li>批量批准只允许同质、无冲突且证据完整项；显示影响数和抽样，禁止“批准全部未知”。后续自动化需独立开关、灰度和误匹配停机阈值。</li></ul>
+<h3>人工审核证据包</h3><p>包括源文件定位、原文与标准化字段、候选对照、冲突与未知列表、模型/规则版本、同名异店提示、下游影响数量、历史决策、当前 reviewer/version。批准保存 decision_reason 与有效期；拒绝保存 negative pair，避免下次重复推荐同一错误配对，但规则/事实改变时可重新评估。</p>
+</section>
+
+<section id="offers"><h2>价格、库存与商品生成</h2>
+<h3>编译资格闸门</h3><p>只有酒店映射、房型映射、价格政策映射均已批准，来源仍有效、日期完整、币种/税费口径明确、渠道能力可表达时，才生成 READY 商品。任何一步失败都返回可操作的 blocking_reasons，不能只给“校验失败”。</p>
+<div class="table-wrap"><table><thead><tr><th>规则组</th><th>设计</th><th>示例与异常</th></tr></thead><tbody><tr><td>来源选择</td><td>先满足条款等价、时效与供应商授权，再按成本、可靠性或人工优先级选择一个来源</td><td>相同房型低价但不可退，不能替代可退报价；选择理由与候选成本保留</td></tr><tr><td>成本与加价</td><td>示例公式 sell = round(net × (1 + markup_rate) + fixed_fee, 2)</td><td>净价 USD100、加价10%、固定费2 → USD112；这是“成本加价”不是毛利率10%</td></tr><tr><td>毛利保护</td><td>若按渠道佣金模拟，margin = sell − commission − cost − fixed_cost</td><td>佣金基数和税费需配置；净价渠道不再扣零售佣金；不得混用两种合同模型</td></tr><tr><td>税费和汇率</td><td>MVP 固定同币种且已知税费口径；未来显式 FX quote/version/expiry 与税费条目</td><td>缺税费口径不生成售价；禁止 LLM 推断税率或悄悄换汇</td></tr><tr><td>库存保护</td><td>publish_qty = max(0, selected_pool_qty − safety_buffer)，按渠道分配约束</td><td>4 间、缓冲1，最多分配3间；SIM-A=2、SIM-B=1，共用池不得各发3间当独占</td></tr><tr><td>多渠道库存模式</td><td>MVP 用静态分配额度；未来共享镜像需订单回流、锁房与补偿</td><td>即使静态分配，本地快照过时仍可能失真，不构成真实防超售保证</td></tr><tr><td>停售与限制</td><td>stop_sell 覆盖数量；CTA/CTD/LOS 单独表示；过期来源触发关闭意图</td><td>quantity=0 不删除房型；缺日价格不可沿用昨日值</td></tr><tr><td>大幅变化</td><td>价格涨跌、房型/退改变化进入风险审批；规则改动产生新版本</td><td>新来源替换导致不可退：直接阻断等价商品，不能只显示价格变动</td></tr></tbody></table></div>
+<h3>商品快照结构与变更范围</h3><p>快照保存 property/room/rate mapping version、source activation version、pricing rule version、allocation policy version、channel capability version、日期区间、逐日价格库存与政策。payload 做规范化排序后计算 SHA-256，剔除非业务字段如 trace_id。审批绑定此 hash；任何业务字段变化都需生成新快照并重新经过审批闸门；符合已授权策略时可由新策略决策批准，否则转人工，不沿用旧hash的审批。</p>
+<p>对比项按内容、房型条款、价格、库存、限制分组。MVP 每个渠道 listing + 日期窗口生成完整目标快照，模拟适配器可转为逐日更新；不做“从当前数据库临时拼出审批后的内容”。</p>
+<h3>本地查询和真实可订的界线</h3><p>本地 availability 查询只反映当前激活文件与已配置分配规则，响应明确包含 as_of、expires_at、simulation=true。没有供应商确认与订单占用，就不能承诺“实时有房”。未来订单链路须增加 search→price check→hold/book→confirm 与失败补偿，另行设计。</p>
+</section>
+
+<section id="publishing"><h2>模拟发布、幂等、重试与对账</h2>
+<h3>模拟渠道不是空壳</h3><p>模拟器是独立的“远端状态机”，有自己的持久化表、幂等收据、能力配置、延迟与故障开关。即使与主系统部署在同一机器，也通过 HTTP 契约交互；主系统不能直接写模拟器远端表，否则无法验证网络与部分失败语义。</p>
+<div class="table-wrap"><table><thead><tr><th>能力</th><th>SIM-A（演示设定）</th><th>SIM-B（演示设定）</th></tr></thead><tbody><tr><td>商品写入</td><td>upsert 内容 + 日历；支持 revision/CAS</td><td>内容先建后更日历；支持 revision/CAS</td></tr><tr><td>负载限制</td><td>每请求最多 30 个日期格</td><td>每请求最多 10 个日期格；示例每秒2次</td></tr><tr><td>条款表达</td><td>支持取消阶梯与餐食人数</td><td>仅 refundable / non_refundable，复杂阶梯阻断</td></tr><tr><td>回执与查询</td><td>幂等键查状态、listing 读取、远端 revision/hash</td><td>异步 operation_id；查询状态与最终快照</td></tr><tr><td>故障注入</td><td>429、500、落地后超时、迟到响应</td><td>异步处理中、部分日期拒绝、远端漂移</td></tr></tbody></table></div>
+<h3>可靠发布时序</h3><ol><li>API 接收 <code>Idempotency-Key</code> 和审批快照；校验权限、审批 hash、expected_revision 和过期时间。</li><li>同一数据库事务内创建 publish_plan、细分 task、desired_revision 和 outbox_event；唯一键约束防止重复计划。提交后立即返回 202 与查询链接。</li><li>dispatcher 通过 <code>FOR UPDATE SKIP LOCKED</code> 取外盒，派发可重复；Worker 接管租约并根据 task 唯一标识去重。</li><li>Worker 校验任务未被 supersede，按 channel_account + listing 聚合键串行；适配器转换快照、拆分请求并携带稳定业务幂等键。</li><li>模拟器在远端事务内校验幂等键、payload hash、revision；写远端状态与 receipt 后返回。同 key 不同 payload 返回 409。</li><li>本地记录回执、applied_revision 和任务结果。Worker 在远端成功后崩溃，恢复时查询同幂等键，获得相同 receipt，不重复创建。</li><li>对账按优先级扫描 desired/applied/observed；成功回执不替代实际读取比对。部分失败汇总但不回滚其他渠道已成功操作。</li></ol>
+<pre><code>HTTP 请求幂等作用域：tenant + route + Idempotency-Key
+业务任务唯一键：tenant + channel_account + listing + desired_revision + chunk_index
+远端请求键：SHA256(tenant | channel_account | listing | revision | action | chunk_index)
+
+if same_key and same_payload_hash: return original_operation
+if same_key and different_payload_hash: reject IDEMPOTENCY_CONFLICT
+if task.revision &lt; listing.desired_revision: mark SUPERSEDED
+if remote.revision &gt; request.revision: reject STALE_REVISION
+
+交付语义：至少一次任务派发 + 幂等外部效果；不宣称端到端 exactly-once。</code></pre>
+<h3>重试与结果未知</h3><div class="table-wrap"><table><thead><tr><th>情况</th><th>自动动作</th><th>终止 / 升级</th></tr></thead><tbody><tr><td>本地校验 400/422；条款不支持</td><td>不重试，保留字段错误</td><td>运营修正，创建新快照</td></tr><tr><td>401/403</td><td>暂停渠道账号，保护队列</td><td>管理员修配置；真实凭证不得进入日志</td></tr><tr><td>429</td><td>尊重 Retry-After；账号级限速与抖动</td><td>超预算或发布窗口即将过期则人工处置</td></tr><tr><td>5xx / 明确未执行的连接失败</td><td>指数退避 full jitter：random(0,min(60s,2s×2^attempt))</td><td>建议最多6次/15分钟，以先到为准；数字为拟议配置</td></tr><tr><td>请求发出后的超时 / 回执丢失</td><td>UNKNOWN，先查 operation / 幂等收据 / 远端版本</td><td>无法证明未执行则不盲目新建；查询预算耗尽后人工审核</td></tr><tr><td>部分日期成功</td><td>按 chunk + cell receipt 标识已生效项，只处理未完成项</td><td>模拟器若不支持部分结果，则整块原子失败；契约必须明确</td></tr><tr><td>重试时源数据已过期</td><td>原快照不再发布；标记 EXPIRED，触发最新关闭/替代计划</td><td>审核员决定新快照；不更新旧 payload 复用旧 key</td></tr></tbody></table></div>
+<h3>旧任务与迟到写入</h3><p>本地串行不足以阻止超时请求迟到。模拟器必须在远端比较 revision，拒绝较旧版本，并在写入事务中原子更新。真实渠道若没有幂等、查询、CAS 或等价顺序保证，只能降低并发、等待不确定请求收敛并持续对账；仍存在残余覆盖风险，应写入接入评估，不虚构通用 exactly-once 保证。</p>
+<h3>三方对账</h3><p><code>desired</code> 是审批后的目标；<code>applied</code> 是已确认发送成功；<code>observed</code> 是实际读取远端的状态。比较单位是租户、渠道账号、listing、日期、人数及 policy hash，远端读取失败归为 UNKNOWN，不归为“缺失”。</p>
+<ul><li>远端缺失 / 数值漂移：若目标仍有效且任务已完成，创建“重新应用同一已批准快照”的修复任务，引用原审批；若业务值变化则需新审批。</li><li>本地已撤回而远端仍售卖：最高优先级停卖 + 告警；所有自动修复必须尊重新的 desired_revision，不能复活撤回商品。</li><li>模拟器对账采用每 60 秒调度和按需触发，作为演示配置；真实频率受平台配额和业务风险约束。</li><li>死信保存分类、尝试历史、最后回执和建议动作；手工重试需原因，不清零审计；重试仍验证版本与时效。</li></ul>
+</section>
+
+<section id="states"><h2>状态机、事务边界与业务不变量</h2>
+<p>状态表示业务事实，进度表示任务执行。不要用一个“成功/失败”字段承载导入、匹配、审批和发布的全部含义。</p>
+<div class="table-wrap"><table><thead><tr><th>聚合</th><th>主状态路径</th><th>异常与合法恢复</th></tr></thead><tbody><tr><td>Import batch</td><td>RECEIVED → PREVIEWED → PARSING → VALIDATED → ACTIVATING → ACTIVE</td><td>QUARANTINED / FAILED / CANCELLED；部分坏行在质量报告展示；已 ACTIVE 只能用新激活事件替代</td></tr><tr><td>Mapping</td><td>UNMATCHED → PROPOSED → IN_REVIEW → APPROVED</td><td>REJECTED / NEEDS_INFO / NEEDS_REVIEW / REVOKED；只有 APPROVED 且版本有效可编译</td></tr><tr><td>Offer revision</td><td>DRAFT → VALIDATED → PENDING_APPROVAL → APPROVED → SUPERSEDED</td><td>BLOCKED / REJECTED / EXPIRED；批准后不可修改，修正必须新 revision</td></tr><tr><td>Publish plan</td><td>CREATED → RUNNING → SUCCEEDED</td><td>PARTIAL / FAILED / CANCELLED；包含多任务汇总，不直接表示远端每格状态</td></tr><tr><td>Publish task</td><td>PENDING → LEASED → SENDING → ACKNOWLEDGED → VERIFIED</td><td>RETRY_WAIT / UNKNOWN / FAILED_FINAL / SUPERSEDED / EXPIRED；UNKNOWN 必须走查询</td></tr><tr><td>Channel listing</td><td>UNPUBLISHED → ACTIVE → STOP_SELL_REQUESTED → STOPPED</td><td>DRIFTED / UNKNOWN；这是对账后的投影，停止请求不等于已停卖</td></tr></tbody></table></div>
+<h3>不可违反的规则</h3><ol><li>任何跨租户外键关系都必须被数据库或资源检查拒绝。</li><li>APPROVED 映射必须引用来源实体版本与主数据版本；关键事实变更后不能继续静默有效。</li><li>已审批快照的业务 payload 永不可变；审批记录中的 hash 必须与任务实际 hash 相同。</li><li>任一库存池的静态渠道分配总额不超过扣除缓冲后的可用量；两个价格计划引用同池不重复加总。</li><li>同 listing 的 desired_revision 单调递增；旧任务不能把远端 revision 降级。</li><li>无法确认的渠道结果必须为 UNKNOWN；不得在列表中伪装为“已发布”。</li><li>重试不能修改 payload 或换用已过期的库存；重发相同业务效果复用稳定幂等键。</li><li>激活来源与写 outbox 同事务；远端 HTTP 调用不放进数据库长事务。</li></ol>
+<h3>并发与取消</h3><p>领域聚合使用 version/ETag 乐观锁。任务租约带 owner、expires_at、fencing_token；租约超时的旧 Worker 不得更新本地结果。取消仅取消未发送任务；SENDING/UNKNOWN 必须先确认外部效果。需要撤回时创建更高 revision 的停卖操作，不能用删除任务假装远端操作消失。</p>
+</section>
+
+<section id="architecture"><h2>技术架构与模块规格</h2>
+<h3>后端主线：持久化工作流，而非 Agent 自主规划</h3><p>阶段顺序、转换条件和副作用由服务端代码与版本化策略决定。AI 只作为被调用的能力，不拥有发布权限。编排器负责“现在可以执行什么”，Worker 负责“如何执行该阶段”，领域模块负责“该操作是否合法”。第一版可用 PostgreSQL 实现轻量编排，不必引入额外工作流平台；人工长等待和流程迁移复杂后，再评估专用持久化工作流引擎。</p>
+<pre><code>UPLOAD_CONFIRMED → VALIDATE → ACTIVATE → RESOLVE_MAPPINGS → COMPILE
+  → APPROVAL_GATE → DISPATCH → VERIFY → COMPLETED
+
+VALIDATE        → WAITING_DATA_FIX       → 新版本校验 / 激活
+RESOLVE_MAPPINGS→ WAITING_MAPPING_REVIEW → 决策事件 → 重新检查依赖
+APPROVAL_GATE   → WAITING_APPROVAL       → 人工决定 / 授权策略决定
+DISPATCH       → RETRY_WAIT / UNKNOWN   → 查询 / 重试 / 升级
+
+等待期间不占用线程或数据库事务；恢复使用持久化状态和版本检查。
+已成功的外部副作用不能靠“重跑整个流程”撤销或重复执行。</code></pre>
+<h3>运行实例与阶段执行规格</h3><div class="table-wrap"><table><thead><tr><th>对象</th><th>持久化内容</th><th>约束</th></tr></thead><tbody><tr><td>workflow_run</td><td>tenant、trigger_batch、definition_version、source_versions、status、current_gate、version、parent_run_id</td><td>同触发源与流程定义幂等创建；COMPLETED 表示所有必需渠道已 VERIFIED，部分成功单列</td></tr><tr><td>workflow_step</td><td>run_id、step_key、input_hash、status、attempt、output_ref、lease_owner、lease_until、fencing_token</td><td>run+step_key+input_hash 唯一；重试复用同输入；输入变化产生新步骤版本</td></tr><tr><td>workflow_wait</td><td>run_id、gate_type、resource_id、expected_version、resolved_event_id、deadline</td><td>人工决策只唤醒相关等待；迟到/重复事件不触发重复执行</td></tr><tr><td>automation_policy</td><td>scope、allowed_changes、thresholds、validity、version、approved_by、enabled</td><td>默认关闭；修改生成新版本；停用阻止未发送任务继续自动授权</td></tr><tr><td>policy_decision</td><td>snapshot_id、payload_hash、policy_version、facts_hash、ALLOW/REVIEW/DENY、reasons、actor</td><td>决策可重算，记录原始版本；不能将模型分数作为唯一授权依据</td></tr></tbody></table></div>
+<h3>事务、并发与背压</h3><ul><li><strong>事务 A：</strong>保存阶段结果、状态转换、审计与后续 outbox 同事务提交。模型/解析/HTTP 在事务外执行，完成后按租约 token 与预期版本提交结果。</li><li><strong>事务 B：</strong>激活来源时锁分区并递增版本。多分区按固定顺序加锁；死锁/序列化失败可有限重试，不能静默覆盖。</li><li><strong>事务 C：</strong>创建发布计划时检查快照、来源、映射和审批/策略版本；发送前再次校验。已过时任务停止并生成新运行。检查后仍可能出现外部在途竞争，使用远端 revision 和后续对账处理，不能宣称完全消除所有竞态。</li><li><strong>资源隔离：</strong>解析、AI、渠道调用使用不同并发预算；按租户公平调度，渠道账号独立限流。队列超过阈值拒绝新重型任务或排队告知，避免无限积压。</li><li><strong>崩溃恢复：</strong>租约到期才接管；旧 Worker 的本地提交被 fencing token 拒绝。外部调用另靠业务幂等与远端 revision 保护，租约本身不能防止外部重复效果。</li><li><strong>局部恢复：</strong>有效输出按 input_hash 复用；新来源使依赖步骤失效。修复坏数据产生新批次并关联旧 run，不把旧快照 payload 原地更新。</li></ul>
+<h3>自动化控制面</h3><p>管理员可暂停租户、供应商或渠道的新增派发；已 SENDING/UNKNOWN 的任务仍需查询与对账。区分“暂停运行”“取消未发送任务”“紧急停卖”三种动作。人工待办显示阻断原因、影响范围、负责角色和恢复条件；完成决策后自动恢复后续阶段。首版用 job 查询轮询即可，不为展示引入 WebSocket。</p>
+<h3>推荐形态：模块化单体 + 独立 Worker + 模拟器</h3><p>建议使用 React/TypeScript 管理后台、FastAPI/Python 应用层、PostgreSQL 数据层。Python 便于文件与 AI 管道；若求职方向为 Java，也可保留相同领域边界用 Spring Boot 实现。选型是拟议建议，不意味着当前已安装或部署。</p>
+<figure class="diagram"><svg viewBox="0 0 1000 510" role="img" aria-labelledby="arch-title"><title id="arch-title">模块化单体与模拟渠道架构</title><rect class="neutral" x="25" y="25" width="190" height="75" rx="4"/><text x="45" y="55">浏览器管理控制台</text><text class="small" x="45" y="80">导入 / 审核 / 发布 / 对账</text><rect class="box" x="275" y="25" width="425" height="75" rx="4"/><text x="298" y="55">API：认证、租户上下文、领域命令</text><text class="small" x="298" y="80">接入 | 主数据 | 匹配 | 商品 | 审批 | 发布 | 审计</text><rect class="risk" x="765" y="25" width="210" height="75" rx="4"/><text x="785" y="55">可选模型适配层</text><text class="small" x="785" y="80">规则回退 / 本地或外部模型</text><rect class="box" x="275" y="170" width="425" height="80" rx="4"/><text x="298" y="200">PostgreSQL：业务事实与事务外盒</text><text class="small" x="298" y="225">租户隔离 / 版本 / 审批 / 任务 / 向量可选</text><rect class="neutral" x="25" y="170" width="190" height="80" rx="4"/><text x="45" y="200">本地 Artifact Store</text><text class="small" x="45" y="225">原件 / 错误报告 / 快照</text><rect class="box" x="275" y="320" width="425" height="80" rx="4"/><text x="298" y="350">Worker：解析 / 候选 / 编译 / 发布 / 对账</text><text class="small" x="298" y="375">DB 任务队列、租约、重试、限流、幂等</text><rect class="risk" x="765" y="320" width="210" height="80" rx="4"/><text x="785" y="350">独立 HTTP 模拟渠道</text><text class="small" x="785" y="375">远端库 / receipt / 故障开关</text><rect class="neutral" x="275" y="450" width="425" height="40" rx="4"/><text x="298" y="476">统一 trace、结构化日志、指标、审计导出</text><path class="edge" d="M215 62H275"/><path class="edge" d="M700 62H765"/><path class="edge" d="M488 100V170"/><path class="edge" d="M275 210H215"/><path class="edge" d="M488 250V320"/><path class="edge" d="M700 360H765"/><path class="edge" d="M488 400V450"/><path class="edge" d="M120 250V360H275"/></svg><figcaption>本地 MVP 不需要 Kafka 或微服务。任务队列和外盒可基于 PostgreSQL；规模出现后再用相同契约替换基础设施。</figcaption></figure>
+<div class="table-wrap"><table><thead><tr><th>模块</th><th>职责 / 输入输出</th><th>边界与失败处理</th></tr></thead><tbody><tr><td>Identity & Tenant</td><td>登录、成员、角色、资源范围、审计主体</td><td>服务端解析租户；后台任务同样设置租户上下文</td></tr><tr><td>Ingestion</td><td>文件→staging→质量报告→激活版本</td><td>解析失败不污染 active view；资源超限可取消</td></tr><tr><td>Master Data</td><td>酒店、房型、政策、别名、版本与合并历史</td><td>禁止硬删除被快照引用的主数据；合并独立审批</td></tr><tr><td>Matching</td><td>候选召回、规则冲突、AI 提案、审核决策</td><td>只产生建议；模型无数据库写权限或发布权限</td></tr><tr><td>Offer Compiler</td><td>当前来源与映射→合格报价→渠道快照</td><td>纯计算优先，可用冻结输入复现；不发 HTTP</td></tr><tr><td>Approval</td><td>提交、差异、风控审批、hash 绑定</td><td>变更自动失效；禁止审批自身高风险操作</td></tr><tr><td>Distribution</td><td>发布计划、外盒、任务、顺序、回执、对账</td><td>适配器隔离协议细节；UNKNOWN 有独立路径</td></tr><tr><td>Channel Simulator</td><td>远端商品、日历、操作回执、故障注入</td><td>独立数据存储；禁用真实域名出站；revision 原子检查</td></tr><tr><td>Audit & Observability</td><td>业务变更链、技术追踪、指标与报告</td><td>敏感信息脱敏；审计不可由普通管理操作修改</td></tr></tbody></table></div>
+<h3>建议工程结构</h3><pre><code>apps/admin/                 # 管理控制台
+services/core/
+  modules/identity/ ingestion/ master_data/ matching/
+  modules/offers/ approval/ distribution/ audit/
+  workers/                   # 同代码库独立进程
+  adapters/files/ models/ channels/
+services/channel-simulator/  # 独立 HTTP 服务与远端存储
+contracts/openapi/ events/ fixtures/
+datasets/seed/ evaluation/   # 全部合成、标注与许可说明
+tests/unit/ integration/ contract/ e2e/ security/
+docs/decisions/ runbooks/ demo/
+infra/                      # 本地启动与数据库迁移</code></pre>
+<h3>运行与环境</h3><p>每个项目使用独立 Conda 环境，建议路径 <code>D:\miniconda3\envs\hotel-distribution</code>，锁定 Python 和依赖，不使用 base。前端 Node 依赖使用项目 lockfile；PostgreSQL/模拟器可以本地服务或容器运行。提供 .env.example、迁移、种子和一条启动入口，真实密钥不入仓库。CPU、内存、模型大小和并发数在评估报告中记录。</p>
+<h3>扩展触发条件</h3><p>当解析/匹配占用导致 API 延迟超目标，先拆独立 Worker 与资源队列；当向量检索确实成为瓶颈，再启用 pgvector 索引；当多实例派发与背压超出 DB 队列能力，再引入消息代理。拆服务需要独立团队/吞吐证据，不能为了作品集堆栈而拆。</p>
+</section>
+
+<section id="database"><h2>核心数据库模型与关系</h2>
+<p>以下为逻辑 Schema，字段省略通用 created_at、updated_at。所有租户业务表含 <code>tenant_id NOT NULL</code>，对外 ID 使用不透明 UUID。软删除或有效期不会自动保证唯一性，需明确部分唯一索引。主键可为全局 UUID，但所有跨表引用仍使用 tenant_id + id 复合外键。</p>
+<div class="table-wrap"><table><thead><tr><th>表</th><th>核心字段</th><th>约束 / 关系</th></tr></thead><tbody>
+<tr><td>tenant / user / membership</td><td>tenant(id,name,status)；user(id,subject)；membership(tenant_id,user_id,role,status)</td><td>membership 唯一 tenant+user；角色可进一步拆 role_permission</td></tr>
+<tr><td>supplier</td><td>id, code, contract_version, inventory_mode, freshness_policy, status</td><td>tenant+code 唯一；合同配置版本化</td></tr>
+<tr><td>artifact</td><td>id, supplier_id, sha256, storage_key, size, mime, uploaded_by</td><td>storage_key 服务端生成；租户授权后下载；原件不可变</td></tr>
+<tr><td>import_batch / processing_run</td><td>id, artifact_id, manifest, mode, scope, source_sequence, template_version, status, report；run_id, normalizer_version</td><td>来源和处理运行分离；批次包含多文件可用 batch_artifact 连接表</td></tr>
+<tr><td>staging_record / dq_issue</td><td>run_id, entity_kind, natural_key, source_row, raw_hash, normalized_json；severity, field, error_code</td><td>分批存储；run+entity+natural_key 检测冲突；大原文外置</td></tr>
+<tr><td>source_activation</td><td>id, supplier_id, partition_key, source_sequence, batch_id, previous_id, activated_by</td><td>当前 pointer 独立表 source_partition；CAS version；激活事件不可变</td></tr>
+<tr><td>supplier_entity / supplier_entity_version</td><td>entity(id,supplier_id,kind,parent_id,external_code)；version(id,entity_id,activation_id,payload,source_locator,hash)</td><td>外部编码唯一需包含 parent 范围；版本按 entity+activation 唯一</td></tr>
+<tr><td>property / property_version</td><td>id, current_version_id；version(id,property_id,name,country,city,address,lat,lon,timezone)</td><td>主数据历史不可变；名字不设唯一；合并 history 保留旧 ID</td></tr>
+<tr><td>room_type / room_version</td><td>id, property_id；version(id,room_id,beds,max_adults,area,view,smoking)</td><td>房型必须属于同租户酒店；关键属性版本化</td></tr>
+<tr><td>rate_plan / policy_version</td><td>id, room_id；policy(id,plan_id,meal,cancel_steps,payment,tax_basis,restrictions,raw_terms)</td><td>政策 JSONB 有 Schema 版本，金额/时间仍结构化校验</td></tr>
+<tr><td>entity_mapping / mapping_decision</td><td>id,source_entity_id,source_version_id,target_kind,target_id,target_version_id,status,version；decision,reason,actor</td><td>每来源实体仅一条当前 APPROVED 映射；kind 与 target 对齐，建议分表确保 FK</td></tr>
+<tr><td>match_proposal</td><td>id,source_version_id,candidate_id,feature_json,hard_conflicts,model_version,prompt_version,rank_score</td><td>保存候选集和证据；score 为排序值，非概率</td></tr>
+<tr><td>inventory_pool / inventory_cell</td><td>pool(id,supplier_id,room_entity_id,external_pool_code)；cell(pool_id,activation_id,stay_date,quantity,stop_sell,observed_at)</td><td>pool+activation+date 唯一；quantity≥0；plan_pool_link 表表达多计划共享</td></tr>
+<tr><td>rate_cell</td><td>supplier_plan_id,activation_id,stay_date,occupancy_key,currency,net_amount,policy_version_id</td><td>计划+版本+日期+人数+币种唯一；NUMERIC 金额</td></tr>
+<tr><td>pricing_rule / allocation_rule</td><td>id,version,config,effective_range,approved_by</td><td>规则不可变版本；来源池按日期分配渠道额度</td></tr>
+<tr><td>offer / offer_snapshot</td><td>offer(id,property_id,room_id,plan_id,channel_account_id)；snapshot(id,offer_id,revision,input_versions,payload,payload_hash,status,expires_at)</td><td>offer+revision 唯一；payload 批准后不可变；大日历可拆 snapshot_cell</td></tr>
+<tr><td>channel_account / channel_mapping</td><td>id,code,adapter_type,capability_version,config_ref；internal_entity_id,external_code</td><td>MVP 只允许 simulator 类型；external code 唯一范围按渠道契约</td></tr>
+<tr><td>approval</td><td>id,snapshot_id,payload_hash,submitted_by,reviewed_by,decision,reason,expires_at,decision_mode,policy_decision_id</td><td>人工高风险 reviewed_by≠submitted_by；策略模式关联policy_decision并记录system actor，不伪造reviewer；重复决策用版本锁</td></tr>
+<tr><td>channel_listing</td><td>id,channel_account_id,offer_id,external_id,desired_revision,applied_revision,observed_revision,state</td><td>tenant+account+offer 唯一；更新 revision 用 CAS</td></tr>
+<tr><td>publish_plan / publish_task</td><td>plan(id,snapshot_ids,state)；task(id,plan_id,listing_id,snapshot_id,chunk_index,idempotency_key,status,attempt,next_run_at,lease_token)</td><td>listing+revision+chunk 唯一；attempt 历史独立表 task_attempt</td></tr>
+<tr><td>outbox_event / consumer_inbox</td><td>event(id,aggregate_id,aggregate_version,type,payload,published_at)；consumer,event_id</td><td>consumer+event_id 唯一；至少一次派发；不删除未派发事件</td></tr>
+<tr><td>channel_receipt / reconciliation_diff</td><td>task_id,remote_operation_id,remote_revision,remote_hash,raw_response_ref；listing_id,desired_hash,observed_hash,diff,state</td><td>回执追加；远端内容脱敏；对账 UNKNOWN 独立分类</td></tr>
+<tr><td>idempotency_record / audit_event</td><td>route,key,request_hash,response_ref,expires_at；actor,action,resource,before_hash,after_hash,reason,trace_id</td><td>幂等保留期覆盖最大重试/对账窗口；审计追加只读</td></tr>
+</tbody></table></div>
+<h3>关系基数与外键选择</h3><pre><code>Tenant 1 ── N Supplier 1 ── N SupplierEntity 1 ── N SupplierEntityVersion
+SupplierEntity 1 ── N MappingHistory ── 1 Property / RoomType / RatePlan
+Property 1 ── N RoomType 1 ── N RatePlan 1 ── N PolicyVersion
+SupplierRoom 1 ── N InventoryPool 1 ── N InventoryCell(date, version)
+SupplierPlan N ── N InventoryPool  （通过 PlanPoolLink）
+SupplierPlan 1 ── N RateCell(date, occupancy, currency, version)
+Offer 1 ── N OfferSnapshot 1 ── N Approval
+Offer 1 ── N ChannelListing 1 ── N PublishTask 1 ── N TaskAttempt
+PublishTask 1 ── N ChannelReceipt；ChannelListing 1 ── N ReconciliationDiff
+
+生产 DDL 建议把 property_mapping / room_mapping / rate_mapping 分表，
+避免 target_kind + target_id 的多态字段无法建立真实外键。</code></pre>
+<h3>代表性 SQL 与索引</h3><pre><code>CREATE TABLE inventory_cell (
+  tenant_id uuid NOT NULL,
+  id uuid NOT NULL,
+  pool_id uuid NOT NULL,
+  activation_id uuid NOT NULL,
+  stay_date date NOT NULL,
+  quantity integer NOT NULL CHECK (quantity &gt;= 0),
+  stop_sell boolean NOT NULL DEFAULT false,
+  observed_at timestamptz NOT NULL,
+  PRIMARY KEY (tenant_id, id),
+  FOREIGN KEY (tenant_id, pool_id) REFERENCES inventory_pool(tenant_id, id),
+  FOREIGN KEY (tenant_id, activation_id) REFERENCES source_activation(tenant_id, id),
+  UNIQUE (tenant_id, pool_id, activation_id, stay_date)
+);
+CREATE INDEX task_ready_idx ON publish_task(tenant_id, next_run_at)
+  WHERE status IN ('PENDING','RETRY_WAIT');
+CREATE UNIQUE INDEX one_active_property_mapping
+  ON property_mapping(tenant_id, source_entity_id)
+  WHERE status = 'APPROVED' AND revoked_at IS NULL;</code></pre>
+<p>酒店名可使用 trigram 索引，地理查询在需要时使用 PostGIS；不先部署全套地理组件。日历数据按 tenant/pool/date 查询索引；分区表在有数据量证据后增加。审计与任务尝试需要保留策略和归档；MVP 可保留全部合成数据，真实环境按合同和适用要求确定期限。</p>
+</section>
+
+<section id="api"><h2>API、错误模型与事件契约</h2>
+<p>以下为拟议 REST v1 设计。所有写命令服务端鉴权，租户由会话/令牌及成员关系确定。上传、候选计算、编译、发布、对账使用异步 job；查询支持 cursor 分页。公开响应明确 simulation 与数据时点，不把模拟状态冒充真实渠道状态。</p>
+<div class="table-wrap"><table><thead><tr><th>接口</th><th>用途与输入</th><th>响应 / 约束</th></tr></thead><tbody>
+<tr><td>POST /v1/imports</td><td>multipart 文件 + supplier_id + template_version + manifest</td><td>202 {batch_id, job_id}；Idempotency-Key；上传后仍需确认预览</td></tr>
+<tr><td>GET /v1/imports/{id}/preview</td><td>工作表/映射预览</td><td>样本、字段推断、未映射列、风险；只返回授权字段</td></tr>
+<tr><td>POST /v1/imports/{id}/confirm</td><td>字段映射、scope、mode、expected_version</td><td>202；冻结解析参数；模板变化新 processing_run</td></tr>
+<tr><td>GET /v1/imports/{id}/quality</td><td>按 severity/field 分页</td><td>计数、行定位、错误下载授权链接</td></tr>
+<tr><td>POST /v1/imports/{id}/activate</td><td>expected_active_version、确认范围与风险理由</td><td>202/409；CAS 激活，不接受隐式覆盖</td></tr>
+<tr><td>POST /v1/match-runs</td><td>来源版本、实体类型、规则/模型配置</td><td>202；无模型也可执行规则候选</td></tr>
+<tr><td>GET /v1/match-proposals</td><td>status、supplier、conflict、cursor</td><td>候选及证据摘要，详情按需查询</td></tr>
+<tr><td>POST /v1/mappings/{id}/decisions</td><td>decision、target_version_id、reason</td><td>200；If-Match 版本必需；无权限403，冲突409</td></tr>
+<tr><td>POST /v1/offers/compile</td><td>source_activation_ids、渠道、日期、rule_version</td><td>202；返回合格商品与阻断原因；不发布</td></tr>
+<tr><td>GET /v1/offer-snapshots/{id}/diff</td><td>与 base_revision 比较</td><td>内容/价格/库存/条款差异及来源</td></tr>
+<tr><td>POST /v1/offer-snapshots/{id}/submit</td><td>payload_hash、expected_revision</td><td>200；进入待审批</td></tr>
+<tr><td>POST /v1/approvals/{id}/decisions</td><td>approve/reject、reason、hash</td><td>200；职责分离；过期或 hash 变化409</td></tr>
+<tr><td>POST /v1/publish-plans</td><td>snapshot_ids、channel_account_ids、approval_ids</td><td>202；Idempotency-Key；不可混入未审批快照</td></tr>
+<tr><td>GET /v1/publish-plans/{id}</td><td>计划与任务汇总</td><td>总数、成功、UNKNOWN、失败、各 task 链接</td></tr>
+<tr><td>POST /v1/publish-tasks/{id}/retry</td><td>reason、expected_version</td><td>202；仍检查时效、版本、未知结果，不能强行跳过</td></tr>
+<tr><td>POST /v1/listings/{id}/stop-sell</td><td>reason、日期范围、expected_revision</td><td>202；新停卖快照，紧急权限独立审计</td></tr>
+<tr><td>POST /v1/reconciliations</td><td>渠道、listing 范围</td><td>202；返回 diff report / job</td></tr>
+<tr><td>GET /v1/availability</td><td>property、check_in/out、adults=2</td><td>本地报价、as_of、expires_at、simulation=true</td></tr>
+<tr><td>GET /v1/jobs/{id} / audit-events</td><td>任务状态 / 资源审计查询</td><td>只读权限；cursor；脱敏；不暴露其他租户计数</td></tr>
+</tbody></table></div>
+<h3>发布请求与响应示例</h3><pre><code>POST /v1/publish-plans
+Idempotency-Key: demo-run-01-publish-03
+Content-Type: application/json
+
+{"snapshot_ids":["snap-001"], "channel_account_ids":["sim-a"],
+ "approval_ids":["approval-001"], "expected_revisions":{"listing-001":2}}
+
+HTTP 202
+{"plan_id":"plan-003", "job_id":"job-003", "status":"CREATED",
+ "simulation":true, "links":{"status":"/v1/publish-plans/plan-003"}}
+
+HTTP 409
+{"error":{"code":"SNAPSHOT_STALE","message":"来源版本已更新，请重新编译并审批。",
+ "retryable":false,"resource_id":"snap-001","trace_id":"trace-001",
+ "details":{"expected_source":11,"current_source":12}}}</code></pre>
+<h3>错误约定</h3><p>400 参数错误；401 未认证；403 无权；对不可见资源可统一 404 防枚举；409 版本/幂等冲突；413 文件超限；422 业务语义不可满足；429 限流；503 短暂不可用。error.code 稳定用于前端动作，message 可本地化，details 不含密钥/SQL/堆栈。异步 job 失败使用相同错误结构，不让 HTTP 202 被误读为业务成功。</p>
+<h3>工作流与自动化策略接口</h3><div class="table-wrap"><table><thead><tr><th>接口</th><th>用途</th><th>约束</th></tr></thead><tbody><tr><td>GET /v1/workflow-runs/{id}</td><td>查询阶段、输入版本、等待项、失败与恢复历史</td><td>只展示当前租户；输出运行状态不冒充远端成功</td></tr><tr><td>POST /v1/workflow-runs/{id}/pause</td><td>暂停后续派发，保留在途查询与对账</td><td>操作权限、原因、If-Match；幂等</td></tr><tr><td>POST /v1/workflow-runs/{id}/resume</td><td>请求重新检查等待条件并继续</td><td>不能直接设置下一状态；未满足审批/版本条件则409</td></tr><tr><td>POST /v1/automation-policies</td><td>建立范围、阈值、有效期和允许变更类型</td><td>创建为DRAFT；独立审批者授权，模型无此权限</td></tr><tr><td>POST /v1/automation-policies/{id}/decisions</td><td>批准/拒绝指定策略版本</td><td>职责分离与版本锁；不能默认涵盖全部供应商/渠道</td></tr><tr><td>POST /v1/automation-policies/{id}/disable</td><td>撤回后续自动授权</td><td>审计并通知编排器；在途效果仍需确认</td></tr></tbody></table></div>
+<p>后台人工决策通过既有映射/审批接口提交，事务内发送 mapping.decided 或 approval.decided，消费者去重后唤醒等待。客户端不能直接调用“跳过校验”或自行伪造恢复事件。workflow.step.completed、workflow.wait.created/resolved、automation.policy.disabled 使用相同事件信封与版本规则。</p>
+<h3>事件契约</h3><pre><code>{
+ "event_id":"evt-001", "event_type":"source.activation.completed", "schema_version":1,
+ "tenant_id":"tenant-demo-a", "aggregate_type":"source_partition",
+ "aggregate_id":"partition-a100", "aggregate_version":12,
+ "occurred_at":"2027-01-01T02:05:00Z", "trace_id":"trace-001",
+ "payload":{"activation_id":"act-012","affected_property_ids":["H001"],
+            "date_from":"2027-01-10","date_to_exclusive":"2027-01-13"}
+}</code></pre>
+<p>其他事件：mapping.approved/revoked、offer.snapshot.created/expired、approval.decided、publish.task.acknowledged/unknown、listing.drift.detected。消费者以 consumer+event_id 去重，聚合版本处理乱序；事件携带引用和小型事实，不内嵌整份酒店文件。事件 Schema 兼容演进，未知必需版本进入死信，不静默忽略。</p>
+<details><summary>适配器接口与契约测试要点</summary><pre><code>ChannelAdapter:
+  capabilities(account) → CapabilitySpec
+  validate(snapshot, capabilities) → ValidationIssue[]
+  prepare(snapshot, mapping) → PreparedRequest[]
+  publish(request, idempotency_key, revision) → Receipt | UnknownResult
+  query_operation(operation_id_or_key) → OperationStatus
+  fetch_listing(external_id, date_range) → ObservedSnapshot
+  stop_sell(snapshot, key, revision) → Receipt | UnknownResult
+
+契约测试：相同幂等键重复返回同效果；不同载荷409；旧 revision拒绝；
+字段单位/币种/时区不丢失；缺能力明确报错；回执可归一化；限流可分类。</code></pre></details>
+</section>
+
+<section id="security"><h2>多租户、RBAC 与安全设计</h2>
+<div class="table-wrap"><table class="matrix"><thead><tr><th>操作</th><th>导入运营</th><th>映射审核</th><th>分销经理</th><th>管理员</th><th>审计员</th></tr></thead><tbody><tr><td>上传/确认来源</td><td>允许</td><td>只读</td><td>只读</td><td>配置与授权</td><td>只读</td></tr><tr><td>批准映射</td><td>仅提议</td><td>允许</td><td>只读</td><td>可授予角色</td><td>只读</td></tr><tr><td>编译/提交商品</td><td>否</td><td>否</td><td>允许</td><td>可授予角色</td><td>只读</td></tr><tr><td>发布审批</td><td>否</td><td>可独立授予</td><td>需独立审批权限且非本人提交</td><td>不默认绕过职责分离</td><td>只读</td></tr><tr><td>重试/对账/紧急停卖</td><td>否</td><td>否</td><td>授权范围内</td><td>紧急权限单独审计</td><td>只读</td></tr><tr><td>成员/渠道配置</td><td>否</td><td>否</td><td>仅查看脱敏配置</td><td>允许</td><td>只读审计</td></tr><tr><td>导出审计</td><td>否</td><td>否</td><td>范围内报告</td><td>显式权限</td><td>允许</td></tr></tbody></table></div>
+<h3>租户隔离的实际实现</h3><ul><li>API 令牌携带用户身份，服务端通过 membership 验证 active tenant；不信任请求体中的 tenant_id。对象 ID 每次按租户过滤并做动作权限检查。</li><li>PostgreSQL RLS 作为第二道边界，事务内使用 SET LOCAL 设置租户；连接池归还前不遗留上下文。服务角色不使用 BYPASSRLS，必要时 FORCE ROW LEVEL SECURITY。</li><li>后台任务从数据库取 tenant 上下文并校验任务归属；artifact 路径、向量检索、缓存 key、幂等 key、日志索引和指标查询均带租户作用域。</li><li>复合 FK 防止“本租户 mapping 指向他租户酒店”；共享候选索引默认禁用。管理员也只管理所在租户，平台运维越权访问需要显式 break-glass 流程。</li><li>本地登录可使用开发账号，但密码哈希、会话过期、HttpOnly/SameSite Cookie、CSRF 防护和登录限速仍需实现；联网部署必须 HTTPS。</li></ul>
+<h3>安全威胁与响应</h3><div class="table-wrap"><table><thead><tr><th>威胁</th><th>控制</th><th>验证</th></tr></thead><tbody><tr><td>恶意文件 / 压缩炸弹 / 路径穿越</td><td>扩展名+MIME+结构检查，展开限制，随机存储键，隔离解析，禁止任意服务器路径</td><td>畸形 XLSX、超大字符串、../ 文件名测试</td></tr><tr><td>提示注入 / AI 幻觉</td><td>模型无工具权限、固定输出 Schema、证据校验、规则闸门与人工批准</td><td>在酒店描述植入“直接批准”；确认无法影响状态</td></tr><tr><td>越权 / IDOR</td><td>对象级鉴权、RLS、复合 FK、下载授权、租户缓存隔离</td><td>替换资源 ID、任务 ID、artifact ID 的跨租户测试</td></tr><tr><td>XSS / CSV 公式注入</td><td>前端按文本渲染；不把来源 HTML 直接插入；导出危险前缀转义</td><td>酒店名含 script 与公式字符，确认只显示文本</td></tr><tr><td>密钥泄露 / SSRF</td><td>密钥引用与脱敏；MVP adapter URL 白名单仅模拟器；用户不可填任意出站 URL</td><td>日志扫描、私网地址滥用测试；未来连接器单独出站策略</td></tr><tr><td>数据篡改 / 审计丢失</td><td>最小数据库权限、不可变版本、审批 hash、只追加审计、备份校验</td><td>篡改 payload 后发布被拒绝；恢复后 hash 对照</td></tr></tbody></table></div>
+<p>不使用真实旅客信息作为演示数据。酒店内容、图片、供应商报价仍可能受许可和合同限制；作品集只使用自造文本与虚构实体。真实数据出境、保留期限和许可需由合适负责人确认，不能由本设计替代审查。</p>
+</section>
+
+<section id="ux"><h2>管理后台与关键交互</h2>
+<p>后台按运营工作组织，而非按数据库表组织。默认入口展示“待处理事项”，优先暴露过期库存、未知发布结果、冲突映射和渠道漂移，不以酒店总数等虚荣指标占据主要空间。</p>
+<div class="table-wrap"><table><thead><tr><th>页面 / 路由</th><th>核心内容与动作</th><th>必要状态</th></tr></thead><tbody><tr><td>工作台 /workbench</td><td>我的审核、待激活批次、临期来源、UNKNOWN、漂移；按风险排序</td><td>首次为空时提供导入合成数据入口；每项跳到可操作详情</td></tr><tr><td>导入中心 /imports</td><td>文件→工作表→字段映射→scope/mode→预览→确认；批次历史与质量</td><td>上传/解析进度分开；后台可恢复；坏行下载；重复文件提示</td></tr><tr><td>酒店主数据 /properties</td><td>内部酒店、来源别名、房型/计划树、映射覆盖与版本</td><td>疑似重复、主数据合并影响、关键字段变更复审</td></tr><tr><td>匹配工作台 /matching</td><td>左来源、中候选、右证据/冲突；支持键盘和筛选</td><td>未知醒目标记；审批理由；409 版本冲突；拒绝与待补充都有入口</td></tr><tr><td>报价与日历 /offers</td><td>酒店×房型×计划×日期；净价/售价、来源、分配池、TTL</td><td>0、未知、停售、过期四种显示；不能只用颜色</td></tr><tr><td>发布预览 /publish-preview</td><td>变更前后、条款差异、渠道能力、阻断理由、审批 hash</td><td>风险未解除不可提交；变更影响日期和商品数可核对</td></tr><tr><td>发布任务 /publish-plans</td><td>渠道/任务/尝试树；回执、UNKNOWN、重试时间与处置动作</td><td>部分成功不显示全绿；重试按钮解释等待查询结果的原因</td></tr><tr><td>对账中心 /reconciliation</td><td>desired/applied/observed 并排、差异类型、修复提案</td><td>查询失败=未知；停卖优先；修复也要版本校验</td></tr><tr><td>审计回放 /audit</td><td>源行→标准化→映射→规则→快照→审批→任务→远端结果</td><td>只读导出；字段脱敏；可追踪原因和操作者</td></tr><tr><td>设置 /settings</td><td>成员、角色、供应商契约、模板、模拟渠道、故障开关</td><td>故障开关只在演示租户可见；真实适配器入口在准入前禁用</td></tr></tbody></table></div>
+<h3>匹配审核页布局示意</h3><figure class="diagram"><svg viewBox="0 0 1000 330" role="img" aria-labelledby="ux-title"><title id="ux-title">审核页三栏布局与明确冲突动作</title><rect class="neutral" x="15" y="20" width="970" height="45" rx="3"/><text x="35" y="49">待审核  ·  供应商 B  ·  房型  ·  仅显示硬冲突  ·  来源版本 12</text><rect class="box" x="15" y="85" width="275" height="175" rx="3"/><text class="title" x="35" y="115">来源记录</text><text x="35" y="146">Deluxe Twin / 双床</text><text x="35" y="176">最多 2 成人；餐食未知</text><text class="small" x="35" y="207">文件 rooms.csv · 第 18 行</text><text class="small" x="35" y="234">原始值与标准化值可切换</text><rect class="neutral" x="310" y="85" width="325" height="175" rx="3"/><text class="title" x="330" y="115">候选房型</text><text x="330" y="146">豪华大床房 · 2 成人</text><text x="330" y="176">名称相似，但床型冲突</text><text class="small" x="330" y="207">候选 2：豪华双床房 → 查看</text><text class="small" x="330" y="234">排序值不是批准概率</text><rect class="risk" x="655" y="85" width="330" height="175" rx="3"/><text class="title" x="675" y="115">决策证据与风险</text><text x="675" y="146">硬冲突：TWIN ≠ KING</text><text x="675" y="176">未知：早餐人数</text><text class="small" x="675" y="207">当前候选禁止批准等价映射</text><text class="small" x="675" y="234">修正候选或退回补充资料</text><rect class="neutral" x="15" y="280" width="970" height="36" rx="3"/><text class="small" x="35" y="303">操作：拒绝候选　|　选择其他候选　|　待补充　|　新建标准房型　　所有操作保留原因与版本</text></svg><figcaption>示意图描述待开发产品，不是已实现后台截图。</figcaption></figure>
+<h3>体验与可访问性要求</h3><ul><li>中文界面保留原始多语言字段；时间显示酒店本地时区并可切换 UTC。金额始终带币种和口径。</li><li>表格支持固定关键列、筛选、分页、批量选择和列设置；不在浏览器一次渲染全部十万行。</li><li>空、加载、失败、部分完成和未知结果分别提供可恢复动作；错误提示指向具体字段/来源行。</li><li>审批页进入后固定待审版本；服务端有新数据时显示版本变化，不悄悄刷新审批对象。</li><li>键盘可访问、标签明确、焦点可见；状态使用文字+颜色，危险操作说明影响范围与结果，不只问“确定吗”。</li></ul>
+</section>
+
+<section id="observability"><h2>审计、可观测性与运营处置</h2>
+<div class="table-wrap"><table><thead><tr><th>层面</th><th>建议采集</th><th>诊断问题</th></tr></thead><tbody><tr><td>接入</td><td>import_rows_total、dq_errors、parse_duration、active_source_age</td><td>谁的模板坏了？报价是否过期？错误在哪一列？</td></tr><tr><td>匹配</td><td>candidate_coverage、review_backlog、decision_duration、conflict_rate、override_rate</td><td>召回不足还是规则太松？人工队列是否积压？</td></tr><tr><td>编译</td><td>offer_blocked_by_reason、compile_duration、price_change_alerts</td><td>不能上架的主要原因是政策、映射还是时效？</td></tr><tr><td>发布</td><td>queue_age、attempts、429_rate、unknown_count、ack_latency、verified_latency</td><td>等待在哪个渠道？远端是否已执行？</td></tr><tr><td>对账</td><td>drift_count、unknown_observations、stop_sell_pending_age、repair_outcomes</td><td>本地与远端是否一致？停售是否真的落地？</td></tr><tr><td>系统</td><td>API p95、Worker memory、DB pool saturation、dead_letters、outbox_lag</td><td>瓶颈与资源耗尽来自哪里？</td></tr></tbody></table></div>
+<p>日志使用 JSON，包含 timestamp、level、service、trace_id、tenant_id、batch/task/listing ID、error_code；业务原文和密钥不进入普通日志。Trace 串联 HTTP→事务→外盒→Worker→模拟器→回执。指标标签不使用高基数的完整酒店名、文件名或 task_id；详细对象通过日志/追踪查询。</p>
+<h3>拟议告警与处置手册</h3><ul><li><strong>停卖待确认超过 5 分钟：</strong>演示阈值；先查询远端，暂停新发布，提升停卖优先级，记录受影响日期，不把任务重置为成功。</li><li><strong>UNKNOWN 积压 / 429 持续：</strong>检查远端健康与配额，降低账号并发，防止重试风暴；确认最大等待和人工责任人。</li><li><strong>来源 TTL 过期：</strong>标记报价失效，创建关闭目标，通知补文件；远端查询失败时保持风险可见。</li><li><strong>映射误判：</strong>冻结映射→影响分析→停卖→修订→复审→发布→对账；保留 incident 记录用于评估。</li><li><strong>数据库恢复：</strong>先停止发新任务，恢复备份与日志，校验快照 hash；以外部幂等收据和远端状态重建 applied，不盲目重播所有事件。</li></ul>
+<h3>恢复目标（拟议，待验证）</h3><p>本地展示版本可接受 RPO≤24h、RTO≤1h，需用备份/恢复演练证实后才能写成结果；真实商业系统的 RPO/RTO 由合同与收入风险决定。备份包含数据库、原件存储与版本清单，恢复演练必须覆盖“远端成功、本地尚未记账”的窗口。</p>
+</section>
+
+<section id="testing"><h2>测试策略、AI 评估与目标指标</h2>
+<div class="notice"><strong>验收优先级：业务正确性 → 故障恢复 → 性能与可运维性 → AI 辅助效果</strong><p>后端必测不因模型准确率高而豁免。AI只需至少一项实际能力接入、结果可验证、失败可降级；更高匹配准确率属于后续优化。既要证明常规流程能自动完成，也要证明异常不会被错误地当作成功。</p></div>
+<h3>后端自动化专属验收</h3><div class="table-wrap"><table><thead><tr><th>测试</th><th>操作</th><th>预期证据</th></tr></thead><tbody><tr><td>常规更新自动贯通</td><td>启用已审批演示策略，上传已确认契约且映射有效的更新文件</td><td>接收后无需逐步点击；每阶段有run/step、策略决策、新快照和远端验证记录</td></tr><tr><td>异常人工恢复</td><td>引入未知房型或超阈值价格，之后补充并批准</td><td>只暂停依赖商品；决策后自动恢复；不重复执行已成功副作用</td></tr><tr><td>并发与原子性</td><td>两个激活请求竞争同分区；注入事务提交前后故障</td><td>高版本不被覆盖；状态与外盒同时存在或同时不存在；无半激活</td></tr><tr><td>Worker崩溃</td><td>解析中、任务租约后、远端落地后分别终止进程</td><td>安全接管、结果不丢、外部效果不重复；旧Worker不能提交本地结果</td></tr><tr><td>策略停用</td><td>任务排队时禁用自动化策略</td><td>未发送任务不继续使用已撤销授权；在途任务查询与对账仍持续</td></tr><tr><td>模型故障</td><td>超时、返回非法JSON、候选ID不存在</td><td>拒绝无效结果、记录错误、规则/人工降级；已有有效映射更新不被无关模型故障阻断</td></tr></tbody></table></div>
+<p>补充报告自动完成率（全部符合策略的更新中，无人工介入且VERIFIED的比例）、人工等待时长、阶段重试数、队列最老任务年龄与恢复耗时。按正常/故障场景分别报告；失败、超时、等待和UNKNOWN不得从端到端统计中隐去。数值目标待第一次基线测量后设定，本版不编造实测值。</p>
+<h3>分层测试</h3><div class="table-wrap"><table><thead><tr><th>类型</th><th>关键用例</th><th>完成证据</th></tr></thead><tbody><tr><td>单元 / 属性测试</td><td>金额舍入；库存非负；共享池不重复计数；退房日不占夜；政策等价；状态转移</td><td>确定性 fixture；随机生成日期/数量验证不变量；失败样本入回归集</td></tr><tr><td>数据库集成</td><td>原子激活、FK/RLS、同分区并发、外盒事务、任务抢占、乐观锁</td><td>真实测试 PostgreSQL，不只 mock 数据库</td></tr><tr><td>适配器契约</td><td>能力校验、幂等、重复 key 冲突、旧 revision、部分成功、异步回执</td><td>主系统与模拟器双向契约测试</td></tr><tr><td>故障注入</td><td>远端落地后超时、Worker 崩溃、外盒重复、消息乱序、连接失败、429</td><td>远端单一效果、任务可恢复、UNKNOWN 收敛或显式升级</td></tr><tr><td>端到端</td><td>上传→审核→审批→双渠道发布→漂移→修复→回放</td><td>可自动复现的脚本与截图/录屏，重置后结果一致</td></tr><tr><td>安全</td><td>跨租户、角色越权、恶意 XLSX、XSS、CSV 注入、提示注入</td><td>负向请求全部被正确拒绝；错误无秘密泄露</td></tr><tr><td>性能 / 稳定性</td><td>十万行流式解析、批量候选、发布积压、低配机器、长时运行</td><td>报告硬件/版本/样本/并发/冷热缓存与 p50/p95；不凭单次结果宣传</td></tr><tr><td>可用性</td><td>错误定位、未知结果处置、审批理解、键盘操作</td><td>任务完成率、人工用时、误点击与访谈观察</td></tr></tbody></table></div>
+<h3>AI 评估集</h3><p>采用两套数据：小型演示集用于讲故事，独立冻结评估集用于衡量泛化。建议初版建立 300 个虚构标准酒店、900 个房型、1,800 个计划，生成多语言别名、不同城市同名、缺字段、错坐标、床型冲突和相近取消条款。规模为计划，不是已生成记录数；不能把合成评估成绩直接外推真实业务。</p>
+<ul><li>标签单位是 source entity→canonical entity 或 NONE，不只标正例；房型/政策用字段级等价标签和硬冲突标签。</li><li>按标准酒店实体切分开发/验证/测试，别名和同物业的房型不得跨分区泄漏；测试集冻结后不调阈值。规则、词典、提示词变更均需留版本。</li><li>采用双人独立标注与争议裁定；只有单人作品集时明确标注“单人标注，缺独立复核”，不得暗示双盲。</li><li>分别报告语言、字段缺失率、同名异店、不同床型、不同政策等困难子集；报告混淆矩阵与置信区间，失败案例比单一平均分更重要。</li></ul>
+<div class="table-wrap"><table><thead><tr><th>指标</th><th>定义</th><th>拟议目标 / 解读限制</th></tr></thead><tbody><tr><td>酒店候选 Recall@10</td><td>有真实对应项的样本中，正确标准酒店出现在前10候选的比例</td><td>建议目标≥95%；不覆盖无匹配样本，需单列 NONE 误报</td></tr><tr><td>Top1 准确率</td><td>有对应项的来源中排名第一正确的比例</td><td>先报告基线再设提升目标；与候选召回一起看</td></tr><tr><td>高置信建议精确率</td><td>落入高置信建议桶的正确建议 / 全部高置信建议</td><td>拟议≥99%，同时报告覆盖率；MVP 仍人工批准，不能称自动匹配准确率</td></tr><tr><td>房型/政策硬冲突漏检</td><td>存在关键冲突却被判可等价的样本数 / 关键冲突样本数</td><td>冻结必测集目标为0次；有限样本0次不代表真实风险为0</td></tr><tr><td>审核效率</td><td>同一任务人工基线与系统辅助的中位用时、修正率</td><td>先采基线；建议希望降低30%，这是待验证假设，属于辅助体验指标，不作为后端项目完成的首要标准</td></tr><tr><td>导入性能</td><td>固定硬件、无模型调用，解析/校验/持久化10万行耗时与峰值内存</td><td>建议 p95≤120秒、峰值≤1GB；首次实现后调整并解释</td></tr><tr><td>闭环成功率</td><td>批准且有效的模拟发布任务在预算内 VERIFIED 的比例</td><td>正常网络建议≥99%；故障注入单列，不把重试任务排出分母</td></tr><tr><td>幂等效果</td><td>同业务任务重复投递后的远端有效商品/修订次数</td><td>必测场景目标无重复效果，至少覆盖100次随机重复投递</td></tr><tr><td>对账收敛</td><td>漂移注入到确认修复的时间</td><td>模拟器可用、无配额阻塞时建议≤2个对账周期</td></tr><tr><td>隔离与追溯</td><td>跨租户负向用例；抽样已发布商品能回溯全部版本</td><td>必测越权0次成功；抽样追溯覆盖100%，均为验收目标</td></tr></tbody></table></div>
+<h3>为什么不能轻易承诺 99% 自动匹配</h3><p>高置信建议精确率必须同时给出样本量、覆盖率与置信区间。若只在少量容易样本上全部正确，不能支撑 99% 泛化声明。未来启用自动批准前，应以足够独立样本证明误合并上界可接受，并由业务负责人确定风险预算；任何硬冲突仍不得自动通过。</p>
+</section>
+
+<section id="dataset"><h2>样例数据设计与演示脚本</h2>
+<p>本节给出可实施的数据契约与样例内容，属于设计样本；本 HTML 不包含已经执行的后端或完整测试数据包。演示实体均为虚构，城市和时区仅用于测试。建议用固定 seed 和固定业务时钟生成文件，避免演示因自然时间推进导致全部 TTL 过期。</p>
+<h3>小型演示数据包</h3><div class="table-wrap"><table><thead><tr><th>组成</th><th>建议数量</th><th>目的</th></tr></thead><tbody><tr><td>tenant-demo-a / tenant-demo-b</td><td>2 租户、每租户至少3角色账号</td><td>越权测试与职责分离</td></tr><tr><td>canonical_properties</td><td>6 酒店，其中2对相似名称</td><td>同店别名与同名异店</td></tr><tr><td>supplier-a / supplier-b</td><td>各5酒店记录；总10记录</td><td>8条指向6家标准酒店，1条无匹配，1条故意缺地址</td></tr><tr><td>rooms / rate_plans</td><td>每来源酒店2房型、每房型2计划</td><td>20来源房型、40来源计划；关键冲突样本</td></tr><tr><td>库存与价格</td><td>3晚、2成人；最多60库存格与120价格格</td><td>库存池共享、日期缺口、价格与停售变化</td></tr><tr><td>模拟渠道</td><td>SIM-A / SIM-B</td><td>能力差异、限流、超时、对账</td></tr><tr><td>异常变体文件</td><td>坏行、旧版本、重复、delta、条款变化各1份</td><td>精确复现异常，不依赖随机碰运气</td></tr></tbody></table></div>
+<h3>关键事实与预期判断</h3><div class="table-wrap"><table><thead><tr><th>来源</th><th>记录</th><th>预期</th></tr></thead><tbody><tr><td>A / A100</td><td>Hailan Bay Hotel，SG，Singapore，测试地址 Demo Quay 8</td><td>映射 H001；虚构物业</td></tr><tr><td>B / B700</td><td>海岚滨海酒店，同一测试地址与建筑级坐标</td><td>建议 H001，人工批准；跨语言正确配对</td></tr><tr><td>B / B701</td><td>Hailan Bay Hotel，MY，Kuala Lumpur，另一地址</td><td>不得映射 H001；同名异国硬冲突</td></tr><tr><td>A / R-K</td><td>Deluxe King，1 KING，2成人，禁烟</td><td>标准豪华大床</td></tr><tr><td>B / R-T</td><td>Deluxe Twin，2 SINGLE，2成人，禁烟</td><td>不能映射大床；应选标准双床或新建</td></tr><tr><td>A / BF-FLEX</td><td>双早；入住前72h免费取消；之后首晚罚金</td><td>不同于 BF-NRF；不得只按“含早”合并</td></tr><tr><td>A / POOL-K</td><td>2027-01-10 库存4；FLEX和NRF共用</td><td>总池4；缓冲1后渠道静态分配合计≤3</td></tr></tbody></table></div>
+<pre><code># properties.csv（虚构样例）
+property_code,name,country_code,city,address,timezone
+A100,Hailan Bay Hotel,SG,Singapore,Demo Quay 8,Asia/Singapore
+
+# rooms.csv
+property_code,room_code,name,max_adults,bed_type
+A100,R-K,Deluxe King,2,KING
+
+# inventory.csv
+property_code,room_code,pool_code,stay_date,quantity,stop_sell,observed_at
+A100,R-K,POOL-K,2027-01-10,4,false,2027-01-01T02:00:00Z
+A100,R-K,POOL-K,2027-01-11,2,false,2027-01-01T02:00:00Z
+A100,R-K,POOL-K,2027-01-12,0,true,2027-01-01T02:00:00Z
+
+# rates.csv
+property_code,room_code,plan_code,stay_date,adults,currency,net_amount
+A100,R-K,BF-FLEX,2027-01-10,2,USD,100.00
+A100,R-K,BF-FLEX,2027-01-11,2,USD,110.00
+A100,R-K,BF-FLEX,2027-01-12,2,USD,110.00</code></pre>
+<p>样例 observed_at 与业务时钟固定为 2027-01-01T02:00Z，仅为演示。正常运行使用实际当前时间，测试模式需醒目标识“冻结时钟”，禁止在真实连接中启用。CSV 上方的注释行是文档说明，实际文件不包含这些注释。</p>
+<h3>12–15 分钟面试演示剧本：后端闭环优先（建议）</h3><div class="table-wrap"><table><thead><tr><th>时间</th><th>操作</th><th>后端证据</th></tr></thead><tbody>
+<tr><td>0:00–1:00</td><td>说明本地输入、独立模拟渠道、工作流与AI能力边界</td><td>解释领域对象与自动化目标，明确尚无真实OTA接入</td></tr>
+<tr><td>1:00–3:00</td><td>导入含坏行文件，展示质量报告；激活修正版；重复上传并投递旧版本</td><td>原件、行定位、版本、去重、乱序保护；不是最后写入获胜</td></tr>
+<tr><td>3:00–4:30</td><td>首次映射等待审核；查看AI属性与候选；批准后自动继续</td><td>AI只提供结构化建议；持久化等待点与决策事件；床型/条款冲突不通过</td></tr>
+<tr><td>4:30–6:00</td><td>导入常规库存更新，按已授权策略自动编译、决策并派发；再注入超范围价格变化</td><td>自动更新与人工异常分流；每个快照有独立策略决策，异常只阻断相关商品</td></tr>
+<tr><td>6:00–8:30</td><td>SIM-A成功；SIM-B落地后超时；在远端成功、本地未记账窗口停止Worker再恢复</td><td>UNKNOWN→查询receipt→确认；租约接管与幂等确保远端单一效果</td></tr>
+<tr><td>8:30–10:00</td><td>并发提交相同发布请求；发送旧revision；打开限流</td><td>唯一约束、幂等冲突、顺序保护、退避预算与队列指标</td></tr>
+<tr><td>10:00–11:30</td><td>注入远端漂移，执行对账；演示停售待确认</td><td>desired/applied/observed区别；恢复确认后才显示一致或已停卖</td></tr>
+<tr><td>11:30–13:00</td><td>跨租户请求资源；打开从文件到回执的审计链与trace</td><td>资源鉴权、RLS、完整证据链与故障定位</td></tr>
+<tr><td>13:00–15:00</td><td>展示测试、性能与恢复报告，说明技术取舍</td><td>实测环境与结果明确；解释为何采用模块化单体、outbox和模拟器</td></tr>
+</tbody></table></div>
+<h3>演示可复现要求</h3><ul><li>提供 reset-demo 命令，清理范围严格限定演示租户，重建固定 ID、业务时钟、随机 seed 与故障配置；不能误清其他租户。</li><li>每个故障有一次性触发选项与已触发记录。录屏时说明模拟条件，不能把故障恢复演示称作真实平台验证。</li><li>准备无外部模型模式与缓存证据；网络断开仍能走完整本地闭环。备用录屏与截图仅作补充，标明生成时间与代码版本。</li></ul>
+</section>
+
+<section id="roadmap"><h2>分阶段开发、验收与退出标准</h2>
+<p>以下以<strong>单人、每周约20–25小时、熟悉所选技术栈</strong>为假设，给出约10–12周建议计划，含缓冲。它是范围管理工具，不是工期承诺。若时间不足，保留 P0 完整闭环，削减向量模型、复杂批量 UI 与额外统计页。</p>
+<div class="table-wrap"><table><thead><tr><th>阶段</th><th>后端交付主线</th><th>退出标准</th><th>范围控制</th></tr></thead><tbody>
+<tr><td>G0 / 第1周<br>领域与环境</td><td>领域契约、文件Schema、测试种子、数据库迁移、认证租户、API骨架</td><td>库存/报价口径可解释；隔离基本测试通过</td><td>框架是建议，不因求职方向未确定而绑定语言</td></tr>
+<tr><td>G1 / 第2–3周<br>最小纵向闭环</td><td>先接CSV；原件→校验→版本激活→人工映射→编译快照→人工审批→独立模拟器→回执查询；提供最小操作页</td><td>一份文件真实走完所有后端阶段，可追溯到源行；不是多个不相连的CRUD模块</td><td>AI接口先用规则实现；先单渠道，不做复杂后台</td></tr>
+<tr><td>G2 / 第4–5周<br>数据与工作流可靠性</td><td>XLSX/JSON、流式批处理、坏行、snapshot/delta、持久化run/step/wait、CAS、租约、outbox、去重、人工事件恢复</td><td>乱序与并发激活不覆盖新版本；崩溃可恢复；重复决策不重复推进</td><td>先测试事实与状态，不先增加模型复杂度</td></tr>
+<tr><td>G3 / 第6–7周<br>多渠道与故障闭环</td><td>第二模拟渠道、能力契约、限流/退避、UNKNOWN查询、远端revision、三方对账、停卖、并发与故障注入</td><td>落地后超时、旧请求迟到、Worker崩溃、部分失败都有可验证结果；远端无重复效果</td><td>发布与对账是核心验收，不能只验证HTTP返回成功</td></tr>
+<tr><td>G4 / 第8周<br>AI辅助与自动化策略</td><td>接入实际AI属性提取或语义检索，至少一项；候选证据、Schema校验、超时降级；授权策略、常规更新自动流转</td><td>展示模型真实输入输出与版本；模型停用仍可人工完成；常规更新无逐步点击，异常审核后自动恢复</td><td>只接一个可替换模型能力；不追求自主Agent或新映射全自动批准</td></tr>
+<tr><td>G5 / 第9–10周<br>安全、观测与交付</td><td>权限负测、性能基准、审计回放、队列指标、备份恢复、最小后台完善、录屏、README与runbook</td><td>P0通过；目标与实测分开；新机器按说明可复现；故障证据齐全</td><td>AI评估保留必要对照，后端正确性与恢复证据优先</td></tr>
+<tr><td>缓冲 / 第11–12周</td><td>缺陷修复、压测瓶颈处理、演示彩排、版本冻结</td><td>已知限制公开；重置与故障恢复重复可用</td><td>不临时增加真实接入或大型展示页</td></tr>
+<tr><td>G6 / 后续独立阶段</td><td>供应商/渠道准入与sandbox试点</td><td>授权、能力、查询与应急机制满足门槛</td><td>外部准入不由开发排期保证</td></tr>
+</tbody></table></div>
+<h3>MVP 总验收清单</h3><ol><li>纵向闭环在同一运行实例中贯通，包含至少一项实际AI能力；不以未实现的设计描述替代执行证据。</li><li>符合授权策略的常规更新自动完成；策略外异常进入持久化等待，人工处理后从检查点恢复；策略停用、重复决策与来源变化均有测试。</li><li>三种本地文件格式可走相同契约；保留原件与行定位；覆盖范围与增量/全量明确。</li><li>相同文件重复处理不重复生效；旧版本不能覆盖新分区；坏行不会被当成全量删除。</li><li>酒店、房型、计划独立映射；Twin/King、可退/不可退、未知税费的必测冲突不能自动通过。</li><li>AI 不可用时，人工审核、编译、审批与模拟发布仍可完成；每个提案能显示证据与版本。</li><li>报价金额可复算；共享库存池不重复计算；静态渠道分配总额符合约束。</li><li>审批绑定不可变快照；关键来源变化或审批过期时禁止发布；新 revision 可重编译审批。</li><li>模拟器独立落地，具备幂等、回执、revision 与故障注入；不会触达真实平台。</li><li>重复投递、落地后超时、Worker 崩溃、429、迟到旧版本和部分失败都有明确处理与测试。</li><li>对账区分 missing/drift/unknown，修复不复活停售商品；发布状态可追到远端观察结果。</li><li>租户/权限负向测试通过；来源文本安全呈现；导出与模型输入无越权泄露。</li><li>有固定演示数据、重置命令、完整审计回放和可复现测试报告；所有实测数字注明环境和时间。</li><li>README 明确当前实现、未实现与真实接入边界；不将设计文档内容全部冒称已实现。</li></ol>
+<h3>建议砍掉的首版复杂度</h3><p>不做自动预订、儿童年龄价格、复杂打包套餐、多币种实时汇率、真实税费引擎、全球内容爬取、微服务集群、自动政策放宽和全自动实体合并。保留数据库可扩展点即可，不为未来功能预建大量空页面。</p>
+</section>
+
+<section id="integration"><h2>未来供应商 API 与真实渠道接入</h2>
+<p>不假设 OTA/B2B 提供可自助申请的开放 API，也不承诺某个平台一定接受本企业成为供货方。真实接入对象和条件尚未研究验证，本节定义研究与准入方法，而非平台事实清单。</p>
+<div class="table-wrap"><table><thead><tr><th>关卡</th><th>必须获得的证据</th><th>不通过时</th></tr></thead><tbody><tr><td>商务资格</td><td>合作主体、供货/分销身份、目标市场、酒店授权、商业模式与结算责任</td><td>保持模拟模式；不使用非授权账号绕开</td></tr><tr><td>数据许可</td><td>内容、图片、报价、库存、模型处理、保存和跨境使用范围</td><td>禁止使用或仅使用允许字段；替换演示资料</td></tr><tr><td>技术可行性</td><td>正式文档版本、认证、能力、限制、配额、可查询性、幂等与回执语义</td><td>记录不可满足项；不把模拟器能力推定为真实能力</td></tr><tr><td>测试准入</td><td>sandbox/认证流程、测试账号、用例、监控/支持渠道、验收标准</td><td>不连接生产；继续契约测试</td></tr><tr><td>受控试点</td><td>少量已授权物业、明确库存模式、人工审批、停卖能力、对账与应急责任人</td><td>暂停扩量，恢复模拟或人工运营</td></tr><tr><td>生产放量</td><td>持续稳定性证据、容量、履约/订单链路、SLA、故障与账务责任</td><td>不扩大酒店/日期/渠道范围</td></tr></tbody></table></div>
+<h3>供应商 API 扩展</h3><p>连接器把拉取/推送数据变为同样的 raw artifact + normalized version，不绕过质量检查与激活规则。增加游标、增量版本、限流、断点、凭证轮换与 webhook 验签；重复/乱序事件按供应方序号处理。若 API 只有当前快照，需定义抓取窗口一致性与缺失项语义。现有系统连接器优先受支持的导出/API，不直接依赖其内部数据库表。</p>
+<h3>真实渠道适配器研究清单</h3><ul><li>商品内容、房型、计划、价格、库存、限制是否分别维护？内部与渠道编码由谁创建和确认？是否需要先人工建店？</li><li>每晚/每次入住、含税/净价、人数组合、儿童、早餐和取消阶梯能否无损表达？不能表达时阻断还是需要独立商品？</li><li>请求是 upsert、patch 还是替换？最大日期范围、部分失败、异步回执、读取一致性和限流规则是什么？</li><li>是否支持幂等键、更新版本或 operation 查询？若不支持，如何降低重复与迟到覆盖风险？残余风险由谁接受？</li><li>停售是否有高优先级通道？远端状态多久可读到？时钟、时区、金额舍入和错误码如何处理？</li><li>真实共享库存与订单是否闭环？若不能回流订单，是否只允许独占 allotment 或人工受控分配？</li></ul>
+<h3>避免不可逆的接口耦合</h3><p>核心存标准商品语义和来源证据，渠道映射与 payload 保存在 adapter 层；渠道回执归一化同时保留原响应引用。新增渠道需通过能力契约和回归测试，不能修改核心政策使其迁就单个平台。真实凭证与演示配置分开，生产适配器默认不存在或禁用。</p>
+</section>
+
+<section id="risks"><h2>风险、取舍与关键决策记录</h2>
+<div class="table-wrap"><table><thead><tr><th>风险</th><th>概率 / 影响（主观初评）</th><th>缓解与剩余限制</th></tr></thead><tbody><tr><td>酒店误合并导致错售</td><td>中 / 高</td><td>独立实体分层、硬约束、人工审核、撤销止损；合成数据不能代表真实复杂度</td></tr><tr><td>政策提取错误</td><td>中 / 高</td><td>保留原文、结构化校验、关键未知阻断；复杂多语言条款仍需业务人员判断</td></tr><tr><td>本地库存过期 / 超售</td><td>高 / 高</td><td>TTL、库存池、静态分配、停售对账；无实时确认与订单闭环无法保证真实不超售</td></tr><tr><td>真实平台无法接入</td><td>未知 / 高</td><td>模拟闭环独立有价值；先准入研究再投入，不承诺具体平台数量</td></tr><tr><td>单人项目范围失控</td><td>高 / 中</td><td>P0优先、分期门槛、缓冲；额外模型/大屏/微服务均可砍</td></tr><tr><td>AI 成本、网络与许可</td><td>中 / 中</td><td>本地规则回退、缓存、预算、最小字段；外部调用单独开关</td></tr><tr><td>发布结果未知与旧写入迟到</td><td>中 / 高</td><td>远端幂等/CAS/查询；真实平台无等价能力则残余风险需要显式接受</td></tr><tr><td>多租户数据泄露</td><td>低至中 / 高</td><td>RLS+资源鉴权+复合FK+负向测试；管理员工具和导出同样覆盖</td></tr><tr><td>作品集夸大成果</td><td>可控 / 高</td><td>设计/实现/实测/模拟分栏；用测试证据、演示与已知限制说话</td></tr></tbody></table></div>
+<h3>ADR 摘要</h3><div class="table-wrap"><table><thead><tr><th>决策</th><th>选择与理由</th><th>代价 / 重审条件</th></tr></thead><tbody><tr><td>ADR-001 数据源</td><td>本地文件先行，稳定输入且可复现</td><td>库存不实时；拿到授权和文档后加 API connector</td></tr><tr><td>ADR-002 部署</td><td>模块化单体+Worker，减少分布式复杂度</td><td>模块边界需约束；团队/吞吐证据出现后拆分</td></tr><tr><td>ADR-003 AI 权限</td><td>只提案不提交事实和发布</td><td>人工成本保留；独立评估证明后才考虑自动批准</td></tr><tr><td>ADR-004 发布对象</td><td>不可变快照+审批hash+外盒</td><td>存储更多版本；换取可复现和安全重试</td></tr><tr><td>ADR-005 库存策略</td><td>来源选择+静态渠道分配，不叠加未知池</td><td>可能保守少售；需要真实订单闭环后再提升利用率</td></tr><tr><td>ADR-006 首个渠道</td><td>独立模拟器，不冒充真实平台</td><td>不能证明商务接入；可证明可靠分发与契约设计</td></tr><tr><td>ADR-007 任务设施</td><td>PostgreSQL 任务队列与外盒</td><td>需实现租约与清理；队列吞吐成为瓶颈后再替换</td></tr><tr><td>ADR-008 评估</td><td>规则基线与困难子集优先，目标与结果分开</td><td>需要标注投入；没有真实数据时诚实限制外推</td></tr></tbody></table></div>
+<h3>待确认问题与负责人</h3><p>业务负责人确认库存类型、共享关系、税费和取消口径；运营确认模板、覆盖范围与 TTL；安全/数据负责人确认许可和模型处理范围；工程负责人确认栈、硬件与性能预算；商务负责人确认渠道身份与准入。未确认项在实施时作为配置或阻断项，不用模型猜测填空。</p>
+</section>
+
+<section id="handoff"><h2>作品集交付与实施清单</h2>
+<h3>建议仓库最终交付</h3><ul><li><strong>README：</strong>问题、目标用户、当前实现范围、启动方式、模拟边界、演示账号、已知限制。</li><li><strong>设计证据：</strong>本说明书、领域关系图、状态机、OpenAPI、事件契约、ADR、接入关卡。</li><li><strong>工程证据：</strong>迁移脚本、版本化种子、测试、失败恢复用例、质量/性能报告、依赖锁文件。</li><li><strong>演示证据：</strong>12–15分钟完整演示与2分钟精简录屏、故障注入配置、可重置数据、审计导出样本。</li><li><strong>评估证据：</strong>数据生成规则、标注约定、切分清单、规则基线、模型对照、困难案例与未解决问题。</li><li><strong>运营证据：</strong>来源过期、UNKNOWN、误匹配与数据库恢复 runbook；真实接入前检查清单。</li></ul>
+<h3>可直接用于开发的首批任务</h3><ol><li>冻结术语与文件 Schema v1，制作一份有效包与五份异常变体，手工写出期望结果。</li><li>建立独立项目环境、数据库迁移、tenant/membership/RLS 与负向权限测试。</li><li>实现原件上传、hash、preview 和 staging，不调用模型；把坏行与覆盖范围语义做正确。</li><li>先完成主数据/映射审核与规则候选，以最少页面打通到模拟器的纵向链路；保留可替换模型接口。</li><li>用纯函数实现报价编译、共享库存分配和不可变快照；完成金额/日期/政策测试。</li><li>建立模拟器，再做外盒、幂等与 UNKNOWN；用“远端已写入但本地超时”作为首个可靠性用例。</li><li>完善持久化等待、并发控制、对账与审计；再接入至少一项实际AI能力及授权策略自动流转，最后完善后台，按P0清单冻结版本。</li></ol>
+<h3>面试表达建议</h3><p>先用一条纵向业务链解释领域模型，再展示重复导入、并发激活、人工等待恢复、发布超时与对账修复。结合事务边界、唯一约束和测试结果说明正确性；AI用一组实际输入输出展示其辅助作用。最后指出本地文件库存与模拟渠道的真实性边界。只有完成实测后，才把“建议目标”改成“在某环境某数据规模下测得”。</p>
+<div class="notice"><strong>交付定义</strong><p>成功的作品不是功能菜单最长，而是能把一份来源不统一的文件，经过可解释判断、明确审批与可靠执行，变成一份可核对、可追溯、可恢复的模拟渠道商品。每一个“自动化”都应能回答：依据什么、谁批准、失败怎么办、如何证明。</p></div>
+</section>
+<footer><p>本文是独立离线设计说明书，内容基于指定场景的产品推演与工程建议，不包含对具体 OTA 开放政策的核实结论。图示为内嵌 SVG，无外部请求；可用浏览器打印保存。建议实施时将本文件作为版本化基线，逐项标记“已实现 / 已验证 / 待实现”。</p><p>文档版本 v1.1 · 后端工程主线 · 2026-10-25 · 所有样例酒店、供应商、渠道与记录标识均为虚构。</p></footer>
+</main><a id="top-link" href="#top">返回顶部</a>
+<script>
+document.getElementById('expand').addEventListener('click',()=>document.querySelectorAll('details').forEach(d=>d.open=true));
+document.getElementById('collapse').addEventListener('click',()=>document.querySelectorAll('details').forEach(d=>d.open=false));
+if('IntersectionObserver' in window){const links=[...document.querySelectorAll('#toc a')];const observer=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting);if(visible.length){links.forEach(a=>a.removeAttribute('aria-current'));const a=links.find(a=>a.hash==='#'+visible[0].target.id);if(a)a.setAttribute('aria-current','true');}},{rootMargin:'-10% 0px -65% 0px'});document.querySelectorAll('main section').forEach(s=>observer.observe(s));}
+</script></body></html>

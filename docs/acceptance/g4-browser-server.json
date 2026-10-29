@@ -1,0 +1,856 @@
+{
+  "status": "BROWSER_AUTHORIZED_AUTOMATIC_DUAL_VERIFIED",
+  "run": {
+    "id": "a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+    "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+    "subscription_id": "6bf109de-5b1c-44cf-ae80-7fbf549ac674",
+    "processing_id": "36fe4f1f-040f-40b8-bb58-e70f64cba0da",
+    "definition": "g4-flow-v1",
+    "state": "COMPLETED",
+    "activation_id": "ab8757ca-24d7-4c84-89fa-4a8e3af5ba29",
+    "allocation_id": "89e841e0-0a8e-4e77-abd9-2a474498b1e3",
+    "snapshot_ids": [
+      "d38e51b7-68e0-4c32-9e95-f58467ba7ea7",
+      "24d467dd-621a-4890-809e-a268ee263f22"
+    ],
+    "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393",
+    "reason": "VERIFIED",
+    "version": 6,
+    "created_at": "2026-10-27T15:22:02.742161+08:00",
+    "steps": [
+      {
+        "id": "f4f67d17-cebb-45d0-b8b8-e9e07001976e",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "run_id": "a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+        "step_key": "PROCESSING",
+        "input_hash": "bbfbd008a64a206abe87d16c46addf52f5aeac84a01471c7d9ddea7d5a5ff931",
+        "state": "PROCESSING",
+        "detail": {
+          "reason": "READY"
+        },
+        "created_at": "2026-10-27T15:22:02.755127+08:00"
+      },
+      {
+        "id": "c4b4bd39-32de-412e-91d6-b1e38af3a0f1",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "run_id": "a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+        "step_key": "RUNNING",
+        "input_hash": "d7be3270e43b3b6f6ce4cbaa7eb14fc0f5e13493ae6a05325806160a5b9b402d",
+        "state": "RUNNING",
+        "detail": {
+          "reason": "G3_PLAN_COMMITTED",
+          "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393"
+        },
+        "created_at": "2026-10-27T15:22:03.105967+08:00"
+      },
+      {
+        "id": "b0e151b0-b007-4da2-8334-f75f27ec1835",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "run_id": "a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+        "step_key": "WAIT_EXTERNAL",
+        "input_hash": "3a7dc1ee050777d4b1e9dea99895211bee9a0707d61a14065ad89c2929ed2453",
+        "state": "WAIT_EXTERNAL",
+        "detail": {
+          "reason": "RUNNING",
+          "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393"
+        },
+        "created_at": "2026-10-27T15:22:03.887817+08:00"
+      },
+      {
+        "id": "88d7ef8f-907c-4565-aca2-22cc5f0c7d16",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "run_id": "a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+        "step_key": "WAIT_EXTERNAL",
+        "input_hash": "dfedf0fe7fa31490375f2f8ce9ea136c26c7bc73666140c2e07e0a0009ba7bd7",
+        "state": "WAIT_EXTERNAL",
+        "detail": {
+          "reason": "PARTIAL",
+          "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393"
+        },
+        "created_at": "2026-10-27T15:22:04.931263+08:00"
+      },
+      {
+        "id": "d4795127-f732-4a79-974b-595da3453c88",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "run_id": "a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+        "step_key": "COMPLETED",
+        "input_hash": "7a86dc7747249d2aea0160cc935d5c0801ad096981978e4bb4b0de6cd6565154",
+        "state": "COMPLETED",
+        "detail": {
+          "reason": "VERIFIED",
+          "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393"
+        },
+        "created_at": "2026-10-27T15:22:05.882493+08:00"
+      }
+    ],
+    "decisions": [
+      {
+        "id": "dc54a553-8d61-439b-a07c-4acfa5ebb3c7",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "policy_id": "3473e777-be57-40f3-80df-044c59582bfd",
+        "snapshot_id": "24d467dd-621a-4890-809e-a268ee263f22",
+        "epoch": 4,
+        "payload_hash": "2d756180097b28a181f6bfd8613fbf2cd8a730c4b12e177b5ec0611bbc18ff39",
+        "input_hash": "75eee704aa2b18b8579d4385f7acbf9194088b597457aa17e5bad5694515a416",
+        "result": "ALLOW",
+        "reasons": [],
+        "actor": "system.policy",
+        "expires_at": "2026-10-27T15:52:03.364917+08:00",
+        "created_at": "2026-10-27T15:22:03.105967+08:00"
+      },
+      {
+        "id": "af7f5039-4415-48b4-8076-d0550128b0ef",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "policy_id": "3473e777-be57-40f3-80df-044c59582bfd",
+        "snapshot_id": "d38e51b7-68e0-4c32-9e95-f58467ba7ea7",
+        "epoch": 4,
+        "payload_hash": "4fbef4f5d05eb1434a83b479b5a8c06075554db47c2287e37235c01ca4baf9ff",
+        "input_hash": "4b275dd0bfac862479aa99c3164cdc11fd3a0f1f0b83796f79ac6cd3d8c3bc62",
+        "result": "ALLOW",
+        "reasons": [],
+        "actor": "system.policy",
+        "expires_at": "2026-10-27T15:52:03.364917+08:00",
+        "created_at": "2026-10-27T15:22:03.105967+08:00"
+      }
+    ]
+  },
+  "plan": {
+    "id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393",
+    "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+    "command_key": "g4:a9e2796b-f3e6-4cd0-9001-f5112d9413b4",
+    "request_hash": "8fbc860581a82ac5a6473a07f4b2ba4f63d252d9c02ce73dab75015a5068d6d8",
+    "state": "VERIFIED",
+    "created_by": "a.tenant_admin",
+    "created_at": "2026-10-27T15:22:03.105967+08:00",
+    "definition": "g3-flow-v1",
+    "branches": [
+      {
+        "id": "8d2908be-e138-470f-b0e3-2e3ed15e7e29",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "listing_id": "d5eda352-5149-46d0-919a-dd893f87f4a1",
+        "snapshot_id": "d38e51b7-68e0-4c32-9e95-f58467ba7ea7",
+        "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393",
+        "action": "PUBLISH",
+        "desired_revision": 1,
+        "delivery_revision": 1,
+        "stop_epoch": 0,
+        "payload": {
+          "cells": [
+            {
+              "key": "G4-HTTP-2696697e/R1/POOL-1",
+              "date": "2027-01-10",
+              "kind": "pool",
+              "quantity": 2,
+              "sellable": true
+            },
+            {
+              "key": "G4-HTTP-2696697e/R1/POOL-1",
+              "date": "2027-01-11",
+              "kind": "pool",
+              "quantity": 2,
+              "sellable": true
+            },
+            {
+              "key": "G4-HTTP-2696697e/R1/POOL-1",
+              "date": "2027-01-12",
+              "kind": "pool",
+              "quantity": 2,
+              "sellable": true
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-10",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-11",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-12",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            }
+          ],
+          "content": {
+            "plans": [
+              {
+                "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "meal": "BREAKFAST_2",
+                "adults": 2,
+                "payment": "AT_PROPERTY",
+                "currency": "USD",
+                "pool_key": "G4-HTTP-2696697e/R1/POOL-1",
+                "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                "tax_basis": "NET_EXCLUSIVE",
+                "cancellation": {
+                  "kind": "NONREF",
+                  "penalty_basis": "stay_total",
+                  "deadline_hours": 0
+                }
+              }
+            ],
+            "pools": [
+              "G4-HTTP-2696697e/R1/POOL-1"
+            ],
+            "scope": {
+              "entities": [
+                "properties",
+                "rooms",
+                "rate_plans",
+                "inventory",
+                "rates"
+              ],
+              "property_codes": [
+                "G4-HTTP-2696697e"
+              ],
+              "stay_date_from": "2027-01-10",
+              "stay_date_to_exclusive": "2027-01-13"
+            },
+            "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+          }
+        },
+        "payload_hash": "4fbef4f5d05eb1434a83b479b5a8c06075554db47c2287e37235c01ca4baf9ff",
+        "manifest": {
+          "chunks": {
+            "1": "a693981583f454b8ec8fba703feeb604df0807992924aaa94281977ed9ab9325"
+          },
+          "content_hash": "06073e6d011f6104b981604bb8b6201f885649844aebaa94a99305cf6ef3e2f1",
+          "payload_hash": "4fbef4f5d05eb1434a83b479b5a8c06075554db47c2287e37235c01ca4baf9ff"
+        },
+        "manifest_hash": "0f7e5a5911a4590c746ca644fce01f727f7a6c2181183300cbe014f19f15d6cd",
+        "state": "VERIFIED",
+        "created_by": "a.tenant_admin",
+        "reason": "Approved publish",
+        "created_at": "2026-10-27T15:22:03.105967+08:00",
+        "code": "SIM-A",
+        "listing_state": "VERIFIED",
+        "tasks": [
+          {
+            "id": "487042c7-c670-4cbf-b2cd-3b0caff06c7d",
+            "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+            "intent_id": "8d2908be-e138-470f-b0e3-2e3ed15e7e29",
+            "chunk_index": 0,
+            "action": "CONTENT",
+            "request_key": "43e0bdaa2ce3178bfe31a882903f23dc6635765368bd2bcf544fb21d128428f9",
+            "body": {
+              "cells": [],
+              "action": "CONTENT",
+              "content": {
+                "plans": [
+                  {
+                    "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "meal": "BREAKFAST_2",
+                    "adults": 2,
+                    "payment": "AT_PROPERTY",
+                    "currency": "USD",
+                    "pool_key": "G4-HTTP-2696697e/R1/POOL-1",
+                    "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                    "tax_basis": "NET_EXCLUSIVE",
+                    "cancellation": {
+                      "kind": "NONREF",
+                      "penalty_basis": "stay_total",
+                      "deadline_hours": 0
+                    }
+                  }
+                ],
+                "pools": [
+                  "G4-HTTP-2696697e/R1/POOL-1"
+                ],
+                "scope": {
+                  "entities": [
+                    "properties",
+                    "rooms",
+                    "rate_plans",
+                    "inventory",
+                    "rates"
+                  ],
+                  "property_codes": [
+                    "G4-HTTP-2696697e"
+                  ],
+                  "stay_date_from": "2027-01-10",
+                  "stay_date_to_exclusive": "2027-01-13"
+                },
+                "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+              },
+              "manifest": {
+                "chunks": {
+                  "1": "a693981583f454b8ec8fba703feeb604df0807992924aaa94281977ed9ab9325"
+                },
+                "content_hash": "06073e6d011f6104b981604bb8b6201f885649844aebaa94a99305cf6ef3e2f1",
+                "payload_hash": "4fbef4f5d05eb1434a83b479b5a8c06075554db47c2287e37235c01ca4baf9ff"
+              },
+              "revision": 1,
+              "chunk_index": 0,
+              "manifest_hash": "0f7e5a5911a4590c746ca644fce01f727f7a6c2181183300cbe014f19f15d6cd"
+            },
+            "request_hash": "2efc82d2664a63bb7c33f9593e7a445d721a5f0a38b88a3b38728567c11c24e3",
+            "state": "APPLIED",
+            "send_count": 1,
+            "query_count": 0,
+            "budget_cycle": 1,
+            "error": null,
+            "remote_operation": "a8c2baf4-0f84-4b08-8dfa-15c9da7a03c2",
+            "deadline": "2026-10-27T15:37:03.105967+08:00",
+            "version": 3,
+            "cell_results": [],
+            "receipts": [
+              {
+                "phase": "SEND",
+                "status": 200,
+                "data": {
+                  "state": "DONE",
+                  "result": {
+                    "cells": [],
+                    "status": "APPLIED",
+                    "revision": 1,
+                    "manifest_hash": "0f7e5a5911a4590c746ca644fce01f727f7a6c2181183300cbe014f19f15d6cd"
+                  },
+                  "operation_id": "a8c2baf4-0f84-4b08-8dfa-15c9da7a03c2"
+                },
+                "created_at": "2026-10-27T15:22:04.006492+08:00"
+              }
+            ]
+          },
+          {
+            "id": "79306bf6-daf2-4585-9eed-fd441a6374ec",
+            "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+            "intent_id": "8d2908be-e138-470f-b0e3-2e3ed15e7e29",
+            "chunk_index": 1,
+            "action": "PUBLISH",
+            "request_key": "b9b4f74525cc00335d27522f3b0e12935b0dab7df05b2a9a802d23f1006bd4ca",
+            "body": {
+              "cells": [
+                {
+                  "key": "G4-HTTP-2696697e/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                {
+                  "key": "G4-HTTP-2696697e/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                {
+                  "key": "G4-HTTP-2696697e/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 2,
+                  "sellable": true
+                },
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                {
+                  "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                }
+              ],
+              "action": "PUBLISH",
+              "content": null,
+              "manifest": null,
+              "revision": 1,
+              "chunk_index": 1,
+              "manifest_hash": "0f7e5a5911a4590c746ca644fce01f727f7a6c2181183300cbe014f19f15d6cd"
+            },
+            "request_hash": "df56b5374d2813f2c4f34383902a4255891a0e728bdedb0c9ad88c7369299c3a",
+            "state": "APPLIED",
+            "send_count": 1,
+            "query_count": 0,
+            "budget_cycle": 1,
+            "error": null,
+            "remote_operation": "2f5ebe4e-3fe8-47d8-8244-9cbc4dcf206b",
+            "deadline": "2026-10-27T15:37:03.105967+08:00",
+            "version": 3,
+            "cell_results": [
+              {
+                "cell_key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-10",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-11",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-12",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                "state": "APPLIED",
+                "code": null
+              }
+            ],
+            "receipts": [
+              {
+                "phase": "SEND",
+                "status": 200,
+                "data": {
+                  "state": "DONE",
+                  "result": {
+                    "cells": [
+                      {
+                        "key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-10",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-11",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-12",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                        "code": null,
+                        "state": "APPLIED"
+                      }
+                    ],
+                    "status": "APPLIED",
+                    "revision": 1,
+                    "manifest_hash": "0f7e5a5911a4590c746ca644fce01f727f7a6c2181183300cbe014f19f15d6cd"
+                  },
+                  "operation_id": "2f5ebe4e-3fe8-47d8-8244-9cbc4dcf206b"
+                },
+                "created_at": "2026-10-27T15:22:04.507866+08:00"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "73868afd-995c-4e3f-bc80-da57cf89a9f5",
+        "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+        "listing_id": "39c8e70b-11b2-44e2-a123-ffc3f23ce100",
+        "snapshot_id": "24d467dd-621a-4890-809e-a268ee263f22",
+        "plan_id": "79a26f71-1fc0-4145-961b-8dd6f2f1d393",
+        "action": "PUBLISH",
+        "desired_revision": 1,
+        "delivery_revision": 1,
+        "stop_epoch": 0,
+        "payload": {
+          "cells": [
+            {
+              "key": "G4-HTTP-2696697e/R1/POOL-1",
+              "date": "2027-01-10",
+              "kind": "pool",
+              "quantity": 1,
+              "sellable": true
+            },
+            {
+              "key": "G4-HTTP-2696697e/R1/POOL-1",
+              "date": "2027-01-11",
+              "kind": "pool",
+              "quantity": 1,
+              "sellable": true
+            },
+            {
+              "key": "G4-HTTP-2696697e/R1/POOL-1",
+              "date": "2027-01-12",
+              "kind": "pool",
+              "quantity": 1,
+              "sellable": true
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-10",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-11",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            },
+            {
+              "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+              "date": "2027-01-12",
+              "kind": "rate",
+              "sellable": true,
+              "net_amount": "105.0000",
+              "sell_amount": "115.50"
+            }
+          ],
+          "content": {
+            "plans": [
+              {
+                "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                "meal": "BREAKFAST_2",
+                "adults": 2,
+                "payment": "AT_PROPERTY",
+                "currency": "USD",
+                "pool_key": "G4-HTTP-2696697e/R1/POOL-1",
+                "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                "tax_basis": "NET_EXCLUSIVE",
+                "cancellation": {
+                  "kind": "NONREF",
+                  "penalty_basis": "stay_total",
+                  "deadline_hours": 0
+                }
+              }
+            ],
+            "pools": [
+              "G4-HTTP-2696697e/R1/POOL-1"
+            ],
+            "scope": {
+              "entities": [
+                "properties",
+                "rooms",
+                "rate_plans",
+                "inventory",
+                "rates"
+              ],
+              "property_codes": [
+                "G4-HTTP-2696697e"
+              ],
+              "stay_date_from": "2027-01-10",
+              "stay_date_to_exclusive": "2027-01-13"
+            },
+            "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+          }
+        },
+        "payload_hash": "2d756180097b28a181f6bfd8613fbf2cd8a730c4b12e177b5ec0611bbc18ff39",
+        "manifest": {
+          "chunks": {
+            "1": "1054b2c66b1fc8c83de46e045c33e997110025b315bf348c5e1e82e686153677"
+          },
+          "content_hash": "a6988868ed2b20c1c17d064b1bc11652d6eb27a83a660dab1c596deee77cbc95",
+          "payload_hash": "2d756180097b28a181f6bfd8613fbf2cd8a730c4b12e177b5ec0611bbc18ff39"
+        },
+        "manifest_hash": "dfed81ebadb2368b9752ea47da40fbfb8704c8cdc36d2adb2aada85d249607f4",
+        "state": "VERIFIED",
+        "created_by": "a.tenant_admin",
+        "reason": "Approved publish",
+        "created_at": "2026-10-27T15:22:03.105967+08:00",
+        "code": "SIM-B",
+        "listing_state": "VERIFIED",
+        "tasks": [
+          {
+            "id": "628ea9a5-5e79-4f2b-9a02-e0a5d8db934c",
+            "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+            "intent_id": "73868afd-995c-4e3f-bc80-da57cf89a9f5",
+            "chunk_index": 0,
+            "action": "CONTENT",
+            "request_key": "f89af63373bcbe6c37a5b0c8e213f6faeb0590b354ce335e7444ab86fdc3fa4f",
+            "body": {
+              "cells": [],
+              "action": "CONTENT",
+              "content": {
+                "plans": [
+                  {
+                    "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                    "meal": "BREAKFAST_2",
+                    "adults": 2,
+                    "payment": "AT_PROPERTY",
+                    "currency": "USD",
+                    "pool_key": "G4-HTTP-2696697e/R1/POOL-1",
+                    "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+                    "tax_basis": "NET_EXCLUSIVE",
+                    "cancellation": {
+                      "refundable": false
+                    }
+                  }
+                ],
+                "pools": [
+                  "G4-HTTP-2696697e/R1/POOL-1"
+                ],
+                "scope": {
+                  "entities": [
+                    "properties",
+                    "rooms",
+                    "rate_plans",
+                    "inventory",
+                    "rates"
+                  ],
+                  "property_codes": [
+                    "G4-HTTP-2696697e"
+                  ],
+                  "stay_date_from": "2027-01-10",
+                  "stay_date_to_exclusive": "2027-01-13"
+                },
+                "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+              },
+              "manifest": {
+                "chunks": {
+                  "1": "1054b2c66b1fc8c83de46e045c33e997110025b315bf348c5e1e82e686153677"
+                },
+                "content_hash": "a6988868ed2b20c1c17d064b1bc11652d6eb27a83a660dab1c596deee77cbc95",
+                "payload_hash": "2d756180097b28a181f6bfd8613fbf2cd8a730c4b12e177b5ec0611bbc18ff39"
+              },
+              "revision": 1,
+              "chunk_index": 0,
+              "manifest_hash": "dfed81ebadb2368b9752ea47da40fbfb8704c8cdc36d2adb2aada85d249607f4"
+            },
+            "request_hash": "f7a551ca6814b03cd4edc7ea85715a5d6870cf01d8deb038c3a78a3525054abc",
+            "state": "APPLIED",
+            "send_count": 1,
+            "query_count": 0,
+            "budget_cycle": 1,
+            "error": null,
+            "remote_operation": "5715c39f-ada9-4267-b251-07f66cc8bc08",
+            "deadline": "2026-10-27T15:37:03.105967+08:00",
+            "version": 3,
+            "cell_results": [],
+            "receipts": [
+              {
+                "phase": "SEND",
+                "status": 200,
+                "data": {
+                  "state": "DONE",
+                  "result": {
+                    "cells": [],
+                    "status": "APPLIED",
+                    "revision": 1,
+                    "manifest_hash": "dfed81ebadb2368b9752ea47da40fbfb8704c8cdc36d2adb2aada85d249607f4"
+                  },
+                  "operation_id": "5715c39f-ada9-4267-b251-07f66cc8bc08"
+                },
+                "created_at": "2026-10-27T15:22:04.283804+08:00"
+              }
+            ]
+          },
+          {
+            "id": "99167dfa-8b47-47a1-bb75-d08213220d58",
+            "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+            "intent_id": "73868afd-995c-4e3f-bc80-da57cf89a9f5",
+            "chunk_index": 1,
+            "action": "PUBLISH",
+            "request_key": "102b12cca4b7385b0f98d91a325a3ccbf18d55ee43936ed0a12a8d15c8e334a9",
+            "body": {
+              "cells": [
+                {
+                  "key": "G4-HTTP-2696697e/R1/POOL-1",
+                  "date": "2027-01-10",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                {
+                  "key": "G4-HTTP-2696697e/R1/POOL-1",
+                  "date": "2027-01-11",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                {
+                  "key": "G4-HTTP-2696697e/R1/POOL-1",
+                  "date": "2027-01-12",
+                  "kind": "pool",
+                  "quantity": 1,
+                  "sellable": true
+                },
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-10",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-11",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                },
+                {
+                  "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+                  "date": "2027-01-12",
+                  "kind": "rate",
+                  "sellable": true,
+                  "net_amount": "105.0000",
+                  "sell_amount": "115.50"
+                }
+              ],
+              "action": "PUBLISH",
+              "content": null,
+              "manifest": null,
+              "revision": 1,
+              "chunk_index": 1,
+              "manifest_hash": "dfed81ebadb2368b9752ea47da40fbfb8704c8cdc36d2adb2aada85d249607f4"
+            },
+            "request_hash": "dda840b80dc81ad3ecf3c3043ef66384594db9af0f1f270bf9cb06f4a9f4c582",
+            "state": "APPLIED",
+            "send_count": 1,
+            "query_count": 1,
+            "budget_cycle": 1,
+            "error": null,
+            "remote_operation": "d8605481-0204-4023-b14e-958ec963cc45",
+            "deadline": "2026-10-27T15:37:03.105967+08:00",
+            "version": 4,
+            "cell_results": [
+              {
+                "cell_key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-10",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-11",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-12",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                "state": "APPLIED",
+                "code": null
+              },
+              {
+                "cell_key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                "state": "APPLIED",
+                "code": null
+              }
+            ],
+            "receipts": [
+              {
+                "phase": "QUERY",
+                "status": 200,
+                "data": {
+                  "state": "DONE",
+                  "result": {
+                    "cells": [
+                      {
+                        "key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-10",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-11",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "pool/G4-HTTP-2696697e/R1/POOL-1/2027-01-12",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11",
+                        "code": null,
+                        "state": "APPLIED"
+                      },
+                      {
+                        "key": "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12",
+                        "code": null,
+                        "state": "APPLIED"
+                      }
+                    ],
+                    "status": "APPLIED",
+                    "revision": 1,
+                    "manifest_hash": "dfed81ebadb2368b9752ea47da40fbfb8704c8cdc36d2adb2aada85d249607f4"
+                  },
+                  "operation_id": "d8605481-0204-4023-b14e-958ec963cc45"
+                },
+                "created_at": "2026-10-27T15:22:05.261927+08:00"
+              },
+              {
+                "phase": "SEND",
+                "status": 202,
+                "data": {
+                  "state": "PROCESSING",
+                  "result": {},
+                  "operation_id": "d8605481-0204-4023-b14e-958ec963cc45"
+                },
+                "created_at": "2026-10-27T15:22:04.961805+08:00"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "close_method": "actual local HTTP admin commands; not browser clicks",
+  "final_close_confirmations": [
+    {
+      "id": "d5eda352-5149-46d0-919a-dd893f87f4a1",
+      "state": "STOPPED",
+      "desired_revision": 2,
+      "observed_revision": 2
+    },
+    {
+      "id": "39c8e70b-11b2-44e2-a123-ffc3f23ce100",
+      "state": "STOPPED",
+      "desired_revision": 2,
+      "observed_revision": 2
+    }
+  ]
+}

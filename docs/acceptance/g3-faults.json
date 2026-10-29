@@ -1,0 +1,332 @@
+{
+  "suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "146",
+    "time": "403.280",
+    "timestamp": "2026-10-27T11:14:58.823586+08:00",
+    "hostname": "Fionaxi"
+  },
+  "g3_cases": [
+    {
+      "class": "tests.test_g3",
+      "name": "test_g3_dual_channel_real_http",
+      "seconds": 8.598,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3",
+      "name": "test_g3_drift_repair_really_rewrites_remote",
+      "seconds": 9.515,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3",
+      "name": "test_g3_stop_confirmation_and_fence",
+      "seconds": 8.534,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_allocations",
+      "name": "test_concurrent_allocation_versions_commit_only_once",
+      "seconds": 1.671,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_real_multi_chunk_manifest_and_cell_limits",
+      "seconds": 8.547,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_auth_failure_is_account_scoped_and_recoverable",
+      "seconds": 10.04,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_missing_is_not_unknown_and_ungranted_repair_denied",
+      "seconds": 6.393,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_stale_diff_cannot_resurrect_new_stop",
+      "seconds": 9.886,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_expired_base_can_still_be_safely_closed",
+      "seconds": 8.366,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_overdue_stop_records_alert_without_false_confirmation",
+      "seconds": 6.525,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_channel_identity_control_and_rls_are_distinct",
+      "seconds": 6.913,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_manifest_hash_tamper_is_rejected_independently",
+      "seconds": 6.311,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_observed_inventory_overallocation_retains_exposure_and_safely_closes",
+      "seconds": 13.558,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_boundaries",
+      "name": "test_emergency_close_overtakes_ordinary_reconciliation_backlog",
+      "seconds": 10.989,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_retry_after_variants[2-2]",
+      "seconds": 0.003,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_retry_after_variants[0-0]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_retry_after_variants[nonsense-None]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_retry_after_variants[None-None]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_retry_after_variants[-2-None]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_retry_after_http_date",
+      "seconds": 0.001,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_real_cell_chunk_counts[SIM-A-30-1]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_real_cell_chunk_counts[SIM-A-31-2]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_real_cell_chunk_counts[SIM-B-10-1]",
+      "seconds": 0.001,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_real_cell_chunk_counts[SIM-B-11-2]",
+      "seconds": 0.002,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_real_cell_chunk_counts[SIM-B-100-10]",
+      "seconds": 0.003,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_duplicate_cell_rejected",
+      "seconds": 0.001,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_capability_blocks_lossy_policy_and_enforces_approval",
+      "seconds": 1.447,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_wire_policy_is_distinct_and_lossless",
+      "seconds": 1.316,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_atomic_target_set_and_idempotency",
+      "seconds": 1.7,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_cross_tenant_roles_and_no_endpoints_injection",
+      "seconds": 1.415,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_contracts",
+      "name": "test_overallocation_and_stale_allocation",
+      "seconds": 1.438,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_real_intent_commit_windows[before-81-0]",
+      "seconds": 3.674,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_real_intent_commit_windows[after-82-1]",
+      "seconds": 3.885,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_remote_commit_then_real_worker_death",
+      "seconds": 14.606,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_relay_crash_preserves_jobs_exactly_once",
+      "seconds": 3.797,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_unknown_and_retry_classification[after_commit]",
+      "seconds": 8.583,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_unknown_and_retry_classification[lost_operation]",
+      "seconds": 7.451,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_unknown_and_retry_classification[429]",
+      "seconds": 7.47,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_unknown_and_retry_classification[500]",
+      "seconds": 7.508,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_partial_cell_results[partial_temp]",
+      "seconds": 9.868,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_partial_cell_results[partial_permanent]",
+      "seconds": 5.778,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_old_http_actually_executes_after_new_close",
+      "seconds": 6.935,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_incomplete_read_is_unknown_not_missing[read_failure]",
+      "seconds": 6.54,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_incomplete_read_is_unknown_not_missing[incomplete]",
+      "seconds": 7.347,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_faults",
+      "name": "test_g3_remote_ahead_never_blindly_repaired",
+      "seconds": 6.642,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_safe_allocation_transfer_waits_for_remote_reduction",
+      "seconds": 7.87,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_new_approval_can_reopen_after_confirmed_stop",
+      "seconds": 28.479,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_initial_cancel_has_no_remote_side_effect",
+      "seconds": 3.773,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_shared_quota_with_independent_db_connections",
+      "seconds": 0.635,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_stop_dominates_paused_sale_and_old_repair",
+      "seconds": 13.802,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_budget_exhaustion_and_audited_resume",
+      "seconds": 2.957,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_tables_force_rls_and_immutable_payload",
+      "seconds": 2.418,
+      "result": "passed"
+    },
+    {
+      "class": "tests.test_g3_operations",
+      "name": "test_g3_legacy_exposure_requires_explicit_close",
+      "seconds": 2.255,
+      "result": "passed"
+    }
+  ]
+}

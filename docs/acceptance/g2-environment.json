@@ -1,0 +1,17 @@
+{
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "db_version": "18.4",
+  "core_database": "hotel_project",
+  "migration_versions": [
+    "001_foundation",
+    "002_g1",
+    "003_command_idempotency",
+    "004_channel_codes",
+    "005_g2_foundation",
+    "006_generation_links",
+    "007_event_guards"
+  ],
+  "observed_at": "2026-10-26T21:21:59.210458+08:00"
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "actual small HTTP acceptance views; counts exclude other entity/index/WAL writes; not a large-view benchmark",
+  "results": [
+    {
+      "run_id": "9eeda542-2ae6-457f-8b4a-027719768174",
+      "mode": "snapshot",
+      "changed_input_records": 14,
+      "materialized_generation_facts": 14,
+      "compatibility_projection_rows": 14,
+      "fact_plus_projection_writes_per_input": 2.0
+    },
+    {
+      "run_id": "f5ce86ac-ca5a-48bb-a7e2-b71513b9922f",
+      "mode": "snapshot",
+      "changed_input_records": 14,
+      "materialized_generation_facts": 14,
+      "compatibility_projection_rows": 14,
+      "fact_plus_projection_writes_per_input": 2.0
+    },
+    {
+      "run_id": "35ef68f3-79cd-4c1e-96ce-ff852482950e",
+      "mode": "snapshot",
+      "changed_input_records": 14,
+      "materialized_generation_facts": 14,
+      "compatibility_projection_rows": 14,
+      "fact_plus_projection_writes_per_input": 2.0
+    },
+    {
+      "run_id": "7f51937d-784d-47ca-8ce0-b2925d930a30",
+      "mode": "delta",
+      "changed_input_records": 1,
+      "materialized_generation_facts": 14,
+      "compatibility_projection_rows": 14,
+      "fact_plus_projection_writes_per_input": 28.0
+    }
+  ]
+}

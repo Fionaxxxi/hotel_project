@@ -1,0 +1,1056 @@
+{
+  "at": "2026-10-28T14:20:49.300843+00:00",
+  "seed": 20261028,
+  "requests": 100,
+  "attempts": [
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "ebaf2a92f6eb36b950ccaa0533b82920b10998573fd453ea753b321ea22e6718",
+      "action": "STOP",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "d1701a33032d9992015b3805b948ced6d03693c66ae327997b667fcd3f2a0cd0",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "552280670f97f5a52e0cae8907b7a2115c4f6d8987dee348d3b581ffa5f69c49",
+      "action": "PUBLISH",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "2e6116570e10c0d896d5921d089958187e85756604701e8da540e75e76b06a7e",
+      "action": "CONTENT",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "f0654e3217b3a5cc35873bd8c8679eb3fa0258dc44abac764aec133e3437c877",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "a8f8b9fc3543a7189c0a0163434c88da083184b998ed8678c185bd48b3a47246",
+      "action": "STOP",
+      "channel": "SIM-B",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "12da07d6d17dc5e25190ab508e28adeb0ef7ff47358cd74d3fab3c449d938cba",
+      "action": "CONTENT",
+      "channel": "SIM-A",
+      "status": 200
+    },
+    {
+      "request_key": "6632d454f5b2fb3f289b2e2376d4c285760aba81afa56793cbbded36bd4b1b05",
+      "action": "PUBLISH",
+      "channel": "SIM-A",
+      "status": 200
+    }
+  ],
+  "status": "PASSED",
+  "stop": {
+    "seconds": 1.812999999994645,
+    "results": [
+      {
+        "id": "02f06534-0ef9-462e-8109-0b89e63c73c9",
+        "state": "STOPPED",
+        "desired": 2,
+        "observed": 2
+      },
+      {
+        "id": "b8a93fbf-7d48-4d55-92da-d4d43b6b0803",
+        "state": "STOPPED",
+        "desired": 2,
+        "observed": 2
+      }
+    ],
+    "cas_retries": 0
+  },
+  "before": {
+    "SIM-A:S-A-G5-66a6c3a5": {
+      "revision": 2,
+      "content": {
+        "plans": [
+          {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "meal": "BREAKFAST_2",
+            "adults": 2,
+            "payment": "AT_PROPERTY",
+            "currency": "USD",
+            "pool_key": "G5-66a6c3a5/R1/POOL-1",
+            "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+            "tax_basis": "NET_EXCLUSIVE",
+            "cancellation": {
+              "kind": "NONREF",
+              "penalty_basis": "stay_total",
+              "deadline_hours": 0
+            }
+          }
+        ],
+        "pools": [
+          "G5-66a6c3a5/R1/POOL-1"
+        ],
+        "scope": {
+          "entities": [
+            "properties",
+            "rooms",
+            "rate_plans",
+            "inventory",
+            "rates"
+          ],
+          "property_codes": [
+            "G5-66a6c3a5"
+          ],
+          "stay_date_from": "2027-01-10",
+          "stay_date_to_exclusive": "2027-01-13"
+        },
+        "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+      },
+      "cells": {
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-10": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-10",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-11": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-11",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-12": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-12",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+          "value": {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-10",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+          "value": {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-11",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+          "value": {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-12",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        }
+      },
+      "complete": true,
+      "simulation": true
+    },
+    "SIM-B:S-A-G5-66a6c3a5": {
+      "revision": 2,
+      "content": {
+        "plans": [
+          {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "meal": "BREAKFAST_2",
+            "adults": 2,
+            "payment": "AT_PROPERTY",
+            "currency": "USD",
+            "pool_key": "G5-66a6c3a5/R1/POOL-1",
+            "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+            "tax_basis": "NET_EXCLUSIVE",
+            "cancellation": {
+              "refundable": false
+            }
+          }
+        ],
+        "pools": [
+          "G5-66a6c3a5/R1/POOL-1"
+        ],
+        "scope": {
+          "entities": [
+            "properties",
+            "rooms",
+            "rate_plans",
+            "inventory",
+            "rates"
+          ],
+          "property_codes": [
+            "G5-66a6c3a5"
+          ],
+          "stay_date_from": "2027-01-10",
+          "stay_date_to_exclusive": "2027-01-13"
+        },
+        "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+      },
+      "cells": {
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-10": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-10",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-11": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-11",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-12": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-12",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+          "value": {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-10",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+          "value": {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-11",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+          "value": {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-12",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        }
+      },
+      "complete": true,
+      "simulation": true
+    }
+  },
+  "after": {
+    "SIM-A:S-A-G5-66a6c3a5": {
+      "revision": 2,
+      "content": {
+        "plans": [
+          {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "meal": "BREAKFAST_2",
+            "adults": 2,
+            "payment": "AT_PROPERTY",
+            "currency": "USD",
+            "pool_key": "G5-66a6c3a5/R1/POOL-1",
+            "room_key": "SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+            "tax_basis": "NET_EXCLUSIVE",
+            "cancellation": {
+              "kind": "NONREF",
+              "penalty_basis": "stay_total",
+              "deadline_hours": 0
+            }
+          }
+        ],
+        "pools": [
+          "G5-66a6c3a5/R1/POOL-1"
+        ],
+        "scope": {
+          "entities": [
+            "properties",
+            "rooms",
+            "rate_plans",
+            "inventory",
+            "rates"
+          ],
+          "property_codes": [
+            "G5-66a6c3a5"
+          ],
+          "stay_date_from": "2027-01-10",
+          "stay_date_to_exclusive": "2027-01-13"
+        },
+        "hotel_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+      },
+      "cells": {
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-10": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-10",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-11": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-11",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-12": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-12",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+          "value": {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-10",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+          "value": {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-11",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+          "value": {
+            "key": "SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-12",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        }
+      },
+      "complete": true,
+      "simulation": true
+    },
+    "SIM-B:S-A-G5-66a6c3a5": {
+      "revision": 2,
+      "content": {
+        "plans": [
+          {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "meal": "BREAKFAST_2",
+            "adults": 2,
+            "payment": "AT_PROPERTY",
+            "currency": "USD",
+            "pool_key": "G5-66a6c3a5/R1/POOL-1",
+            "room_key": "B-SIM-R-88e401d5-5c8f-590f-ad95-a5c908973f35",
+            "tax_basis": "NET_EXCLUSIVE",
+            "cancellation": {
+              "refundable": false
+            }
+          }
+        ],
+        "pools": [
+          "G5-66a6c3a5/R1/POOL-1"
+        ],
+        "scope": {
+          "entities": [
+            "properties",
+            "rooms",
+            "rate_plans",
+            "inventory",
+            "rates"
+          ],
+          "property_codes": [
+            "G5-66a6c3a5"
+          ],
+          "stay_date_from": "2027-01-10",
+          "stay_date_to_exclusive": "2027-01-13"
+        },
+        "hotel_key": "B-SIM-H-82764ac3-6889-5904-ad86-57a8494aff27"
+      },
+      "cells": {
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-10": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-10",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-11": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-11",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "pool/G5-66a6c3a5/R1/POOL-1/2027-01-12": {
+          "value": {
+            "key": "G5-66a6c3a5/R1/POOL-1",
+            "date": "2027-01-12",
+            "kind": "pool",
+            "quantity": 0,
+            "sellable": false
+          },
+          "revision": 2
+        },
+        "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-10": {
+          "value": {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-10",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-11": {
+          "value": {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-11",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        },
+        "rate/B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc/2027-01-12": {
+          "value": {
+            "key": "B-SIM-P-c06de0e3-8b63-5d28-9561-97394c61c7dc",
+            "date": "2027-01-12",
+            "kind": "rate",
+            "sellable": false,
+            "net_amount": "105.0000",
+            "sell_amount": "115.50"
+          },
+          "revision": 2
+        }
+      },
+      "complete": true,
+      "simulation": true
+    }
+  },
+  "distinct_original_requests": 8,
+  "scope": "Real HTTP duplicate requests with original keys, shuffled after explicit stop; original replies may describe historical publish success while current remote must remain closed."
+}

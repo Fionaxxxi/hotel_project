@@ -1,0 +1,71 @@
+{
+  "at": "2026-10-29T01:02:04.883931+00:00",
+  "status": "PASSED",
+  "source": "G5-72192a78",
+  "updates": 60,
+  "samples": 311,
+  "rss_mib": {
+    "first": 2070.921875,
+    "last": 1908.14453125,
+    "maximum": 2255.609375
+  },
+  "rss_note": "Sum of unique process RSS, including PostgreSQL and model; shared pages can count across processes. Bounded over this one-hour run, not a long-term memory guarantee.",
+  "queue_due_max": 20,
+  "expired_lease_max": 0,
+  "global_dead_letters_first": 14,
+  "global_dead_letters_last": 18,
+  "dead_letters_added_in_window": [
+    {
+      "id": "43ea6c9e-dcb4-4269-9161-51ddbff6e255",
+      "code": "STOP_UNCONFIRMED_OVER_5_MINUTES",
+      "created_at": "2026-10-28 22:52:47.773304+08:00",
+      "listing_id": "90c483c7-5386-42f4-8fdc-a29b5d33d4eb",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-3fe0d250",
+      "state": "STOP_SELL_REQUESTED"
+    },
+    {
+      "id": "70e652c4-7bac-4899-9a30-75fac90a26d7",
+      "code": "STOP_UNCONFIRMED_OVER_5_MINUTES",
+      "created_at": "2026-10-28 22:52:50.800256+08:00",
+      "listing_id": "686ce9ae-59e9-47c6-b464-9d2a8dd0c46a",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-3fe0d250",
+      "state": "STOP_SELL_REQUESTED"
+    },
+    {
+      "id": "d87cd57e-c34b-4efa-8a1d-7218f9c7e20a",
+      "code": "SEND_BUDGET_EXHAUSTED",
+      "created_at": "2026-10-28 23:02:46.586150+08:00",
+      "listing_id": "90c483c7-5386-42f4-8fdc-a29b5d33d4eb",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-3fe0d250",
+      "state": "STOP_SELL_REQUESTED"
+    },
+    {
+      "id": "23eda143-a529-4f69-9092-9a00fbe9399d",
+      "code": "SEND_BUDGET_EXHAUSTED",
+      "created_at": "2026-10-28 23:02:48.690427+08:00",
+      "listing_id": "686ce9ae-59e9-47c6-b464-9d2a8dd0c46a",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-3fe0d250",
+      "state": "STOP_SELL_REQUESTED"
+    }
+  ],
+  "interpretation": "Four global dead letters belong to older G5-3fe0d250, not this soak source: two overdue stop risks and two send-budget exhaustion. Retained unresolved; global queue is not described as clean. Do not change or forge their remote state.",
+  "soak_source_new_dead_letters": [],
+  "current_source_pending_jobs": [],
+  "current_source_listings": [
+    {
+      "id": "f0ce7b21-75cd-4f5b-9d75-cca6dcd621ae",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-72192a78",
+      "state": "STOPPED",
+      "desired_revision": 61,
+      "observed_revision": 61
+    },
+    {
+      "id": "3219a0e2-3474-4efb-9519-c1546eb9cdf3",
+      "source_key": "be8eeadc-d812-51a6-b9d7-6136f7a68e3b/G5-72192a78",
+      "state": "STOPPED",
+      "desired_revision": 61,
+      "observed_revision": 61
+    }
+  ],
+  "both_closed_with_observation": true
+}

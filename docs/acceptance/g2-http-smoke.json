@@ -1,0 +1,138 @@
+{
+  "transport": "real HTTP + independent parse/control/publish worker processes + separate SIM-A",
+  "human_decisions": "real dev login operator/reviewer; no workflow next-step or task creation call",
+  "results": [
+    {
+      "format": "csv",
+      "mode": "snapshot",
+      "run_id": "9eeda542-2ae6-457f-8b4a-027719768174",
+      "generation_id": "99fa5943-9648-4af5-b5be-a1005b11d2a9",
+      "view_hash": "3b89a5a3a8c934dde6a9f4b45852b02451d68ffb6c0eef21e7569d87ea71f6e4",
+      "workflow_id": "6e511489-5ccf-42ca-a9f7-5275b03f3739",
+      "snapshot_id": "0417c517-3949-4354-90cb-4c310aa5d94f",
+      "task_id": "de17583c-1abf-4bd5-a495-954ec5294d78",
+      "payload_hash": "9d06060c9dd87d56bfa0f8c87b3528e556d96acabaee7e6dc7513def01ac5651",
+      "source_record_count": 14,
+      "receipts": [
+        {
+          "data": {
+            "operation": {
+              "id": "f59bfbfb-0f83-4af4-ad0c-e7683a328860",
+              "revision": 4,
+              "account_id": "A",
+              "listing_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27",
+              "payload_hash": "9d06060c9dd87d56bfa0f8c87b3528e556d96acabaee7e6dc7513def01ac5651",
+              "request_hash": "8ae0ce6c2615413ab9333826da36a8a771f0e7349fe3b5e9c2c18e70486f6c99",
+              "idempotency_key": "727f774ec27f142eefe99101c7187aedf3d97887b49a3fd360b89e7a6cfcbb8e"
+            },
+            "listing_hash": "9d06060c9dd87d56bfa0f8c87b3528e556d96acabaee7e6dc7513def01ac5651",
+            "listing_status": 200,
+            "listing_revision": 4,
+            "operation_status": 200
+          },
+          "created_at": "2026-10-26T21:05:13.019498+08:00"
+        }
+      ],
+      "status": "COMPLETED/VERIFIED"
+    },
+    {
+      "format": "xlsx",
+      "mode": "snapshot",
+      "run_id": "f5ce86ac-ca5a-48bb-a7e2-b71513b9922f",
+      "generation_id": "4b96e8d8-e47e-4a04-9bff-8cb0ac7f2c2b",
+      "view_hash": "2df314732b77abf6b0661bd8b0cf3c7102eb5335cd80f81271098df329132f6a",
+      "workflow_id": "f21444b4-a81b-4142-b530-ac260590acd5",
+      "snapshot_id": "a9230917-0905-4afd-b28f-2125346129c2",
+      "task_id": "c85b68d0-3cbd-4749-a90b-968099442920",
+      "payload_hash": "fb26122b1dba2e8d36b1ec719fe4d4cba8bfed05aecc560374fed33799eabb7d",
+      "source_record_count": 14,
+      "receipts": [
+        {
+          "data": {
+            "operation": {
+              "id": "44953d75-fc39-455c-bc85-e7326e4a7d47",
+              "revision": 5,
+              "account_id": "A",
+              "listing_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27",
+              "payload_hash": "fb26122b1dba2e8d36b1ec719fe4d4cba8bfed05aecc560374fed33799eabb7d",
+              "request_hash": "f8d381304c6ec64fc9b37273c3742a20c0bc928c2a6d6ea7418ebe1d79c149b9",
+              "idempotency_key": "d22224a76cf2dd6e7328b76a4d5d0b995ea3e5f09eb8dae557cc6a268e719b24"
+            },
+            "listing_hash": "fb26122b1dba2e8d36b1ec719fe4d4cba8bfed05aecc560374fed33799eabb7d",
+            "listing_status": 200,
+            "listing_revision": 5,
+            "operation_status": 200
+          },
+          "created_at": "2026-10-26T21:05:14.967123+08:00"
+        }
+      ],
+      "status": "COMPLETED/VERIFIED"
+    },
+    {
+      "format": "json",
+      "mode": "snapshot",
+      "run_id": "35ef68f3-79cd-4c1e-96ce-ff852482950e",
+      "generation_id": "1c149da9-6dfc-4a20-8059-ffe95572f0d1",
+      "view_hash": "8199717c7212e2d2cc2b4aa4b54483423da57c36e38e9d588f285ac5a557e67d",
+      "workflow_id": "8bde42bf-f200-4429-a03d-909316d0ea96",
+      "snapshot_id": "d635f19a-017f-4ee5-9de4-8c0e6885617e",
+      "task_id": "0272092a-fbfa-4348-9da9-084091eceeca",
+      "payload_hash": "5029041af95bb9f678c584ba52544fb6d6a24741a584009d3620735ef8f7b541",
+      "source_record_count": 14,
+      "receipts": [
+        {
+          "data": {
+            "operation": {
+              "id": "a94540d2-2ae0-45db-b840-ebaa5f5636ce",
+              "revision": 6,
+              "account_id": "A",
+              "listing_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27",
+              "payload_hash": "5029041af95bb9f678c584ba52544fb6d6a24741a584009d3620735ef8f7b541",
+              "request_hash": "5bacf99faac2172211d7393fddf62c087a4deb1fcfd092e349a39cd261ade8a6",
+              "idempotency_key": "ff6a6c1981488e64fea3ca889d7c759311937fe567e14d680e5e7456fbcd4a4c"
+            },
+            "listing_hash": "5029041af95bb9f678c584ba52544fb6d6a24741a584009d3620735ef8f7b541",
+            "listing_status": 200,
+            "listing_revision": 6,
+            "operation_status": 200
+          },
+          "created_at": "2026-10-26T21:05:17.378828+08:00"
+        }
+      ],
+      "status": "COMPLETED/VERIFIED"
+    },
+    {
+      "format": "json",
+      "mode": "delta",
+      "run_id": "7f51937d-784d-47ca-8ce0-b2925d930a30",
+      "generation_id": "2fb18e54-baf3-4045-ab25-d4ccec78bf72",
+      "view_hash": "198d7297695f1740ab53704df6fbf0f7c91161971a157327df3061e70d9dc101",
+      "workflow_id": "03061184-82be-44f0-908d-3377efcc8538",
+      "snapshot_id": "b4aea4cb-713d-4d51-bb78-422fabaff6e4",
+      "task_id": "58f6a680-568e-4a32-a906-f6a8932b0fdb",
+      "payload_hash": "5d361195acdbf1c8e10abaa930e29ac55f0baecb855234d38dff1a6651483c85",
+      "source_record_count": 14,
+      "receipts": [
+        {
+          "data": {
+            "operation": {
+              "id": "17ec9532-75cc-4f32-ae86-578d75ac6766",
+              "revision": 7,
+              "account_id": "A",
+              "listing_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27",
+              "payload_hash": "5d361195acdbf1c8e10abaa930e29ac55f0baecb855234d38dff1a6651483c85",
+              "request_hash": "213d865142c6979c7c103c10f175fb73f871bcc4e391fe1698cef5cd07aeb674",
+              "idempotency_key": "b67b66c61db552486e47ba556ae8fe36a81ea2a6ed3881547b274447b0ee728e"
+            },
+            "listing_hash": "5d361195acdbf1c8e10abaa930e29ac55f0baecb855234d38dff1a6651483c85",
+            "listing_status": 200,
+            "listing_revision": 7,
+            "operation_status": 200
+          },
+          "created_at": "2026-10-26T21:05:19.339002+08:00"
+        }
+      ],
+      "status": "COMPLETED/VERIFIED"
+    }
+  ]
+}

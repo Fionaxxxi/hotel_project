@@ -1,0 +1,22 @@
+{
+  "schema": "g5-local-budgets-v1",
+  "scope": "Local synthetic workload only. Frozen for the post-safety-scheduler-fix validation; earlier failures retained.",
+  "query_p95_seconds": 2,
+  "parse_100000_p95_seconds": 120,
+  "parse_peak_mib": 1024,
+  "workflow_wait_budget_seconds": 120,
+  "stop_confirmation_budget_seconds": 120,
+  "soak_seconds": 3600,
+  "safety_rescan_interval_seconds": 3,
+  "safety_claim_batch": 2,
+  "notes": [
+    "Safety interval is per-row eligibility, not a whole-system deadline or production SLA.",
+    "A waiting workflow, failed request or UNKNOWN outcome remains in the denominator.",
+    "Query target is set after the first local query baseline; remeasure after the capacity fix.",
+    "Full-workflow target uses the scenario's pre-existing 120-second wait budget."
+  ],
+  "delivery_and_verification_to_background_read_ratio": "4:1, work-conserving, STOP always first",
+  "reconciliation_pending_per_listing": 1,
+  "stopped_periodic_reconciliation_seconds": 300,
+  "active_periodic_reconciliation_seconds": 60
+}

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="3" time="13.806" timestamp="2026-10-28T21:54:07.534183+08:00" hostname="Fionaxi"><testcase classname="tests.test_g5_metadata" name="test_failed_collection_does_not_resolve_risk" time="6.248"><failure message="assert 202 == 200&#10; +  where 202 = &lt;Response [202 Accepted]&gt;.status_code">tests\test_g5_metadata.py:70: in test_failed_collection_does_not_resolve_risk
+    assert result.status_code == 200
+E   assert 202 == 200
+E    +  where 202 = &lt;Response [202 Accepted]&gt;.status_code</failure></testcase><testcase classname="tests.test_g5_audit" name="test_actual_published_audit_graph_and_export" time="5.914" /><testcase classname="tests.test_g5_operations" name="test_metrics_are_tenant_scoped_and_read_only" time="0.373" /></testsuite></testsuites>

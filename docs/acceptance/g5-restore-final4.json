@@ -1,0 +1,28 @@
+{
+  "schema": "g5-restore-v1",
+  "backup_id": "20261028T034916Z-39106885",
+  "run_id": "final4",
+  "restored_at": "2026-10-28T03:56:40.500007+00:00",
+  "duration_seconds": 9.860000000015134,
+  "databases": {
+    "core": {
+      "database": "hotel_project_g5_restore_final4_core",
+      "content_matches": true,
+      "tables": 82
+    },
+    "sim-a": {
+      "database": "hotel_project_g5_restore_final4_sim_a",
+      "content_matches": true,
+      "tables": 8
+    },
+    "sim-b": {
+      "database": "hotel_project_g5_restore_final4_sim_b",
+      "content_matches": true,
+      "tables": 5
+    }
+  },
+  "artifact_root": "D:\\hotel\\.runtime\\g5-restored-artifacts\\final4",
+  "dispatch": "BLOCKED_BY_DEFAULT",
+  "remote_state": "UNMODIFIED; reconciliation required before any release",
+  "rto_note": "restore and hash-check only; full RTO includes reconciliation and explicit safe release"
+}

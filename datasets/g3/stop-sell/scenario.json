@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "dates": [
+    "2027-01-10",
+    "2027-01-11",
+    "2027-01-12"
+  ],
+  "expected": "Separate channel confirmation; no old repair resurrection; fresh independent approval required to reopen"
+}

@@ -1,0 +1,31 @@
+{
+  "status": "VERIFIED",
+  "transport": "real HTTP + separate dispatcher process",
+  "batch_id": "1508ac3d-0dce-4e7c-b551-aa993d92f5d0",
+  "activation_id": "d8cfd97e-dd3b-41f8-b794-33d485ece9ce",
+  "snapshot_id": "3c8709ff-061a-4275-87c5-cf512c963cb1",
+  "task_id": "1cbcd5be-8353-4a10-916a-2162697c8135",
+  "revision": 3,
+  "payload_hash": "8d8d9748a30417d6529f2f9c5efaaeece0881c67e695b9312a987aecbb8ac93a",
+  "source_record_count": 14,
+  "remote_receipts": [
+    {
+      "data": {
+        "operation": {
+          "id": "6c86dee2-6252-4d51-976f-d48e80b96474",
+          "revision": 3,
+          "account_id": "A",
+          "listing_key": "SIM-H-82764ac3-6889-5904-ad86-57a8494aff27",
+          "payload_hash": "8d8d9748a30417d6529f2f9c5efaaeece0881c67e695b9312a987aecbb8ac93a",
+          "request_hash": "4f18718199fba0aa78fce8159f2a061f98ee2acad220b90728dd4abf2997fa8f",
+          "idempotency_key": "70b587067bd5ffd5cc740c657175d0ac1c85c37e9e741fed7af9b95ff3db49db"
+        },
+        "listing_hash": "8d8d9748a30417d6529f2f9c5efaaeece0881c67e695b9312a987aecbb8ac93a",
+        "listing_status": 200,
+        "listing_revision": 3,
+        "operation_status": 200
+      },
+      "created_at": "2026-10-26T19:15:14.585882+08:00"
+    }
+  ]
+}

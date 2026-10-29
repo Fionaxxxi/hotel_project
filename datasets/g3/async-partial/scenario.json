@@ -1,0 +1,9 @@
+{
+  "synthetic": true,
+  "faults": [
+    "lost_operation",
+    "partial_temp",
+    "partial_permanent"
+  ],
+  "expected": "Query original operation; only transient rejected cells retried; successes retained"
+}

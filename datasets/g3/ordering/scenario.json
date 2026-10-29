@@ -1,0 +1,5 @@
+{
+  "synthetic": true,
+  "fault": "hold",
+  "expected": "Release old HTTP only after new close; actual remote rejects STALE_REVISION"
+}

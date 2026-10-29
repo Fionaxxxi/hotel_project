@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "purpose": "G1 source-entity and manual-mapping input specification; not approved mappings",
+  "aliases": [
+    {"tenant": "A", "supplier_code": "S-A", "external_property_code": "001", "name": "Hailan Bay Hotel", "intended_standard_property": "property-A"},
+    {"tenant": "A", "supplier_code": "S-B", "external_property_code": "B700", "name": "海岚滨海酒店", "intended_standard_property": "property-A"}
+  ]
+}

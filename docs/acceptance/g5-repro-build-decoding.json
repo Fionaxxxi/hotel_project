@@ -1,0 +1,18 @@
+{
+  "status": "PASSED",
+  "scope": "Recheck both independent clone frontend builds with explicit UTF-8 output decoding; previous business/model/reproduction evidence retained",
+  "runs": [
+    {
+      "run_id": "reproa596560",
+      "exit_code": 0,
+      "utf8_output_characters": 394,
+      "module_build_confirmed": true
+    },
+    {
+      "run_id": "reprob596560",
+      "exit_code": 0,
+      "utf8_output_characters": 394,
+      "module_build_confirmed": true
+    }
+  ]
+}

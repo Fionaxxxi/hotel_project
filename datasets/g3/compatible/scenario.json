@@ -1,0 +1,13 @@
+{
+  "synthetic": true,
+  "source": "source/",
+  "buffer": 1,
+  "amounts": {
+    "SIM-A": 2,
+    "SIM-B": 1
+  },
+  "plan_codes": [
+    "NONREF"
+  ],
+  "expected": "Both channel targets VERIFIED; shared pool is 2+1, never multiplied by plans"
+}

@@ -1,0 +1,4 @@
+property_code,room_code,pool_code,stay_date,quantity,stop_sell,observed_at
+001,R1,POOL-1,2027-01-10,4,false,2027-01-01T02:00:00Z
+001,R1,POOL-1,2027-01-11,4,false,2027-01-01T02:00:00Z
+001,R1,POOL-1,2027-01-12,4,false,2027-01-01T02:00:00Z

@@ -1,0 +1,138 @@
+{
+  "schema": "g5-local-reproduction-v1",
+  "at": "2026-10-28T14:20:41.381945+00:00",
+  "status": "PASSED_LOCAL_ISOLATED",
+  "new_windows_machine_verified": false,
+  "python_environment": "D:\\miniconda3\\envs\\hotel_project",
+  "dependency_note": "existing dedicated Conda environment; two independent npm ci --offline installs from this machine cache",
+  "business_ids": "fixed natural business IDs and fixture values; generated technical UUIDs differ",
+  "business_payload_hashes_identical": true,
+  "runs": [
+    {
+      "run_id": "reproa596560",
+      "code_root": "D:\\hotel\\.runtime\\g5-reproduction\\reproa596560",
+      "copied_source_files": 523,
+      "node": [
+        {
+          "command": "npm ci --offline",
+          "exit_code": 0
+        },
+        {
+          "command": "npm run build",
+          "exit_code": 0
+        }
+      ],
+      "databases": {
+        "core": {
+          "database": "hotel_project_g5_restore_reproa596560_core",
+          "content_matches": true,
+          "tables": 82
+        },
+        "sim-a": {
+          "database": "hotel_project_g5_restore_reproa596560_sim_a",
+          "content_matches": true,
+          "tables": 8
+        },
+        "sim-b": {
+          "database": "hotel_project_g5_restore_reproa596560_sim_b",
+          "content_matches": true,
+          "tables": 5
+        }
+      },
+      "ports": [
+        8005,
+        8006,
+        8007
+      ],
+      "fixed_business_code": "G5-DEMO-001",
+      "payload_hashes": {
+        "SIM-A": "25bf52b32e8327dc46dfe5ab2ce5812f7a2db1a80fdc1628279fb7f407790d21",
+        "SIM-B": "c9d4a08c759545cb2b571f7feeec535a8e1a67a5fc55e86b91a594c7f5922027"
+      },
+      "model_status": "AI_AVAILABLE",
+      "stop": {
+        "seconds": 2.3910000000032596,
+        "results": [
+          {
+            "id": "809e5969-9818-47dd-8db2-6d472f3e6f0c",
+            "state": "STOPPED",
+            "desired": 2,
+            "observed": 2
+          },
+          {
+            "id": "a408df2d-92eb-47ce-88d3-38a8fdbdc62b",
+            "state": "STOPPED",
+            "desired": 2,
+            "observed": 2
+          }
+        ],
+        "cas_retries": 0
+      },
+      "normal_simulators": "not used for reproduced business; separate restored stores on 8006/8007",
+      "status": "PASSED"
+    },
+    {
+      "run_id": "reprob596560",
+      "code_root": "D:\\hotel\\.runtime\\g5-reproduction\\reprob596560",
+      "copied_source_files": 525,
+      "node": [
+        {
+          "command": "npm ci --offline",
+          "exit_code": 0
+        },
+        {
+          "command": "npm run build",
+          "exit_code": 0
+        }
+      ],
+      "databases": {
+        "core": {
+          "database": "hotel_project_g5_restore_reprob596560_core",
+          "content_matches": true,
+          "tables": 82
+        },
+        "sim-a": {
+          "database": "hotel_project_g5_restore_reprob596560_sim_a",
+          "content_matches": true,
+          "tables": 8
+        },
+        "sim-b": {
+          "database": "hotel_project_g5_restore_reprob596560_sim_b",
+          "content_matches": true,
+          "tables": 5
+        }
+      },
+      "ports": [
+        8005,
+        8006,
+        8007
+      ],
+      "fixed_business_code": "G5-DEMO-001",
+      "payload_hashes": {
+        "SIM-A": "25bf52b32e8327dc46dfe5ab2ce5812f7a2db1a80fdc1628279fb7f407790d21",
+        "SIM-B": "c9d4a08c759545cb2b571f7feeec535a8e1a67a5fc55e86b91a594c7f5922027"
+      },
+      "model_status": "AI_AVAILABLE",
+      "stop": {
+        "seconds": 1.8439999999827705,
+        "results": [
+          {
+            "id": "4e47cce1-d3df-4438-b0e9-31ffc4d2729b",
+            "state": "STOPPED",
+            "desired": 2,
+            "observed": 2
+          },
+          {
+            "id": "18cc68c3-0a1e-458a-b566-42a85ec1abc7",
+            "state": "STOPPED",
+            "desired": 2,
+            "observed": 2
+          }
+        ],
+        "cas_retries": 0
+      },
+      "normal_simulators": "not used for reproduced business; separate restored stores on 8006/8007",
+      "status": "PASSED"
+    }
+  ]
+}

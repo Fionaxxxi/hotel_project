@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "cells": [
+    10,
+    11,
+    30,
+    31
+  ],
+  "expected": "SIM-A max30, SIM-B max10; count pool/day and plan/day independently"
+}

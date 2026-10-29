@@ -1,0 +1,1428 @@
+{
+  "schema": "g5-query-benchmark-v1",
+  "started_at": "2026-10-28T14:26:31.095156+00:00",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "cpu_logical": 18,
+  "host_memory_bytes": 33945935872,
+  "scope": "read-only API metrics and bounded audit, not full workflow capacity",
+  "samples": [
+    {
+      "endpoint": "metrics",
+      "index": 0,
+      "seconds": 0.06943830000818707,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 1,
+      "seconds": 0.07321570001658984,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 2,
+      "seconds": 0.0761458000051789,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 3,
+      "seconds": 0.07490289999986999,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 4,
+      "seconds": 0.10925660000066273,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 5,
+      "seconds": 0.3357843999983743,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 6,
+      "seconds": 0.0734713000128977,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 7,
+      "seconds": 0.07424280000850558,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 8,
+      "seconds": 0.08135330001823604,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 9,
+      "seconds": 0.07680069998605177,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 10,
+      "seconds": 0.06783059998997487,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 11,
+      "seconds": 0.0676431999891065,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 12,
+      "seconds": 0.10587199998553842,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 13,
+      "seconds": 0.06783139999606647,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 14,
+      "seconds": 0.06762270000763237,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 15,
+      "seconds": 0.06805170001462102,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 16,
+      "seconds": 0.0743003000097815,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 17,
+      "seconds": 0.08001090001198463,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 18,
+      "seconds": 0.11559709999710321,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 19,
+      "seconds": 0.07561890000943094,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 20,
+      "seconds": 0.07184710001456551,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 21,
+      "seconds": 0.07821860001422465,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 22,
+      "seconds": 0.07317330001387745,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 23,
+      "seconds": 0.06870400000480004,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 24,
+      "seconds": 0.08071259999996983,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 25,
+      "seconds": 0.07681070000398904,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 26,
+      "seconds": 0.07829959999071434,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 27,
+      "seconds": 0.07234959999914281,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 28,
+      "seconds": 0.06970019999425858,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 29,
+      "seconds": 0.0659960999910254,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 30,
+      "seconds": 0.07926060000318103,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 31,
+      "seconds": 0.06768000000738539,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 32,
+      "seconds": 0.07847869998659007,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 33,
+      "seconds": 0.12284899997757748,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 34,
+      "seconds": 0.07758539999485947,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 35,
+      "seconds": 0.09730319998925552,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 36,
+      "seconds": 0.07975629999418743,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 37,
+      "seconds": 0.07155140000395477,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 38,
+      "seconds": 0.08174339999095537,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 39,
+      "seconds": 0.09565669999574311,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 40,
+      "seconds": 0.07283449999522418,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 41,
+      "seconds": 0.08466750002116896,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 42,
+      "seconds": 0.0903620999888517,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 43,
+      "seconds": 0.0785269999760203,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 44,
+      "seconds": 0.10257779998937622,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 45,
+      "seconds": 0.08656860000337474,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 46,
+      "seconds": 0.09483479999471456,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 47,
+      "seconds": 0.08873339998535812,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 48,
+      "seconds": 0.08752400000230409,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 49,
+      "seconds": 0.08561730000656098,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 50,
+      "seconds": 0.08091170000261627,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 51,
+      "seconds": 0.08469739998690784,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 52,
+      "seconds": 0.08327750000171363,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 53,
+      "seconds": 0.08367280001402833,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 54,
+      "seconds": 0.07856600001105107,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 55,
+      "seconds": 0.07459709999966435,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 56,
+      "seconds": 0.07603530000778846,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 57,
+      "seconds": 0.08769360001315363,
+      "status": 200,
+      "bytes": 959
+    },
+    {
+      "endpoint": "metrics",
+      "index": 58,
+      "seconds": 0.07871849997900426,
+      "status": 200,
+      "bytes": 959
+    },
+    {
+      "endpoint": "metrics",
+      "index": 59,
+      "seconds": 0.12353230000007898,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 60,
+      "seconds": 0.18672200001310557,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 61,
+      "seconds": 0.09130550001282245,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 62,
+      "seconds": 0.09850530000403523,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 63,
+      "seconds": 0.08527829998638481,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 64,
+      "seconds": 0.08348549998481758,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 65,
+      "seconds": 0.08098349999636412,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 66,
+      "seconds": 0.07693499999004416,
+      "status": 200,
+      "bytes": 959
+    },
+    {
+      "endpoint": "metrics",
+      "index": 67,
+      "seconds": 0.08499649999430403,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 68,
+      "seconds": 0.09505030000582337,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 69,
+      "seconds": 0.09554159999242984,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 70,
+      "seconds": 0.08317230001557618,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 71,
+      "seconds": 0.09263960001408122,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 72,
+      "seconds": 0.09360220000962727,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 73,
+      "seconds": 0.11656490000314079,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 74,
+      "seconds": 0.12853680000989698,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 75,
+      "seconds": 0.13936259999172762,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 76,
+      "seconds": 0.1730276999878697,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 77,
+      "seconds": 0.20469080001930706,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 78,
+      "seconds": 0.14316259999759495,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 79,
+      "seconds": 0.13810039998497814,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 80,
+      "seconds": 0.12683880000258796,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 81,
+      "seconds": 0.14765520000946708,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 82,
+      "seconds": 0.13920239999424666,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 83,
+      "seconds": 0.1278745000017807,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 84,
+      "seconds": 0.12085590002243407,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 85,
+      "seconds": 0.13799160000053234,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 86,
+      "seconds": 0.11766170000191778,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 87,
+      "seconds": 0.13588980000349693,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 88,
+      "seconds": 0.11218209998332895,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 89,
+      "seconds": 0.10579570001573302,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 90,
+      "seconds": 0.06374000001233071,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 91,
+      "seconds": 0.05838989999028854,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 92,
+      "seconds": 0.06100909999804571,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 93,
+      "seconds": 0.06101229999330826,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 94,
+      "seconds": 0.06896859998232685,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 95,
+      "seconds": 0.0715253000089433,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 96,
+      "seconds": 0.05905510002048686,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 97,
+      "seconds": 0.06719550001434982,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 98,
+      "seconds": 0.06192109998664819,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "metrics",
+      "index": 99,
+      "seconds": 0.05849409999791533,
+      "status": 200,
+      "bytes": 929
+    },
+    {
+      "endpoint": "audit",
+      "index": 0,
+      "seconds": 1.1336566999962088,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 1,
+      "seconds": 1.0391840000229422,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 2,
+      "seconds": 1.0009612999856472,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 3,
+      "seconds": 1.2234276999952272,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 4,
+      "seconds": 0.9731132999877445,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 5,
+      "seconds": 1.0249027000099886,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 6,
+      "seconds": 1.1478532000037376,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 7,
+      "seconds": 0.8887093999946956,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 8,
+      "seconds": 1.098068699997384,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 9,
+      "seconds": 1.092019799980335,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 10,
+      "seconds": 0.9583978999871761,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 11,
+      "seconds": 1.0776762000168674,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 12,
+      "seconds": 0.8657600999868009,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 13,
+      "seconds": 1.310424100025557,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 14,
+      "seconds": 0.9344400000118185,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 15,
+      "seconds": 0.9783430999959819,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 16,
+      "seconds": 1.0115678000147454,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 17,
+      "seconds": 0.9204270000045653,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 18,
+      "seconds": 1.124370200006524,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 19,
+      "seconds": 1.0027104999753647,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 20,
+      "seconds": 1.1089649999921676,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 21,
+      "seconds": 0.8882180000073276,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 22,
+      "seconds": 1.2169216999900527,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 23,
+      "seconds": 1.271953699993901,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 24,
+      "seconds": 0.9395009000145365,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 25,
+      "seconds": 1.295027599990135,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 26,
+      "seconds": 0.9607602000178304,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 27,
+      "seconds": 1.1931138999934774,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 28,
+      "seconds": 0.8233079999918118,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 29,
+      "seconds": 1.0006487999926321,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 30,
+      "seconds": 0.8491208000050392,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 31,
+      "seconds": 1.2254246000084095,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 32,
+      "seconds": 1.6330262999981642,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 33,
+      "seconds": 0.8695469000085723,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 34,
+      "seconds": 0.9475119000126142,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 35,
+      "seconds": 1.0945749999955297,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 36,
+      "seconds": 0.8017301999789197,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 37,
+      "seconds": 0.9379942999803461,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 38,
+      "seconds": 1.0103825999831315,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 39,
+      "seconds": 0.9118547000107355,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 40,
+      "seconds": 0.9002610000025015,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 41,
+      "seconds": 0.8650372000120115,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 42,
+      "seconds": 1.6288452000007965,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 43,
+      "seconds": 0.955225599987898,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 44,
+      "seconds": 0.8980324000003748,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 45,
+      "seconds": 0.8953635999932885,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 46,
+      "seconds": 0.9853002000018023,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 47,
+      "seconds": 0.999346600001445,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 48,
+      "seconds": 0.8944413999852259,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 49,
+      "seconds": 1.0145021000062115,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 50,
+      "seconds": 0.9517371999972966,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 51,
+      "seconds": 0.7883889999939129,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 52,
+      "seconds": 1.081735399988247,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 53,
+      "seconds": 0.9002089999848977,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 54,
+      "seconds": 0.7950245999963954,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 55,
+      "seconds": 1.0356709999905434,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 56,
+      "seconds": 1.0254350999894086,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 57,
+      "seconds": 0.8798701000050642,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 58,
+      "seconds": 0.9026722999988124,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 59,
+      "seconds": 1.3291800000006333,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 60,
+      "seconds": 0.8926371999841649,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 61,
+      "seconds": 0.8725992000254337,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 62,
+      "seconds": 1.4556467999937013,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 63,
+      "seconds": 0.8126425000082236,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 64,
+      "seconds": 1.138387499988312,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 65,
+      "seconds": 0.8251436999998987,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 66,
+      "seconds": 0.8952062000171281,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 67,
+      "seconds": 0.8184428999957163,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 68,
+      "seconds": 0.916305699996883,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 69,
+      "seconds": 0.9935649000108242,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 70,
+      "seconds": 0.8701355999801308,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 71,
+      "seconds": 0.7968278000189457,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 72,
+      "seconds": 1.1312405999924522,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 73,
+      "seconds": 0.8218168999883346,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 74,
+      "seconds": 0.7803904000029434,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 75,
+      "seconds": 1.0017517000087537,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 76,
+      "seconds": 1.085051999980351,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 77,
+      "seconds": 1.0033318000205327,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 78,
+      "seconds": 1.0398678999918047,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 79,
+      "seconds": 0.888190300000133,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 80,
+      "seconds": 0.8562368999992032,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 81,
+      "seconds": 0.8055238999950234,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 82,
+      "seconds": 0.9428800999885425,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 83,
+      "seconds": 1.3385036000108812,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 84,
+      "seconds": 1.030454199993983,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 85,
+      "seconds": 1.0105875000008382,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 86,
+      "seconds": 0.8429405000060797,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 87,
+      "seconds": 0.9317830000072718,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 88,
+      "seconds": 0.7544714999967255,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 89,
+      "seconds": 0.871967399987625,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 90,
+      "seconds": 0.737701800011564,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 91,
+      "seconds": 0.7714408000174444,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 92,
+      "seconds": 1.185029799991753,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 93,
+      "seconds": 0.8224368999945,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 94,
+      "seconds": 0.91052039997885,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 95,
+      "seconds": 0.902933999983361,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 96,
+      "seconds": 0.8527859000023454,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 97,
+      "seconds": 1.2201019000203814,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 98,
+      "seconds": 0.922822599997744,
+      "status": 200,
+      "bytes": 1308827
+    },
+    {
+      "endpoint": "audit",
+      "index": 99,
+      "seconds": 0.8531269000086468,
+      "status": 200,
+      "bytes": 1308827
+    }
+  ],
+  "summary": {
+    "metrics": {
+      "n": 100,
+      "p50": 0.08116840000730008,
+      "p95_nearest_rank": 0.14316259999759495,
+      "max": 0.3357843999983743,
+      "failures": 0
+    },
+    "audit": {
+      "n": 100,
+      "p50": 0.9496245500049554,
+      "p95_nearest_rank": 1.310424100025557,
+      "max": 1.6330262999981642,
+      "failures": 0
+    }
+  },
+  "completed_at": "2026-10-28T14:28:21.475988+00:00"
+}

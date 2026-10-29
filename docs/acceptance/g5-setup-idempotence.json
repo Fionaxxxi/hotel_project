@@ -1,0 +1,136 @@
+{
+  "at": "2026-10-28T08:11:11.751947+00:00",
+  "status": "PASSED",
+  "before": {
+    "env_sha256": "ab5dbffc0c04ed4972689bc5a1138e3698c4619c90963c651cd00f6f7047566c",
+    "migration_checksums": {
+      "001_foundation": "61f87f08663c2c7da4a51199c4d75b3c1ad68f5a951e9aeb6191257010760bf4",
+      "002_g1": "ab168ad136d5793441270a3d83cb42c2d90e003fd5a622e229959161e6ec3c94",
+      "003_command_idempotency": "0919e1cacf20e12f7eccd2c88745b0f1851a7ae4e01e07b5f82cde988bc94130",
+      "004_channel_codes": "33e0c1d555a248203e9ca29270b9da86e51dd4b40735d4c1b530de7fd5fae5c8",
+      "005_g2_foundation": "e6c3010862b08208c875732e3d8d7ea1c675b8a41c325a75d1f44f6c0cd24bbe",
+      "006_generation_links": "aedb9e8ae5a3799db31a0675fe99f6c95da85aaa2ce9a121bc5107ea2fd8c91e",
+      "007_event_guards": "d78325f53bfbfe58a48ea7bd94098fb939122c92497ac6550de61b3604985c7d",
+      "008_g3_distribution": "e55b826b675e8f7612cab0033f11b67313499adfa3c9ec0bd6e03703d455633b",
+      "009_g3_readiness": "5b5989992a81e7cb3a95665e9e8fe1edf513c9a258fb88cfa70fe97888d5a271",
+      "010_g3_definition": "b4fb03f6cd8818927f26223739aca5990e4db8a6f542e7b89ac9c1c4f4e7a4a0",
+      "011_g4_automation": "69685bd1f30f20229ce55d77a07f161b73ed748c93f2c37c8668a81191cbc935",
+      "012_g4_readiness": "a997f74ee3a6ddb391660c2d48629dfcd5aa4dd0c02b7bb9424c36a34beaaf18",
+      "013_g4_subscription_policy": "9d410dad4f86d19e2c891aa6863d1e21211b8e4cfb1855628346cbbf235086e3",
+      "014_g4_ai_budget": "44b9b6b535f75387668c71b169fe70710cfb67660b2a29b9b834051ab0493439",
+      "015_g4_matching_feedback": "a719722dae691d81545210feabf0cd1614b46b3182aba6ddee7f196103df8822",
+      "016_g5_operations": "3f9ab64a955b6619ad07345437f6bbe907747b1698baa8e0058b41ef5330601c",
+      "017_g5_heartbeat_slots": "3a170d65c455b47f7b7570d3935b499e434d7375c5dc6946e43a0fc7950e3d18",
+      "018_g5_recovery_fences": "24546116553e5a8c5092482d8a73a4639426f50809e7b053992239101bb2bd7a",
+      "019_g5_safety_schedule": "38805c73af90f7616e5b58aecc740c9601552dce5f3592ee1ee1a7cf924ba0e1",
+      "020_g5_queue_fairness": "631b87047ce819b00ef1f9ab16a70c67b02653df91081e6dea9229e25e344748",
+      "021_g5_claim_indexes": "33a8e0aacad3bf4034ce2f0d4a2ee37484caf6e84d832d5690fadea7cc868913",
+      "022_g5_outbox_routing": "0819253828f4d5bd1cbf7b649db1e53f88e2feb4110bb2825b1d6b37503c2718"
+    },
+    "business_counts": {
+      "A": {
+        "import_batch": 448,
+        "g3_listing": 74,
+        "g3_snapshot": 406,
+        "g3_receipt": 1781,
+        "audit_event": 4024
+      },
+      "B": {
+        "import_batch": 0,
+        "g3_listing": 0,
+        "g3_snapshot": 0,
+        "g3_receipt": 0,
+        "audit_event": 2
+      }
+    },
+    "rls": [
+      {
+        "table": "g3_listing",
+        "enabled": true,
+        "forced": true
+      },
+      {
+        "table": "g5_alert",
+        "enabled": true,
+        "forced": true
+      },
+      {
+        "table": "g5_recovery_scope",
+        "enabled": true,
+        "forced": true
+      },
+      {
+        "table": "processing_record",
+        "enabled": true,
+        "forced": true
+      }
+    ]
+  },
+  "after": {
+    "env_sha256": "ab5dbffc0c04ed4972689bc5a1138e3698c4619c90963c651cd00f6f7047566c",
+    "migration_checksums": {
+      "001_foundation": "61f87f08663c2c7da4a51199c4d75b3c1ad68f5a951e9aeb6191257010760bf4",
+      "002_g1": "ab168ad136d5793441270a3d83cb42c2d90e003fd5a622e229959161e6ec3c94",
+      "003_command_idempotency": "0919e1cacf20e12f7eccd2c88745b0f1851a7ae4e01e07b5f82cde988bc94130",
+      "004_channel_codes": "33e0c1d555a248203e9ca29270b9da86e51dd4b40735d4c1b530de7fd5fae5c8",
+      "005_g2_foundation": "e6c3010862b08208c875732e3d8d7ea1c675b8a41c325a75d1f44f6c0cd24bbe",
+      "006_generation_links": "aedb9e8ae5a3799db31a0675fe99f6c95da85aaa2ce9a121bc5107ea2fd8c91e",
+      "007_event_guards": "d78325f53bfbfe58a48ea7bd94098fb939122c92497ac6550de61b3604985c7d",
+      "008_g3_distribution": "e55b826b675e8f7612cab0033f11b67313499adfa3c9ec0bd6e03703d455633b",
+      "009_g3_readiness": "5b5989992a81e7cb3a95665e9e8fe1edf513c9a258fb88cfa70fe97888d5a271",
+      "010_g3_definition": "b4fb03f6cd8818927f26223739aca5990e4db8a6f542e7b89ac9c1c4f4e7a4a0",
+      "011_g4_automation": "69685bd1f30f20229ce55d77a07f161b73ed748c93f2c37c8668a81191cbc935",
+      "012_g4_readiness": "a997f74ee3a6ddb391660c2d48629dfcd5aa4dd0c02b7bb9424c36a34beaaf18",
+      "013_g4_subscription_policy": "9d410dad4f86d19e2c891aa6863d1e21211b8e4cfb1855628346cbbf235086e3",
+      "014_g4_ai_budget": "44b9b6b535f75387668c71b169fe70710cfb67660b2a29b9b834051ab0493439",
+      "015_g4_matching_feedback": "a719722dae691d81545210feabf0cd1614b46b3182aba6ddee7f196103df8822",
+      "016_g5_operations": "3f9ab64a955b6619ad07345437f6bbe907747b1698baa8e0058b41ef5330601c",
+      "017_g5_heartbeat_slots": "3a170d65c455b47f7b7570d3935b499e434d7375c5dc6946e43a0fc7950e3d18",
+      "018_g5_recovery_fences": "24546116553e5a8c5092482d8a73a4639426f50809e7b053992239101bb2bd7a",
+      "019_g5_safety_schedule": "38805c73af90f7616e5b58aecc740c9601552dce5f3592ee1ee1a7cf924ba0e1",
+      "020_g5_queue_fairness": "631b87047ce819b00ef1f9ab16a70c67b02653df91081e6dea9229e25e344748",
+      "021_g5_claim_indexes": "33a8e0aacad3bf4034ce2f0d4a2ee37484caf6e84d832d5690fadea7cc868913",
+      "022_g5_outbox_routing": "0819253828f4d5bd1cbf7b649db1e53f88e2feb4110bb2825b1d6b37503c2718"
+    },
+    "business_counts": {
+      "A": {
+        "import_batch": 448,
+        "g3_listing": 74,
+        "g3_snapshot": 406,
+        "g3_receipt": 1781,
+        "audit_event": 4024
+      },
+      "B": {
+        "import_batch": 0,
+        "g3_listing": 0,
+        "g3_snapshot": 0,
+        "g3_receipt": 0,
+        "audit_event": 2
+      }
+    },
+    "rls": [
+      {
+        "table": "g3_listing",
+        "enabled": true,
+        "forced": true
+      },
+      {
+        "table": "g5_alert",
+        "enabled": true,
+        "forced": true
+      },
+      {
+        "table": "g5_recovery_scope",
+        "enabled": true,
+        "forced": true
+      },
+      {
+        "table": "processing_record",
+        "enabled": true,
+        "forced": true
+      }
+    ]
+  },
+  "applied_files_match": true,
+  "scope": "Current normal stores; append-only upgrade, then repeat setup without resetting any database. Environment contents never exported."
+}

@@ -1,0 +1,376 @@
+{
+  "captured_at": "2026-10-27T08:06:35.835408+00:00",
+  "python": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+  "python_version": "3.12.15",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "dependencies": {
+    "onnxruntime": "1.31.1",
+    "tokenizers": "0.23.3",
+    "numpy": "2.5.4",
+    "fastapi": "0.162.0",
+    "psycopg": "3.3.6",
+    "httpx": "0.28.1",
+    "httpx2": "2.16.0"
+  },
+  "databases": {
+    "core": {
+      "database": "hotel_project",
+      "postgres": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+      "migration_checksums": [
+        [
+          "001_foundation",
+          "61f87f08663c2c7da4a51199c4d75b3c1ad68f5a951e9aeb6191257010760bf4"
+        ],
+        [
+          "002_g1",
+          "ab168ad136d5793441270a3d83cb42c2d90e003fd5a622e229959161e6ec3c94"
+        ],
+        [
+          "003_command_idempotency",
+          "0919e1cacf20e12f7eccd2c88745b0f1851a7ae4e01e07b5f82cde988bc94130"
+        ],
+        [
+          "004_channel_codes",
+          "33e0c1d555a248203e9ca29270b9da86e51dd4b40735d4c1b530de7fd5fae5c8"
+        ],
+        [
+          "005_g2_foundation",
+          "e6c3010862b08208c875732e3d8d7ea1c675b8a41c325a75d1f44f6c0cd24bbe"
+        ],
+        [
+          "006_generation_links",
+          "aedb9e8ae5a3799db31a0675fe99f6c95da85aaa2ce9a121bc5107ea2fd8c91e"
+        ],
+        [
+          "007_event_guards",
+          "d78325f53bfbfe58a48ea7bd94098fb939122c92497ac6550de61b3604985c7d"
+        ],
+        [
+          "008_g3_distribution",
+          "e55b826b675e8f7612cab0033f11b67313499adfa3c9ec0bd6e03703d455633b"
+        ],
+        [
+          "009_g3_readiness",
+          "5b5989992a81e7cb3a95665e9e8fe1edf513c9a258fb88cfa70fe97888d5a271"
+        ],
+        [
+          "010_g3_definition",
+          "b4fb03f6cd8818927f26223739aca5990e4db8a6f542e7b89ac9c1c4f4e7a4a0"
+        ],
+        [
+          "011_g4_automation",
+          "69685bd1f30f20229ce55d77a07f161b73ed748c93f2c37c8668a81191cbc935"
+        ],
+        [
+          "012_g4_readiness",
+          "a997f74ee3a6ddb391660c2d48629dfcd5aa4dd0c02b7bb9424c36a34beaaf18"
+        ],
+        [
+          "013_g4_subscription_policy",
+          "9d410dad4f86d19e2c891aa6863d1e21211b8e4cfb1855628346cbbf235086e3"
+        ],
+        [
+          "014_g4_ai_budget",
+          "44b9b6b535f75387668c71b169fe70710cfb67660b2a29b9b834051ab0493439"
+        ],
+        [
+          "015_g4_matching_feedback",
+          "a719722dae691d81545210feabf0cd1614b46b3182aba6ddee7f196103df8822"
+        ]
+      ],
+      "app_roles": [
+        [
+          "hotel_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_app",
+          false,
+          false
+        ]
+      ],
+      "g4_rls_flags": [
+        [
+          "g4_ai_attempt",
+          true,
+          true
+        ],
+        [
+          "g4_ai_task",
+          true,
+          true
+        ],
+        [
+          "g4_decision",
+          true,
+          true
+        ],
+        [
+          "g4_mapping_reuse",
+          true,
+          true
+        ],
+        [
+          "g4_matching_feedback",
+          true,
+          true
+        ],
+        [
+          "g4_policy",
+          true,
+          true
+        ],
+        [
+          "g4_run",
+          true,
+          true
+        ],
+        [
+          "g4_step",
+          true,
+          true
+        ],
+        [
+          "g4_subscription",
+          true,
+          true
+        ]
+      ]
+    },
+    "sim_a": {
+      "database": "hotel_project_sim",
+      "postgres": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+      "migration_checksums": [
+        [
+          "001",
+          "3a2228455e355e498c559da8d1987602d271af496adfb086f90aa918f5fe761f"
+        ],
+        [
+          "002_g3_protocol",
+          "b69334b1c2a943fcc062f112a99a97c4e89c43446edab9a60035b00d14359795"
+        ],
+        [
+          "003_g3_quota",
+          "c497309bdf5ed902803ac2b839df815072bfda7ae0cc8be623ad5b652db8cbb4"
+        ]
+      ],
+      "app_roles": [
+        [
+          "hotel_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_app",
+          false,
+          false
+        ]
+      ]
+    },
+    "sim_b": {
+      "database": "hotel_project_sim_b",
+      "postgres": "PostgreSQL 18.4 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit",
+      "migration_checksums": [
+        [
+          "001_protocol",
+          "c3f8ac64ea7c42252e8f4bb5330257b11039f80416da7017a9a9d4ac803ff09e"
+        ],
+        [
+          "002_quota",
+          "ea18e8ae9941c1fcb6bd9345472a7dc82bd8b221ca42f169ddad590cd3687ff0"
+        ]
+      ],
+      "app_roles": [
+        [
+          "hotel_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_app",
+          false,
+          false
+        ],
+        [
+          "hotel_sim_b_app",
+          false,
+          false
+        ]
+      ]
+    }
+  },
+  "processes": {
+    "api": {
+      "pid": 36608,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "uvicorn",
+        "services.core.main:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000"
+      ]
+    },
+    "sim": {
+      "pid": 39288,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "uvicorn",
+        "services.channel_simulator.main:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8001"
+      ]
+    },
+    "sim-b": {
+      "pid": 38412,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "uvicorn",
+        "services.channel_simulator_b.main:create_app",
+        "--factory",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8002"
+      ]
+    },
+    "g2-worker-0": {
+      "pid": 6952,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g2.worker",
+        "--lane",
+        "parse"
+      ]
+    },
+    "g2-worker-1": {
+      "pid": 41860,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g2.worker",
+        "--lane",
+        "control"
+      ]
+    },
+    "g3-worker-0": {
+      "pid": 37512,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g3.worker"
+      ]
+    },
+    "g3-worker-1": {
+      "pid": 22252,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g3.worker"
+      ]
+    },
+    "g4-flow": {
+      "pid": 31024,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g4.worker",
+        "--lane",
+        "flow"
+      ]
+    },
+    "g4-ai": {
+      "pid": 38468,
+      "executable": "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+      "cwd": "D:\\hotel",
+      "command": [
+        "D:\\miniconda3\\envs\\hotel_project\\python.exe",
+        "-s",
+        "-m",
+        "services.core.g4.worker",
+        "--lane",
+        "ai"
+      ]
+    }
+  },
+  "model_manifest": {
+    "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "license": "Apache-2.0",
+    "files": {
+      "onnx/model_quint8_avx2.onnx": {
+        "sha256": "98a01d88b7de996cdea58c32ca71208c09968d143798814b2ea09d3439dc334f",
+        "bytes": 118453870
+      },
+      "tokenizer.json": {
+        "sha256": "2c3387be76557bd40970cec13153b3bbf80407865484b209e655e5e4729076b8",
+        "bytes": 9081518
+      },
+      "config.json": {
+        "sha256": "6300193cb75e01cf80c96decef7187dfb33094d97cc1490b7ead6ff134476e4e",
+        "bytes": 645
+      },
+      "README.md": {
+        "sha256": "1e98ea05b0de579fcaad3d625b62ea55647142ed674d5f5ebf1440e4bbbb6f23",
+        "bytes": 3888
+      }
+    }
+  },
+  "model_configuration": {
+    "enabled": true,
+    "prepared": true,
+    "revision": "e8f8c211226b894fcb81acc59f3b34ba3efd5f42",
+    "mode": "LOCAL_ONNX",
+    "prompt_version": null
+  },
+  "core_ready": {
+    "status": "ready",
+    "migration": "015"
+  },
+  "normal_g3_faults": "false",
+  "normal_legacy_faults": "false"
+}

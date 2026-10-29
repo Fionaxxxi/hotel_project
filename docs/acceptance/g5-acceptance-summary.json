@@ -1,0 +1,511 @@
+{
+  "schema": "g5-acceptance-v1",
+  "at": "2026-10-29T01:50:32.722741+00:00",
+  "status": "PASSED_LOCAL_SCOPE_NEW_MACHINE_PENDING",
+  "checks": {
+    "all_local_p0_scenes": true,
+    "complete_regression": true,
+    "final_normal_services": true,
+    "normal_load_50": true,
+    "actual_ai_queued": true,
+    "continuous_60_minutes": true,
+    "query_100_samples": true,
+    "three_format_parse": true,
+    "protocol_three_sizes": true,
+    "browser": true,
+    "audit_20_stratified": true,
+    "two_restores_and_rpo_rto": true,
+    "daily_backup_action": true,
+    "local_isolated_reproduction_twice": true,
+    "secret_scan": true,
+    "handoff_bundle": true,
+    "actual_cross_process_trace": true,
+    "100_duplicate_reorders": true
+  },
+  "open_local_items": [],
+  "independent_new_windows_machine": {
+    "status": "DEFERRED_BY_USER",
+    "reason": "2026-10-28 user has no separate Windows host/VM; complete local implementation and acceptance first"
+  },
+  "deferred_deliveries": {
+    "demonstration_recordings": {
+      "status": "DEFERRED_BY_USER",
+      "decision_date": "2026-10-28",
+      "decision": "不录屏，将录像列为待补交付项",
+      "scope": "G5 scenario49 P1, actual demonstration videos not delivered. Browser actions/screenshots are separate evidence and are not called continuous screen recording."
+    }
+  },
+  "full_regression": {
+    "tests": 306,
+    "failures": 0,
+    "skipped": 0,
+    "seconds": 460.705
+  },
+  "latest_load_summary": {
+    "accepted_updates": 50,
+    "verified": 50,
+    "failed": 0,
+    "p50_seconds": 11.67949999999837,
+    "p95_nearest_rank_seconds": 27.328999999997905,
+    "max_seconds": 34.34299999999348,
+    "stop_count": 10,
+    "stop_max_seconds": 5.26600000000326
+  },
+  "soak_elapsed_seconds": 3603.7029999999795,
+  "historical_failures_retained": [
+    "g5-final-305-pass-1-reopen-fail.xml",
+    "g5-first-full.xml",
+    "g5-full-298-pass-2-fail.xml",
+    "g5-full-299-pass-1-fail.xml",
+    "g5-full-300-pass-20s-probe.xml",
+    "g5-initial-load-close.json",
+    "g5-load-inbox-race.json",
+    "g5-load-initial.json",
+    "g5-load-protocol-contention.json",
+    "g5-load-recon-backlog.json",
+    "g5-outbox-diagnosis.xml",
+    "g5-overnight-pool-timeout.txt",
+    "g5-queue-first-regression.xml",
+    "g5-recon-backlog-close.json",
+    "g5-reopen-profile-first-fail.xml",
+    "g5-soak-initial.json",
+    "g5-soak-protocol-contention.json",
+    "g5-soak-recon-backlog.json",
+    "g5-supplement-status-assertion-first.xml",
+    "g5-validation-interruptions.json"
+  ],
+  "evidence": {
+    "g5-audit-fixtures.json": {
+      "bytes": 320928,
+      "sha256": "6f7ea5a8725830d69228370fbf8c07a89af4d01f47a23a15be49e507fb8c1077"
+    },
+    "g5-audit-historical-truncation.json": {
+      "bytes": 21815,
+      "sha256": "c9767b6e4141e80b621b358dedbb1dad9c84223ea62e7d1475c6b8120f04383e"
+    },
+    "g5-audit-sampling.json": {
+      "bytes": 25630,
+      "sha256": "a068d72a996006b60a3a5404072879827eff31f266147595e41a31bb5a9a77aa"
+    },
+    "g5-backup-age-tests.xml": {
+      "bytes": 472,
+      "sha256": "ad3e80f8f32601b7db1ffe53b3e16a479ca29825546f3f26a95b020c716a85b3"
+    },
+    "g5-backup-failure-drill.json": {
+      "bytes": 451,
+      "sha256": "086a335ae30acf291a91b06d45c9176ed6e1ad57bdf18d1fa39ba013a4a21d66"
+    },
+    "g5-backup-failure-tests.xml": {
+      "bytes": 14064,
+      "sha256": "1a456045531609fbedd4e535d189c18c14a1185982ad1d5e7586754ba7fb17ce"
+    },
+    "g5-backup-schedule.json": {
+      "bytes": 472,
+      "sha256": "a8c7bce1833ad2ee86a4a6eec1b292678393b0f90c374a0c245da86fb0a1c3bf"
+    },
+    "g5-baseline.xml": {
+      "bytes": 30134,
+      "sha256": "f648086d091ad32e61d6d18852b36cb5c3f2b4c68ffdcdbf50c954508b45aa5a"
+    },
+    "g5-before-concurrent-relay-304-tests.xml": {
+      "bytes": 35169,
+      "sha256": "94269b74410956c487de2e5ce9f1bc659a44fcfeed14ce4e8bb77720ab653c19"
+    },
+    "g5-before-pool-recovery-305-tests.xml": {
+      "bytes": 35301,
+      "sha256": "2a84ed3e85c870793c8b46f9f576c3d246604ad467a87bfa6534e8a6605d96da"
+    },
+    "g5-before-pool-recovery-http-smoke.json": {
+      "bytes": 64344,
+      "sha256": "f0478d8603ea93c6d3973a98a19cb68d794e1d93623a53ece3c13d7d9707a684"
+    },
+    "g5-benchmark.md": {
+      "bytes": 2494,
+      "sha256": "327afd209f8199393be983b33ac06689c3ce21e421abda9d03f568d14f39583c"
+    },
+    "g5-browser-cas-conflict.png": {
+      "bytes": 32281,
+      "sha256": "c741adfa45de558b817972b6ee38930cec92cf9151be4c0a776374be211cafd7"
+    },
+    "g5-browser-desktop.png": {
+      "bytes": 65252,
+      "sha256": "bac70a38540e47b544cbbd9d1383b91935c1d97d7f0fd107fdbd501fff11b6e0"
+    },
+    "g5-browser-dual-stop.png": {
+      "bytes": 44182,
+      "sha256": "680521d455b94e4082d289e9d76e8f961045c5a2266415de4cba364c6762079c"
+    },
+    "g5-browser-empty.png": {
+      "bytes": 63269,
+      "sha256": "f7dade3a71540f5642fadc57da0f5b73ed91a2c51f77c941beebd5559bf4a1cd"
+    },
+    "g5-browser-export.json": {
+      "bytes": 481036,
+      "sha256": "05847d8f6e9396e311830fa671b00f7badc4539eccd40863b34c35faabefa26b"
+    },
+    "g5-browser-narrow.png": {
+      "bytes": 37170,
+      "sha256": "9239777a3327ab4e61cd9d6d3a9ad56daf542328fe49ba31242b9053e4bd1849"
+    },
+    "g5-browser-not-found.png": {
+      "bytes": 34467,
+      "sha256": "7939c77cbd8f00311b29b53561ccfc22f5069086ca33960e4783e32f89867fa8"
+    },
+    "g5-browser-partial.png": {
+      "bytes": 67607,
+      "sha256": "16823db81dcec90972278b0c226e0c71536dfff65638844e2fbfc6b029ff772d"
+    },
+    "g5-browser-rebind.png": {
+      "bytes": 36124,
+      "sha256": "4bbd834fe34db7a1f46924d58c3de1c35a763dd5ae61116c12199c5ec69df31f"
+    },
+    "g5-browser-xss.png": {
+      "bytes": 80641,
+      "sha256": "17689cc938817f3ac71bb8c75fdb859dff943d2ea3b63a0607aafd63dfc06232"
+    },
+    "g5-browser.json": {
+      "bytes": 3386,
+      "sha256": "035551c60b90d15f1696dea46fd41fcd1d7ea2cfb404ec50d9a91b002b6736ec"
+    },
+    "g5-duplicate-delivery.json": {
+      "bytes": 31814,
+      "sha256": "54f337f2107e6c26b0a6429b7a534632cfb8dc45f8766a85f9f5c84f51742ef9"
+    },
+    "g5-environment.json": {
+      "bytes": 1271,
+      "sha256": "75f46ee15c35f32f1523d3c73a38f13ce555f0c2f2c28f33e62652dad3f70fb3"
+    },
+    "g5-final-305-pass-1-reopen-fail.xml": {
+      "bytes": 35793,
+      "sha256": "51a716ea9167f3a2968ab0ffd10e74570c061715be235fa2f8527ceb65ce85d7"
+    },
+    "g5-final-guards.xml": {
+      "bytes": 2375,
+      "sha256": "8309ff570827431783bae249466dd1a2916c07003e1c9ed9ebb99dd28270df24"
+    },
+    "g5-final-health.json": {
+      "bytes": 894,
+      "sha256": "eedad8a76e7c605799453c6974533a6dbd93ab6e9c7fe0ac58d58fe5fdc9cdcd"
+    },
+    "g5-final-integration-supplement.xml": {
+      "bytes": 579,
+      "sha256": "95e958cf4cf4ca7d383c494e89f46bef56f9d2495c7b3b19ef42acd32b20ea09"
+    },
+    "g5-final-supplement.xml": {
+      "bytes": 4388,
+      "sha256": "a9f3ae6490ee418ba1b087ddb25182a651f250208c099c1c8902061a68fdf90f"
+    },
+    "g5-first-full.xml": {
+      "bytes": 37676,
+      "sha256": "057fac63d696a08b0f3b9978dfc0e89bda90f9e353552e5f9095b7ecf2b0a84c"
+    },
+    "g5-full-298-pass-2-fail.xml": {
+      "bytes": 35610,
+      "sha256": "7a2e5e443f7506384dc6145416c637f0f96513078841cdf545d933e69c33d1a1"
+    },
+    "g5-full-299-pass-1-fail.xml": {
+      "bytes": 35261,
+      "sha256": "96a919a8709b8899d0e224ad54897b244ba90111875ec7d1252fa35facecacec"
+    },
+    "g5-full-300-pass-20s-probe.xml": {
+      "bytes": 35133,
+      "sha256": "79cc66b62c4f9d0fc3a9da9f51586f32a5c3b374c41c81ab93841b26e55a32f1"
+    },
+    "g5-http-smoke.json": {
+      "bytes": 64331,
+      "sha256": "0e7f1f53c81ad47423f8fd26cd252026d12a8e987362e9477700f5afc0adea30"
+    },
+    "g5-inbox-race-fix-tests.xml": {
+      "bytes": 983,
+      "sha256": "e5e16e9d0fff3f0d7d09549934737912c6b595875bcc13f7b64c53b95d41d2b5"
+    },
+    "g5-initial-load-close.json": {
+      "bytes": 3843,
+      "sha256": "7fad5b994109860fdc77844729279843efaa5c6e60705e5b6dda3616114d6f1e"
+    },
+    "g5-load-inbox-race.json": {
+      "bytes": 3595170,
+      "sha256": "e5fe4575989185e699dbaa4276a8ad6cc869e149ca2c791346f66657fff52c13"
+    },
+    "g5-load-initial.json": {
+      "bytes": 2025646,
+      "sha256": "225044c04d656902e35cf71f08b447df60b68a50bb0b0bf18a038700cf37573b"
+    },
+    "g5-load-protocol-contention.json": {
+      "bytes": 6145050,
+      "sha256": "ca5a09be58fbf75ab3aa0f10a69cc3da7dd08985904c23dd79657c3f40bc62fe"
+    },
+    "g5-load-recon-backlog.json": {
+      "bytes": 455685,
+      "sha256": "6a8bfa7dd50b7284a9e0829d7ceb2ecbce2a0c88f8f7758a1a23d839ca2d92de"
+    },
+    "g5-load.json": {
+      "bytes": 8338539,
+      "sha256": "3ce959b44deb1c02dd24a66ba279feeb82265cd6b94aa7cbbf70e1154f839c11"
+    },
+    "g5-local-reproduction.json": {
+      "bytes": 4210,
+      "sha256": "e3176df066f2e459bc6e9ee8e7ba51b78c62797a0db32b930370eb196ef3a681"
+    },
+    "g5-offline-tests.xml": {
+      "bytes": 457,
+      "sha256": "5899865030bb34b9f2bcd93c7dfaf7de61f483879def3a6607305a6efff0ae78"
+    },
+    "g5-original-locators.json": {
+      "bytes": 1294,
+      "sha256": "dd29ec813c5376eaa3f4fdfee8514a9ac301cfebec1cb5629c08e2b561df41fa"
+    },
+    "g5-outbox-diagnosis.xml": {
+      "bytes": 5114,
+      "sha256": "b8f373a6cf1af434753da8e3a4395826199393324043574528782e789639e920"
+    },
+    "g5-outbox-fix-tests.xml": {
+      "bytes": 4542,
+      "sha256": "676f311c44e2d5306aa27453a5a02b9335b3e4272a201574206413dfdf1afac3"
+    },
+    "g5-overnight-pool-timeout.txt": {
+      "bytes": 1439,
+      "sha256": "c7be61af804d021984456d7326b05e80c5c6512ef3dd35f706f4e4d118286486"
+    },
+    "g5-parse-benchmark.json": {
+      "bytes": 16882,
+      "sha256": "2a21321e5d27b0d660716faffc934810274ee7d83259b7ee30e734074471e52b"
+    },
+    "g5-protocol-benchmark.json": {
+      "bytes": 2532,
+      "sha256": "126b69c3ffed000b46035fc997a5f159f9a97fc3624abf4aae21f7aebe19f43c"
+    },
+    "g5-protocol-benchmark.md": {
+      "bytes": 851,
+      "sha256": "f292e81d7ba8e2adf0084fb91db16428ae8025c9af94c0392acbc719501df014"
+    },
+    "g5-query-benchmark.json": {
+      "bytes": 30094,
+      "sha256": "4d02fa3752a6a393494dc9d97cf29b0289392f04f534d12c93b3ab8364f59d5b"
+    },
+    "g5-queue-budget-recheck.xml": {
+      "bytes": 741,
+      "sha256": "548e69a07f484bb599c4f2ed2119eb1c77eb5d606f69daae77b732a267ef7289"
+    },
+    "g5-queue-first-regression.xml": {
+      "bytes": 35696,
+      "sha256": "253927eb9b9b7e1c754985b6e7856a3a8348cd8302e7b88cf2ba2b61a60b9338"
+    },
+    "g5-queue-fix-tests.xml": {
+      "bytes": 3021,
+      "sha256": "796cf0bbf763e6074614297bc967632922772a12ac80fc720001bc08c6a7e64b"
+    },
+    "g5-race-audit-recheck.xml": {
+      "bytes": 478,
+      "sha256": "45f63ebafab3ee86186c98f335992b41d89553b132e85ee0e20c1c75d673fdb2"
+    },
+    "g5-recon-backlog-close.json": {
+      "bytes": 4641,
+      "sha256": "d315ca27a1a2109a1567b7a4f2b1723dd3d4303975536f4bf641641c2f34eddc"
+    },
+    "g5-recon-compaction.json": {
+      "bytes": 54653,
+      "sha256": "65344644332e0d4a7022c679516e06a41aee7c42979a1694267a388afad57f40"
+    },
+    "g5-reconcile-currenta52b2e2.json": {
+      "bytes": 2150133,
+      "sha256": "f9ab18e61203d492690ba7480b3147dfdc3e9ad40b34add2e7b101f1c75a9360"
+    },
+    "g5-reconcile-currentb52b2e2.json": {
+      "bytes": 2150133,
+      "sha256": "3ed9a0bbe273adca6b76634513e0ebb705fa9ad4c24f2b3f9bbdc936fe82f79d"
+    },
+    "g5-reconcile-final1.json": {
+      "bytes": 68874,
+      "sha256": "a622f499f53e229c349bf64dab70296cee8d3ab2750f07d273d2108cb55cd82c"
+    },
+    "g5-reconcile-final2.json": {
+      "bytes": 68874,
+      "sha256": "d98f59a3fa7f862e5c7cb0199b2feb7658059857b72788662e0aecbc9844359d"
+    },
+    "g5-reconcile-final3.json": {
+      "bytes": 548370,
+      "sha256": "b9374ff18680723e374ad1a89021b382d5fd2ba74e18fb547cc70a8a31571b4c"
+    },
+    "g5-reconcile-final4.json": {
+      "bytes": 548370,
+      "sha256": "86e508361e054fdf82ec12a7dcd57e9a3438169116ac31e0922a81f9ae4a7219"
+    },
+    "g5-reconcile-reproa596560.json": {
+      "bytes": 2150131,
+      "sha256": "3d51b9deb61502a45cbe036d8da47cad04a6c51806e78bec823b20509f7722fd"
+    },
+    "g5-reconcile-reprob596560.json": {
+      "bytes": 2150131,
+      "sha256": "d97fc44fd168a4d96c2cb3deea914a685376fbea35bf530e4ac0408859c921d1"
+    },
+    "g5-reopen-profile-first-fail.xml": {
+      "bytes": 707,
+      "sha256": "da34ca76bb7945a79cf536dedf2117821fb7bbe91efaa1c62e35ca7634e54043"
+    },
+    "g5-reopen-query-fix-tests.xml": {
+      "bytes": 367,
+      "sha256": "d7d56a2eb01f6f80257f6832d742f84880a76470ab682783384a8b87d2a50083"
+    },
+    "g5-reopen-query-fix.json": {
+      "bytes": 1899,
+      "sha256": "50e4bab1e048a31627d1d6aba8a6f957d7221985165065413411384a271d5bbd"
+    },
+    "g5-reopen-query-profile-after.json": {
+      "bytes": 43171,
+      "sha256": "9798447637410fce0c50748b458b36aef8c6f5a124fa5512a7f4cb67b09474dc"
+    },
+    "g5-reopen-query-profile-before.json": {
+      "bytes": 43067,
+      "sha256": "334745d49d2149abac403b538c4d19167b0b0f90c8463aa9920acd10076d775d"
+    },
+    "g5-reopen-unchanged-profile-pass.xml": {
+      "bytes": 367,
+      "sha256": "075c183963cf3b9225a7924d17309afb47eb2f09800b8fa29eb6e244f31893ee"
+    },
+    "g5-repro-build-decoding.json": {
+      "bytes": 494,
+      "sha256": "6400a1aa397fc5d60e6159d8b1717abb88c580c3a32ae401ca1f9aa4b0722919"
+    },
+    "g5-restore-business-currenta52b2e2.json": {
+      "bytes": 113113,
+      "sha256": "55b9effcf75ab3d8d67c5ff261e88f441cb658054f1a79674b60b4b1e62610a7"
+    },
+    "g5-restore-business-currentb52b2e2.json": {
+      "bytes": 113120,
+      "sha256": "705e2fda48e74d84088cf306bc7afdaa4f6cd7dd1f83fd9399345b11cc900423"
+    },
+    "g5-restore-business-final1.json": {
+      "bytes": 118381,
+      "sha256": "77bcf05fb2c264a231a9118c00e2b0ecc4922efd63e99de90c834f3c972fd1ed"
+    },
+    "g5-restore-business-final2.json": {
+      "bytes": 129533,
+      "sha256": "6d45d5bee3c18ee1b1c7408e33f73578f64362db14c653263f9c27b868591392"
+    },
+    "g5-restore-business-final3.json": {
+      "bytes": 119353,
+      "sha256": "e309cc2de882ebce19f70554f9de9844e87223c82bce181a37df456147661f49"
+    },
+    "g5-restore-business-final4.json": {
+      "bytes": 113784,
+      "sha256": "cbe8a1290d25b69fd6912508854b5bf015984820c02d352e5bf492e7a9c5e5c3"
+    },
+    "g5-restore-currenta52b2e2.json": {
+      "bytes": 948,
+      "sha256": "ba5c1966c1decced5be7aeda25d5a32b23cb767100042b80f77d6fe251b80535"
+    },
+    "g5-restore-currentb52b2e2.json": {
+      "bytes": 961,
+      "sha256": "11ff985afc692b6b46112b5f7e0ddb83c0d951584589149ee65f2a212800dd48"
+    },
+    "g5-restore-drill2.json": {
+      "bytes": 921,
+      "sha256": "57b63187715eb9ba861c418ac67f1c75beafd845510dbcf1c115ad42269dc6dc"
+    },
+    "g5-restore-final1.json": {
+      "bytes": 920,
+      "sha256": "959885f005e49c95abcaa85acef7190e8fb19a599f2b2d945b7922ca92b52dab"
+    },
+    "g5-restore-final2.json": {
+      "bytes": 908,
+      "sha256": "695fb370197846e0e150728d7f4878b161bf392aad56aa2350fec17365d564ee"
+    },
+    "g5-restore-final3.json": {
+      "bytes": 920,
+      "sha256": "c594bea36e273c5139ab542df5eb9bd84dd26c2a1738ae92d235649fe583f8a0"
+    },
+    "g5-restore-final4.json": {
+      "bytes": 920,
+      "sha256": "9580c34411649da183bd44a53004c8b0f62915a538324bacfd7f1262b005e4bf"
+    },
+    "g5-restore-reproa596560.json": {
+      "bytes": 951,
+      "sha256": "c7499c2d0681109a78abd048041485f4aaa775ed1e5bd83b6ace3ac6b484307e"
+    },
+    "g5-restore-reprob596560.json": {
+      "bytes": 951,
+      "sha256": "1a3049d8dc6e204d163e4552c2fbd7e85623aef0212d5dcd9b6a9a1455ffeb82"
+    },
+    "g5-restore-summary.json": {
+      "bytes": 1111,
+      "sha256": "e103cdb6655e505c653cb19927156da66b3812fdde0fc80616066538c14dac07"
+    },
+    "g5-restore.md": {
+      "bytes": 1378,
+      "sha256": "33d03752216c1c159ffa57cf0e8133304d377b16351cd6e04464f1ff1ad77e41"
+    },
+    "g5-risk-matrix-tests.xml": {
+      "bytes": 379,
+      "sha256": "baa92774e734131a4188ce6405b250415f235d1b3de8c44594cf68c23844ece6"
+    },
+    "g5-scenario-matrix.json": {
+      "bytes": 17126,
+      "sha256": "a199596fc1dcbdec3b9afc2a569269abf4d0d785ac349cbb83bdc041e8224f4e"
+    },
+    "g5-scenario-matrix.md": {
+      "bytes": 8005,
+      "sha256": "3eaedbd46d2e9097ed05a1c5cd7a34d07ea560f09ff7d8b191a35c930fcda962"
+    },
+    "g5-secret-scan.json": {
+      "bytes": 322,
+      "sha256": "89e9c728d0cfdf0139f4e86edbb239d9d9ba25a7db363dd56fc6172ee15f2792"
+    },
+    "g5-security-matrix-public-redirect-review.json": {
+      "bytes": 10591,
+      "sha256": "6fdd70e5d0ab3ed95aefd362151310a01b8d7927cbb42425664cee0e97ebeb94"
+    },
+    "g5-security-matrix.json": {
+      "bytes": 10386,
+      "sha256": "0ebac17f3468b715b3a7b67ba8b75b0859b31645a21a231241f5e1de438e81bf"
+    },
+    "g5-security.md": {
+      "bytes": 1137,
+      "sha256": "8480e440237c2da03f6e1fd0afb3ef44947b3bf0fa5b1b8385387f11c3a775a8"
+    },
+    "g5-setup-idempotence.json": {
+      "bytes": 6422,
+      "sha256": "aee469cc27eba70ebed9d2e7ae2debd3d84831f40d1c6133c9334ae90795b8af"
+    },
+    "g5-soak-closure.json": {
+      "bytes": 2833,
+      "sha256": "2ea2438bbdeac6b8541a4b18e453364f1fa9ba3c0069b63093d9512954656ea7"
+    },
+    "g5-soak-initial.json": {
+      "bytes": 258006,
+      "sha256": "39d2b4b537f55e7eb3ae35db2cfdc3dd654361779097f2b28f56cf961d9117c8"
+    },
+    "g5-soak-protocol-contention.json": {
+      "bytes": 2072275,
+      "sha256": "a4f18f23b8d29cfbbcdeb6d5c4a6e21d6dd1858218cdf62cc00c8c4d7460ead2"
+    },
+    "g5-soak-recon-backlog.json": {
+      "bytes": 16782,
+      "sha256": "41f3e3841f976bb222798dd7186b11028083a72305fecf5eac3caa4d96db8a52"
+    },
+    "g5-soak.json": {
+      "bytes": 3674855,
+      "sha256": "ae0a77ebb7a2a7d282f7ef9f226adefc3a81d0fb8ef41990f46d34c3d0436aa2"
+    },
+    "g5-supplement-status-assertion-first.xml": {
+      "bytes": 902,
+      "sha256": "b8a8ea764b546403fb8d8a5f822702852212f73897f67543e999d3bd4c6a6410"
+    },
+    "g5-tests.xml": {
+      "bytes": 35419,
+      "sha256": "61902c70dc008563e55b48a3b9254b0bd4287b3084a436f8a335a6df635e8dcc"
+    },
+    "g5-trace.json": {
+      "bytes": 16899,
+      "sha256": "0734a41a1b4e49cd7a3cf09a88e51b592c35565cf87b58079e3cc1893d17f9f0"
+    },
+    "g5-validation-interruptions.json": {
+      "bytes": 1171,
+      "sha256": "6ea346cc11dad1c7a757d045dac73671c552a9ea1b85c862043746d62257ff7b"
+    },
+    "g5-video.json": {
+      "bytes": 307,
+      "sha256": "c79d960ff8b2574a43ca8c3e288bbaf79ca3b92671ea8a6bf0374503b6f42941"
+    }
+  }
+}

@@ -1,0 +1,704 @@
+{
+  "schema": "g5-soak-v1",
+  "started_at": "2026-10-28T06:45:56.695429+00:00",
+  "requested_seconds": 3600,
+  "status": "INTERRUPTED_FOR_RECONCILIATION_BACKLOG_FIX",
+  "samples": [
+    {
+      "elapsed_seconds": 120.34299999999348,
+      "at": "2026-10-28T06:47:59.382333+00:00",
+      "resources": {
+        "processes": {
+          "api": {
+            "rss_bytes": 105095168,
+            "pids": [
+              13412,
+              45080
+            ]
+          },
+          "g2-worker-0": {
+            "rss_bytes": 88719360,
+            "pids": [
+              38856,
+              28496
+            ]
+          },
+          "g2-worker-1": {
+            "rss_bytes": 87896064,
+            "pids": [
+              42296,
+              36320
+            ]
+          },
+          "g3-worker-0": {
+            "rss_bytes": 115765248,
+            "pids": [
+              45092,
+              37012
+            ]
+          },
+          "g4-ai": {
+            "rss_bytes": 544108544,
+            "pids": [
+              9796,
+              16868,
+              33776,
+              3840
+            ]
+          },
+          "g4-flow": {
+            "rss_bytes": 85704704,
+            "pids": [
+              34152,
+              44156
+            ]
+          },
+          "g5-ops": {
+            "rss_bytes": 66895872,
+            "pids": [
+              41864,
+              23704
+            ]
+          },
+          "sim-b": {
+            "rss_bytes": 76881920,
+            "pids": [
+              36644,
+              35208
+            ]
+          },
+          "sim": {
+            "rss_bytes": 76574720,
+            "pids": [
+              23084,
+              43876
+            ]
+          },
+          "postgres": {
+            "rss_bytes": 1068515328,
+            "pids": [
+              20844,
+              4716,
+              28180,
+              1980,
+              27240,
+              13256,
+              2776,
+              12660,
+              22712,
+              31644,
+              14012,
+              31048,
+              26388,
+              6172,
+              20488,
+              25852,
+              31088,
+              35480,
+              47672,
+              37868,
+              47448,
+              42584,
+              45148,
+              10116
+            ]
+          }
+        },
+        "rss_sum_bytes": 2316156928,
+        "host_available_bytes": 8215216128,
+        "rss_note": "unique PIDs; RSS shared pages may still be counted across processes"
+      },
+      "metrics": {
+        "schema": "g5-metrics-v1",
+        "collected_at": "2026-10-28T14:47:59.806396+08:00",
+        "status": "CURRENT",
+        "groups": {
+          "execution_job": [
+            {
+              "state": "BLOCKED",
+              "count": 6
+            },
+            {
+              "state": "MANUAL",
+              "count": 10
+            },
+            {
+              "state": "READY",
+              "count": 460
+            },
+            {
+              "state": "SUCCEEDED",
+              "count": 29267
+            }
+          ],
+          "g3_task": [
+            {
+              "state": "APPLIED",
+              "count": 1183
+            },
+            {
+              "state": "MANUAL",
+              "count": 10
+            },
+            {
+              "state": "READY",
+              "count": 14
+            },
+            {
+              "state": "REJECTED",
+              "count": 2
+            },
+            {
+              "state": "SUPERSEDED",
+              "count": 81
+            }
+          ],
+          "g4_run": [
+            {
+              "state": "COMPLETED",
+              "count": 127
+            },
+            {
+              "state": "STALE",
+              "count": 22
+            },
+            {
+              "state": "WAIT_EXTERNAL",
+              "count": 5
+            }
+          ],
+          "workflow_run": [
+            {
+              "state": "COMPLETED",
+              "count": 5
+            },
+            {
+              "state": "G3_MANAGED",
+              "count": 12
+            },
+            {
+              "state": "G4_MANAGED",
+              "count": 31
+            },
+            {
+              "state": "STALE",
+              "count": 154
+            },
+            {
+              "state": "WAIT_MAPPING",
+              "count": 2
+            }
+          ],
+          "g4_ai_task": [
+            {
+              "state": "COMPLETED",
+              "count": 65
+            }
+          ]
+        },
+        "queue": {
+          "due": 460,
+          "expired_lease": 0,
+          "oldest_due_seconds": 1887.638843
+        },
+        "outbox": {
+          "pending": 0,
+          "oldest_seconds": 0
+        },
+        "dead_letters": 14,
+        "risk": {
+          "unknown_listings": 0,
+          "stopping": 4
+        },
+        "api_pool": {
+          "requests_num": 76527,
+          "requests_queued": 106,
+          "connections_num": 6,
+          "connections_ms": 590,
+          "requests_wait_ms": 820,
+          "usage_ms": 229745,
+          "pool_min": 0,
+          "pool_max": 2,
+          "pool_size": 2,
+          "pool_available": 2,
+          "requests_waiting": 0
+        }
+      },
+      "status": "OK"
+    },
+    {
+      "elapsed_seconds": 251.2960000000021,
+      "at": "2026-10-28T06:50:10.334780+00:00",
+      "resources": {
+        "processes": {
+          "api": {
+            "rss_bytes": 105095168,
+            "pids": [
+              13412,
+              45080
+            ]
+          },
+          "g2-worker-0": {
+            "rss_bytes": 88723456,
+            "pids": [
+              38856,
+              28496
+            ]
+          },
+          "g2-worker-1": {
+            "rss_bytes": 87896064,
+            "pids": [
+              42296,
+              36320
+            ]
+          },
+          "g3-worker-0": {
+            "rss_bytes": 85860352,
+            "pids": [
+              45092,
+              37012
+            ]
+          },
+          "g4-ai": {
+            "rss_bytes": 544108544,
+            "pids": [
+              9796,
+              16868,
+              33776,
+              3840
+            ]
+          },
+          "g4-flow": {
+            "rss_bytes": 85704704,
+            "pids": [
+              34152,
+              44156
+            ]
+          },
+          "g5-ops": {
+            "rss_bytes": 66895872,
+            "pids": [
+              41864,
+              23704
+            ]
+          },
+          "sim-b": {
+            "rss_bytes": 76939264,
+            "pids": [
+              36644,
+              35208
+            ]
+          },
+          "sim": {
+            "rss_bytes": 76701696,
+            "pids": [
+              23084,
+              43876
+            ]
+          },
+          "postgres": {
+            "rss_bytes": 1085571072,
+            "pids": [
+              20844,
+              4716,
+              28180,
+              1980,
+              27240,
+              13256,
+              2776,
+              12660,
+              22712,
+              31644,
+              14012,
+              31048,
+              26388,
+              6172,
+              20488,
+              25852,
+              31088,
+              35480,
+              47672,
+              37868,
+              47448,
+              42584,
+              45148,
+              10116
+            ]
+          }
+        },
+        "rss_sum_bytes": 2303496192,
+        "host_available_bytes": 8334020608,
+        "rss_note": "unique PIDs; RSS shared pages may still be counted across processes"
+      },
+      "metrics": {
+        "schema": "g5-metrics-v1",
+        "collected_at": "2026-10-28T14:50:10.775548+08:00",
+        "status": "CURRENT",
+        "groups": {
+          "execution_job": [
+            {
+              "state": "BLOCKED",
+              "count": 6
+            },
+            {
+              "state": "MANUAL",
+              "count": 10
+            },
+            {
+              "state": "READY",
+              "count": 520
+            },
+            {
+              "state": "SUCCEEDED",
+              "count": 29347
+            }
+          ],
+          "g3_task": [
+            {
+              "state": "APPLIED",
+              "count": 1183
+            },
+            {
+              "state": "MANUAL",
+              "count": 10
+            },
+            {
+              "state": "READY",
+              "count": 24
+            },
+            {
+              "state": "REJECTED",
+              "count": 2
+            },
+            {
+              "state": "SUPERSEDED",
+              "count": 85
+            }
+          ],
+          "g4_run": [
+            {
+              "state": "COMPLETED",
+              "count": 127
+            },
+            {
+              "state": "STALE",
+              "count": 23
+            },
+            {
+              "state": "WAIT_EXTERNAL",
+              "count": 6
+            }
+          ],
+          "workflow_run": [
+            {
+              "state": "COMPLETED",
+              "count": 5
+            },
+            {
+              "state": "G3_MANAGED",
+              "count": 11
+            },
+            {
+              "state": "G4_MANAGED",
+              "count": 32
+            },
+            {
+              "state": "STALE",
+              "count": 156
+            },
+            {
+              "state": "WAIT_MAPPING",
+              "count": 2
+            }
+          ],
+          "g4_ai_task": [
+            {
+              "state": "COMPLETED",
+              "count": 65
+            }
+          ]
+        },
+        "queue": {
+          "due": 520,
+          "expired_lease": 0,
+          "oldest_due_seconds": 1926.7579
+        },
+        "outbox": {
+          "pending": 0,
+          "oldest_seconds": 0
+        },
+        "dead_letters": 14,
+        "risk": {
+          "unknown_listings": 0,
+          "stopping": 4
+        },
+        "api_pool": {
+          "requests_num": 78807,
+          "requests_queued": 106,
+          "connections_num": 6,
+          "connections_ms": 590,
+          "requests_wait_ms": 820,
+          "usage_ms": 256947,
+          "pool_min": 0,
+          "pool_max": 2,
+          "pool_size": 2,
+          "pool_available": 2,
+          "requests_waiting": 0
+        }
+      },
+      "status": "OK"
+    },
+    {
+      "elapsed_seconds": 382.31200000000536,
+      "at": "2026-10-28T06:52:21.362127+00:00",
+      "resources": {
+        "processes": {
+          "api": {
+            "rss_bytes": 105381888,
+            "pids": [
+              13412,
+              45080
+            ]
+          },
+          "g2-worker-0": {
+            "rss_bytes": 88760320,
+            "pids": [
+              38856,
+              28496
+            ]
+          },
+          "g2-worker-1": {
+            "rss_bytes": 87900160,
+            "pids": [
+              42296,
+              36320
+            ]
+          },
+          "g3-worker-0": {
+            "rss_bytes": 85999616,
+            "pids": [
+              45092,
+              37012
+            ]
+          },
+          "g4-ai": {
+            "rss_bytes": 544108544,
+            "pids": [
+              9796,
+              16868,
+              33776,
+              3840
+            ]
+          },
+          "g4-flow": {
+            "rss_bytes": 85704704,
+            "pids": [
+              34152,
+              44156
+            ]
+          },
+          "g5-ops": {
+            "rss_bytes": 66945024,
+            "pids": [
+              41864,
+              23704
+            ]
+          },
+          "sim-b": {
+            "rss_bytes": 77168640,
+            "pids": [
+              36644,
+              35208
+            ]
+          },
+          "sim": {
+            "rss_bytes": 76828672,
+            "pids": [
+              23084,
+              43876
+            ]
+          },
+          "postgres": {
+            "rss_bytes": 1122762752,
+            "pids": [
+              20844,
+              4716,
+              28180,
+              1980,
+              27240,
+              13256,
+              2776,
+              12660,
+              22712,
+              31644,
+              14012,
+              31048,
+              26388,
+              20488,
+              25852,
+              31088,
+              35480,
+              47672,
+              47448,
+              42584,
+              45148,
+              10116,
+              3968,
+              46060,
+              25244,
+              39284
+            ]
+          }
+        },
+        "rss_sum_bytes": 2341560320,
+        "host_available_bytes": 8504807424,
+        "rss_note": "unique PIDs; RSS shared pages may still be counted across processes"
+      },
+      "metrics": {
+        "schema": "g5-metrics-v1",
+        "collected_at": "2026-10-28T14:52:21.787490+08:00",
+        "status": "CURRENT",
+        "groups": {
+          "execution_job": [
+            {
+              "state": "BLOCKED",
+              "count": 6
+            },
+            {
+              "state": "MANUAL",
+              "count": 10
+            },
+            {
+              "state": "READY",
+              "count": 566
+            },
+            {
+              "state": "RETRY_WAIT",
+              "count": 4
+            },
+            {
+              "state": "SUCCEEDED",
+              "count": 29428
+            }
+          ],
+          "g3_task": [
+            {
+              "state": "APPLIED",
+              "count": 1183
+            },
+            {
+              "state": "MANUAL",
+              "count": 10
+            },
+            {
+              "state": "READY",
+              "count": 34
+            },
+            {
+              "state": "REJECTED",
+              "count": 2
+            },
+            {
+              "state": "SUPERSEDED",
+              "count": 89
+            }
+          ],
+          "g4_run": [
+            {
+              "state": "COMPLETED",
+              "count": 127
+            },
+            {
+              "state": "STALE",
+              "count": 24
+            },
+            {
+              "state": "WAIT_EXTERNAL",
+              "count": 7
+            }
+          ],
+          "workflow_run": [
+            {
+              "state": "COMPLETED",
+              "count": 5
+            },
+            {
+              "state": "G3_MANAGED",
+              "count": 10
+            },
+            {
+              "state": "G4_MANAGED",
+              "count": 33
+            },
+            {
+              "state": "STALE",
+              "count": 158
+            },
+            {
+              "state": "WAIT_MAPPING",
+              "count": 2
+            }
+          ],
+          "g4_ai_task": [
+            {
+              "state": "COMPLETED",
+              "count": 65
+            }
+          ]
+        },
+        "queue": {
+          "due": 570,
+          "expired_lease": 0,
+          "oldest_due_seconds": 1958.244009
+        },
+        "outbox": {
+          "pending": 0,
+          "oldest_seconds": 0
+        },
+        "dead_letters": 14,
+        "risk": {
+          "unknown_listings": 0,
+          "stopping": 4
+        },
+        "api_pool": {
+          "requests_num": 81087,
+          "requests_queued": 106,
+          "connections_num": 6,
+          "connections_ms": 590,
+          "requests_wait_ms": 820,
+          "usage_ms": 284255,
+          "pool_min": 0,
+          "pool_max": 2,
+          "pool_size": 2,
+          "pool_available": 2,
+          "requests_waiting": 0
+        }
+      },
+      "status": "OK"
+    }
+  ],
+  "updates": [],
+  "ai": [],
+  "failures": [
+    {
+      "elapsed_seconds": 0.0,
+      "operation": "update/inference",
+      "error_type": "RuntimeError",
+      "error_code": "HTTP_SCENARIO_TIMEOUT:/v4/overview"
+    },
+    {
+      "elapsed_seconds": 131.0460000000021,
+      "operation": "update/inference",
+      "error_type": "RuntimeError",
+      "error_code": "HTTP_SCENARIO_TIMEOUT:/v4/overview"
+    },
+    {
+      "elapsed_seconds": 262.01500000001397,
+      "operation": "update/inference",
+      "error_type": "RuntimeError",
+      "error_code": "HTTP_SCENARIO_TIMEOUT:/v4/overview"
+    }
+  ],
+  "source": "G5-e5091af6",
+  "elapsed_seconds": 383.0309999999881
+}

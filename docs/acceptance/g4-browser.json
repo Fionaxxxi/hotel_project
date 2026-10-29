@@ -1,0 +1,71 @@
+{
+  "status": "PASSED",
+  "url": "http://127.0.0.1:8000/admin/",
+  "code": "G4-UI-f39c8885",
+  "policy_id": "91de11a7-2054-490e-85fa-830e76b8897b",
+  "normal_suggestion_id": "fa61406a-81f5-4f12-9665-305caf67a451",
+  "attack_suggestion_id": "04838aad-a5dd-49e9-8845-88bc46a2027d",
+  "regular_run_id": "30b336b6-c70e-4700-bfe2-762508a05a58",
+  "exception_run_id": "10e1c211-0588-437d-a29f-3f451fe802a3",
+  "viewports": [
+    {
+      "requested": {
+        "width": 390,
+        "height": 844
+      },
+      "actual": {
+        "clientWidth": 375,
+        "injectionMarker": null,
+        "probeImageCount": 0,
+        "scrollWidth": 375
+      }
+    },
+    {
+      "requested": {
+        "width": 1280,
+        "height": 800
+      },
+      "actual": {
+        "clientWidth": 1265,
+        "scrollWidth": 1265
+      }
+    }
+  ],
+  "narrow_decision_table": {
+    "clientWidth": 375,
+    "scrollWidth": 375,
+    "tableScrollWidth": 600,
+    "tableViewportWidth": 303
+  },
+  "security": {
+    "untrusted_text_length": 3726,
+    "full_source_retained": true,
+    "literal_text_shown": true,
+    "injected_image_nodes": 0,
+    "injected_execution_marker": null,
+    "attack_business_unchanged": {
+      "all_mappings_unapproved": true,
+      "no_listing_created": true
+    }
+  },
+  "actions": [
+    "reviewer accepted actual model property suggestion in narrow UI",
+    "reviewer approved both baseline snapshots in desktop UI",
+    "reviewer independently approved policy in UI; admin enabled and subscribed",
+    "real HTTP upload -> separate workers -> browser confirmed dual SYSTEM_POLICY ALLOW and completed",
+    "real HTTP out-of-range update -> browser confirmed WAIT_APPROVAL",
+    "reviewer approved both exception snapshots in narrow UI -> separate workers resumed without upload",
+    "admin submitted both stop commands in narrow UI",
+    "final rebuilt narrow and desktop UI confirmed both STOPPED, desired=observed=3"
+  ],
+  "screenshots": [
+    "g4-final-narrow-security.png",
+    "g4-final-narrow-mapping.png",
+    "g4-final-desktop-workflow.png",
+    "g4-final-narrow-wait.png",
+    "g4-final-narrow-stop.png",
+    "g4-final-desktop-stop.png"
+  ],
+  "uncompleted": [],
+  "previous_partial_evidence": "g4-browser-initial.json"
+}

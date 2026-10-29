@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0",
+  "supplier_code": "S-A",
+  "source_sequence": 1,
+  "generated_at": "2027-01-01T02:00:00Z",
+  "mode": "snapshot",
+  "contract_version": "supplier-demo-v1",
+  "scope": {
+    "property_codes": [
+      "001"
+    ],
+    "entities": [
+      "properties",
+      "rooms",
+      "rate_plans",
+      "inventory",
+      "rates"
+    ],
+    "stay_date_from": "2027-01-10"
+  },
+  "files": [
+    {
+      "name": "properties.csv",
+      "sha256": "a746911c51d5e4f3b03489d370a03ba12151e2775b984cc998c70964d3d0bce7"
+    },
+    {
+      "name": "rooms.csv",
+      "sha256": "0f67e311f1e4f3ba1951841d97b98c751010a1891fcc2378b1959ff4964542a6"
+    },
+    {
+      "name": "rate_plans.csv",
+      "sha256": "daa6e72b33004309cf13ab2f8ab91b0e5092c6808d6c32e205cfc44d1806d5e2"
+    },
+    {
+      "name": "inventory.csv",
+      "sha256": "2d6289baa5bff403d6f1737b510bf9c05ecc363a56018a6c85c2361a08cfe205"
+    },
+    {
+      "name": "rates.csv",
+      "sha256": "bf5291eaa615f2514017a57d05ceb67837e10231cdef275aeede789babb44b38"
+    }
+  ]
+}

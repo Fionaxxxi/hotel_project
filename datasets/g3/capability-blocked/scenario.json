@@ -1,0 +1,8 @@
+{
+  "synthetic": true,
+  "plan_codes": [
+    "FLEX"
+  ],
+  "channel": "SIM-B",
+  "expected": "422 CANCELLATION_NOT_REPRESENTABLE; no dropped plan or lossy boolean policy"
+}

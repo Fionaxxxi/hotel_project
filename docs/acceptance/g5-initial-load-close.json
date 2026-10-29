@@ -1,0 +1,163 @@
+{
+  "source_codes": [
+    "G5-06c2761a",
+    "G5-0a62602d",
+    "G5-180b9bb8",
+    "G5-2e5e2a22",
+    "G5-3253d814",
+    "G5-935cf083",
+    "G5-b7e9d726",
+    "G5-c80c1a68",
+    "G5-d53ce5a0",
+    "G5-f5230d6a",
+    "G5-f8dfbfb5"
+  ],
+  "paused": [
+    "f449bd3d-592f-40b2-96d3-ebf03f387a81",
+    "5f1ffdb1-f030-4e73-8e24-d74e5a167083",
+    "fbf4fcd4-9b35-4dfa-a8d7-0c8687ae2308",
+    "3a7d6d42-fdf2-499f-a11f-381d4698950f",
+    "cf87663e-fe26-42d2-a236-20b07170b76a",
+    "0a2fe2e6-0431-49eb-8324-38f02a4d089c",
+    "c218ce69-a9dc-4307-8769-0244698c05bc",
+    "d7e61143-3be4-49ce-83cd-810e3538f58f",
+    "64a3b8a0-9922-4c4d-8e1b-9ed9ab1548f2",
+    "d99530f7-4228-497c-adde-dd6630169d4f",
+    "becb3a1b-10b2-4f56-8dc4-ca733ab094d7"
+  ],
+  "closed": [
+    {
+      "id": "ea92c676-b2f9-453c-8d0d-c1872de79db9",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "a800d871-d2d0-4184-bf97-7bbd6c0ab552",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "c46c45c6-ccc0-4c69-89be-224819acc695",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "7f182b10-6037-428a-bdc5-ff04f04905b3",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "478f1ddb-d0be-484b-8042-bea15adf1b30",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "379bf5db-6e62-4666-a14b-e1da073bf200",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "3485a64b-1b95-4699-b555-e3e9dfdbb145",
+      "desired": 2,
+      "observed": 2,
+      "state": "STOPPED"
+    },
+    {
+      "id": "c96c6b1c-2501-4661-886b-ef957eb70695",
+      "desired": 2,
+      "observed": 2,
+      "state": "STOPPED"
+    },
+    {
+      "id": "c9eb89dd-f151-4c96-ae2e-9b89dbe0f532",
+      "desired": 2,
+      "observed": 2,
+      "state": "STOPPED"
+    },
+    {
+      "id": "3a143930-c9e4-4089-bbcb-47e9c8d1b3ed",
+      "desired": 2,
+      "observed": 2,
+      "state": "STOPPED"
+    },
+    {
+      "id": "7a3a2931-4450-4d50-8a03-092d484faf49",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "84fd4e4b-4231-4531-bd2f-904ac02172a0",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "f9ecf492-7cf6-433c-afc6-a4c245281190",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "3106cac4-80bc-4b04-ad6d-a554eccae745",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "dae77662-1ed6-4cd4-b0be-768f08ed271a",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "90569bae-23d5-4c9e-80ee-d1da462e4009",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "c833e41e-7b42-42c9-90db-d22f29463507",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "9d7d2b9d-e4ad-4a46-b1dd-eb6880e2e655",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "a29a87f0-f8bd-440a-baaa-dc472dcde7ab",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "ae962adf-33b1-499e-9a7a-fe2f709a2dd1",
+      "desired": 3,
+      "observed": 3,
+      "state": "STOPPED"
+    },
+    {
+      "id": "58ec46bb-a9ed-455f-8d75-7a0cd0aed1a6",
+      "desired": 9,
+      "observed": 9,
+      "state": "STOPPED"
+    },
+    {
+      "id": "d65ad865-f300-4b20-9b0e-4e45ddce9ffb",
+      "desired": 9,
+      "observed": 9,
+      "state": "STOPPED"
+    }
+  ],
+  "history": "retained; no reset/delete"
+}

@@ -1,0 +1,42 @@
+{
+  "evidence": "Derived from actual final g2-tests.xml; child exit codes and DB assertions are checked by each named test",
+  "database": "hotel_project_g2_test / hotel_project_sim_g2_test",
+  "scope": "real subprocess exits 73/74/75/76/77, two-process barrier exit78, concurrent activation; no production faults",
+  "results": [
+    {
+      "case": "test_real_process_crash_checkpoint",
+      "seconds": 4.032,
+      "passed": true
+    },
+    {
+      "case": "test_real_activation_commit_windows[before]",
+      "seconds": 3.025,
+      "passed": true
+    },
+    {
+      "case": "test_real_activation_commit_windows[after]",
+      "seconds": 2.417,
+      "passed": true
+    },
+    {
+      "case": "test_real_relay_crash_and_atomic_inbox",
+      "seconds": 1.768,
+      "passed": true
+    },
+    {
+      "case": "test_real_remote_commit_then_worker_crash",
+      "seconds": 5.131,
+      "passed": true
+    },
+    {
+      "case": "test_two_process_fencing_barrier",
+      "seconds": 1.867,
+      "passed": true
+    },
+    {
+      "case": "test_concurrent_activation_and_disjoint_updates",
+      "seconds": 1.005,
+      "passed": true
+    }
+  ]
+}

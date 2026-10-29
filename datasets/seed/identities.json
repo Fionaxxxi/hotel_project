@@ -1,0 +1,22 @@
+{
+  "A": {
+    "tenant_id": "f0ea4639-93ff-5f70-9e3a-8caaf4a1e8e7",
+    "property_id": "82764ac3-6889-5904-ad86-57a8494aff27",
+    "subjects": [
+      "a.tenant_admin",
+      "a.operator",
+      "a.reviewer",
+      "a.auditor"
+    ]
+  },
+  "B": {
+    "tenant_id": "3ec7cb48-e7c0-5d55-936b-657ce4cafde0",
+    "property_id": "fecbb398-9f45-5055-a399-54dcace0440b",
+    "subjects": [
+      "b.tenant_admin",
+      "b.operator",
+      "b.reviewer",
+      "b.auditor"
+    ]
+  }
+}

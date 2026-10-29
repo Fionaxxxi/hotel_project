@@ -1,0 +1,1100 @@
+[
+  {
+    "sql": "SELECT e.* FROM outbox_event e WHERE e.tenant_id=%s AND e.event_type='g3.intent.created' AND NOT EXISTS(SELECT 1 FROM consumer_inbox i WHERE i.tenant_id=e.tenant_id AND i.event_id=e.id AND i.consumer='g3-delivery-v1') ORDER BY e.created_at LIMIT 1 FOR UPDATE OF e SKIP LOCKED",
+    "calls": 80,
+    "seconds": 0.49794969998765737,
+    "max_seconds": 0.022784900007536635
+  },
+  {
+    "sql": "SELECT set_config('app.tenant_id', %s, true)",
+    "calls": 569,
+    "seconds": 0.27170810030656867,
+    "max_seconds": 0.0037506999797187746
+  },
+  {
+    "sql": "SELECT set_config('app.subject', %s, true)",
+    "calls": 569,
+    "seconds": 0.24184320005588233,
+    "max_seconds": 0.004050899995490909
+  },
+  {
+    "sql": "UPDATE outbox_event e SET delivered_at=clock_timestamp() WHERE e.tenant_id=%s AND e.event_type='g3.intent.created' AND e.delivered_at IS NULL AND EXISTS(SELECT 1 FROM consumer_inbox i WHERE i.tenant_id=e.tenant_id AND i.event_id=e.id AND i.consumer='g3-delivery-v1')",
+    "calls": 80,
+    "seconds": 0.18841110009816475,
+    "max_seconds": 0.019724099984159693
+  },
+  {
+    "sql": "SELECT phase,status,data,created_at FROM g3_receipt WHERE task_id=%s ORDER BY created_at DESC LIMIT 5",
+    "calls": 112,
+    "seconds": 0.1647382999653928,
+    "max_seconds": 0.007711600017501041
+  },
+  {
+    "sql": "SELECT * FROM execution_job WHERE tenant_id=nullif(current_setting('app.tenant_id',true),'')::uuid AND ((state IN ('READY','RETRY_WAIT') AND next_run_at<=clock_timestamp() AND attempt<max_attempts) OR (state='RUNNING' AND lease_until<clock_timestamp())) AND kind=ANY(%s::text[]) AND resource_id=ANY(%s::uuid[]) ORDER BY next_run_at,created_at FOR UPDATE SKIP LOCKED LIMIT 1",
+    "calls": 119,
+    "seconds": 0.15642560002743267,
+    "max_seconds": 0.005471200012834743
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('room_mapping'), SQL(' WHERE source_id=%s')])",
+    "calls": 210,
+    "seconds": 0.13516310002887622,
+    "max_seconds": 0.006696500000543892
+  },
+  {
+    "sql": "SELECT j.id FROM execution_job j JOIN g3_task t ON (t.tenant_id,t.id)=(j.tenant_id,j.resource_id) JOIN g3_intent i ON (i.tenant_id,i.id)=(t.tenant_id,t.intent_id) WHERE j.tenant_id=%s AND j.kind='G3_DELIVER' AND i.action='STOP' AND (%s::uuid[] IS NULL OR i.listing_id=ANY(%s)) AND j.state IN ('READY','RETRY_WAIT') AND j.next_run_at<=clock_timestamp() ORDER BY j.created_at LIMIT 1",
+    "calls": 74,
+    "seconds": 0.13503780000610277,
+    "max_seconds": 0.0033474000229034573
+  },
+  {
+    "sql": "SELECT * FROM supplier_entity_version WHERE activation_id=%s AND kind=%s AND natural_key=%s",
+    "calls": 214,
+    "seconds": 0.13115319996722974,
+    "max_seconds": 0.001501899998402223
+  },
+  {
+    "sql": "Composed([SQL('SELECT e.*,e.id AS target_id,e.current_version_id AS target_version_id,v.* FROM '), Identifier('rate_plan'), SQL(' e JOIN '), Identifier('policy_version'), SQL(' v ON(e.tenant_id,e.id,e.current_version_id)=(v.tenant_id,v.'), Identifier('plan_id'), SQL(',v.id) ORDER BY e.id')])",
+    "calls": 124,
+    "seconds": 0.12076470005558804,
+    "max_seconds": 0.012802699988242239
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('property_mapping'), SQL(' WHERE source_id=%s')])",
+    "calls": 135,
+    "seconds": 0.09698570001637563,
+    "max_seconds": 0.006911200005561113
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('rate_mapping'), SQL(' WHERE source_id=%s')])",
+    "calls": 126,
+    "seconds": 0.09198430000105873,
+    "max_seconds": 0.0067687000264413655
+  },
+  {
+    "sql": "SELECT id FROM execution_job WHERE id=%s AND owner=%s AND fencing_token=%s AND state='RUNNING' AND lease_until>clock_timestamp() FOR UPDATE",
+    "calls": 99,
+    "seconds": 0.08913239990943111,
+    "max_seconds": 0.017251299985218793
+  },
+  {
+    "sql": "SELECT id FROM g3_listing WHERE intent_id IS NOT NULL AND state!='STOPPED' AND safety_due_at<=clock_timestamp() AND (%s::uuid[] IS NULL OR id=ANY(%s)) ORDER BY safety_due_at,id LIMIT %s FOR UPDATE SKIP LOCKED",
+    "calls": 74,
+    "seconds": 0.08406499997363426,
+    "max_seconds": 0.004111600021133199
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('rate_plan'), SQL(' WHERE id=%s')])",
+    "calls": 142,
+    "seconds": 0.08235499993315898,
+    "max_seconds": 0.0012413000222295523
+  },
+  {
+    "sql": "SELECT * FROM g3_listing WHERE intent_id IS NOT NULL AND next_due_at<=clock_timestamp() AND (%s::uuid[] IS NULL OR id=ANY(%s)) ORDER BY next_due_at LIMIT 10 FOR UPDATE SKIP LOCKED",
+    "calls": 74,
+    "seconds": 0.08165149981505238,
+    "max_seconds": 0.002096899988828227
+  },
+  {
+    "sql": "SELECT t.id FROM g3_task t JOIN g3_intent i ON (i.tenant_id,i.id)=(t.tenant_id,t.intent_id) WHERE t.tenant_id=%s AND i.listing_id=ANY(%s)",
+    "calls": 74,
+    "seconds": 0.08127090014750138,
+    "max_seconds": 0.0035943000111728907
+  },
+  {
+    "sql": "SELECT cell_key,state,code FROM g3_cell_result WHERE task_id=%s ORDER BY cell_key",
+    "calls": 112,
+    "seconds": 0.07601649992284365,
+    "max_seconds": 0.009163300012005493
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_intent'), SQL(' WHERE id=%s')])",
+    "calls": 115,
+    "seconds": 0.07422679997398518,
+    "max_seconds": 0.006425100000342354
+  },
+  {
+    "sql": "SELECT i.*,a.code,l.state AS listing_state FROM g3_intent i JOIN g3_listing l ON(l.tenant_id,l.id)=(i.tenant_id,i.listing_id) JOIN g3_account a ON(a.tenant_id,a.id)=(l.tenant_id,l.account_id) WHERE i.plan_id=%s ORDER BY a.code",
+    "calls": 28,
+    "seconds": 0.07393909999518655,
+    "max_seconds": 0.004419400007463992
+  },
+  {
+    "sql": "Composed([SQL('SELECT e.*,e.id AS target_id,e.current_version_id AS target_version_id,v.* FROM '), Identifier('room_type'), SQL(' e JOIN '), Identifier('room_version'), SQL(' v ON(e.tenant_id,e.id,e.current_version_id)=(v.tenant_id,v.'), Identifier('room_id'), SQL(',v.id) ORDER BY e.id')])",
+    "calls": 66,
+    "seconds": 0.07298050005920231,
+    "max_seconds": 0.012556400004541501
+  },
+  {
+    "sql": "Composed([SQL('SELECT e.*,e.id AS target_id,e.current_version_id AS target_version_id,v.* FROM '), Identifier('property'), SQL(' e JOIN '), Identifier('property_version'), SQL(' v ON(e.tenant_id,e.id,e.current_version_id)=(v.tenant_id,v.'), Identifier('property_id'), SQL(',v.id) ORDER BY e.id')])",
+    "calls": 62,
+    "seconds": 0.07125669997185469,
+    "max_seconds": 0.011523099994519725
+  },
+  {
+    "sql": "SELECT 1 FROM supplier_entity_version WHERE activation_id=%s AND kind='rate' AND parent_key=%s",
+    "calls": 116,
+    "seconds": 0.06791249979869463,
+    "max_seconds": 0.001599199982592836
+  },
+  {
+    "sql": "SELECT c.observed_at FROM inventory_cell c JOIN inventory_pool p ON(c.tenant_id,c.pool_id)=(p.tenant_id,p.id) WHERE p.activation_id=%s",
+    "calls": 58,
+    "seconds": 0.06726350006647408,
+    "max_seconds": 0.012753999995766208
+  },
+  {
+    "sql": "SELECT tenant_id, role FROM membership WHERE status='active' ORDER BY tenant_id",
+    "calls": 79,
+    "seconds": 0.061831099941628054,
+    "max_seconds": 0.014061999972909689
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_listing'), SQL(' WHERE id=%s')])",
+    "calls": 87,
+    "seconds": 0.06156080009532161,
+    "max_seconds": 0.008041799999773502
+  },
+  {
+    "sql": "SELECT h.generation_id,l.activation_id FROM source_head h LEFT JOIN generation_activation l ON(h.tenant_id,h.generation_id)=(l.tenant_id,l.generation_id) WHERE h.supplier_id=%s AND h.property_code=%s",
+    "calls": 58,
+    "seconds": 0.05914190024486743,
+    "max_seconds": 0.009186900017084554
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('source_activation'), SQL(' WHERE id=%s')])",
+    "calls": 69,
+    "seconds": 0.055665100255282596,
+    "max_seconds": 0.005569199973251671
+  },
+  {
+    "sql": "SELECT * FROM channel_mapping WHERE channel_id=%s",
+    "calls": 57,
+    "seconds": 0.05381499996292405,
+    "max_seconds": 0.011607799999183044
+  },
+  {
+    "sql": "SELECT 1 FROM source_partition WHERE activation_id=%s",
+    "calls": 58,
+    "seconds": 0.05331630012369715,
+    "max_seconds": 0.005611300002783537
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_account'), SQL(' WHERE id=%s')])",
+    "calls": 67,
+    "seconds": 0.051503100083209574,
+    "max_seconds": 0.008237100002588704
+  },
+  {
+    "sql": "SELECT * FROM supplier_entity_version WHERE activation_id=%s ORDER BY kind,natural_key",
+    "calls": 58,
+    "seconds": 0.047892099915770814,
+    "max_seconds": 0.005056499998318031
+  },
+  {
+    "sql": "SELECT * FROM g3_task WHERE intent_id=%s ORDER BY chunk_index",
+    "calls": 56,
+    "seconds": 0.04659040001570247,
+    "max_seconds": 0.0016476999735459685
+  },
+  {
+    "sql": "UPDATE execution_job SET state='RUNNING',owner=%s,lease_until=clock_timestamp()+(%s*interval '1 second'),fencing_token=fencing_token+1,attempt=attempt+1 WHERE id=%s RETURNING *",
+    "calls": 34,
+    "seconds": 0.046431200054939836,
+    "max_seconds": 0.0036170000093989074
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_snapshot'), SQL(' WHERE id=%s')])",
+    "calls": 30,
+    "seconds": 0.04611539997858927,
+    "max_seconds": 0.013726800010772422
+  },
+  {
+    "sql": "SELECT 1 FROM tenant WHERE id=%s",
+    "calls": 79,
+    "seconds": 0.04336379995220341,
+    "max_seconds": 0.00427450001006946
+  },
+  {
+    "sql": "SELECT * FROM g3_observation WHERE listing_id=%s ORDER BY created_at DESC LIMIT 20",
+    "calls": 26,
+    "seconds": 0.039373100007651374,
+    "max_seconds": 0.005458900006487966
+  },
+  {
+    "sql": "INSERT INTO audit_event(id,tenant_id,actor,action,resource_id,trace_id,reason) VALUES(%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 29,
+    "seconds": 0.03805179998744279,
+    "max_seconds": 0.011930900014704093
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_task'), SQL(' WHERE id=%s')])",
+    "calls": 40,
+    "seconds": 0.03726799998548813,
+    "max_seconds": 0.008896700019249693
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_allocation'), SQL(' WHERE id=%s')])",
+    "calls": 33,
+    "seconds": 0.035304199962411076,
+    "max_seconds": 0.012444899999536574
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_plan'), SQL(' WHERE id=%s')])",
+    "calls": 28,
+    "seconds": 0.03256890003103763,
+    "max_seconds": 0.009619899996323511
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_task'), SQL(' WHERE id=%s FOR UPDATE')])",
+    "calls": 35,
+    "seconds": 0.031788499880349264,
+    "max_seconds": 0.0021641999774146825
+  },
+  {
+    "sql": "SELECT pg_advisory_xact_lock(hashtextextended(%s,0))",
+    "calls": 60,
+    "seconds": 0.0304426999646239,
+    "max_seconds": 0.0013792999961879104
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('offer_snapshot'), SQL(' WHERE id=%s')])",
+    "calls": 25,
+    "seconds": 0.0300153998832684,
+    "max_seconds": 0.0074148999992758036
+  },
+  {
+    "sql": "INSERT INTO job_attempt(id,tenant_id,job_id,token,owner,outcome) VALUES(%s,%s,%s,%s,%s,%s)",
+    "calls": 23,
+    "seconds": 0.02985439996700734,
+    "max_seconds": 0.0049347999738529325
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_listing'), SQL(' WHERE id=%s FOR UPDATE')])",
+    "calls": 38,
+    "seconds": 0.029616199986776337,
+    "max_seconds": 0.0038477000198327005
+  },
+  {
+    "sql": "UPDATE g3_reservation SET exposure=greatest(exposure,%s) WHERE source_key=%s AND account_id=%s AND pool_day=%s",
+    "calls": 24,
+    "seconds": 0.02827340000658296,
+    "max_seconds": 0.012136499979533255
+  },
+  {
+    "sql": "INSERT INTO g3_cell_result VALUES(%s,%s,%s,%s,%s,%s) ON CONFLICT DO NOTHING",
+    "calls": 36,
+    "seconds": 0.02731479998328723,
+    "max_seconds": 0.001728699979139492
+  },
+  {
+    "sql": "UPDATE execution_job SET state=%s,error=%s,lease_until=NULL,next_run_at=clock_timestamp()+interval '1 second' WHERE id=%s",
+    "calls": 23,
+    "seconds": 0.026905100065050647,
+    "max_seconds": 0.0020118999818805605
+  },
+  {
+    "sql": "INSERT INTO execution_job(id,tenant_id,kind,resource_id,logical_key,trace_id,cause_event_id) VALUES(%s,%s,%s,%s,%s,%s,%s) ON CONFLICT(tenant_id,kind,logical_key) DO NOTHING RETURNING *",
+    "calls": 23,
+    "seconds": 0.026093700056662783,
+    "max_seconds": 0.0021516000269912183
+  },
+  {
+    "sql": "SELECT * FROM g3_allocation_head WHERE source_key=%s",
+    "calls": 28,
+    "seconds": 0.025785500009078532,
+    "max_seconds": 0.009025399980600923
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('channel_account'), SQL(' WHERE id=%s')])",
+    "calls": 24,
+    "seconds": 0.025607199990190566,
+    "max_seconds": 0.0064796000078786165
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_account'), SQL(' WHERE id=%s FOR UPDATE')])",
+    "calls": 32,
+    "seconds": 0.024897800059989095,
+    "max_seconds": 0.0018447999900672585
+  },
+  {
+    "sql": "UPDATE g3_plan p SET state=CASE WHEN NOT EXISTS(SELECT 1 FROM g3_intent z WHERE z.plan_id=p.id AND z.state!='VERIFIED') THEN 'VERIFIED' ELSE 'PARTIAL' END WHERE EXISTS(SELECT 1 FROM g3_intent z WHERE z.plan_id=p.id AND z.listing_id=%s)",
+    "calls": 6,
+    "seconds": 0.023536899912869558,
+    "max_seconds": 0.0073253999871667475
+  },
+  {
+    "sql": "UPDATE execution_job SET next_run_at=clock_timestamp()+(%s*interval '1 second') WHERE id=%s",
+    "calls": 11,
+    "seconds": 0.023466500104404986,
+    "max_seconds": 0.010927900002570823
+  },
+  {
+    "sql": "UPDATE g3_reservation SET exposure=%s WHERE source_key=%s AND account_id=%s AND pool_day=%s",
+    "calls": 36,
+    "seconds": 0.0220907999901101,
+    "max_seconds": 0.0013761000009253621
+  },
+  {
+    "sql": "SELECT m.role FROM membership m JOIN app_user u ON u.id=m.user_id WHERE u.subject=%s AND m.status='active'",
+    "calls": 10,
+    "seconds": 0.021758200018666685,
+    "max_seconds": 0.011354799993569031
+  },
+  {
+    "sql": "INSERT INTO g3_observation(id,tenant_id,listing_id,desired_revision,classification,complete,data) VALUES(%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 10,
+    "seconds": 0.021110500034410506,
+    "max_seconds": 0.006027700001141056
+  },
+  {
+    "sql": "SELECT id,kind,state FROM execution_job WHERE kind IN ('G3_RECON','G3_VERIFY') AND resource_id=%s AND state IN ('READY','RETRY_WAIT','RUNNING') ORDER BY (kind='G3_VERIFY') DESC,created_at LIMIT 1",
+    "calls": 18,
+    "seconds": 0.02104500003042631,
+    "max_seconds": 0.0019144999969284981
+  },
+  {
+    "sql": "INSERT INTO g3_receipt(id,tenant_id,task_id,phase,status,data) VALUES(%s,%s,%s,%s,%s,%s)",
+    "calls": 15,
+    "seconds": 0.02089260015054606,
+    "max_seconds": 0.00533830001950264
+  },
+  {
+    "sql": "INSERT INTO import_batch(id,tenant_id,supplier_id,package_hash,manifest,created_by) VALUES(%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.02083310001762584,
+    "max_seconds": 0.02083310001762584
+  },
+  {
+    "sql": "SELECT pg_try_advisory_lock(hashtextextended(%s,0)) AS ok",
+    "calls": 20,
+    "seconds": 0.01968880000640638,
+    "max_seconds": 0.0026473999896552414
+  },
+  {
+    "sql": "SELECT 1 FROM g3_cell_result r JOIN g3_task t ON t.id=r.task_id WHERE t.intent_id=%s AND r.code='CELL_POLICY_REJECTED'",
+    "calls": 10,
+    "seconds": 0.01942979995510541,
+    "max_seconds": 0.009893400012515485
+  },
+  {
+    "sql": "SELECT coalesce(max(greatest(coalesce((proof->>'reserved_revision')::bigint,0),coalesce((proof->>'observed_revision')::bigint,0))),0) AS n FROM g3_source_control WHERE proof->>'listing_key'=%s",
+    "calls": 5,
+    "seconds": 0.01905800000531599,
+    "max_seconds": 0.008426299988059327
+  },
+  {
+    "sql": "SELECT pg_advisory_unlock(hashtextextended(%s,0))",
+    "calls": 20,
+    "seconds": 0.018821799953002483,
+    "max_seconds": 0.0019133000168949366
+  },
+  {
+    "sql": "SELECT 1 FROM g5_recovery_scope WHERE source_key=%s AND state='HELD'",
+    "calls": 15,
+    "seconds": 0.018150600022636354,
+    "max_seconds": 0.004684400017140433
+  },
+  {
+    "sql": "UPDATE execution_job SET state='RETRY_WAIT',attempt=greatest(0,attempt-1),lease_until=NULL,error=%s,next_run_at=clock_timestamp()+interval '1 second' WHERE id=%s",
+    "calls": 11,
+    "seconds": 0.017969400039874017,
+    "max_seconds": 0.0025523000222165138
+  },
+  {
+    "sql": "INSERT INTO outbox_event(id,tenant_id,event_type,aggregate_id,aggregate_version,payload,trace_id) VALUES(%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 18,
+    "seconds": 0.017765099910320714,
+    "max_seconds": 0.0032980999967548996
+  },
+  {
+    "sql": "INSERT INTO g3_task(id,tenant_id,intent_id,chunk_index,action,request_key,body,request_hash) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 12,
+    "seconds": 0.017220000008819625,
+    "max_seconds": 0.007892800000263378
+  },
+  {
+    "sql": "UPDATE g3_task SET state=%s,send_count=send_count+%s,query_count=query_count+%s,version=version+1 WHERE id=%s",
+    "calls": 15,
+    "seconds": 0.01685779998661019,
+    "max_seconds": 0.003642700001364574
+  },
+  {
+    "sql": "SELECT a.* FROM source_partition p JOIN source_activation a ON(p.tenant_id,p.activation_id)=(a.tenant_id,a.id) WHERE p.supplier_id=%s AND p.property_code=%s",
+    "calls": 3,
+    "seconds": 0.015703799988841638,
+    "max_seconds": 0.013024999992921948
+  },
+  {
+    "sql": "UPDATE g3_diff SET state='RESOLVED' WHERE listing_id=%s AND desired_revision=%s AND state IN ('OPEN','REPAIRING')",
+    "calls": 6,
+    "seconds": 0.015317500015953556,
+    "max_seconds": 0.007118100009392947
+  },
+  {
+    "sql": "SELECT r.*,l.pool_id FROM rate_cell r JOIN plan_pool_link l ON(r.tenant_id,r.source_plan_id)=(l.tenant_id,l.source_plan_id) JOIN supplier_entity_version s ON(r.tenant_id,r.source_plan_id)=(s.tenant_id,s.id) WHERE s.activation_id=%s",
+    "calls": 5,
+    "seconds": 0.014925099996617064,
+    "max_seconds": 0.008185699989553541
+  },
+  {
+    "sql": "UPDATE g3_listing SET next_due_at=clock_timestamp()+CASE WHEN state='STOPPED' THEN interval '5 minutes' ELSE interval '60 seconds' END WHERE id=%s",
+    "calls": 18,
+    "seconds": 0.014750499976798892,
+    "max_seconds": 0.0013726000033784658
+  },
+  {
+    "sql": "SELECT clock_timestamp() AS t",
+    "calls": 32,
+    "seconds": 0.0139481000660453,
+    "max_seconds": 0.0008736999880056828
+  },
+  {
+    "sql": "INSERT INTO g3_snapshot(id,tenant_id,account_id,allocation_id,base_snapshot_id,source_key,listing_key,payload,payload_hash,inputs,created_by,expires_at) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 4,
+    "seconds": 0.0134072000219021,
+    "max_seconds": 0.00922899998840876
+  },
+  {
+    "sql": "SELECT * FROM g3_listing WHERE account_id=%s AND listing_key=%s FOR UPDATE",
+    "calls": 4,
+    "seconds": 0.013253300014184788,
+    "max_seconds": 0.010964199987938628
+  },
+  {
+    "sql": "UPDATE g3_task SET state=%s,remote_operation=%s,error=%s,version=version+1 WHERE id=%s",
+    "calls": 12,
+    "seconds": 0.012973900011274964,
+    "max_seconds": 0.001705500006210059
+  },
+  {
+    "sql": "SELECT 1 FROM publish_task t JOIN offer_snapshot s ON s.id=t.snapshot_id WHERE s.activation_id=%s AND t.status IN ('SENDING','UNKNOWN','ACKNOWLEDGED') LIMIT 1",
+    "calls": 1,
+    "seconds": 0.012867100012954324,
+    "max_seconds": 0.012867100012954324
+  },
+  {
+    "sql": "SELECT * FROM offer_snapshot WHERE channel_id=%s AND listing_key=%s ORDER BY revision DESC LIMIT 1",
+    "calls": 5,
+    "seconds": 0.012390900024911389,
+    "max_seconds": 0.008750700013479218
+  },
+  {
+    "sql": "SELECT count(*) AS n FROM execution_job WHERE kind='PARSE' AND state IN ('READY','RUNNING','RETRY_WAIT')",
+    "calls": 1,
+    "seconds": 0.012093400000594556,
+    "max_seconds": 0.012093400000594556
+  },
+  {
+    "sql": "SELECT a.capacity FROM g3_allocation_head h JOIN g3_allocation a ON a.id=h.allocation_id WHERE h.source_key=%s",
+    "calls": 12,
+    "seconds": 0.012080499989679083,
+    "max_seconds": 0.0014347999822348356
+  },
+  {
+    "sql": "INSERT INTO artifact VALUES(%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 6,
+    "seconds": 0.011760499997762963,
+    "max_seconds": 0.005980799993267283
+  },
+  {
+    "sql": "SELECT position FROM parse_checkpoint WHERE run_id=%s AND artifact_id=%s AND kind=%s",
+    "calls": 5,
+    "seconds": 0.011501900007715449,
+    "max_seconds": 0.00732510001398623
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('processing_record'), SQL(' WHERE id=%s')])",
+    "calls": 14,
+    "seconds": 0.011311200039926916,
+    "max_seconds": 0.0011199000000488013
+  },
+  {
+    "sql": "INSERT INTO g3_intent(id,tenant_id,listing_id,snapshot_id,plan_id,action,desired_revision,delivery_revision,stop_epoch,payload,payload_hash,manifest,manifest_hash,created_by,reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 6,
+    "seconds": 0.011310400004731491,
+    "max_seconds": 0.006094200012739748
+  },
+  {
+    "sql": "INSERT INTO rate_cell VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 6,
+    "seconds": 0.011033799994038418,
+    "max_seconds": 0.00391739999759011
+  },
+  {
+    "sql": "UPDATE g3_task SET state='SUPERSEDED',version=version+1 WHERE intent_id IN (SELECT id FROM g3_intent WHERE listing_id=%s AND id!=%s) AND state IN ('READY','RETRY_WAIT')",
+    "calls": 6,
+    "seconds": 0.010867699951631948,
+    "max_seconds": 0.006805899989558384
+  },
+  {
+    "sql": "UPDATE g3_account SET next_read_at=clock_timestamp()+(%s*interval '1 second') WHERE id=%s",
+    "calls": 13,
+    "seconds": 0.010692000010749325,
+    "max_seconds": 0.0012581000046338886
+  },
+  {
+    "sql": "UPDATE g3_snapshot SET state=%s,reviewer=%s,reason=%s,allow_repair=%s,version=version+1 WHERE id=%s",
+    "calls": 4,
+    "seconds": 0.010498799994820729,
+    "max_seconds": 0.00450549999368377
+  },
+  {
+    "sql": "UPDATE execution_job SET max_attempts=100000 WHERE id=%s",
+    "calls": 12,
+    "seconds": 0.010496800037799403,
+    "max_seconds": 0.0013993000029586256
+  },
+  {
+    "sql": "UPDATE g3_listing SET next_due_at=clock_timestamp() WHERE id=%s",
+    "calls": 12,
+    "seconds": 0.010352999961469322,
+    "max_seconds": 0.0013840000028721988
+  },
+  {
+    "sql": "SELECT * FROM g3_plan WHERE command_key=%s",
+    "calls": 2,
+    "seconds": 0.010253400017973036,
+    "max_seconds": 0.009764400019776076
+  },
+  {
+    "sql": "SELECT * FROM g3_reservation WHERE source_key=%s AND pool_day=%s",
+    "calls": 3,
+    "seconds": 0.010101099993335083,
+    "max_seconds": 0.008242599986260757
+  },
+  {
+    "sql": "UPDATE g3_listing SET next_due_at=clock_timestamp()+CASE WHEN %s THEN interval '0 seconds' WHEN state='STOPPED' THEN interval '5 minutes' ELSE interval '60 seconds' END WHERE id=%s",
+    "calls": 10,
+    "seconds": 0.010049500007880852,
+    "max_seconds": 0.0018717999919317663
+  },
+  {
+    "sql": "UPDATE processing_run SET rows_committed=(SELECT count(*) FROM processing_record WHERE run_id=%s) WHERE id=%s",
+    "calls": 5,
+    "seconds": 0.009743200003867969,
+    "max_seconds": 0.0037284000136423856
+  },
+  {
+    "sql": "SELECT pool_day,sum(exposure) AS n FROM g3_reservation WHERE source_key=%s GROUP BY pool_day",
+    "calls": 12,
+    "seconds": 0.009717300010379404,
+    "max_seconds": 0.0012520999880507588
+  },
+  {
+    "sql": "SELECT count(*) AS n FROM dq_issue WHERE run_id=%s",
+    "calls": 3,
+    "seconds": 0.009549899958074093,
+    "max_seconds": 0.007559599995147437
+  },
+  {
+    "sql": "SELECT * FROM stable_partition WHERE supplier_id=%s AND property_code=%s ORDER BY partition_key",
+    "calls": 3,
+    "seconds": 0.009510000032605603,
+    "max_seconds": 0.007298000011360273
+  },
+  {
+    "sql": "INSERT INTO mapping_decision(id,tenant_id,source_id,kind,decision,target_id,target_version_id,actor,reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 5,
+    "seconds": 0.009484199981670827,
+    "max_seconds": 0.004608699993696064
+  },
+  {
+    "sql": "SELECT cell_key FROM g3_cell_result r JOIN g3_task t ON t.id=r.task_id WHERE t.intent_id=%s AND r.code='TEMPORARY_CELL'",
+    "calls": 10,
+    "seconds": 0.009423200011951849,
+    "max_seconds": 0.001623000018298626
+  },
+  {
+    "sql": "SELECT * FROM workflow_run WHERE processing_id=%s",
+    "calls": 2,
+    "seconds": 0.009106400015298277,
+    "max_seconds": 0.008234000008087605
+  },
+  {
+    "sql": "INSERT INTO plan_pool_link VALUES(%s,%s,%s,%s)",
+    "calls": 2,
+    "seconds": 0.009088000049814582,
+    "max_seconds": 0.008235900022555143
+  },
+  {
+    "sql": "INSERT INTO g3_listing(id,tenant_id,account_id,source_key,listing_key) VALUES(%s,%s,%s,%s,%s) ON CONFLICT(tenant_id,account_id,listing_key) DO NOTHING",
+    "calls": 4,
+    "seconds": 0.009063699981197715,
+    "max_seconds": 0.006782599986763671
+  },
+  {
+    "sql": "UPDATE g3_account SET next_write_at=clock_timestamp()+(%s*interval '1 second') WHERE id=%s",
+    "calls": 12,
+    "seconds": 0.0090201000275556,
+    "max_seconds": 0.0010788000072352588
+  },
+  {
+    "sql": "INSERT INTO g3_reservation VALUES(%s,%s,%s,%s,%s,%s) ON CONFLICT(tenant_id,source_key,account_id,pool_day) DO UPDATE SET exposure=greatest(g3_reservation.exposure,excluded.exposure)",
+    "calls": 12,
+    "seconds": 0.008728399960091338,
+    "max_seconds": 0.0018444999877829105
+  },
+  {
+    "sql": "INSERT INTO inventory_cell VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 3,
+    "seconds": 0.008496199967339635,
+    "max_seconds": 0.006473499990534037
+  },
+  {
+    "sql": "SELECT * FROM channel_account WHERE code='SIM-A'",
+    "calls": 5,
+    "seconds": 0.008451300032902509,
+    "max_seconds": 0.005437699990579858
+  },
+  {
+    "sql": "SELECT coalesce(sum(exposure),0) AS n FROM g3_reservation WHERE source_key=%s AND pool_day=%s AND account_id!=%s",
+    "calls": 12,
+    "seconds": 0.008384999993722886,
+    "max_seconds": 0.0013849000097252429
+  },
+  {
+    "sql": "SELECT * FROM g3_allocation_head WHERE source_key=%s FOR UPDATE",
+    "calls": 1,
+    "seconds": 0.008366900001419708,
+    "max_seconds": 0.008366900001419708
+  },
+  {
+    "sql": "SELECT 1 FROM activation_command WHERE run_id=%s AND key=%s",
+    "calls": 1,
+    "seconds": 0.00816800000029616,
+    "max_seconds": 0.00816800000029616
+  },
+  {
+    "sql": "SELECT 1 FROM g3_task WHERE intent_id=%s AND chunk_index=0 AND state='APPLIED'",
+    "calls": 11,
+    "seconds": 0.007911399938166142,
+    "max_seconds": 0.0010768999927677214
+  },
+  {
+    "sql": "INSERT INTO g4_matching_feedback(id,tenant_id,source_id,source_hash,kind,target_id,target_version_id,decision,actor,reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 5,
+    "seconds": 0.007908200030215085,
+    "max_seconds": 0.00347579998197034
+  },
+  {
+    "sql": "SELECT 1 FROM g3_task WHERE intent_id=%s AND state IN ('READY','RETRY_WAIT','SENDING','PROCESSING','UNKNOWN') LIMIT 1",
+    "calls": 10,
+    "seconds": 0.007804200053215027,
+    "max_seconds": 0.0012947000213898718
+  },
+  {
+    "sql": "INSERT INTO supplier_entity_version VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 5,
+    "seconds": 0.007796700025210157,
+    "max_seconds": 0.003997699997853488
+  },
+  {
+    "sql": "SELECT * FROM source_head WHERE supplier_id=%s AND property_code=%s",
+    "calls": 1,
+    "seconds": 0.00779480001074262,
+    "max_seconds": 0.00779480001074262
+  },
+  {
+    "sql": "INSERT INTO consumer_inbox VALUES(%s,%s,%s,'g3-delivery-v1','APPLIED') ON CONFLICT(tenant_id,event_id,consumer) DO NOTHING RETURNING id",
+    "calls": 6,
+    "seconds": 0.007646000012755394,
+    "max_seconds": 0.002522200025850907
+  },
+  {
+    "sql": "SELECT * FROM artifact WHERE batch_id=%s AND name!='manifest.json' ORDER BY name",
+    "calls": 1,
+    "seconds": 0.007428000011714175,
+    "max_seconds": 0.007428000011714175
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('import_batch'), SQL(' WHERE id=%s')])",
+    "calls": 5,
+    "seconds": 0.007168300013290718,
+    "max_seconds": 0.0030764999974053353
+  },
+  {
+    "sql": "SELECT * FROM processing_run WHERE batch_id=%s AND params_hash=%s",
+    "calls": 1,
+    "seconds": 0.007130499987397343,
+    "max_seconds": 0.007130499987397343
+  },
+  {
+    "sql": "INSERT INTO parse_checkpoint VALUES(%s,%s,%s,%s,%s,%s) ON CONFLICT(tenant_id,run_id,artifact_id,kind) DO UPDATE SET position=excluded.position",
+    "calls": 5,
+    "seconds": 0.007096500019542873,
+    "max_seconds": 0.0019193000043742359
+  },
+  {
+    "sql": "SELECT id FROM import_batch WHERE supplier_id=%s AND package_hash=%s",
+    "calls": 1,
+    "seconds": 0.007027600018773228,
+    "max_seconds": 0.007027600018773228
+  },
+  {
+    "sql": "SELECT * FROM g3_account ORDER BY code",
+    "calls": 1,
+    "seconds": 0.0070143000048119575,
+    "max_seconds": 0.0070143000048119575
+  },
+  {
+    "sql": "SELECT id FROM supplier WHERE code=%s AND status='active'",
+    "calls": 1,
+    "seconds": 0.006875799997942522,
+    "max_seconds": 0.006875799997942522
+  },
+  {
+    "sql": "UPDATE execution_job SET lease_until=clock_timestamp()+(%s*interval '1 second') WHERE id=%s AND owner=%s AND fencing_token=%s AND state='RUNNING' AND lease_until>clock_timestamp() RETURNING id",
+    "calls": 5,
+    "seconds": 0.00664639996830374,
+    "max_seconds": 0.0014846999838482589
+  },
+  {
+    "sql": "SELECT set_config('app.subject',%s,true)",
+    "calls": 10,
+    "seconds": 0.006331199954729527,
+    "max_seconds": 0.0007328999927267432
+  },
+  {
+    "sql": "UPDATE execution_job SET next_run_at=clock_timestamp()-interval '1 hour' WHERE id=%s",
+    "calls": 7,
+    "seconds": 0.0063236000132746994,
+    "max_seconds": 0.0012095999845769256
+  },
+  {
+    "sql": "INSERT INTO g3_allocation_head VALUES(%s,%s,%s,%s,%s) ON CONFLICT(tenant_id,source_key) DO UPDATE SET allocation_id=excluded.allocation_id,version=excluded.version",
+    "calls": 1,
+    "seconds": 0.006250800011912361,
+    "max_seconds": 0.006250800011912361
+  },
+  {
+    "sql": "INSERT INTO stable_partition VALUES(%s,%s,%s,%s,%s,%s,1,%s,%s) ON CONFLICT(tenant_id,supplier_id,property_code,stream,partition_key) DO UPDATE SET version=stable_partition.version+1,source_sequence=excluded.source_sequence,generation_id=excluded.generation_id",
+    "calls": 4,
+    "seconds": 0.0062414000276476145,
+    "max_seconds": 0.002359600010095164
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('supplier_entity_version'), SQL(' WHERE id=%s')])",
+    "calls": 5,
+    "seconds": 0.006159999989904463,
+    "max_seconds": 0.0016213000053539872
+  },
+  {
+    "sql": "INSERT INTO offer_snapshot(id,tenant_id,activation_id,channel_id,listing_key,revision,input_versions,payload,payload_hash,expires_at) VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.006077400001231581,
+    "max_seconds": 0.006077400001231581
+  },
+  {
+    "sql": "UPDATE g3_intent SET state='VERIFIED' WHERE listing_id=%s AND desired_revision=%s AND payload_hash=%s",
+    "calls": 6,
+    "seconds": 0.00590430002193898,
+    "max_seconds": 0.0014996999816503376
+  },
+  {
+    "sql": "SELECT * FROM g3_stop WHERE listing_id=%s AND command_key=%s",
+    "calls": 2,
+    "seconds": 0.005645199969876558,
+    "max_seconds": 0.005169899988686666
+  },
+  {
+    "sql": "UPDATE outbox_event SET delivered_at=clock_timestamp() WHERE id=%s",
+    "calls": 6,
+    "seconds": 0.005446800001664087,
+    "max_seconds": 0.001473200012696907
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('processing_run'), SQL(' WHERE id=%s')])",
+    "calls": 5,
+    "seconds": 0.005345799989299849,
+    "max_seconds": 0.0011986999888904393
+  },
+  {
+    "sql": "INSERT INTO g3_source_control(id,tenant_id,source_key,activation_id) VALUES(%s,%s,%s,%s) ON CONFLICT(tenant_id,source_key) DO NOTHING",
+    "calls": 1,
+    "seconds": 0.005268799985060468,
+    "max_seconds": 0.005268799985060468
+  },
+  {
+    "sql": "UPDATE g3_listing SET intent_id=%s,desired_revision=%s,delivery_revision=%s,stop_epoch=%s,state=%s,version=version+1,next_due_at=clock_timestamp() WHERE id=%s",
+    "calls": 6,
+    "seconds": 0.005263999977614731,
+    "max_seconds": 0.0019348000059835613
+  },
+  {
+    "sql": "INSERT INTO source_generation(id,tenant_id,supplier_id,property_code,parent_id,run_id,scope,view_hash) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.005165700014913455,
+    "max_seconds": 0.005165700014913455
+  },
+  {
+    "sql": "SELECT * FROM staging_record WHERE batch_id=%s ORDER BY kind,record_number",
+    "calls": 1,
+    "seconds": 0.005087500001536682,
+    "max_seconds": 0.005087500001536682
+  },
+  {
+    "sql": "Composed([SQL('INSERT INTO '), Identifier('rate_mapping'), SQL('(id,tenant_id,source_id,target_id,target_version_id,status,actor,reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)')])",
+    "calls": 2,
+    "seconds": 0.0050817999872379005,
+    "max_seconds": 0.0033022999996319413
+  },
+  {
+    "sql": "UPDATE g3_listing SET safety_due_at=clock_timestamp()+interval '3 seconds' WHERE id=%s",
+    "calls": 6,
+    "seconds": 0.004648599948268384,
+    "max_seconds": 0.0009470999939367175
+  },
+  {
+    "sql": "UPDATE g3_listing SET state=%s,applied_revision=%s,observed_revision=%s,version=version+1 WHERE id=%s",
+    "calls": 6,
+    "seconds": 0.004534199979389086,
+    "max_seconds": 0.0011014000046998262
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('supplier'), SQL(' WHERE id=%s')])",
+    "calls": 5,
+    "seconds": 0.00439300001016818,
+    "max_seconds": 0.0011955000227317214
+  },
+  {
+    "sql": "SELECT * FROM inventory_pool WHERE activation_id=%s",
+    "calls": 5,
+    "seconds": 0.004383599967695773,
+    "max_seconds": 0.0011535999947227538
+  },
+  {
+    "sql": "SELECT id FROM g3_task WHERE intent_id=%s",
+    "calls": 6,
+    "seconds": 0.004173600056674331,
+    "max_seconds": 0.0016145000117830932
+  },
+  {
+    "sql": "SELECT * FROM inventory_cell WHERE pool_id=%s ORDER BY stay_date",
+    "calls": 5,
+    "seconds": 0.004118400043807924,
+    "max_seconds": 0.0011641999881248921
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('g3_snapshot'), SQL(' WHERE id=%s FOR UPDATE')])",
+    "calls": 4,
+    "seconds": 0.004037900012917817,
+    "max_seconds": 0.0013624000130221248
+  },
+  {
+    "sql": "Composed([SQL('INSERT INTO '), Identifier('room_mapping'), SQL('(id,tenant_id,source_id,target_id,target_version_id,status,actor,reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)')])",
+    "calls": 2,
+    "seconds": 0.003868200001306832,
+    "max_seconds": 0.0024929000064730644
+  },
+  {
+    "sql": "INSERT INTO g3_allocation VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,clock_timestamp())",
+    "calls": 1,
+    "seconds": 0.003423600021051243,
+    "max_seconds": 0.003423600021051243
+  },
+  {
+    "sql": "SELECT * FROM supplier_entity_version WHERE activation_id=%s ORDER BY CASE kind WHEN 'property' THEN 0 WHEN 'room' THEN 1 ELSE 2 END,natural_key",
+    "calls": 3,
+    "seconds": 0.003324199962662533,
+    "max_seconds": 0.001246399973751977
+  },
+  {
+    "sql": "UPDATE g3_task SET state=%s,remote_operation=%s,error=%s WHERE id=%s",
+    "calls": 3,
+    "seconds": 0.0033202999329660088,
+    "max_seconds": 0.001297999988310039
+  },
+  {
+    "sql": "INSERT INTO inventory_pool VALUES(%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.0030340999946929514,
+    "max_seconds": 0.0030340999946929514
+  },
+  {
+    "sql": "SELECT * FROM execution_job WHERE tenant_id=nullif(current_setting('app.tenant_id',true),'')::uuid AND ((state IN ('READY','RETRY_WAIT') AND next_run_at<=clock_timestamp() AND attempt<max_attempts) OR (state='RUNNING' AND lease_until<clock_timestamp())) AND kind=ANY(%s::text[]) AND resource_id=%s::uuid ORDER BY next_run_at,created_at FOR UPDATE SKIP LOCKED LIMIT 1",
+    "calls": 1,
+    "seconds": 0.002973900001961738,
+    "max_seconds": 0.002973900001961738
+  },
+  {
+    "sql": "INSERT INTO generation_activation VALUES(%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.0028095000016037375,
+    "max_seconds": 0.0028095000016037375
+  },
+  {
+    "sql": "SELECT * FROM g3_account WHERE code=%s",
+    "calls": 4,
+    "seconds": 0.0025394999829586595,
+    "max_seconds": 0.0008661999891046435
+  },
+  {
+    "sql": "UPDATE import_batch SET status='ACTIVE',version=version+1 WHERE id=%s",
+    "calls": 2,
+    "seconds": 0.002427600004011765,
+    "max_seconds": 0.0012328000157140195
+  },
+  {
+    "sql": "Composed([SQL('INSERT INTO '), Identifier('property_mapping'), SQL('(id,tenant_id,source_id,target_id,target_version_id,status,actor,reason) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)')])",
+    "calls": 1,
+    "seconds": 0.002241199981654063,
+    "max_seconds": 0.002241199981654063
+  },
+  {
+    "sql": "SELECT * FROM g3_source_control WHERE source_key=%s",
+    "calls": 2,
+    "seconds": 0.0021874999802093953,
+    "max_seconds": 0.0011007999710272998
+  },
+  {
+    "sql": "SELECT p.property_code,p.room_code,p.pool_code,i.* FROM inventory_pool p JOIN inventory_cell i ON(p.tenant_id,p.id)=(i.tenant_id,i.pool_id) WHERE p.activation_id=%s",
+    "calls": 1,
+    "seconds": 0.0020290999964345247,
+    "max_seconds": 0.0020290999964345247
+  },
+  {
+    "sql": "INSERT INTO processing_run(id,tenant_id,batch_id,definition,params_hash,params,created_by) VALUES(%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.0019774999818764627,
+    "max_seconds": 0.0019774999818764627
+  },
+  {
+    "sql": "INSERT INTO source_head(id,tenant_id,supplier_id,property_code,generation_id) VALUES(%s,%s,%s,%s,%s) ON CONFLICT(tenant_id,supplier_id,property_code) DO UPDATE SET generation_id=excluded.generation_id,version=source_head.version+1",
+    "calls": 1,
+    "seconds": 0.0019555999897420406,
+    "max_seconds": 0.0019555999897420406
+  },
+  {
+    "sql": "SELECT a.* FROM source_partition p JOIN source_activation a ON(p.tenant_id,p.activation_id)=(a.tenant_id,a.id) WHERE p.supplier_id=%s AND p.property_code=%s ORDER BY a.created_at",
+    "calls": 1,
+    "seconds": 0.0017486000142525882,
+    "max_seconds": 0.0017486000142525882
+  },
+  {
+    "sql": "SELECT * FROM processing_record WHERE run_id=%s AND is_valid ORDER BY kind,position",
+    "calls": 1,
+    "seconds": 0.0017370999848935753,
+    "max_seconds": 0.0017370999848935753
+  },
+  {
+    "sql": "SELECT kind,position FROM parse_checkpoint WHERE run_id=%s",
+    "calls": 2,
+    "seconds": 0.00171720000798814,
+    "max_seconds": 0.0008928000170271844
+  },
+  {
+    "sql": "SELECT coalesce(max(revision),0) AS n FROM offer_snapshot WHERE channel_id=%s AND listing_key=%s",
+    "calls": 1,
+    "seconds": 0.00169650002499111,
+    "max_seconds": 0.00169650002499111
+  },
+  {
+    "sql": "INSERT INTO source_activation(id,tenant_id,batch_id,supplier_id,property_code,scope,source_sequence,activated_by) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.0016811999958008528,
+    "max_seconds": 0.0016811999958008528
+  },
+  {
+    "sql": "INSERT INTO activation_command VALUES(%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.001583499979460612,
+    "max_seconds": 0.001583499979460612
+  },
+  {
+    "sql": "INSERT INTO g3_stop(id,tenant_id,listing_id,command_key,request_hash,intent_id,reason,created_by) VALUES(%s,%s,%s,%s,%s,%s,%s,%s)",
+    "calls": 2,
+    "seconds": 0.001493899995693937,
+    "max_seconds": 0.0009360999974887818
+  },
+  {
+    "sql": "INSERT INTO g3_plan(id,tenant_id,command_key,request_hash,created_by) VALUES(%s,%s,%s,%s,%s)",
+    "calls": 2,
+    "seconds": 0.0014642000023741275,
+    "max_seconds": 0.0010781000019051135
+  },
+  {
+    "sql": "UPDATE g3_source_control SET legacy_state=%s,proof=%s WHERE id=%s",
+    "calls": 1,
+    "seconds": 0.001426500006346032,
+    "max_seconds": 0.001426500006346032
+  },
+  {
+    "sql": "INSERT INTO source_partition(id,tenant_id,supplier_id,property_code,scope_hash,activation_id) VALUES(%s,%s,%s,%s,%s,%s)",
+    "calls": 1,
+    "seconds": 0.0014250999956857413,
+    "max_seconds": 0.0014250999956857413
+  },
+  {
+    "sql": "INSERT INTO import_batch(id,tenant_id,supplier_id,package_hash,manifest,status,created_by) VALUES(%s,%s,%s,%s,%s,'READY','system.g2-projection')",
+    "calls": 1,
+    "seconds": 0.0013892999850213528,
+    "max_seconds": 0.0013892999850213528
+  },
+  {
+    "sql": "UPDATE processing_run SET status='RUNNING' WHERE id=%s",
+    "calls": 1,
+    "seconds": 0.0013205999857746065,
+    "max_seconds": 0.0013205999857746065
+  },
+  {
+    "sql": "SELECT p.*,a.scope,a.source_sequence,a.batch_id FROM source_partition p JOIN source_activation a ON(p.tenant_id,p.activation_id)=(a.tenant_id,a.id) WHERE p.supplier_id=%s AND p.property_code=%s FOR UPDATE OF p",
+    "calls": 1,
+    "seconds": 0.0012728000001516193,
+    "max_seconds": 0.0012728000001516193
+  },
+  {
+    "sql": "UPDATE processing_run SET status='ACTIVE',version=version+1 WHERE id=%s",
+    "calls": 1,
+    "seconds": 0.0012565999932121485,
+    "max_seconds": 0.0012565999932121485
+  },
+  {
+    "sql": "UPDATE processing_run SET status=%s,version=version+1 WHERE id=%s",
+    "calls": 1,
+    "seconds": 0.0012064999900758266,
+    "max_seconds": 0.0012064999900758266
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('source_generation'), SQL(' WHERE id=%s')])",
+    "calls": 1,
+    "seconds": 0.0011546000023372471,
+    "max_seconds": 0.0011546000023372471
+  },
+  {
+    "sql": "SELECT kind,natural_key FROM processing_record WHERE run_id=%s AND is_valid GROUP BY kind,natural_key HAVING count(*)>1",
+    "calls": 1,
+    "seconds": 0.0011329000117257237,
+    "max_seconds": 0.0011329000117257237
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('import_batch'), SQL(' WHERE id=%s FOR UPDATE')])",
+    "calls": 1,
+    "seconds": 0.0011013999755959958,
+    "max_seconds": 0.0011013999755959958
+  },
+  {
+    "sql": "Composed([SQL('SELECT * FROM '), Identifier('processing_run'), SQL(' WHERE id=%s FOR UPDATE')])",
+    "calls": 1,
+    "seconds": 0.0010725999891292304,
+    "max_seconds": 0.0010725999891292304
+  },
+  {
+    "sql": "SELECT DISTINCT partition_key FROM dq_issue WHERE run_id=%s",
+    "calls": 1,
+    "seconds": 0.0010006999946199358,
+    "max_seconds": 0.0010006999946199358
+  },
+  {
+    "sql": "SELECT * FROM activation_command WHERE run_id=%s AND key=%s",
+    "calls": 1,
+    "seconds": 0.000887800008058548,
+    "max_seconds": 0.000887800008058548
+  },
+  {
+    "sql": "SELECT set_config('app.generation_id',%s,true)",
+    "calls": 1,
+    "seconds": 0.0005821999802719802,
+    "max_seconds": 0.0005821999802719802
+  }
+]

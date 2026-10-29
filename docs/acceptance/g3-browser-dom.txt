@@ -1,0 +1,188 @@
+- complementary:
+  - text: 酒店库存
+  - text: 分销工作台
+  - navigation "业务阶段":
+    - button "1 文件与来源":
+      - generic: "1"
+      - text: 文件与来源
+    - button "2 实体映射":
+      - generic: "2"
+      - text: 实体映射
+    - button "3 商品与审批":
+      - generic: "3"
+      - text: 商品与审批
+    - button "4 发布与追溯":
+      - generic: "4"
+      - text: 发布与追溯
+    - button "5 流程与质量":
+      - generic: "5"
+      - text: 流程与质量
+    - button "6 双渠道与对账":
+      - generic: "6"
+      - text: 双渠道与对账
+  - strong: 本地模拟环境
+  - paragraph: 仅连接 SIM-A / SIM-B 本机模拟渠道。全部数据为虚构样例，不代表实时可订库存。
+- main:
+  - heading "双渠道与对账" [level=1]
+  - paragraph: 分别确认各渠道实际结果，优先处理差异与停卖。
+  - strong: a.tenant_admin
+  - generic: 租户 f0ea4639
+  - generic: SIM-A / SIM-B · 双模拟渠道
+  - region "演示身份":
+    - text: 租户
+    - combobox "租户":
+      - option "A" [selected]
+      - option "B"
+    - text: 身份
+    - combobox "身份":
+      - option "运营"
+      - option "审核"
+      - option "只读审计"
+      - option "租户管理员" [selected]
+    - text: 本机开发口令
+    - textbox "本机开发口令":
+      - /placeholder: 使用本机配置中的演示口令
+    - button "切换身份"
+  - generic: 模拟业务时钟：2027-01-01T02:00:00+00:00 · 来源时效使用演示时间，账号令牌使用真实时间。
+  - status: 操作已完成，状态来自服务端。
+  - generic: 当前批次 未选择
+  - button "刷新列表"
+  - heading "双模拟渠道与安全额度" [level=2]
+  - button "刷新双渠道状态"
+  - paragraph: 每个渠道有独立账号、能力和远端结果。共享池4间、缓冲1间时，默认分配 SIM-A 2间、SIM-B 1间。未知或尚未确认降低的曝光仍保留额度。
+  - table:
+    - rowgroup:
+      - row "模拟渠道 能力版本 账号状态 管理":
+        - columnheader "模拟渠道"
+        - columnheader "能力版本"
+        - columnheader "账号状态"
+        - columnheader "管理"
+    - rowgroup:
+      - row "SIM-A sim-a-g3-v1 账号正常 配置修复后恢复账号":
+        - cell "SIM-A"
+        - cell "sim-a-g3-v1"
+        - cell "账号正常"
+        - cell "配置修复后恢复账号":
+          - button "配置修复后恢复账号" [disabled]
+      - row "SIM-B sim-b-v1 账号正常 配置修复后恢复账号":
+        - cell "SIM-B"
+        - cell "sim-b-v1"
+        - cell "账号正常"
+        - cell "配置修复后恢复账号":
+          - button "配置修复后恢复账号" [disabled]
+  - text: 当前已激活来源
+  - combobox "当前已激活来源":
+    - option "请选择来源（先完成必要映射）" [selected]
+    - option "S-A / 001 · 待核查旧曝光"
+    - option "S-A / A21e09d4cb · 待核查旧曝光"
+    - option "S-A / G3-HTTP-373ce7ab · 旧协议无曝光"
+    - option "S-A / G3-HTTP-65691400 · 待核查旧曝光"
+    - option "S-A / G3-HTTP-d15c8a02 · 旧协议无曝光"
+    - option "S-A / G3-HTTP-dbbadab1 · 旧协议无曝光"
+    - option "S-A / HTTP-G2-0d9a7790 · 待核查旧曝光"
+    - option "S-A / HTTP-JSON-ba07c6cb · 待核查旧曝光"
+    - option "S-A / HTTP-XLSX-6b79732d · 待核查旧曝光"
+    - option "S-A / P46b7429c · 待核查旧曝光"
+    - option "S-A / Pebd6af43 · 待核查旧曝光"
+    - option "S-A / Sd41ef7be · 待核查旧曝光"
+    - option "S-A / T0374e28839 · 待核查旧曝光"
+    - option "S-A / T336e2215cb · 待核查旧曝光"
+    - option "S-A / T4e8638eedb · 待核查旧曝光"
+    - option "S-A / T545a2591a5 · 待核查旧曝光"
+    - option "S-A / T761c38307b · 待核查旧曝光"
+    - option "S-A / T9864b62f8f · 待核查旧曝光"
+    - option "S-A / Ta405a291de · 待核查旧曝光"
+    - option "S-A / Tace247876f · 待核查旧曝光"
+    - option "S-A / Tae027dda56 · 待核查旧曝光"
+    - option "S-A / Tb35360b3a1 · 待核查旧曝光"
+    - option "S-A / Tba8a7e6434 · 待核查旧曝光"
+    - option "S-A / Tdb95f17cbc · 待核查旧曝光"
+    - option "S-A / Tf6de26ef42 · 待核查旧曝光"
+    - option "S-A / UI-G2-d42170a9 · 待核查旧曝光"
+  - button "接管并核查旧协议曝光" [disabled]
+  - button "关闭旧协议曝光并确认" [disabled]
+  - text: 库存缓冲
+  - spinbutton "库存缓冲": "1"
+  - text: SIM-A 每池每日额度
+  - spinbutton "SIM-A 每池每日额度": "2"
+  - text: SIM-B 每池每日额度
+  - spinbutton "SIM-B 每池每日额度": "1"
+  - button "核验并冻结额度版本" [disabled]
+  - text: 采用额度
+  - combobox "采用额度":
+    - option "请选择已冻结额度" [selected]
+    - option "G3-HTTP-373ce7ab · v1 · A=2 / B=1"
+    - option "G3-HTTP-d15c8a02 · v1 · A=2 / B=1"
+    - option "G3-HTTP-dbbadab1 · v1 · A=2 / B=1"
+  - text: 明确选择来源计划编码（逗号分隔）
+  - textbox "明确选择来源计划编码（逗号分隔）": NONREF
+  - paragraph: SIM-B 首版只接受精确等价的 NONREF。FLEX 72小时取消不会被改成简单可退款标记，也不会被悄悄排除。
+  - button "编译并提交 SIM-A 快照" [disabled]
+  - button "编译并提交 SIM-B 快照" [disabled]
+  - heading "渠道快照与独立审批" [level=2]
+  - text: 处理理由
+  - textbox "处理理由": 已核对模拟渠道的范围、版本与实际结果
+  - button "SIM-B · S-A-G3-HTTP-373ce7ab · 已批准"
+  - button "SIM-A · S-A-G3-HTTP-373ce7ab · 已批准"
+  - button "SIM-B · S-A-G3-HTTP-d15c8a02 · 已批准"
+  - button "SIM-A · S-A-G3-HTTP-d15c8a02 · 已批准"
+  - button "SIM-B · S-A-G3-HTTP-dbbadab1 · 已批准"
+  - button "SIM-A · S-A-G3-HTTP-dbbadab1 · 已批准"
+  - heading "提交多渠道计划" [level=2]
+  - paragraph: 明确勾选本次渠道快照。计划成功需各渠道实际核验；一个渠道失败不会重发另一个已成功分支。
+  - checkbox "SIM-B · S-A-G3-HTTP-373ce7ab · 49abff58"
+  - text: SIM-B · S-A-G3-HTTP-373ce7ab · 49abff58
+  - checkbox "SIM-A · S-A-G3-HTTP-373ce7ab · 8ee48bfc"
+  - text: SIM-A · S-A-G3-HTTP-373ce7ab · 8ee48bfc
+  - checkbox "SIM-B · S-A-G3-HTTP-d15c8a02 · 0df42463"
+  - text: SIM-B · S-A-G3-HTTP-d15c8a02 · 0df42463
+  - checkbox "SIM-A · S-A-G3-HTTP-d15c8a02 · 011b5022"
+  - text: SIM-A · S-A-G3-HTTP-d15c8a02 · 011b5022
+  - checkbox "SIM-B · S-A-G3-HTTP-dbbadab1 · 9d20295f"
+  - text: SIM-B · S-A-G3-HTTP-dbbadab1 · 9d20295f
+  - checkbox "SIM-A · S-A-G3-HTTP-dbbadab1 · 31752e04"
+  - text: SIM-A · S-A-G3-HTTP-dbbadab1 · 31752e04
+  - checkbox "本次是关闭后的显式新开售，使用关闭后新提交并批准的快照。"
+  - text: 本次是关闭后的显式新开售，使用关闭后新提交并批准的快照。
+  - button "确认目标集合并提交计划" [disabled]
+  - button "计划 9f3ff601"
+  - button "计划 e8275943"
+  - button "计划 dcb20d1e"
+  - heading "三方对账与紧急停卖" [level=2]
+  - button "刷新对账列表"
+  - button "SIM-A · S-A-G3-HTTP-373ce7ab 远端已确认关闭 目标 2 / 观察 2" [active]:
+    - generic: SIM-A · S-A-G3-HTTP-373ce7ab
+    - generic: 远端已确认关闭
+    - generic: 目标 2 / 观察 2
+  - button "SIM-B · S-A-G3-HTTP-373ce7ab 远端已确认关闭 目标 2 / 观察 2":
+    - generic: SIM-B · S-A-G3-HTTP-373ce7ab
+    - generic: 远端已确认关闭
+    - generic: 目标 2 / 观察 2
+  - button "SIM-A · S-A-G3-HTTP-d15c8a02 远端已确认关闭 目标 2 / 观察 2":
+    - generic: SIM-A · S-A-G3-HTTP-d15c8a02
+    - generic: 远端已确认关闭
+    - generic: 目标 2 / 观察 2
+  - button "SIM-B · S-A-G3-HTTP-d15c8a02 远端已确认关闭 目标 2 / 观察 2":
+    - generic: SIM-B · S-A-G3-HTTP-d15c8a02
+    - generic: 远端已确认关闭
+    - generic: 目标 2 / 观察 2
+  - button "SIM-A · S-A-G3-HTTP-dbbadab1 远端已确认关闭 目标 2 / 观察 2":
+    - generic: SIM-A · S-A-G3-HTTP-dbbadab1
+    - generic: 远端已确认关闭
+    - generic: 目标 2 / 观察 2
+  - button "SIM-B · S-A-G3-HTTP-dbbadab1 远端已确认关闭 目标 2 / 观察 2":
+    - generic: SIM-B · S-A-G3-HTTP-dbbadab1
+    - generic: 远端已确认关闭
+    - generic: 目标 2 / 观察 2
+  - heading "S-A-G3-HTTP-373ce7ab · 远端已确认关闭" [level=3]
+  - paragraph: 目标、已确认应用、实际观察分别为 2 / 2 / 2。暂停只阻止新售卖，不能撤销已经发出的请求。
+  - button "排队读取远端并对账"
+  - button "暂停新增售卖派发"
+  - button "恢复派发（不解除停售）"
+  - button "刷新该渠道观察"
+  - checkbox "确认关闭此渠道当前商品的全部日期和依赖计划；未远端确认前仍显示待确认。"
+  - text: 确认关闭此渠道当前商品的全部日期和依赖计划；未远端确认前仍显示待确认。
+  - button "提交紧急停卖并持续核验" [disabled]
+  - generic "最近实际观察与原始远端证据"
+  - text: 酒店库存分销 · G3 多渠道与故障闭环
+  - generic: 真实来源记录 / 人工决策 / 模拟渠道回执

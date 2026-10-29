@@ -1,0 +1,93 @@
+{
+  "schema": "g5-browser-acceptance-v1",
+  "status": "PASSED",
+  "at": "2026-10-29T01:01:34.542Z",
+  "url": "http://127.0.0.1:8000/admin/",
+  "checks": {
+    "keyboard_login": true,
+    "exception_review": true,
+    "cas_conflict_recovery": true,
+    "keyboard_confirmation": true,
+    "policy_rebind": true,
+    "new_policy_auto_update": true,
+    "dual_stop": true,
+    "unknown_id_error": true,
+    "alert_readonly_denied": true,
+    "narrow_audit_export": true,
+    "narrow_no_overflow": true,
+    "desktop_audit": true,
+    "desktop_no_overflow": true,
+    "literal_hostile_text": true,
+    "partial_result_visible": true,
+    "tenant_b_cross_tenant_hidden": true,
+    "empty_list_guidance": true,
+    "risk_navigation": true,
+    "expired_login_recovery": true
+  },
+  "uncompleted": [],
+  "narrow": {
+    "width": 390,
+    "height": 844,
+    "client": 375,
+    "scroll": 375
+  },
+  "desktop": {
+    "client": 1265,
+    "scroll": 1265,
+    "width": 1280
+  },
+  "fixture": {
+    "source": "G5-UI-843ca9",
+    "stage": "after-stop",
+    "rebound_subscription": "a8614fef-37c0-48a2-905a-6c719d069547",
+    "stale_rebind": {
+      "status": 409,
+      "body": {
+        "code": "VERSION_CONFLICT",
+        "message": "VERSION_CONFLICT",
+        "trace_id": "a89f5afd-bf09-4576-aed0-c12061bbc900",
+        "details": []
+      },
+      "unchanged": true
+    },
+    "stopped": [
+      {
+        "id": "0cea6898-03fc-4ab3-9dc8-646de435fff5",
+        "state": "STOPPED",
+        "desired": 4,
+        "observed": 4
+      },
+      {
+        "id": "3ebabc51-571b-468a-b8a2-7480b6b5813f",
+        "state": "STOPPED",
+        "desired": 4,
+        "observed": 4
+      }
+    ]
+  },
+  "actions": [
+    "Reviewer keyboard login and independent exception approval of both channel snapshots after scope review.",
+    "Admin enables independently approved replacement policy; keyboard checks rebind confirmation. Concurrent fixture pause/resume changes subscription version; UI reports 409, refresh/reconfirm succeeds.",
+    "Real source sequence4 verified under replacement policy, then UI requests both channel stops; HTTP after-action fixture verifies STOPPED and matching revision.",
+    "Auditor loads unknown ID, gets friendly hidden/not-found; loads complete snapshot and downloads actual offline-verifiable export at width390.",
+    "Token expires during overnight pause; refresh returns login and keyboard login recovers.",
+    "At1280 hostile batch text displayed literally; no img node or execution marker. Long historic snapshot explicitly incomplete at400nodes.",
+    "Risk action navigates to dual-channel workbench. TenantB auditor sees no channel products; A snapshot returns not-found. Added explicit empty-state guidance, rebuilt and checked visible."
+  ],
+  "screenshots": [
+    "g5-browser-desktop.png",
+    "g5-browser-narrow.png",
+    "g5-browser-cas-conflict.png",
+    "g5-browser-rebind.png",
+    "g5-browser-dual-stop.png",
+    "g5-browser-xss.png",
+    "g5-browser-partial.png",
+    "g5-browser-empty.png"
+  ],
+  "export": "g5-browser-export.json",
+  "boundaries": [
+    "HTTP fixture preparation and post-action checks are separate from browser operations.",
+    "Screenshot sequence is not a recording; video deferred by user.",
+    "Browser runtime reset; earlier completed actions consolidated from preserved turn record and fixture/screenshot/export artifacts."
+  ]
+}

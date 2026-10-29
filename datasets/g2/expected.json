@@ -1,0 +1,12 @@
+{
+  "synthetic": true,
+  "equivalent_sequences": [
+    1,
+    2,
+    3
+  ],
+  "delta_sequence": 4,
+  "delta_net_amount": "115.0000",
+  "delta_sell_amount": "126.50",
+  "quality_blocked_day": "2027-01-11"
+}

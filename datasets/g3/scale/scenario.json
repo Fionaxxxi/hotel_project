@@ -1,0 +1,10 @@
+{
+  "synthetic": true,
+  "cells": [
+    100,
+    1000,
+    10000
+  ],
+  "generator": "infra.g3_benchmark",
+  "expected": "Real HTTP, unique cell keys, actual request/query counts, sample scope explicit"
+}

@@ -1,0 +1,89 @@
+{
+  "status": "PASSED_LOCAL_SCOPED_G4",
+  "scope": "local synthetic S-A, one source/property, USD two adults, NONREF, independent SIM-A/B",
+  "scenario_count": 50,
+  "full_regression": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "201",
+    "time": "289.320",
+    "timestamp": "2026-10-27T15:56:54.968011+08:00",
+    "hostname": "Fionaxi"
+  },
+  "independent_hard_conflict_suite": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "60",
+    "time": "0.140",
+    "timestamp": "2026-10-27T15:59:41.992378+08:00",
+    "hostname": "Fionaxi"
+  },
+  "total_testcases_across_two_suites": 261,
+  "not_one_combined_invocation": true,
+  "browser_status": "PASSED",
+  "browser_screenshots": {
+    "g4-final-narrow-security.png": {
+      "raster_width": 65536,
+      "raster_height": 4292542531,
+      "sha256": "9540325b88ad1486b36313e15b597038503e9920b8e207c6cb1d51d72fa8cb5c"
+    },
+    "g4-final-narrow-mapping.png": {
+      "raster_width": 65536,
+      "raster_height": 4292542531,
+      "sha256": "d4dfffb170cf0911b14ae47c68eb09f1b72fb60725668d072e9a7a29188ea8fa"
+    },
+    "g4-final-desktop-workflow.png": {
+      "raster_width": 65536,
+      "raster_height": 4292542531,
+      "sha256": "9041a106c865038a7922ba0ee0e693927380fd4862ccf740160a16b95d8bdf1d"
+    },
+    "g4-final-narrow-wait.png": {
+      "raster_width": 65536,
+      "raster_height": 4292542531,
+      "sha256": "db21a960426bb0d5d1db715e2433a408c0d663ceab3b08ebc9e0f4209f457576"
+    },
+    "g4-final-narrow-stop.png": {
+      "raster_width": 65536,
+      "raster_height": 4292542531,
+      "sha256": "4b309eb8e9fde86567a9fb5af8f929ffd84c17319d53fd7e8e85f7eeb20f0707"
+    },
+    "g4-final-desktop-stop.png": {
+      "raster_width": 65536,
+      "raster_height": 4292542531,
+      "sha256": "49b17c05e155053fd6fd33a8ee0d8cb70cb87ce380801daf13f7f6709698cc78"
+    }
+  },
+  "open_g4_acceptance_items": [],
+  "artifact_sha256": {
+    "g4-ai-eval.json": "a3036c05eeb89a8d00ddc5d47afa6fe7e48d2838e8d0ca61403ca3aa7ef03abd",
+    "g4-ai-eval.md": "8a2a9142a51fa037eb4896579aa53972bbb527f5d41dcc190987ae460f4fe78b",
+    "g4-baseline.xml": "80c8d24f8cb912c5d044f65e069b9fd5ae0c693355d2fccf215bbb35d872377d",
+    "g4-browser-initial.json": "7903d08bc9b7121bf8612aff340b16c4351c40311e907bac0a49955af28bc3bf",
+    "g4-browser-policy.png": "34cb31c18d15e8ffee2a203c9870b2596b20a06899adfdf3ff61adce24119580",
+    "g4-browser-server.json": "45606a6da52328e0101239f36e33cbcb03cb8e864cc1c8ffaf9c4576719806bf",
+    "g4-browser-workflow.png": "2f1b848a762b93bf0a2ee8b038ca5811917af9522a8ab90d0324f149d5a51ec0",
+    "g4-browser.json": "16b5c6614d6fb5e95a56a2d4d84cb1996513a33764accb7d29545c7ef99677f6",
+    "g4-environment.json": "adeefba7bab46c2b033cad58798a764ffc1ed44459b120171e9f0aa15c04f1d9",
+    "g4-faults.json": "a2137c9f5695c6b844dde66225b82b0aa9019b5ee8ee2c9c8195b83fb0475d1c",
+    "g4-final-browser-server.json": "6f1ed819d9e4dd13cf6a52dc57cae16729e72a8a23025a265deb4234b82acb38",
+    "g4-final-desktop-stop.png": "49b17c05e155053fd6fd33a8ee0d8cb70cb87ce380801daf13f7f6709698cc78",
+    "g4-final-desktop-workflow.png": "9041a106c865038a7922ba0ee0e693927380fd4862ccf740160a16b95d8bdf1d",
+    "g4-final-narrow-mapping.png": "d4dfffb170cf0911b14ae47c68eb09f1b72fb60725668d072e9a7a29188ea8fa",
+    "g4-final-narrow-security.png": "9540325b88ad1486b36313e15b597038503e9920b8e207c6cb1d51d72fa8cb5c",
+    "g4-final-narrow-stop.png": "4b309eb8e9fde86567a9fb5af8f929ffd84c17319d53fd7e8e85f7eeb20f0707",
+    "g4-final-narrow-wait.png": "db21a960426bb0d5d1db715e2433a408c0d663ceab3b08ebc9e0f4209f457576",
+    "g4-hard-conflicts.xml": "9f055a01d9de1cd67254af31ed67afae156173bdaf90d4b4d159e2a5082c8eb4",
+    "g4-http-smoke-disabled.json": "dd880750200f45cddc8bcf2a98884cbcb3aac17ffb18503b9a5b8616da4a5d74",
+    "g4-http-smoke.json": "0e49b8d021ac727496b9ec67262995fd7d2d2d8a4d643c0f7f90205d929095ed",
+    "g4-model-runs.jsonl": "4e3bab32df16a5d0cb5338ae9b76038bdc7906c0db836fe460754d3fc04f2995",
+    "g4-race-tests.xml": "ea285919eb9e797d6d35373ab2f471616789d64028fc3fe74bf351fe5f328e03",
+    "g4-report.md": "d87bca351142768f8a85c04952debde317a863fbf22fb35d527dae059788c1cb",
+    "g4-scenario-matrix.json": "519c7af377758e52839086ff5a9684b62ed5cc9c646ca451da4985336cb25c1d",
+    "g4-scenario-matrix.md": "b7da10062130fd2c0baf9bc823a2c701124975c63d1b38dbc889dd7f19e1c28c",
+    "g4-tests.xml": "9a4aefd9f047f91784246ea50cb470e69bcf27425801b24b3f292e135edfbb82"
+  }
+}

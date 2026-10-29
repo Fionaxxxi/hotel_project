@@ -1,0 +1,10 @@
+{
+  "schema": "g5-release-result-v1",
+  "archive": "D:\\hotel\\.runtime\\g5-handoff\\hotel-project-g5-20261029T015035Z.zip",
+  "bytes": 84844530,
+  "sha256": "970ff52a00fadd04bb66bba59d667a2eba5eba1b30de208fb0df0f7520e3e126",
+  "files": 573,
+  "secret_scan": "PASSED_EXACT_CURRENT_SECRET_VALUES",
+  "archive_validation": "PASSED",
+  "limitations": "locked dependency preparation still requires a populated package cache or network; do not claim offline install"
+}

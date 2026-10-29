@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="5.883" timestamp="2026-10-28T21:20:18.434729+08:00" hostname="Fionaxi"><testcase classname="tests.test_g5_risk_matrix" name="test_all_operational_risk_kinds_detected_without_unbounded_labels" time="3.473" /></testsuite></testsuites>

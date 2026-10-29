@@ -1,0 +1,84 @@
+{
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.12.15 | packaged by Anaconda, Inc. | (main, Oct  1 2026, 20:14:50) [MSC v.1942 64 bit (AMD64)]",
+  "logical_cpu": 18,
+  "memory_gib": 31.61,
+  "scope": "real HTTP wire serialization, remote token bucket, async operation polling and final cell comparison; excludes core quote compiler, allocation, core worker queue and PostgreSQL server RSS",
+  "samples_per_cell": 1,
+  "cache": "not controlled; no p95/SLA claim",
+  "store": "named G3 isolated simulator stores, extra loopback ports8003/8004; no developer data reset",
+  "results": [
+    {
+      "channel": "SIM-A",
+      "cells": 100,
+      "write_requests": 5,
+      "operation_queries": 0,
+      "rate_limits": 0,
+      "seconds": 0.922,
+      "peak_driver_and_sim_mib": 175.55,
+      "status": "VERIFIED",
+      "listing_key": "BENCH-827a39cdbf",
+      "payload_bytes": 24869
+    },
+    {
+      "channel": "SIM-B",
+      "cells": 100,
+      "write_requests": 11,
+      "operation_queries": 10,
+      "rate_limits": 0,
+      "seconds": 5.406,
+      "peak_driver_and_sim_mib": 180.67,
+      "status": "VERIFIED",
+      "listing_key": "BENCH-80b0353ff9",
+      "payload_bytes": 23969
+    },
+    {
+      "channel": "SIM-A",
+      "cells": 1000,
+      "write_requests": 35,
+      "operation_queries": 0,
+      "rate_limits": 0,
+      "seconds": 7.531,
+      "peak_driver_and_sim_mib": 185.39,
+      "status": "VERIFIED",
+      "listing_key": "BENCH-78a8c463ac",
+      "payload_bytes": 245659
+    },
+    {
+      "channel": "SIM-B",
+      "cells": 1000,
+      "write_requests": 101,
+      "operation_queries": 100,
+      "rate_limits": 0,
+      "seconds": 51.843,
+      "peak_driver_and_sim_mib": 189.82,
+      "status": "VERIFIED",
+      "listing_key": "BENCH-7e8cfe48e7",
+      "payload_bytes": 238321
+    },
+    {
+      "channel": "SIM-A",
+      "cells": 10000,
+      "write_requests": 335,
+      "operation_queries": 0,
+      "rate_limits": 0,
+      "seconds": 73.718,
+      "peak_driver_and_sim_mib": 214.0,
+      "status": "VERIFIED",
+      "listing_key": "BENCH-3f53397388",
+      "payload_bytes": 2481129
+    },
+    {
+      "channel": "SIM-B",
+      "cells": 10000,
+      "write_requests": 1001,
+      "operation_queries": 1002,
+      "rate_limits": 0,
+      "seconds": 516.297,
+      "peak_driver_and_sim_mib": 231.99,
+      "status": "VERIFIED",
+      "listing_key": "BENCH-e4205e5fb1",
+      "payload_bytes": 2410623
+    }
+  ]
+}

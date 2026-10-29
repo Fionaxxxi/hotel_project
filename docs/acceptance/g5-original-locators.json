@@ -1,0 +1,43 @@
+{
+  "at": "2026-10-28T14:20:44.342930+00:00",
+  "status": "PASSED",
+  "cases": [
+    {
+      "format": "csv",
+      "processing_id": "3c9f78c8-3f1c-45b0-8469-5a4153afcb48",
+      "locator": {
+        "file": "properties.csv",
+        "record": 2
+      },
+      "artifact_sha256": "c1ab1a3b8512a3c05ac385fad15ccb510dd5b9adffef5fe9b51541afd4dabb9d",
+      "record_hash_matches": true,
+      "multiline_preserved": true,
+      "physical_csv_lines": 3
+    },
+    {
+      "format": "xlsx",
+      "processing_id": "84bcdcca-1b4a-4ed6-8fee-e3df2ede1f8d",
+      "locator": {
+        "row": 2,
+        "file": "data.xlsx",
+        "sheet": "properties"
+      },
+      "artifact_sha256": "f41a200791ba86bdd665c8cb87396d8b858e4081aaa41020aad03fdf89c8e0f3",
+      "record_hash_matches": true,
+      "multiline_preserved": true,
+      "physical_csv_lines": null
+    },
+    {
+      "format": "json",
+      "processing_id": "16f771dd-0477-4856-bccd-3fad9f9f7e7a",
+      "locator": {
+        "file": "data.json",
+        "json_path": "/properties/0"
+      },
+      "artifact_sha256": "7df66b41ccc7568b7104e3c089c85f451be4b4b920862bbe956390f98914910f",
+      "record_hash_matches": true,
+      "multiline_preserved": true,
+      "physical_csv_lines": null
+    }
+  ]
+}
